@@ -1,0 +1,107 @@
+// Version: 4.0.0
+type Chat__20117544 =
+  {
+    createdAt : Int;
+    folder : ?Nat;
+    id : Nat;
+    messages : [Message__637539832];
+    pinned : Bool;
+    title : Text;
+    updatedAt : Int
+  };
+type Chat__792738717 =
+  {
+    createdAt : Int;
+    folder : ?Nat;
+    id : Nat;
+    messages : [Message__454780518];
+    pinned : Bool;
+    title : Text;
+    updatedAt : Int
+  };
+type Data__80296667<K, V> =
+  {var count : Nat__1040412405; kvs : [var ?(K, V)]};
+type Folder__1052370243 = {createdAt : Int; id : Nat; name : Text};
+type Folder__977224132 = {createdAt : Int; id : Nat; name : Text};
+type Internal__41346355<K, V> =
+  {children : [var ?Node__1000929467<K, V>]; data : Data__80296667<K, V>};
+type Leaf__712614010<K, V> = {data : Data__80296667<K, V>};
+type Map__222667396<K, V> = Map__912772452<K, V>;
+type Map__709709801<K, V> =
+  {var root : Node__1000929467<K, V>; var size : Nat__1040412405};
+type Map__912772452<K, V> = Map__709709801<K, V>;
+type Message__454780518 =
+  {
+    content : Text;
+    mode : ?Mode__952180919;
+    model : ?Model__159366869;
+    role : Role__711988144;
+    timestamp : Int
+  };
+type Message__637539832 =
+  {
+    content : Text;
+    mode : ?Mode__924073883;
+    model : ?Model__152285947;
+    role : Role__415105322;
+    timestamp : Int
+  };
+type Mode__924073883 =
+  {
+    #codingAssistant;
+    #documentAssistant;
+    #emailAssistant;
+    #imageAnalysis;
+    #internetSearch;
+    #knowledgeBase;
+    #normal;
+    #research;
+    #youtubeSearch
+  };
+type Mode__952180919 =
+  {
+    #codingAssistant;
+    #documentAssistant;
+    #emailAssistant;
+    #imageAnalysis;
+    #internetSearch;
+    #knowledgeBase;
+    #normal;
+    #research;
+    #youtubeSearch
+  };
+type Model__152285947 =
+  {#claude; #deepseek; #gemini; #gpt; #llama; #mistral; #ollama; #qwen};
+type Model__159366869 =
+  {#claude; #deepseek; #gemini; #gpt; #llama; #mistral; #ollama; #qwen};
+type Nat__1040412405 = Nat__920180692;
+type Nat__920180692 = Nat;
+type NewActor__721354561 =
+  {
+    chats : Map__222667396<Principal, [Chat__20117544]>;
+    folders : Map__222667396<Principal, [Folder__1052370243]>;
+    nextChatId : {var next : Nat};
+    nextFolderId : {var next : Nat}
+  };
+type Node__1000929467<K, V> =
+  {#internal : Internal__41346355<K, V>; #leaf : Leaf__712614010<K, V>};
+type OldActor__196187416 = {};
+type Role__415105322 = {#assistant; #systemMsg; #user};
+type Role__711988144 = {#assistant; #systemMsg; #user};
+{
+  "20260630_000000" : (old : OldActor__196187416) -> NewActor__721354561
+}
+actor  {
+  stable chats :
+    {
+      var root : Node__1000929467<Principal, [Chat__792738717]>;
+      var size : Nat__1040412405
+    };
+  stable folders :
+    {
+      var root : Node__1000929467<Principal, [Folder__977224132]>;
+      var size : Nat__1040412405
+    };
+  stable nextChatId : {var next : Nat};
+  stable nextFolderId : {var next : Nat}
+};

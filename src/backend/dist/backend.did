@@ -1,0 +1,78 @@
+type Role = 
+ variant {
+   assistant;
+   systemMsg;
+   user;
+ };
+type Model = 
+ variant {
+   claude;
+   deepseek;
+   gemini;
+   gpt;
+   llama;
+   mistral;
+   ollama;
+   qwen;
+ };
+type Mode = 
+ variant {
+   codingAssistant;
+   documentAssistant;
+   emailAssistant;
+   imageAnalysis;
+   internetSearch;
+   knowledgeBase;
+   normal;
+   research;
+   youtubeSearch;
+ };
+type Message = 
+ record {
+   content: text;
+   mode: opt Mode;
+   model: opt Model;
+   role: Role;
+   timestamp: int;
+ };
+type Folder = 
+ record {
+   createdAt: int;
+   id: nat;
+   name: text;
+ };
+type Chat = 
+ record {
+   createdAt: int;
+   folder: opt nat;
+   id: nat;
+   messages: vec Message;
+   pinned: bool;
+   title: text;
+   updatedAt: int;
+ };
+service : {
+  __chats: (ko: opt principal, count: opt nat) ->
+   (vec record {
+          principal;
+          vec Chat;
+        }) query;
+  __folders: (ko: opt principal, count: opt nat) ->
+   (vec record {
+          principal;
+          vec Folder;
+        }) query;
+  __nextChatId: () -> (reserved) query;
+  __nextFolderId: () -> (reserved) query;
+  addMessage: (chatId: nat, message: Message) -> (opt Chat);
+  createChat: (title: text) -> (Chat);
+  createFolder: (name: text) -> (Folder);
+  deleteChat: (id: nat) -> (bool);
+  deleteFolder: (id: nat) -> (bool);
+  getChat: (id: nat) -> (opt Chat);
+  listChats: () -> (vec Chat);
+  listFolders: () -> (vec Folder);
+  renameFolder: (id: nat, name: text) -> (opt Folder);
+  updateChat: (id: nat, title: opt text, folder: opt opt nat, pinned:
+   opt bool) -> (opt Chat);
+}

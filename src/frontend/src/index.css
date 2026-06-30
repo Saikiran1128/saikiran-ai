@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-display: "Fraunces";
+    --font-body: "General Sans";
+    --font-mono: "JetBrains Mono";
+    --radius: 0.75rem;
+
+    /* Light — Aurora Editorial: warm-neutral surfaces, deep indigo-violet primary */
+    --background: 0.985 0.004 260;
+    --foreground: 0.16 0.012 265;
+    --card: 1.0 0.0 0;
+    --card-foreground: 0.16 0.012 265;
+    --popover: 1.0 0.0 0;
+    --popover-foreground: 0.16 0.012 265;
+
+    --primary: 0.45 0.2 268;
+    --primary-foreground: 0.99 0.004 268;
+
+    --secondary: 0.96 0.006 260;
+    --secondary-foreground: 0.28 0.014 265;
+    --muted: 0.96 0.006 260;
+    --muted-foreground: 0.52 0.012 265;
+
+    --accent: 0.68 0.16 25;
+    --accent-foreground: 0.99 0.004 25;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.99 0.004 25;
+
+    --success: 0.6 0.16 150;
+    --success-foreground: 0.99 0.004 150;
+    --warning: 0.78 0.15 75;
+    --warning-foreground: 0.2 0.04 75;
+
+    --border: 0.91 0.006 260;
+    --input: 0.91 0.006 260;
+    --ring: 0.45 0.2 268;
+
+    --chart-1: 0.55 0.22 268;
+    --chart-2: 0.65 0.17 195;
+    --chart-3: 0.7 0.18 25;
+    --chart-4: 0.62 0.18 150;
+    --chart-5: 0.6 0.2 305;
+
+    --sidebar: 0.975 0.004 260;
+    --sidebar-foreground: 0.16 0.012 265;
+    --sidebar-primary: 0.45 0.2 268;
+    --sidebar-primary-foreground: 0.99 0.004 268;
+    --sidebar-accent: 0.94 0.008 260;
+    --sidebar-accent-foreground: 0.28 0.014 265;
+    --sidebar-border: 0.91 0.006 260;
+    --sidebar-ring: 0.45 0.2 268;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(0.45 0.2 268),
+      oklch(0.5 0.22 290)
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      oklch(0.99 0.004 260),
+      oklch(0.96 0.006 260)
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      oklch(0.68 0.16 25),
+      oklch(0.72 0.18 15)
+    );
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    /* Dark — Aurora Editorial: deep ink charcoal, indigo-violet primary, coral accent */
+    --background: 0.145 0.014 260;
+    --foreground: 0.95 0.008 260;
+    --card: 0.185 0.016 260;
+    --card-foreground: 0.95 0.008 260;
+    --popover: 0.2 0.018 260;
+    --popover-foreground: 0.95 0.008 260;
+
+    --primary: 0.62 0.18 268;
+    --primary-foreground: 0.145 0.014 268;
+
+    --secondary: 0.22 0.018 260;
+    --secondary-foreground: 0.85 0.008 260;
+    --muted: 0.22 0.018 260;
+    --muted-foreground: 0.58 0.01 260;
+
+    --accent: 0.7 0.16 25;
+    --accent-foreground: 0.145 0.014 25;
+
+    --destructive: 0.6 0.2 22;
+    --destructive-foreground: 0.95 0.008 22;
+
+    --success: 0.65 0.16 150;
+    --success-foreground: 0.145 0.014 150;
+    --warning: 0.78 0.15 75;
+    --warning-foreground: 0.145 0.014 75;
+
+    --border: 0.28 0.018 260;
+    --input: 0.28 0.018 260;
+    --ring: 0.62 0.18 268;
+
+    --chart-1: 0.62 0.2 268;
+    --chart-2: 0.68 0.17 195;
+    --chart-3: 0.7 0.18 25;
+    --chart-4: 0.65 0.18 150;
+    --chart-5: 0.62 0.2 305;
+
+    --sidebar: 0.165 0.016 260;
+    --sidebar-foreground: 0.95 0.008 260;
+    --sidebar-primary: 0.62 0.18 268;
+    --sidebar-primary-foreground: 0.145 0.014 268;
+    --sidebar-accent: 0.22 0.018 260;
+    --sidebar-accent-foreground: 0.85 0.008 260;
+    --sidebar-border: 0.28 0.018 260;
+    --sidebar-ring: 0.62 0.18 268;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(0.62 0.18 268),
+      oklch(0.58 0.2 290)
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      oklch(0.165 0.016 260),
+      oklch(0.145 0.014 260)
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      oklch(0.7 0.16 25),
+      oklch(0.72 0.18 15)
+    );
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  ::selection {
+    background-color: oklch(var(--primary) / 0.2);
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  .gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+  .gradient-subtle {
+    background-image: var(--gradient-subtle);
+  }
+  .gradient-accent {
+    background-image: var(--gradient-accent);
+  }
+  .glass {
+    background-color: oklch(var(--card) / 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .glass-strong {
+    background-color: oklch(var(--card) / 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "overview": "A premium AI-powered productivity platform combining AI chat, productivity tools, and a clean modern interface in one place.",
+  "features": [
+    "Landing page with hero, search bar, and feature cards",
+    "Email login and Internet Identity sign-in with protected routes",
+    "ChatGPT-style AI chat with streaming, modes, models, and history",
+    "Tools marketplace with 8 functional tools and coming soon cards",
+    "Dark and light mode with smooth animations",
+    "Responsive sidebar navigation across all pages"
+  ],
+  "category": "productivity",
+  "tags": [
+    "ai",
+    "chat",
+    "tools",
+    "productivity",
+    "dashboard"
+  ],
+  "last_updated": "2026-06-30T08:24:38.847Z"
+}
