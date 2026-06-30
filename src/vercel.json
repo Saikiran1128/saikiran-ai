@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd src/frontend && pnpm build",
+  "outputDirectory": "src/frontend/dist"
+}
