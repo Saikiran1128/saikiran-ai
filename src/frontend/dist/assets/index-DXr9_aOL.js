@@ -17,7 +17,7 @@ var __privateWrapper = (obj, member, setter, getter) => ({
     return __privateGet(obj, member, getter);
   }
 });
-var _disableTimeVerification, _agent, _dbName, _storeName, _dbPromise, _IndexedDBExpirableStore_instances, getDb_fn, openDb_fn, openRequest_fn, prune_fn, _entries, _InMemoryExpirableStore_instances, prune_fn2, _rawKey, _derKey, _a, _currentInterval, _randomizationFactor, _multiplier, _maxInterval, _startTime, _maxElapsedTime, _maxIterations, _date, _count, _rootKeyPromise, _shouldFetchRootKey, _timeDiffMsecs, _hasSyncedTime, _syncTimePromise, _shouldSyncTime, _identity, _fetch, _fetchOptions, _callOptions, _credentials, _retryTimes, _backoffStrategy, _maxIngressExpiryInMinutes, _subnetNodeKeyExpirableStore, _HttpAgent_instances, maxIngressExpiryInMs_get, _queryPipeline, _updatePipeline, _subnetKeysFetching, _verifyQuerySignatures, handleV4SyncResponse_fn, handleV2Rejection_fn, requestAndRetryQuery_fn, requestAndRetry_fn, _verifyQueryResponse, readStateInner_fn, setTimeDiffMsecs_fn, asyncGuard_fn, rootKeyGuard_fn, syncTimeGuard_fn, doFetchSubnetKeys_fn, _focused, _cleanup, _setup, _b, _provider, _providerCalled, _c, _online, _cleanup2, _setup2, _d, _gcTimeout, _e, _initialState, _revertState, _cache, _client, _retryer, _defaultOptions, _abortSignalConsumed, _Query_instances, isInitialPausedFetch_fn, dispatch_fn, _f, _client2, _observers, _mutationCache, _retryer2, _Mutation_instances, dispatch_fn2, _g, _mutations, _scopes, _mutationId, _h, _queries, _i, _queryCache, _mutationCache2, _defaultOptions2, _queryDefaults, _mutationDefaults, _mountCount, _unsubscribeFocus, _unsubscribeOnline, _j, _rawKey2, _derKey2, _publicKey, _privateKey, _inner, _delegation, _inner2, _attributes, _signer, _options, _channel, _establishingChannel, _scheduledChannelClosure, _pendingRequestCount, _Signer_instances, rpc_fn, applyTransforms_fn, _options2, _status, _HeartbeatClient_instances, establish_fn, maintain_fn, receiveStatusResponse_fn, sendStatusRequest_fn, _options3, _closeListeners, _options4, _closed, _pendingQueue, _instance, _callbacks, _idleTimeout, _timeoutID, _resetTimer, _options5, _identity2, _chain, _storage, _signer2, _options6, _initPromise, _AuthClient_instances, resolveNonce_fn, init_fn, hydrate_fn, registerDefaultIdleCallback_fn;
+var _disableTimeVerification, _agent, _dbName, _storeName, _dbPromise, _IndexedDBExpirableStore_instances, getDb_fn, openDb_fn, openRequest_fn, prune_fn, _entries, _InMemoryExpirableStore_instances, prune_fn2, _rawKey, _derKey, _a, _currentInterval, _randomizationFactor, _multiplier, _maxInterval, _startTime, _maxElapsedTime, _maxIterations, _date, _count, _rootKeyPromise, _shouldFetchRootKey, _timeDiffMsecs, _hasSyncedTime, _syncTimePromise, _shouldSyncTime, _identity, _fetch, _fetchOptions, _callOptions, _credentials, _retryTimes, _backoffStrategy, _maxIngressExpiryInMinutes, _subnetNodeKeyExpirableStore, _HttpAgent_instances, maxIngressExpiryInMs_get, _queryPipeline, _updatePipeline, _subnetKeysFetching, _verifyQuerySignatures, handleV4SyncResponse_fn, handleV2Rejection_fn, requestAndRetryQuery_fn, requestAndRetry_fn, _verifyQueryResponse, readStateInner_fn, setTimeDiffMsecs_fn, asyncGuard_fn, rootKeyGuard_fn, syncTimeGuard_fn, doFetchSubnetKeys_fn, _focused, _cleanup, _setup, _b, _provider, _providerCalled, _c, _online, _cleanup2, _setup2, _d, _gcTimeout, _e, _initialState, _revertState, _cache, _client, _retryer, _defaultOptions, _abortSignalConsumed, _Query_instances, isInitialPausedFetch_fn, dispatch_fn, _f, _client2, _currentQuery, _currentQueryInitialState, _currentResult, _currentResultState, _currentResultOptions, _currentThenable, _selectError, _selectFn, _selectResult, _lastQueryWithDefinedData, _staleTimeoutId, _refetchIntervalId, _currentRefetchInterval, _trackedProps, _QueryObserver_instances, executeFetch_fn, updateStaleTimeout_fn, computeRefetchInterval_fn, updateRefetchInterval_fn, updateTimers_fn, clearStaleTimeout_fn, clearRefetchInterval_fn, updateQuery_fn, notify_fn, _g, _client3, _observers, _mutationCache, _retryer2, _Mutation_instances, dispatch_fn2, _h, _mutations, _scopes, _mutationId, _i, _client4, _currentResult2, _currentMutation, _mutateOptions, _MutationObserver_instances, updateResult_fn, notify_fn2, _j, _queries, _k, _queryCache, _mutationCache2, _defaultOptions2, _queryDefaults, _mutationDefaults, _mountCount, _unsubscribeFocus, _unsubscribeOnline, _l, _rawKey2, _derKey2, _publicKey, _privateKey, _inner, _delegation, _inner2, _attributes, _signer, _options, _channel, _establishingChannel, _scheduledChannelClosure, _pendingRequestCount, _Signer_instances, rpc_fn, applyTransforms_fn, _options2, _status, _HeartbeatClient_instances, establish_fn, maintain_fn, receiveStatusResponse_fn, sendStatusRequest_fn, _options3, _closeListeners, _options4, _closed, _pendingQueue, _instance, _callbacks, _idleTimeout, _timeoutID, _resetTimer, _options5, _identity2, _chain, _storage, _signer2, _options6, _initPromise, _AuthClient_instances, resolveNonce_fn, init_fn, hydrate_fn, registerDefaultIdleCallback_fn;
 function _mergeNamespaces(n, m2) {
   for (var i = 0; i < m2.length; i++) {
     const e = m2[i];
@@ -74,8 +74,8 @@ function _mergeNamespaces(n, m2) {
     fetch(link.href, fetchOpts);
   }
 })();
-function getDefaultExportFromCjs(x3) {
-  return x3 && x3.__esModule && Object.prototype.hasOwnProperty.call(x3, "default") ? x3["default"] : x3;
+function getDefaultExportFromCjs(x2) {
+  return x2 && x2.__esModule && Object.prototype.hasOwnProperty.call(x2, "default") ? x2["default"] : x2;
 }
 var jsxRuntime = { exports: {} };
 var reactJsxRuntime_production = {};
@@ -114,6 +114,42 @@ reactJsxRuntime_production.jsxs = jsxProd;
   jsxRuntime.exports = reactJsxRuntime_production;
 }
 var jsxRuntimeExports = jsxRuntime.exports;
+class ExternalBlob {
+  constructor(directURL, blob) {
+    __publicField(this, "_blob");
+    __publicField(this, "directURL");
+    __publicField(this, "onProgress");
+    if (blob) {
+      this._blob = blob;
+    }
+    this.directURL = directURL;
+  }
+  static fromURL(url) {
+    return new ExternalBlob(url, null);
+  }
+  static fromBytes(blob) {
+    const url = URL.createObjectURL(new Blob([new Uint8Array(blob)], {
+      type: "application/octet-stream"
+    }));
+    return new ExternalBlob(url, blob);
+  }
+  async getBytes() {
+    if (this._blob) {
+      return this._blob;
+    }
+    const response = await fetch(this.directURL);
+    const blob = await response.blob();
+    this._blob = new Uint8Array(await blob.arrayBuffer());
+    return this._blob;
+  }
+  getDirectURL() {
+    return this.directURL;
+  }
+  withUploadProgress(onProgress) {
+    this.onProgress = onProgress;
+    return this;
+  }
+}
 var ReplicaRejectCode;
 (function(ReplicaRejectCode2) {
   ReplicaRejectCode2[ReplicaRejectCode2["SysFatal"] = 1] = "SysFatal";
@@ -753,7 +789,7 @@ function split(lst, le2 = false) {
   }
   return [Ah, Al];
 }
-const shrSH = (h2, _l, s) => h2 >>> s;
+const shrSH = (h2, _l2, s) => h2 >>> s;
 const shrSL = (h2, l2, s) => h2 << 32 - s | l2 >>> s;
 const rotrSH = (h2, l2, s) => h2 >>> s | l2 << 32 - s;
 const rotrSL = (h2, l2, s) => h2 << 32 - s | l2 >>> s;
@@ -1823,7 +1859,7 @@ class UnexpectedV4StatusErrorCode extends ErrorCode {
     Object.setPrototypeOf(this, UnexpectedV4StatusErrorCode.prototype);
   }
   toErrorMessage() {
-    const replacer = (_k, v2) => v2 instanceof Uint8Array ? `hex(${v2.length}):${bytesToHex(v2)}` : v2;
+    const replacer = (_k2, v2) => v2 instanceof Uint8Array ? `hex(${v2.length}):${bytesToHex(v2)}` : v2;
     return `Unexpected request status in v4 sync response: "${this.status}"
   Request ID (hex): ${bytesToHex(this.requestId)}
   Response: ${JSON.stringify(this.response, replacer, 2)}`;
@@ -2279,7 +2315,7 @@ const magicNumber = "DIDL";
 const magicNumberBytes = new TextEncoder().encode(magicNumber);
 const toReadableString_max = 400;
 function zipWith(xs, ys, f2) {
-  return xs.map((x3, i) => f2(x3, ys[i]));
+  return xs.map((x2, i) => f2(x2, ys[i]));
 }
 class TypeTable {
   constructor() {
@@ -2433,13 +2469,13 @@ var IdlTypeName;
   IdlTypeName2["FuncClass"] = "__IDL_FuncClass__";
   IdlTypeName2["ServiceClass"] = "__IDL_ServiceClass__";
 })(IdlTypeName || (IdlTypeName = {}));
-class Type {
+let Type$1 = class Type {
   /* Display type name */
   display() {
     return this.name;
   }
-  valueToString(x3) {
-    return toReadableString(x3);
+  valueToString(x2) {
+    return toReadableString(x2);
   }
   /* Implement `T` in the IDL spec, only needed for non-primitive types */
   buildTypeTable(typeTable) {
@@ -2447,8 +2483,8 @@ class Type {
       this._buildTypeTableImpl(typeTable);
     }
   }
-}
-class PrimitiveType extends Type {
+};
+class PrimitiveType extends Type$1 {
   checkType(t) {
     if (this.name !== t.name) {
       throw new Error(`type mismatch: type on the wire ${t.name}, expect type ${this.name}`);
@@ -2458,7 +2494,7 @@ class PrimitiveType extends Type {
   _buildTypeTableImpl(_typeTable) {
   }
 }
-class ConstructType extends Type {
+class ConstructType extends Type$1 {
   checkType(t) {
     if (t instanceof RecClass) {
       const ty = t.getType();
@@ -2483,8 +2519,8 @@ class EmptyClass extends PrimitiveType {
   accept(v2, d2) {
     return v2.visitEmpty(this, d2);
   }
-  covariant(x3) {
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+  covariant(x2) {
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
   encodeValue() {
     throw new Error("Empty cannot appear as a function argument");
@@ -2502,7 +2538,7 @@ class EmptyClass extends PrimitiveType {
     return "empty";
   }
 }
-class UnknownClass extends Type {
+class UnknownClass extends Type$1 {
   get typeName() {
     return IdlTypeName.UnknownClass;
   }
@@ -2515,8 +2551,8 @@ class UnknownClass extends Type {
   accept(v2, d2) {
     throw v2.visitType(this, d2);
   }
-  covariant(x3) {
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+  covariant(x2) {
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
   encodeValue() {
     throw new Error("Unknown cannot appear as a function argument");
@@ -2563,14 +2599,14 @@ class BoolClass extends PrimitiveType {
   accept(v2, d2) {
     return v2.visitBool(this, d2);
   }
-  covariant(x3) {
-    if (typeof x3 === "boolean") {
+  covariant(x2) {
+    if (typeof x2 === "boolean") {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    return new Uint8Array([x3 ? 1 : 0]);
+  encodeValue(x2) {
+    return new Uint8Array([x2 ? 1 : 0]);
   }
   encodeType() {
     return slebEncode(IDLTypeIds.Bool);
@@ -2600,11 +2636,11 @@ class NullClass extends PrimitiveType {
   accept(v2, d2) {
     return v2.visitNull(this, d2);
   }
-  covariant(x3) {
-    if (x3 === null) {
+  covariant(x2) {
+    if (x2 === null) {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
   encodeValue() {
     return new Uint8Array(0);
@@ -2659,14 +2695,14 @@ class TextClass extends PrimitiveType {
   accept(v2, d2) {
     return v2.visitText(this, d2);
   }
-  covariant(x3) {
-    if (typeof x3 === "string") {
+  covariant(x2) {
+    if (typeof x2 === "string") {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    const buf = new TextEncoder().encode(x3);
+  encodeValue(x2) {
+    const buf = new TextEncoder().encode(x2);
     const len = lebEncode(buf.byteLength);
     return concat(len, buf);
   }
@@ -2683,8 +2719,8 @@ class TextClass extends PrimitiveType {
   get name() {
     return "text";
   }
-  valueToString(x3) {
-    return `"${x3}"`;
+  valueToString(x2) {
+    return `"${x2}"`;
   }
 }
 class IntClass extends PrimitiveType {
@@ -2697,14 +2733,14 @@ class IntClass extends PrimitiveType {
   accept(v2, d2) {
     return v2.visitInt(this, d2);
   }
-  covariant(x3) {
-    if (typeof x3 === "bigint" || Number.isInteger(x3)) {
+  covariant(x2) {
+    if (typeof x2 === "bigint" || Number.isInteger(x2)) {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    return slebEncode(x3);
+  encodeValue(x2) {
+    return slebEncode(x2);
   }
   encodeType() {
     return slebEncode(IDLTypeIds.Int);
@@ -2716,8 +2752,8 @@ class IntClass extends PrimitiveType {
   get name() {
     return "int";
   }
-  valueToString(x3) {
-    return x3.toString();
+  valueToString(x2) {
+    return x2.toString();
   }
 }
 class NatClass extends PrimitiveType {
@@ -2730,14 +2766,14 @@ class NatClass extends PrimitiveType {
   accept(v2, d2) {
     return v2.visitNat(this, d2);
   }
-  covariant(x3) {
-    if (typeof x3 === "bigint" && x3 >= BigInt(0) || Number.isInteger(x3) && x3 >= 0) {
+  covariant(x2) {
+    if (typeof x2 === "bigint" && x2 >= BigInt(0) || Number.isInteger(x2) && x2 >= 0) {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    return lebEncode(x3);
+  encodeValue(x2) {
+    return lebEncode(x2);
   }
   encodeType() {
     return slebEncode(IDLTypeIds.Nat);
@@ -2749,8 +2785,8 @@ class NatClass extends PrimitiveType {
   get name() {
     return "nat";
   }
-  valueToString(x3) {
-    return x3.toString();
+  valueToString(x2) {
+    return x2.toString();
   }
 }
 class FloatClass extends PrimitiveType {
@@ -2770,19 +2806,19 @@ class FloatClass extends PrimitiveType {
   accept(v2, d2) {
     return v2.visitFloat(this, d2);
   }
-  covariant(x3) {
-    if (typeof x3 === "number" || x3 instanceof Number) {
+  covariant(x2) {
+    if (typeof x2 === "number" || x2 instanceof Number) {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
+  encodeValue(x2) {
     const buf = new ArrayBuffer(this._bits / 8);
     const view = new DataView(buf);
     if (this._bits === 32) {
-      view.setFloat32(0, x3, true);
+      view.setFloat32(0, x2, true);
     } else {
-      view.setFloat64(0, x3, true);
+      view.setFloat64(0, x2, true);
     }
     return new Uint8Array(buf);
   }
@@ -2802,8 +2838,8 @@ class FloatClass extends PrimitiveType {
   get name() {
     return `float${this._bits}`;
   }
-  valueToString(x3) {
-    return x3.toString();
+  valueToString(x2) {
+    return x2.toString();
   }
 }
 class FixedIntClass extends PrimitiveType {
@@ -2820,23 +2856,23 @@ class FixedIntClass extends PrimitiveType {
   accept(v2, d2) {
     return v2.visitFixedInt(this, d2);
   }
-  covariant(x3) {
+  covariant(x2) {
     const min2 = iexp2(this._bits - 1) * BigInt(-1);
     const max2 = iexp2(this._bits - 1) - BigInt(1);
-    if (typeof x3 === "bigint") {
-      if (x3 >= min2 && x3 <= max2) {
+    if (typeof x2 === "bigint") {
+      if (x2 >= min2 && x2 <= max2) {
         return true;
       }
-    } else if (Number.isInteger(x3)) {
-      const v2 = BigInt(x3);
+    } else if (Number.isInteger(x2)) {
+      const v2 = BigInt(x2);
       if (v2 >= min2 && v2 <= max2) {
         return true;
       }
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    return writeIntLE(x3, this._bits / 8);
+  encodeValue(x2) {
+    return writeIntLE(x2, this._bits / 8);
   }
   encodeType() {
     const offset2 = Math.log2(this._bits) - 3;
@@ -2853,8 +2889,8 @@ class FixedIntClass extends PrimitiveType {
   get name() {
     return `int${this._bits}`;
   }
-  valueToString(x3) {
-    return x3.toString();
+  valueToString(x2) {
+    return x2.toString();
   }
 }
 class FixedNatClass extends PrimitiveType {
@@ -2871,22 +2907,22 @@ class FixedNatClass extends PrimitiveType {
   accept(v2, d2) {
     return v2.visitFixedNat(this, d2);
   }
-  covariant(x3) {
+  covariant(x2) {
     const max2 = iexp2(this._bits);
-    if (typeof x3 === "bigint" && x3 >= BigInt(0)) {
-      if (x3 < max2) {
+    if (typeof x2 === "bigint" && x2 >= BigInt(0)) {
+      if (x2 < max2) {
         return true;
       }
-    } else if (Number.isInteger(x3) && x3 >= 0) {
-      const v2 = BigInt(x3);
+    } else if (Number.isInteger(x2) && x2 >= 0) {
+      const v2 = BigInt(x2);
       if (v2 < max2) {
         return true;
       }
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    return writeUIntLE(x3, this._bits / 8);
+  encodeValue(x2) {
+    return writeUIntLE(x2, this._bits / 8);
   }
   encodeType() {
     const offset2 = Math.log2(this._bits) - 3;
@@ -2903,8 +2939,8 @@ class FixedNatClass extends PrimitiveType {
   get name() {
     return `nat${this._bits}`;
   }
-  valueToString(x3) {
-    return x3.toString();
+  valueToString(x2) {
+    return x2.toString();
   }
 }
 class VecClass extends ConstructType {
@@ -2925,9 +2961,9 @@ class VecClass extends ConstructType {
   accept(v2, d2) {
     return v2.visitVec(this, this._type, d2);
   }
-  covariant(x3) {
+  covariant(x2) {
     const bits = this._type instanceof FixedNatClass ? this._type._bits : this._type instanceof FixedIntClass ? this._type._bits : 0;
-    if (ArrayBuffer.isView(x3) && bits == x3.BYTES_PER_ELEMENT * 8 || Array.isArray(x3) && x3.every((v2, idx) => {
+    if (ArrayBuffer.isView(x2) && bits == x2.BYTES_PER_ELEMENT * 8 || Array.isArray(x2) && x2.every((v2, idx) => {
       try {
         return this._type.covariant(v2);
       } catch (e) {
@@ -2938,52 +2974,52 @@ index ${idx} -> ${e.message}`, { cause: e });
     })) {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    const len = lebEncode(x3.length);
+  encodeValue(x2) {
+    const len = lebEncode(x2.length);
     if (this._blobOptimization) {
-      return concat(len, new Uint8Array(x3));
+      return concat(len, new Uint8Array(x2));
     }
-    if (ArrayBuffer.isView(x3)) {
-      if (x3 instanceof Int16Array || x3 instanceof Uint16Array) {
-        const buffer = new DataView(new ArrayBuffer(x3.length * 2));
-        for (let i = 0; i < x3.length; i++) {
-          if (x3 instanceof Int16Array) {
-            buffer.setInt16(i * 2, x3[i], true);
+    if (ArrayBuffer.isView(x2)) {
+      if (x2 instanceof Int16Array || x2 instanceof Uint16Array) {
+        const buffer = new DataView(new ArrayBuffer(x2.length * 2));
+        for (let i = 0; i < x2.length; i++) {
+          if (x2 instanceof Int16Array) {
+            buffer.setInt16(i * 2, x2[i], true);
           } else {
-            buffer.setUint16(i * 2, x3[i], true);
+            buffer.setUint16(i * 2, x2[i], true);
           }
         }
         return concat(len, new Uint8Array(buffer.buffer));
       }
-      if (x3 instanceof Int32Array || x3 instanceof Uint32Array) {
-        const buffer = new DataView(new ArrayBuffer(x3.length * 4));
-        for (let i = 0; i < x3.length; i++) {
-          if (x3 instanceof Int32Array) {
-            buffer.setInt32(i * 4, x3[i], true);
+      if (x2 instanceof Int32Array || x2 instanceof Uint32Array) {
+        const buffer = new DataView(new ArrayBuffer(x2.length * 4));
+        for (let i = 0; i < x2.length; i++) {
+          if (x2 instanceof Int32Array) {
+            buffer.setInt32(i * 4, x2[i], true);
           } else {
-            buffer.setUint32(i * 4, x3[i], true);
+            buffer.setUint32(i * 4, x2[i], true);
           }
         }
         return concat(len, new Uint8Array(buffer.buffer));
       }
-      if (x3 instanceof BigInt64Array || x3 instanceof BigUint64Array) {
-        const buffer = new DataView(new ArrayBuffer(x3.length * 8));
-        for (let i = 0; i < x3.length; i++) {
-          if (x3 instanceof BigInt64Array) {
-            buffer.setBigInt64(i * 8, x3[i], true);
+      if (x2 instanceof BigInt64Array || x2 instanceof BigUint64Array) {
+        const buffer = new DataView(new ArrayBuffer(x2.length * 8));
+        for (let i = 0; i < x2.length; i++) {
+          if (x2 instanceof BigInt64Array) {
+            buffer.setBigInt64(i * 8, x2[i], true);
           } else {
-            buffer.setBigUint64(i * 8, x3[i], true);
+            buffer.setBigUint64(i * 8, x2[i], true);
           }
         }
         return concat(len, new Uint8Array(buffer.buffer));
       }
-      return concat(len, new Uint8Array(x3.buffer, x3.byteOffset, x3.byteLength));
+      return concat(len, new Uint8Array(x2.buffer, x2.byteOffset, x2.byteLength));
     }
-    const buf = new PipeArrayBuffer(new Uint8Array(len.byteLength + x3.length), 0);
+    const buf = new PipeArrayBuffer(new Uint8Array(len.byteLength + x2.length), 0);
     buf.write(len);
-    for (const d2 of x3) {
+    for (const d2 of x2) {
       const encoded = this._type.encodeValue(d2);
       buf.write(new Uint8Array(encoded));
     }
@@ -3063,8 +3099,8 @@ index ${idx} -> ${e.message}`, { cause: e });
   display() {
     return `vec ${this._type.display()}`;
   }
-  valueToString(x3) {
-    const elements = x3.map((e) => this._type.valueToString(e));
+  valueToString(x2) {
+    const elements = x2.map((e) => this._type.valueToString(e));
     return `vec {${elements.join("; ")}}`;
   }
 }
@@ -3082,23 +3118,23 @@ class OptClass extends ConstructType {
   accept(v2, d2) {
     return v2.visitOpt(this, this._type, d2);
   }
-  covariant(x3) {
+  covariant(x2) {
     try {
-      if (Array.isArray(x3) && (x3.length === 0 || x3.length === 1 && this._type.covariant(x3[0]))) {
+      if (Array.isArray(x2) && (x2.length === 0 || x2.length === 1 && this._type.covariant(x2[0]))) {
         return true;
       }
     } catch (e) {
-      throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)} 
+      throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)} 
 
 -> ${e.message}`, { cause: e });
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    if (x3.length === 0) {
+  encodeValue(x2) {
+    if (x2.length === 0) {
       return new Uint8Array([0]);
     }
-    return concat(new Uint8Array([1]), this._type.encodeValue(x3[0]));
+    return concat(new Uint8Array([1]), this._type.encodeValue(x2[0]));
   }
   _buildTypeTableImpl(typeTable) {
     this._type.buildTypeTable(typeTable);
@@ -3164,11 +3200,11 @@ class OptClass extends ConstructType {
   display() {
     return `opt ${this._type.display()}`;
   }
-  valueToString(x3) {
-    if (x3.length === 0) {
+  valueToString(x2) {
+    if (x2.length === 0) {
       return "null";
     }
-    return `opt ${this._type.valueToString(x3[0])}`;
+    return `opt ${this._type.valueToString(x2[0])}`;
   }
 }
 class RecordClass extends ConstructType {
@@ -3196,13 +3232,13 @@ class RecordClass extends ConstructType {
     }
     return res;
   }
-  covariant(x3) {
-    if (typeof x3 === "object" && this._fields.every(([k2, t]) => {
-      if (!x3.hasOwnProperty(k2)) {
+  covariant(x2) {
+    if (typeof x2 === "object" && this._fields.every(([k2, t]) => {
+      if (!x2.hasOwnProperty(k2)) {
         throw new Error(`Record is missing key "${k2}".`);
       }
       try {
-        return t.covariant(x3[k2]);
+        return t.covariant(x2[k2]);
       } catch (e) {
         throw new Error(`Invalid ${this.display()} argument: 
 
@@ -3213,10 +3249,10 @@ field ${k2} -> ${e.message}`, {
     })) {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    const values = this._fields.map(([key]) => x3[key]);
+  encodeValue(x2) {
+    const values = this._fields.map(([key]) => x2[key]);
     const bufs = zipWith(this._fields, values, ([, c2], d2) => c2.encodeValue(d2));
     return concat(...bufs);
   }
@@ -3232,7 +3268,7 @@ field ${k2} -> ${e.message}`, {
     if (!(record instanceof RecordClass)) {
       throw new CandidDecodeError(`Expected type '${this.display()}', but received non-record type '${record.display()}'`);
     }
-    const x3 = {};
+    const x2 = {};
     let expectedRecordIdx = 0;
     let actualRecordIdx = 0;
     while (actualRecordIdx < record._fields.length) {
@@ -3246,12 +3282,12 @@ field ${k2} -> ${e.message}`, {
       const expectedId = idlLabelToId(this._fields[expectedRecordIdx][0]);
       const actualId = idlLabelToId(hash);
       if (expectedId === actualId) {
-        x3[expectKey] = expectType.decodeValue(b2, type);
+        x2[expectKey] = expectType.decodeValue(b2, type);
         expectedRecordIdx++;
         actualRecordIdx++;
       } else if (actualId > expectedId) {
         if (expectType instanceof OptClass || expectType instanceof ReservedClass) {
-          x3[expectKey] = [];
+          x2[expectKey] = [];
           expectedRecordIdx++;
         } else {
           const expectedFields = this._fields.map(([name]) => name).join(", ");
@@ -3265,14 +3301,14 @@ field ${k2} -> ${e.message}`, {
     }
     for (const [expectKey, expectType] of this._fields.slice(expectedRecordIdx)) {
       if (expectType instanceof OptClass || expectType instanceof ReservedClass) {
-        x3[expectKey] = [];
+        x2[expectKey] = [];
       } else {
         const expectedFields = this._fields.map(([name]) => name).join(", ");
         const receivedFields = record._fields.map(([name]) => name).join(", ");
         throw new CandidDecodeError(`Cannot find required field '${expectKey}' in record, expected fields: [${expectedFields}], received fields: [${receivedFields}]`);
       }
     }
-    return x3;
+    return x2;
   }
   get fieldsAsObject() {
     const fields = {};
@@ -3289,8 +3325,8 @@ field ${k2} -> ${e.message}`, {
     const fields = this._fields.map(([key, value]) => `${key}:${value.display()}`);
     return `record {${fields.join("; ")}}`;
   }
-  valueToString(x3) {
-    const values = this._fields.map(([key]) => x3[key]);
+  valueToString(x2) {
+    const values = this._fields.map(([key]) => x2[key]);
     const fields = zipWith(this._fields, values, ([k2, c2], d2) => `${k2}=${c2.valueToString(d2)}`);
     return `record {${fields.join("; ")}}`;
   }
@@ -3303,18 +3339,18 @@ class TupleClass extends RecordClass {
     return instance.typeName === IdlTypeName.TupleClass;
   }
   constructor(_components) {
-    const x3 = {};
-    _components.forEach((e, i) => x3[`_${i}_`] = e);
-    super(x3);
+    const x2 = {};
+    _components.forEach((e, i) => x2[`_${i}_`] = e);
+    super(x2);
     this._components = _components;
   }
   accept(v2, d2) {
     return v2.visitTuple(this, this._components, d2);
   }
-  covariant(x3) {
-    if (Array.isArray(x3) && x3.length >= this._fields.length && this._components.every((t, i) => {
+  covariant(x2) {
+    if (Array.isArray(x2) && x2.length >= this._fields.length && this._components.every((t, i) => {
       try {
-        return t.covariant(x3[i]);
+        return t.covariant(x2[i]);
       } catch (e) {
         throw new Error(`Invalid ${this.display()} argument: 
 
@@ -3325,10 +3361,10 @@ index ${i} -> ${e.message}`, {
     })) {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    const bufs = zipWith(this._components, x3, (c2, d2) => c2.encodeValue(d2));
+  encodeValue(x2) {
+    const bufs = zipWith(this._components, x2, (c2, d2) => c2.encodeValue(d2));
     return concat(...bufs);
   }
   decodeValue(b2, t) {
@@ -3372,10 +3408,10 @@ class VariantClass extends ConstructType {
   accept(v2, d2) {
     return v2.visitVariant(this, this._fields, d2);
   }
-  covariant(x3) {
-    if (typeof x3 === "object" && Object.entries(x3).length === 1 && this._fields.every(([k2, v2]) => {
+  covariant(x2) {
+    if (typeof x2 === "object" && Object.entries(x2).length === 1 && this._fields.every(([k2, v2]) => {
       try {
-        return !x3.hasOwnProperty(k2) || v2.covariant(x3[k2]);
+        return !x2.hasOwnProperty(k2) || v2.covariant(x2[k2]);
       } catch (e) {
         throw new Error(`Invalid ${this.display()} argument: 
 
@@ -3386,18 +3422,18 @@ variant ${k2} -> ${e.message}`, {
     })) {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
+  encodeValue(x2) {
     for (let i = 0; i < this._fields.length; i++) {
       const [name, type] = this._fields[i];
-      if (x3.hasOwnProperty(name)) {
+      if (x2.hasOwnProperty(name)) {
         const idx = lebEncode(i);
-        const buf = type.encodeValue(x3[name]);
+        const buf = type.encodeValue(x2[name]);
         return concat(idx, buf);
       }
     }
-    throw Error(`Variant has no data: ${x3}`);
+    throw Error(`Variant has no data: ${x2}`);
   }
   _buildTypeTableImpl(typeTable) {
     this._fields.forEach(([, type]) => {
@@ -3435,17 +3471,17 @@ variant ${k2} -> ${e.message}`, {
     const fields = this._fields.map(([key, type]) => key + (type.name === "null" ? "" : `:${type.display()}`));
     return `variant {${fields.join("; ")}}`;
   }
-  valueToString(x3) {
+  valueToString(x2) {
     for (const [name, type] of this._fields) {
-      if (x3.hasOwnProperty(name)) {
-        const value = type.valueToString(x3[name]);
+      if (x2.hasOwnProperty(name)) {
+        const value = type.valueToString(x2[name]);
         if (value === "null") {
           return `variant {${name}}`;
         }
         return `variant {${name}=${value}}`;
       }
     }
-    throw new Error(`Variant has no data: ${x3}`);
+    throw new Error(`Variant has no data: ${x2}`);
   }
   get alternativesAsObject() {
     const alternatives = {};
@@ -3478,17 +3514,17 @@ const _RecClass = class _RecClass extends ConstructType {
   getType() {
     return this._type;
   }
-  covariant(x3) {
-    if (this._type ? this._type.covariant(x3) : false) {
+  covariant(x2) {
+    if (this._type ? this._type.covariant(x2) : false) {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
+  encodeValue(x2) {
     if (!this._type) {
       throw Error("Recursive type uninitialized.");
     }
-    return this._type.encodeValue(x3);
+    return this._type.encodeValue(x2);
   }
   _buildTypeTableImpl(typeTable) {
     if (!this._type) {
@@ -3513,18 +3549,18 @@ const _RecClass = class _RecClass extends ConstructType {
     }
     return `μ${this.name}.${this._type.name}`;
   }
-  valueToString(x3) {
+  valueToString(x2) {
     if (!this._type) {
       throw Error("Recursive type uninitialized.");
     }
-    return this._type.valueToString(x3);
+    return this._type.valueToString(x2);
   }
 };
 _RecClass._counter = 0;
 let RecClass = _RecClass;
 function decodePrincipalId(b2) {
-  const x3 = safeReadUint8(b2);
-  if (x3 !== 1) {
+  const x2 = safeReadUint8(b2);
+  if (x2 !== 1) {
     throw new Error("Cannot decode principal");
   }
   const len = Number(lebDecode(b2));
@@ -3540,14 +3576,14 @@ class PrincipalClass extends PrimitiveType {
   accept(v2, d2) {
     return v2.visitPrincipal(this, d2);
   }
-  covariant(x3) {
-    if (x3 && x3._isPrincipal) {
+  covariant(x2) {
+    if (x2 && x2._isPrincipal) {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    const buf = x3.toUint8Array();
+  encodeValue(x2) {
+    const buf = x2.toUint8Array();
     const len = lebEncode(buf.byteLength);
     return concat(new Uint8Array([1]), len, buf);
   }
@@ -3561,8 +3597,8 @@ class PrincipalClass extends PrimitiveType {
   get name() {
     return "principal";
   }
-  valueToString(x3) {
-    return `${this.name} "${x3.toText()}"`;
+  valueToString(x2) {
+    return `${this.name} "${x2.toText()}"`;
   }
 }
 class FuncClass extends ConstructType {
@@ -3587,11 +3623,11 @@ class FuncClass extends ConstructType {
   accept(v2, d2) {
     return v2.visitFunc(this, d2);
   }
-  covariant(x3) {
-    if (Array.isArray(x3) && x3.length === 2 && x3[0] && x3[0]._isPrincipal && typeof x3[1] === "string") {
+  covariant(x2) {
+    if (Array.isArray(x2) && x2.length === 2 && x2[0] && x2[0]._isPrincipal && typeof x2[1] === "string") {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
   encodeValue([principal, methodName]) {
     const buf = principal.toUint8Array();
@@ -3618,8 +3654,8 @@ class FuncClass extends ConstructType {
     if (!subtype(tt2, this)) {
       throw new Error(`Cannot decode function reference at type ${this.display()} from wire type ${tt2.display()}`);
     }
-    const x3 = safeReadUint8(b2);
-    if (x3 !== 1) {
+    const x2 = safeReadUint8(b2);
+    if (x2 !== 1) {
       throw new Error("Cannot decode function reference");
     }
     const canister = decodePrincipalId(b2);
@@ -3679,14 +3715,14 @@ class ServiceClass extends ConstructType {
   accept(v2, d2) {
     return v2.visitService(this, d2);
   }
-  covariant(x3) {
-    if (x3 && x3._isPrincipal) {
+  covariant(x2) {
+    if (x2 && x2._isPrincipal) {
       return true;
     }
-    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x3)}`);
+    throw new Error(`Invalid ${this.display()} argument: ${toReadableString(x2)}`);
   }
-  encodeValue(x3) {
-    const buf = x3.toUint8Array();
+  encodeValue(x2) {
+    const buf = x2.toUint8Array();
     const len = lebEncode(buf.length);
     return concat(new Uint8Array([1]), len, buf);
   }
@@ -3712,8 +3748,8 @@ class ServiceClass extends ConstructType {
     const fields = this._fields.map(([key, value]) => `${key}:${value.name}`);
     return `service {${fields.join("; ")}}`;
   }
-  valueToString(x3) {
-    return `service "${x3.toText()}"`;
+  valueToString(x2) {
+    return `service "${x2.toText()}"`;
   }
   fieldsAsObject() {
     const fields = {};
@@ -3723,8 +3759,8 @@ class ServiceClass extends ConstructType {
     return fields;
   }
 }
-function toReadableString(x3) {
-  const str = JSON.stringify(x3, (_key, value) => typeof value === "bigint" ? `BigInt(${value})` : value);
+function toReadableString(x2) {
+  const str = JSON.stringify(x2, (_key, value) => typeof value === "bigint" ? `BigInt(${value})` : value);
   return str && str.length > toReadableString_max ? `${str.substring(0, toReadableString_max - 3)}...` : str;
 }
 function encode$2(argTypes, args) {
@@ -3736,16 +3772,16 @@ function encode$2(argTypes, args) {
   const table = typeTable.encode();
   const len = lebEncode(args.length);
   const typs = concat(...argTypes.map((t) => t.encodeType(typeTable)));
-  const vals = concat(...zipWith(argTypes, args, (t, x3) => {
+  const vals = concat(...zipWith(argTypes, args, (t, x2) => {
     try {
-      t.covariant(x3);
+      t.covariant(x2);
     } catch (e) {
       const err = new Error(`${e.message}
 
 `);
       throw err;
     }
-    return t.encodeValue(x3);
+    return t.encodeValue(x2);
   }));
   return concat(magicNumberBytes, table, len, typs, vals);
 }
@@ -4257,7 +4293,7 @@ const IDL = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty(
   TextClass,
   Tuple,
   TupleClass,
-  Type,
+  Type: Type$1,
   Unknown,
   UnknownClass,
   Variant,
@@ -4344,7 +4380,7 @@ function hashOfMap(map) {
   const sorted = traversed.sort(([k1], [k2]) => {
     return compare(k1, k2);
   });
-  const concatenated = concatBytes(...sorted.map((x3) => concatBytes(...x3)));
+  const concatenated = concatBytes(...sorted.map((x2) => concatBytes(...x2)));
   const result = sha256(concatenated);
   return result;
 }
@@ -4417,7 +4453,7 @@ function J(t) {
 function Q(t) {
   return t & 31;
 }
-let S = new Uint8Array(), U$1, d = 0;
+let S = new Uint8Array(), U, d = 0;
 function ut(t, e) {
   S = t, d = 0;
   const n = B();
@@ -4429,7 +4465,7 @@ function B(t) {
     case c.UnsignedInteger:
       return h(n);
     case c.NegativeInteger:
-      return M$2(n);
+      return M$1(n);
     case c.ByteString:
       return $(n);
     case c.TextString:
@@ -4505,22 +4541,22 @@ function j(t, e) {
 function h(t) {
   if (t <= f.Value)
     return t;
-  switch (U$1 = new DataView(S.buffer, S.byteOffset + d), t) {
+  switch (U = new DataView(S.buffer, S.byteOffset + d), t) {
     case f.OneByte:
-      return d++, U$1.getUint8(0);
+      return d++, U.getUint8(0);
     case f.TwoBytes:
-      return d += 2, U$1.getUint16(0, l);
+      return d += 2, U.getUint16(0, l);
     case f.FourBytes:
-      return d += 4, U$1.getUint32(0, l);
+      return d += 4, U.getUint32(0, l);
     case f.EightBytes:
-      return d += 8, U$1.getBigUint64(0, l);
+      return d += 8, U.getBigUint64(0, l);
     case f.Indefinite:
       return 1 / 0;
     default:
       throw new w(`Unsupported integer info: ${t.toString(2)}`);
   }
 }
-function M$2(t) {
+function M$1(t) {
   const e = h(t);
   return typeof e == "number" ? -1 - e : -1n - e;
 }
@@ -4541,11 +4577,11 @@ function v$1(t, e) {
     return B();
   throw new w(`Unsupported tag: ${n}.`);
 }
-let x$1 = class x extends Error {
+class x extends Error {
   constructor(e) {
     super(e), this.name = "SerializationError";
   }
-};
+}
 const C = 2 * 1024, V = 100, tt$1 = new TextEncoder();
 function y(t) {
   return t << 5;
@@ -4572,7 +4608,7 @@ function _(t, e) {
     return;
   }
   if (typeof t == "string") {
-    z$1(t);
+    z(t);
     return;
   }
   if (t instanceof Uint8Array) {
@@ -4591,7 +4627,7 @@ function _(t, e) {
     nt(t, e);
     return;
   }
-  throw new x$1(`Unsupported type: ${typeof t}`);
+  throw new x(`Unsupported type: ${typeof t}`);
 }
 function et(t, e) {
   E(c.Array, t.length), t.forEach((n, s) => {
@@ -4600,7 +4636,7 @@ function et(t, e) {
 }
 function nt(t, e) {
   O = Object.entries(t), E(c.Map, O.length), O.forEach(([n, s]) => {
-    z$1(n), _((e == null ? void 0 : e(s, n)) ?? s, e);
+    z(n), _((e == null ? void 0 : e(s, n)) ?? s, e);
   });
 }
 function E(t, e) {
@@ -4639,7 +4675,7 @@ function E(t, e) {
     ), g.setBigUint64(r$1, BigInt(e), l), r$1 += 8;
     return;
   }
-  throw new x$1(`Value too large to encode: ${e}`);
+  throw new x(`Value too large to encode: ${e}`);
 }
 function rt(t) {
   E(c.Simple, ct(t));
@@ -4653,7 +4689,7 @@ function ct(t) {
     return u.Null;
   if (t === void 0)
     return u.Undefined;
-  throw new x$1(`Unrecognized simple value: ${t.toString()}`);
+  throw new x(`Unrecognized simple value: ${t.toString()}`);
 }
 function T(t, e) {
   E(t, e.length), r$1 > a.length - e.length && k(r$1 + e.length), a.set(e, r$1), r$1 += e.length;
@@ -4673,7 +4709,7 @@ function st(t) {
 function ot(t) {
   t >= 0 ? it(t) : st(t);
 }
-function z$1(t) {
+function z(t) {
   T(c.TextString, tt$1.encode(t));
 }
 function m(t) {
@@ -4974,8 +5010,8 @@ function mod(a2, b2) {
   const result = a2 % b2;
   return result >= _0n$6 ? result : b2 + result;
 }
-function pow2(x3, power, modulo) {
-  let res = x3;
+function pow2(x2, power, modulo) {
+  let res = x2;
   while (power-- > _0n$6) {
     res *= res;
     res %= modulo;
@@ -4989,17 +5025,17 @@ function invert(number2, modulo) {
     throw new Error("invert: expected positive modulus, got " + modulo);
   let a2 = mod(number2, modulo);
   let b2 = modulo;
-  let x3 = _0n$6, u2 = _1n$7;
+  let x2 = _0n$6, u2 = _1n$7;
   while (a2 !== _0n$6) {
     const q2 = b2 / a2;
     const r2 = b2 % a2;
-    const m2 = x3 - u2 * q2;
-    b2 = a2, a2 = r2, x3 = u2, u2 = m2;
+    const m2 = x2 - u2 * q2;
+    b2 = a2, a2 = r2, x2 = u2, u2 = m2;
   }
   const gcd = b2;
   if (gcd !== _1n$7)
     throw new Error("invert: does not exist");
-  return mod(x3, modulo);
+  return mod(x2, modulo);
 }
 function assertIsSquare(Fp3, root2, n) {
   if (!Fp3.eql(Fp3.sqr(root2), n))
@@ -5121,7 +5157,7 @@ const FIELD_FIELDS = [
   "mulN",
   "sqrN"
 ];
-function validateField$1(field) {
+function validateField(field) {
   const initial = {
     ORDER: "bigint",
     MASK: "bigint",
@@ -5255,7 +5291,7 @@ function Field(ORDER, bitLenOrOpts, isLE = false, opts = {}) {
       return sqrtP(f2, n);
     }),
     toBytes: (num) => isLE ? numberToBytesLE(num, BYTES) : numberToBytesBE(num, BYTES),
-    fromBytes: (bytes, skipValidation2 = true) => {
+    fromBytes: (bytes, skipValidation = true) => {
       if (allowedLengths) {
         if (!allowedLengths.includes(bytes.length) || bytes.length > BYTES) {
           throw new Error("Field.fromBytes: expected " + allowedLengths + " bytes, got " + bytes.length);
@@ -5269,7 +5305,7 @@ function Field(ORDER, bitLenOrOpts, isLE = false, opts = {}) {
       let scalar = isLE ? bytesToNumberLE(bytes) : bytesToNumberBE(bytes);
       if (modFromBytes)
         scalar = mod(scalar, ORDER);
-      if (!skipValidation2) {
+      if (!skipValidation) {
         if (!f2.isValid(scalar))
           throw new Error("invalid field element: outside of range 0..ORDER");
       }
@@ -5553,7 +5589,7 @@ function createField(order, field, isLE) {
   if (field) {
     if (field.ORDER !== order)
       throw new Error("Field.ORDER must match order: Fp == p, Fn == n");
-    validateField$1(field);
+    validateField(field);
     return field;
   } else {
     return Field(order, { isLE });
@@ -5683,12 +5719,12 @@ function hash_to_field(msg, count2, options) {
 }
 function isogenyMap(field, map) {
   const coeff = map.map((i) => Array.from(i).reverse());
-  return (x3, y2) => {
-    const [xn, xd, yn, yd] = coeff.map((val) => val.reduce((acc, i) => field.add(field.mul(acc, x3), i)));
+  return (x2, y2) => {
+    const [xn, xd, yn, yd] = coeff.map((val) => val.reduce((acc, i) => field.add(field.mul(acc, x2), i)));
     const [xd_inv, yd_inv] = FpInvertBatch(field, [xd, yd], true);
-    x3 = field.mul(xn, xd_inv);
+    x2 = field.mul(xn, xd_inv);
     y2 = field.mul(y2, field.mul(yn, yd_inv));
-    return { x: x3, y: y2 };
+    return { x: x2, y: y2 };
   };
 }
 const _DST_scalar = utf8ToBytes("HashToScalar-");
@@ -5803,8 +5839,8 @@ function weierstrassN(params, extraOpts = {}) {
       throw new Error("compression is not supported: Field does not have .isOdd()");
   }
   function pointToBytes(_c2, point, isCompressed) {
-    const { x: x3, y: y2 } = point.toAffine();
-    const bx = Fp3.toBytes(x3);
+    const { x: x2, y: y2 } = point.toAffine();
+    const bx = Fp3.toBytes(x2);
     _abool2(isCompressed, "isCompressed");
     if (isCompressed) {
       assertCompressionIsSupported();
@@ -5821,10 +5857,10 @@ function weierstrassN(params, extraOpts = {}) {
     const head = bytes[0];
     const tail = bytes.subarray(1);
     if (length === comp && (head === 2 || head === 3)) {
-      const x3 = Fp3.fromBytes(tail);
-      if (!Fp3.isValid(x3))
+      const x2 = Fp3.fromBytes(tail);
+      if (!Fp3.isValid(x2))
         throw new Error("bad point: is not on curve, wrong x");
-      const y2 = weierstrassEquation(x3);
+      const y2 = weierstrassEquation(x2);
       let y3;
       try {
         y3 = Fp3.sqrt(y2);
@@ -5837,28 +5873,28 @@ function weierstrassN(params, extraOpts = {}) {
       const isHeadOdd = (head & 1) === 1;
       if (isHeadOdd !== isYOdd)
         y3 = Fp3.neg(y3);
-      return { x: x3, y: y3 };
+      return { x: x2, y: y3 };
     } else if (length === uncomp && head === 4) {
       const L2 = Fp3.BYTES;
-      const x3 = Fp3.fromBytes(tail.subarray(0, L2));
+      const x2 = Fp3.fromBytes(tail.subarray(0, L2));
       const y2 = Fp3.fromBytes(tail.subarray(L2, L2 * 2));
-      if (!isValidXY(x3, y2))
+      if (!isValidXY(x2, y2))
         throw new Error("bad point: is not on curve");
-      return { x: x3, y: y2 };
+      return { x: x2, y: y2 };
     } else {
       throw new Error(`bad point: got length ${length}, expected compressed=${comp} or uncompressed=${uncomp}`);
     }
   }
   const encodePoint = extraOpts.toBytes || pointToBytes;
   const decodePoint = extraOpts.fromBytes || pointFromBytes;
-  function weierstrassEquation(x3) {
-    const x22 = Fp3.sqr(x3);
-    const x32 = Fp3.mul(x22, x3);
-    return Fp3.add(Fp3.add(x32, Fp3.mul(x3, CURVE.a)), CURVE.b);
+  function weierstrassEquation(x2) {
+    const x22 = Fp3.sqr(x2);
+    const x3 = Fp3.mul(x22, x2);
+    return Fp3.add(Fp3.add(x3, Fp3.mul(x2, CURVE.a)), CURVE.b);
   }
-  function isValidXY(x3, y2) {
+  function isValidXY(x2, y2) {
     const left = Fp3.sqr(y2);
-    const right = weierstrassEquation(x3);
+    const right = weierstrassEquation(x2);
     return Fp3.eql(left, right);
   }
   if (!isValidXY(CURVE.Gx, CURVE.Gy))
@@ -5888,14 +5924,14 @@ function weierstrassN(params, extraOpts = {}) {
     const is0 = p2.is0();
     if (iz == null)
       iz = is0 ? Fp3.ONE : Fp3.inv(Z2);
-    const x3 = Fp3.mul(X2, iz);
+    const x2 = Fp3.mul(X2, iz);
     const y2 = Fp3.mul(Y2, iz);
     const zz = Fp3.mul(Z2, iz);
     if (is0)
       return { x: Fp3.ZERO, y: Fp3.ZERO };
     if (!Fp3.eql(zz, Fp3.ONE))
       throw new Error("invZ was invalid");
-    return { x: x3, y: y2 };
+    return { x: x2, y: y2 };
   });
   const assertValidMemo = memoized((p2) => {
     if (p2.is0()) {
@@ -5903,10 +5939,10 @@ function weierstrassN(params, extraOpts = {}) {
         return;
       throw new Error("bad point: ZERO");
     }
-    const { x: x3, y: y2 } = p2.toAffine();
-    if (!Fp3.isValid(x3) || !Fp3.isValid(y2))
+    const { x: x2, y: y2 } = p2.toAffine();
+    if (!Fp3.isValid(x2) || !Fp3.isValid(y2))
       throw new Error("bad point: x or y not field elements");
-    if (!isValidXY(x3, y2))
+    if (!isValidXY(x2, y2))
       throw new Error("bad point: equation left != right");
     if (!p2.isTorsionFree())
       throw new Error("bad point: not in prime-order subgroup");
@@ -5931,14 +5967,14 @@ function weierstrassN(params, extraOpts = {}) {
     }
     /** Does NOT validate if the point is valid. Use `.assertValidity()`. */
     static fromAffine(p2) {
-      const { x: x3, y: y2 } = p2 || {};
-      if (!p2 || !Fp3.isValid(x3) || !Fp3.isValid(y2))
+      const { x: x2, y: y2 } = p2 || {};
+      if (!p2 || !Fp3.isValid(x2) || !Fp3.isValid(y2))
         throw new Error("invalid affine point");
       if (p2 instanceof Point)
         throw new Error("projective point not allowed");
-      if (Fp3.is0(x3) && Fp3.is0(y2))
+      if (Fp3.is0(x2) && Fp3.is0(y2))
         return Point.ZERO;
-      return new Point(x3, y2, Fp3.ONE);
+      return new Point(x2, y2, Fp3.ONE);
     }
     static fromBytes(bytes) {
       const P2 = Point.fromAffine(decodePoint(_abytes2(bytes, void 0, "point")));
@@ -6289,7 +6325,7 @@ function SWUFpSqrtRatio(Fp3, Z2) {
   return sqrtRatio;
 }
 function mapToCurveSimpleSWU(Fp3, opts) {
-  validateField$1(Fp3);
+  validateField(Fp3);
   const { A, B: B2, Z: Z2 } = opts;
   if (!Fp3.isValid(A) || !Fp3.isValid(B2) || !Fp3.isValid(Z2))
     throw new Error("mapToCurveSimpleSWU: invalid opts");
@@ -6297,7 +6333,7 @@ function mapToCurveSimpleSWU(Fp3, opts) {
   if (!Fp3.isOdd)
     throw new Error("Field does not have .isOdd()");
   return (u2) => {
-    let tv1, tv2, tv3, tv4, tv5, tv6, x3, y2;
+    let tv1, tv2, tv3, tv4, tv5, tv6, x2, y2;
     tv1 = Fp3.sqr(u2);
     tv1 = Fp3.mul(tv1, Z2);
     tv2 = Fp3.sqr(tv1);
@@ -6314,17 +6350,17 @@ function mapToCurveSimpleSWU(Fp3, opts) {
     tv6 = Fp3.mul(tv6, tv4);
     tv5 = Fp3.mul(tv6, B2);
     tv2 = Fp3.add(tv2, tv5);
-    x3 = Fp3.mul(tv1, tv3);
+    x2 = Fp3.mul(tv1, tv3);
     const { isValid, value } = sqrtRatio(tv2, tv6);
     y2 = Fp3.mul(tv1, u2);
     y2 = Fp3.mul(y2, value);
-    x3 = Fp3.cmov(x3, tv3, isValid);
+    x2 = Fp3.cmov(x2, tv3, isValid);
     y2 = Fp3.cmov(y2, value, isValid);
     const e1 = Fp3.isOdd(u2) === Fp3.isOdd(y2);
     y2 = Fp3.cmov(Fp3.neg(y2), y2, e1);
     const tv4_inv = FpInvertBatch(Fp3, [tv4], true)[0];
-    x3 = Fp3.mul(x3, tv4_inv);
-    return { x: x3, y: y2 };
+    x2 = Fp3.mul(x2, tv4_inv);
+    return { x: x2, y: y2 };
   };
 }
 function getWLengths(Fp3, Fn) {
@@ -6371,10 +6407,10 @@ function _weierstrass_legacy_opts_to_new(c2) {
   return { CURVE, curveOpts };
 }
 function _legacyHelperEquat(Fp3, a2, b2) {
-  function weierstrassEquation(x3) {
-    const x22 = Fp3.sqr(x3);
-    const x32 = Fp3.mul(x22, x3);
-    return Fp3.add(Fp3.add(x32, Fp3.mul(x3, a2)), b2);
+  function weierstrassEquation(x2) {
+    const x22 = Fp3.sqr(x2);
+    const x3 = Fp3.mul(x22, x2);
+    return Fp3.add(Fp3.add(x3, Fp3.mul(x2, a2)), b2);
   }
   return weierstrassEquation;
 }
@@ -6457,8 +6493,8 @@ function createBlsPairing(fields, G1, G2, params) {
   const ATE_NAF = NAfDecomposition(ateLoopSize);
   const calcPairingPrecomputes = memoized((point) => {
     const p2 = point;
-    const { x: x3, y: y2 } = p2.toAffine();
-    const Qx = x3, Qy = y2, negQy = Fp22.neg(y2);
+    const { x: x2, y: y2 } = p2.toAffine();
+    const Qx = x2, Qy = y2, negQy = Fp22.neg(y2);
     let Rx = Qx, Ry = Qy, Rz = Fp22.ONE;
     const ell = [];
     for (const bit of ATE_NAF) {
@@ -6757,8 +6793,8 @@ function calcFrobeniusCoefficients(Fp3, nonResidue, modulus, degree, num = 1, di
 function psiFrobenius(Fp3, Fp22, base) {
   const PSI_X = Fp22.pow(base, (Fp3.ORDER - _1n$3) / _3n$1);
   const PSI_Y = Fp22.pow(base, (Fp3.ORDER - _1n$3) / _2n$3);
-  function psi(x3, y2) {
-    const x22 = Fp22.mul(Fp22.frobeniusMap(x3, 1), PSI_X);
+  function psi(x2, y2) {
+    const x22 = Fp22.mul(Fp22.frobeniusMap(x2, 1), PSI_X);
     const y22 = Fp22.mul(Fp22.frobeniusMap(y2, 1), PSI_Y);
     return [x22, y22];
   }
@@ -6766,8 +6802,8 @@ function psiFrobenius(Fp3, Fp22, base) {
   const PSI2_Y = Fp22.pow(base, (Fp3.ORDER ** _2n$3 - _1n$3) / _2n$3);
   if (!Fp22.eql(PSI2_Y, Fp22.neg(Fp22.ONE)))
     throw new Error("psiFrobenius: PSI2_Y!==-1");
-  function psi2(x3, y2) {
-    return [Fp22.mul(x3, PSI2_X), Fp22.neg(y2)];
+  function psi2(x2, y2) {
+    return [Fp22.mul(x2, PSI2_X), Fp22.neg(y2)];
   }
   const mapAffine = (fn) => (c2, P2) => {
     const affine = P2.toAffine();
@@ -6909,16 +6945,16 @@ class _Field2 {
     if (!Fp22.eql(Fp22.sqr(candidateSqrt), num))
       throw new Error("Cannot find square root");
     const x1 = candidateSqrt;
-    const x22 = Fp22.neg(x1);
+    const x2 = Fp22.neg(x1);
     const { re: re1, im: im1 } = Fp22.reim(x1);
-    const { re: re2, im: im2 } = Fp22.reim(x22);
+    const { re: re2, im: im2 } = Fp22.reim(x2);
     if (im1 > im2 || im1 === im2 && re1 > re2)
       return x1;
-    return x22;
+    return x2;
   }
   // Same as sgn0_m_eq_2 in RFC 9380
-  isOdd(x3) {
-    const { re: x0, im: x1 } = this.reim(x3);
+  isOdd(x2) {
+    const { re: x0, im: x1 } = this.reim(x2);
     const sign_0 = x0 % _2n$3;
     const zero_0 = x0 === _0n$2;
     const sign_1 = x1 % _2n$3;
@@ -7445,15 +7481,15 @@ const { Fp: Fp$1, Fp2, Fp6, Fp12 } = tower12({
     return { c0: Fp$1.sub(t0, t1), c1: Fp$1.add(t0, t1) };
   },
   Fp12finalExponentiate: (num) => {
-    const x3 = BLS_X;
+    const x2 = BLS_X;
     const t0 = Fp12.div(Fp12.frobeniusMap(num, 6), num);
     const t1 = Fp12.mul(Fp12.frobeniusMap(t0, 2), t0);
-    const t2 = Fp12.conjugate(Fp12._cyclotomicExp(t1, x3));
+    const t2 = Fp12.conjugate(Fp12._cyclotomicExp(t1, x2));
     const t3 = Fp12.mul(Fp12.conjugate(Fp12._cyclotomicSquare(t1)), t2);
-    const t4 = Fp12.conjugate(Fp12._cyclotomicExp(t3, x3));
-    const t5 = Fp12.conjugate(Fp12._cyclotomicExp(t4, x3));
-    const t6 = Fp12.mul(Fp12.conjugate(Fp12._cyclotomicExp(t5, x3)), Fp12._cyclotomicSquare(t2));
-    const t7 = Fp12.conjugate(Fp12._cyclotomicExp(t6, x3));
+    const t4 = Fp12.conjugate(Fp12._cyclotomicExp(t3, x2));
+    const t5 = Fp12.conjugate(Fp12._cyclotomicExp(t4, x2));
+    const t6 = Fp12.mul(Fp12.conjugate(Fp12._cyclotomicExp(t5, x2)), Fp12._cyclotomicSquare(t2));
+    const t7 = Fp12.conjugate(Fp12._cyclotomicExp(t6, x2));
     const t2_t5_pow_q2 = Fp12.frobeniusMap(Fp12.mul(t2, t5), 2);
     const t4_t1_pow_q3 = Fp12.frobeniusMap(Fp12.mul(t4, t1), 3);
     const t6_t1c_pow_q1 = Fp12.frobeniusMap(Fp12.mul(t6, Fp12.conjugate(t1)), 1);
@@ -7510,56 +7546,56 @@ function setMask(bytes, mask2) {
 function pointG1ToBytes(_c2, point, isComp) {
   const { BYTES: L2, ORDER: P2 } = Fp$1;
   const is0 = point.is0();
-  const { x: x3, y: y2 } = point.toAffine();
+  const { x: x2, y: y2 } = point.toAffine();
   if (isComp) {
     if (is0)
       return COMPZERO.slice();
     const sort = Boolean(y2 * _2n$2 / P2);
-    return setMask(numberToBytesBE(x3, L2), { compressed: true, sort });
+    return setMask(numberToBytesBE(x2, L2), { compressed: true, sort });
   } else {
     if (is0) {
       return concatBytes(Uint8Array.of(64), new Uint8Array(2 * L2 - 1));
     } else {
-      return concatBytes(numberToBytesBE(x3, L2), numberToBytesBE(y2, L2));
+      return concatBytes(numberToBytesBE(x2, L2), numberToBytesBE(y2, L2));
     }
   }
 }
 function signatureG1ToBytes(point) {
   point.assertValidity();
   const { BYTES: L2, ORDER: P2 } = Fp$1;
-  const { x: x3, y: y2 } = point.toAffine();
+  const { x: x2, y: y2 } = point.toAffine();
   if (point.is0())
     return COMPZERO.slice();
   const sort = Boolean(y2 * _2n$2 / P2);
-  return setMask(numberToBytesBE(x3, L2), { compressed: true, sort });
+  return setMask(numberToBytesBE(x2, L2), { compressed: true, sort });
 }
 function pointG1FromBytes(bytes) {
   const { compressed, infinity, sort, value } = parseMask(bytes);
   const { BYTES: L2, ORDER: P2 } = Fp$1;
   if (value.length === 48 && compressed) {
     const compressedValue = bytesToNumberBE(value);
-    const x3 = Fp$1.create(compressedValue & bitMask(Fp$1.BITS));
+    const x2 = Fp$1.create(compressedValue & bitMask(Fp$1.BITS));
     if (infinity) {
-      if (x3 !== _0n$1)
+      if (x2 !== _0n$1)
         throw new Error("invalid G1 point: non-empty, at infinity, with compression");
       return { x: _0n$1, y: _0n$1 };
     }
-    const right = Fp$1.add(Fp$1.pow(x3, _3n), Fp$1.create(bls12_381_CURVE_G1.b));
+    const right = Fp$1.add(Fp$1.pow(x2, _3n), Fp$1.create(bls12_381_CURVE_G1.b));
     let y2 = Fp$1.sqrt(right);
     if (!y2)
       throw new Error("invalid G1 point: compressed point");
     if (y2 * _2n$2 / P2 !== BigInt(sort))
       y2 = Fp$1.neg(y2);
-    return { x: Fp$1.create(x3), y: Fp$1.create(y2) };
+    return { x: Fp$1.create(x2), y: Fp$1.create(y2) };
   } else if (value.length === 96 && !compressed) {
-    const x3 = bytesToNumberBE(value.subarray(0, L2));
+    const x2 = bytesToNumberBE(value.subarray(0, L2));
     const y2 = bytesToNumberBE(value.subarray(L2));
     if (infinity) {
-      if (x3 !== _0n$1 || y2 !== _0n$1)
+      if (x2 !== _0n$1 || y2 !== _0n$1)
         throw new Error("G1: non-empty point at infinity");
       return bls12_381.G1.Point.ZERO.toAffine();
     }
-    return { x: Fp$1.create(x3), y: Fp$1.create(y2) };
+    return { x: Fp$1.create(x2), y: Fp$1.create(y2) };
   } else {
     throw new Error("invalid G1 point: expected 48/96 bytes");
   }
@@ -7571,31 +7607,31 @@ function signatureG1FromBytes(hex2) {
   const compressedValue = bytesToNumberBE(value);
   if (infinity)
     return Point.ZERO;
-  const x3 = Fp$1.create(compressedValue & bitMask(Fp$1.BITS));
-  const right = Fp$1.add(Fp$1.pow(x3, _3n), Fp$1.create(bls12_381_CURVE_G1.b));
+  const x2 = Fp$1.create(compressedValue & bitMask(Fp$1.BITS));
+  const right = Fp$1.add(Fp$1.pow(x2, _3n), Fp$1.create(bls12_381_CURVE_G1.b));
   let y2 = Fp$1.sqrt(right);
   if (!y2)
     throw new Error("invalid G1 point: compressed");
   const aflag = BigInt(sort);
   if (y2 * _2n$2 / P2 !== aflag)
     y2 = Fp$1.neg(y2);
-  const point = Point.fromAffine({ x: x3, y: y2 });
+  const point = Point.fromAffine({ x: x2, y: y2 });
   point.assertValidity();
   return point;
 }
 function pointG2ToBytes(_c2, point, isComp) {
   const { BYTES: L2, ORDER: P2 } = Fp$1;
   const is0 = point.is0();
-  const { x: x3, y: y2 } = point.toAffine();
+  const { x: x2, y: y2 } = point.toAffine();
   if (isComp) {
     if (is0)
       return concatBytes(COMPZERO, numberToBytesBE(_0n$1, L2));
     const flag = Boolean(y2.c1 === _0n$1 ? y2.c0 * _2n$2 / P2 : y2.c1 * _2n$2 / P2);
-    return concatBytes(setMask(numberToBytesBE(x3.c1, L2), { compressed: true, sort: flag }), numberToBytesBE(x3.c0, L2));
+    return concatBytes(setMask(numberToBytesBE(x2.c1, L2), { compressed: true, sort: flag }), numberToBytesBE(x2.c0, L2));
   } else {
     if (is0)
       return concatBytes(Uint8Array.of(64), new Uint8Array(4 * L2 - 1));
-    const { re: x0, im: x1 } = Fp2.reim(x3);
+    const { re: x0, im: x1 } = Fp2.reim(x2);
     const { re: y0, im: y1 } = Fp2.reim(y2);
     return concatBytes(numberToBytesBE(x1, L2), numberToBytesBE(x0, L2), numberToBytesBE(y1, L2), numberToBytesBE(y0, L2));
   }
@@ -7605,8 +7641,8 @@ function signatureG2ToBytes(point) {
   const { BYTES: L2 } = Fp$1;
   if (point.is0())
     return concatBytes(COMPZERO, numberToBytesBE(_0n$1, L2));
-  const { x: x3, y: y2 } = point.toAffine();
-  const { re: x0, im: x1 } = Fp2.reim(x3);
+  const { x: x2, y: y2 } = point.toAffine();
+  const { re: x0, im: x1 } = Fp2.reim(x2);
   const { re: y0, im: y1 } = Fp2.reim(y2);
   const tmp = y1 > _0n$1 ? y1 * _2n$2 : y0 * _2n$2;
   const sort = Boolean(tmp / Fp$1.ORDER & _1n$2);
@@ -7631,12 +7667,12 @@ function pointG2FromBytes(bytes) {
     }
     const x_1 = slc(value, 0, L2);
     const x_0 = slc(value, L2, 2 * L2);
-    const x3 = Fp2.create({ c0: Fp$1.create(x_0), c1: Fp$1.create(x_1) });
-    const right = Fp2.add(Fp2.pow(x3, _3n), bls12_381_CURVE_G2.b);
+    const x2 = Fp2.create({ c0: Fp$1.create(x_0), c1: Fp$1.create(x_1) });
+    const right = Fp2.add(Fp2.pow(x2, _3n), bls12_381_CURVE_G2.b);
     let y2 = Fp2.sqrt(right);
     const Y_bit = y2.c1 === _0n$1 ? y2.c0 * _2n$2 / P2 : y2.c1 * _2n$2 / P2 ? _1n$2 : _0n$1;
     y2 = sort && Y_bit > 0 ? y2 : Fp2.neg(y2);
-    return { x: x3, y: y2 };
+    return { x: x2, y: y2 };
   } else if (value.length === 192 && !compressed) {
     if (infinity) {
       if (value.reduce((p2, c2) => p2 !== 0 ? c2 + 1 : c2, 0) > 0) {
@@ -7665,8 +7701,8 @@ function signatureG2FromBytes(hex2) {
   if (infinity)
     return Point.ZERO;
   const x1 = Fp$1.create(z1 & bitMask(Fp$1.BITS));
-  const x22 = Fp$1.create(z2);
-  const x3 = Fp2.create({ c0: x22, c1: x1 });
+  const x2 = Fp$1.create(z2);
+  const x3 = Fp2.create({ c0: x2, c1: x1 });
   const y2 = Fp2.add(Fp2.pow(x3, _3n), bls12_381_CURVE_G2.b);
   let y3 = Fp2.sqrt(y2);
   if (!y3)
@@ -7758,14 +7794,14 @@ const bls12_381 = bls({
     // https://eprint.iacr.org/2017/419.pdf
     // prettier-ignore
     clearCofactor: (c2, P2) => {
-      const x3 = BLS_X;
-      let t1 = P2.multiplyUnsafe(x3).negate();
+      const x2 = BLS_X;
+      let t1 = P2.multiplyUnsafe(x2).negate();
       let t2 = G2psi(c2, P2);
       let t3 = P2.double();
       t3 = G2psi2(c2, t3);
       t3 = t3.subtract(t2);
       t2 = t1.add(t2);
-      t2 = t2.multiplyUnsafe(x3).negate();
+      t2 = t2.multiplyUnsafe(x2).negate();
       t3 = t3.add(t2);
       t3 = t3.subtract(t1);
       const Q2 = t3.subtract(P2);
@@ -7957,12 +7993,12 @@ const G2_SWU = mapToCurveSimpleSWU(Fp2, {
   // Z: -(2 + I)
 });
 function mapToG1(scalars) {
-  const { x: x3, y: y2 } = G1_SWU(Fp$1.create(scalars[0]));
-  return isogenyMapG1(x3, y2);
+  const { x: x2, y: y2 } = G1_SWU(Fp$1.create(scalars[0]));
+  return isogenyMapG1(x2, y2);
 }
 function mapToG2(scalars) {
-  const { x: x3, y: y2 } = G2_SWU(Fp2.fromBigTuple(scalars));
-  return isogenyMapG2(x3, y2);
+  const { x: x2, y: y2 } = G2_SWU(Fp2.fromBigTuple(scalars));
+  return isogenyMapG2(x2, y2);
 }
 function blsVerify(pk, sig, msg) {
   const primaryKey = typeof pk === "string" ? pk : bytesToHex(pk);
@@ -8774,8 +8810,8 @@ function readCertifiedReject(certificate, path, requestId) {
 }
 /*! noble-curves - MIT License (c) 2022 Paul Miller (paulmillr.com) */
 const _0n = BigInt(0), _1n$1 = BigInt(1), _2n$1 = BigInt(2), _8n$1 = BigInt(8);
-function isEdValidXY(Fp3, CURVE, x3, y2) {
-  const x22 = Fp3.sqr(x3);
+function isEdValidXY(Fp3, CURVE, x2, y2) {
+  const x22 = Fp3.sqr(x2);
   const y22 = Fp3.sqr(y2);
   const left = Fp3.add(Fp3.mul(CURVE.a, x22), y22);
   const right = Fp3.add(Fp3.ONE, Fp3.mul(CURVE.d, Fp3.mul(x22, y22)));
@@ -8812,14 +8848,14 @@ function edwards(params, extraOpts = {}) {
     const is0 = p2.is0();
     if (iz == null)
       iz = is0 ? _8n$1 : Fp3.inv(Z2);
-    const x3 = modP(X2 * iz);
+    const x2 = modP(X2 * iz);
     const y2 = modP(Y2 * iz);
     const zz = Fp3.mul(Z2, iz);
     if (is0)
       return { x: _0n, y: _1n$1 };
     if (zz !== _1n$1)
       throw new Error("invZ was invalid");
-    return { x: x3, y: y2 };
+    return { x: x2, y: y2 };
   });
   const assertValidMemo = memoized((p2) => {
     const { a: a2, d: d2 } = CURVE;
@@ -8855,10 +8891,10 @@ function edwards(params, extraOpts = {}) {
     static fromAffine(p2) {
       if (p2 instanceof Point)
         throw new Error("extended point not allowed");
-      const { x: x3, y: y2 } = p2 || {};
-      acoord("x", x3);
+      const { x: x2, y: y2 } = p2 || {};
+      acoord("x", x2);
       acoord("y", y2);
-      return new Point(x3, y2, _1n$1, modP(x3 * y2));
+      return new Point(x2, y2, _1n$1, modP(x2 * y2));
     }
     // Uses algo from RFC8032 5.1.3.
     static fromBytes(bytes, zip215 = false) {
@@ -8875,16 +8911,16 @@ function edwards(params, extraOpts = {}) {
       const y22 = modP(y2 * y2);
       const u2 = modP(y22 - _1n$1);
       const v2 = modP(d2 * y22 - a2);
-      let { isValid, value: x3 } = uvRatio2(u2, v2);
+      let { isValid, value: x2 } = uvRatio2(u2, v2);
       if (!isValid)
         throw new Error("bad point: invalid y coordinate");
-      const isXOdd = (x3 & _1n$1) === _1n$1;
+      const isXOdd = (x2 & _1n$1) === _1n$1;
       const isLastByteOdd = (lastByte & 128) !== 0;
-      if (!zip215 && x3 === _0n && isLastByteOdd)
+      if (!zip215 && x2 === _0n && isLastByteOdd)
         throw new Error("bad point: x=0 and x_0=1");
       if (isLastByteOdd !== isXOdd)
-        x3 = modP(-x3);
-      return Point.fromAffine({ x: x3, y: y2 });
+        x2 = modP(-x2);
+      return Point.fromAffine({ x: x2, y: y2 });
     }
     static fromHex(bytes, zip215 = false) {
       return Point.fromBytes(ensureBytes("point", bytes), zip215);
@@ -9012,9 +9048,9 @@ function edwards(params, extraOpts = {}) {
       return this.multiplyUnsafe(cofactor);
     }
     toBytes() {
-      const { x: x3, y: y2 } = this.toAffine();
+      const { x: x2, y: y2 } = this.toAffine();
       const bytes = Fp3.toBytes(y2);
-      bytes[bytes.length - 1] |= x3 & _1n$1 ? 128 : 0;
+      bytes[bytes.length - 1] |= x2 & _1n$1 ? 128 : 0;
       return bytes;
     }
     toHex() {
@@ -9266,13 +9302,13 @@ const ed25519_CURVE = /* @__PURE__ */ (() => ({
   Gx: BigInt("0x216936d3cd6e53fec0a4e231fdd6dc5c692cc7609525a7b2c9562d608f25d51a"),
   Gy: BigInt("0x6666666666666666666666666666666666666666666666666666666666666658")
 }))();
-function ed25519_pow_2_252_3(x3) {
+function ed25519_pow_2_252_3(x2) {
   const _10n = BigInt(10), _20n = BigInt(20), _40n = BigInt(40), _80n = BigInt(80);
   const P2 = ed25519_CURVE_p;
-  const x22 = x3 * x3 % P2;
-  const b2 = x22 * x3 % P2;
+  const x22 = x2 * x2 % P2;
+  const b2 = x22 * x2 % P2;
   const b4 = pow2(b2, _2n, P2) * b2 % P2;
-  const b5 = pow2(b4, _1n, P2) * x3 % P2;
+  const b5 = pow2(b4, _1n, P2) * x2 % P2;
   const b10 = pow2(b5, _5n, P2) * b5 % P2;
   const b20 = pow2(b10, _10n, P2) * b10 % P2;
   const b40 = pow2(b20, _20n, P2) * b20 % P2;
@@ -9280,7 +9316,7 @@ function ed25519_pow_2_252_3(x3) {
   const b160 = pow2(b80, _80n, P2) * b80 % P2;
   const b240 = pow2(b160, _80n, P2) * b80 % P2;
   const b250 = pow2(b240, _10n, P2) * b10 % P2;
-  const pow_p_5_8 = pow2(b250, _2n, P2) * x3 % P2;
+  const pow_p_5_8 = pow2(b250, _2n, P2) * x2 % P2;
   return { pow_p_5_8, b2 };
 }
 function adjustScalarBytes(bytes) {
@@ -9295,20 +9331,20 @@ function uvRatio(u2, v2) {
   const v3 = mod(v2 * v2 * v2, P2);
   const v7 = mod(v3 * v3 * v2, P2);
   const pow = ed25519_pow_2_252_3(u2 * v7).pow_p_5_8;
-  let x3 = mod(u2 * v3 * pow, P2);
-  const vx2 = mod(v2 * x3 * x3, P2);
-  const root1 = x3;
-  const root2 = mod(x3 * ED25519_SQRT_M1, P2);
+  let x2 = mod(u2 * v3 * pow, P2);
+  const vx2 = mod(v2 * x2 * x2, P2);
+  const root1 = x2;
+  const root2 = mod(x2 * ED25519_SQRT_M1, P2);
   const useRoot1 = vx2 === u2;
   const useRoot2 = vx2 === mod(-u2, P2);
   const noRoot = vx2 === mod(-u2 * ED25519_SQRT_M1, P2);
   if (useRoot1)
-    x3 = root1;
+    x2 = root1;
   if (useRoot2 || noRoot)
-    x3 = root2;
-  if (isNegativeLE(x3, P2))
-    x3 = mod(-x3, P2);
-  return { isValid: useRoot1 || useRoot2, value: x3 };
+    x2 = root2;
+  if (isNegativeLE(x2, P2))
+    x2 = mod(-x2, P2);
+  return { isValid: useRoot1 || useRoot2, value: x2 };
 }
 const Fp = /* @__PURE__ */ (() => Field(ed25519_CURVE.p, { isLE: true }))();
 const ed25519Defaults = /* @__PURE__ */ (() => ({
@@ -10029,8 +10065,8 @@ const _HttpAgent = class _HttpAgent {
         throw ProtocolError.fromCode(new ExcessiveSignaturesErrorCode(signatures.length, maxSignatures));
       }
       for (const sig of signatures) {
-        const { timestamp, identity: identity2 } = sig;
-        const nodeId = Principal$1.fromUint8Array(identity2).toText();
+        const { timestamp, identity } = sig;
+        const nodeId = Principal$1.fromUint8Array(identity).toText();
         let hash;
         if (status === QueryResponseStatus.Replied) {
           const { reply } = queryResponse;
@@ -10168,10 +10204,10 @@ const _HttpAgent = class _HttpAgent {
   }
   addTransform(type, fn, priority = fn.priority || 0) {
     if (type === "update") {
-      const i = __privateGet(this, _updatePipeline).findIndex((x3) => (x3.priority || 0) < priority);
+      const i = __privateGet(this, _updatePipeline).findIndex((x2) => (x2.priority || 0) < priority);
       __privateGet(this, _updatePipeline).splice(i >= 0 ? i : __privateGet(this, _updatePipeline).length, 0, Object.assign(fn, { priority }));
     } else if (type === "query") {
-      const i = __privateGet(this, _queryPipeline).findIndex((x3) => (x3.priority || 0) < priority);
+      const i = __privateGet(this, _queryPipeline).findIndex((x2) => (x2.priority || 0) < priority);
       __privateGet(this, _queryPipeline).splice(i >= 0 ? i : __privateGet(this, _queryPipeline).length, 0, Object.assign(fn, { priority }));
     }
   }
@@ -10188,9 +10224,9 @@ const _HttpAgent = class _HttpAgent {
    * @param identity - (Optional) The identity to use for the call. If not provided, the agent's current identity will be used.
    * @returns A promise that resolves to the response of the call, including the request ID and response details.
    */
-  async call(canisterId, options, identity2) {
+  async call(canisterId, options, identity) {
     const callSync = options.callSync ?? true;
-    const id2 = await (identity2 ?? __privateGet(this, _identity));
+    const id2 = await (identity ?? __privateGet(this, _identity));
     if (!id2) {
       throw ExternalError.fromCode(new IdentityInvalidErrorCode());
     }
@@ -10278,11 +10314,11 @@ const _HttpAgent = class _HttpAgent {
             ...options,
             // disable v4 api
             callSync: false
-          }, identity2);
+          }, identity);
         }
         if (error.hasCode(IngressExpiryInvalidErrorCode) && !__privateGet(this, _hasSyncedTime)) {
           await this.syncTime(canister);
-          return this.call(canister, options, identity2);
+          return this.call(canister, options, identity);
         }
         error.code.requestContext = {
           requestId,
@@ -10329,14 +10365,14 @@ const _HttpAgent = class _HttpAgent {
     };
     throw UnknownError.fromCode(unexpectedErrorCode);
   }
-  async query(canisterId, fields, identity2) {
+  async query(canisterId, fields, identity) {
     const backoff2 = __privateGet(this, _backoffStrategy).call(this);
     const ecid = fields.effectiveCanisterId ? Principal$1.from(fields.effectiveCanisterId) : Principal$1.from(canisterId);
     await __privateMethod(this, _HttpAgent_instances, asyncGuard_fn).call(this, ecid);
     this.log.print(`ecid ${ecid.toString()}`);
     this.log.print(`canisterId ${canisterId.toString()}`);
     let transformedRequest;
-    const id2 = await (identity2 ?? __privateGet(this, _identity));
+    const id2 = await (identity ?? __privateGet(this, _identity));
     if (!id2) {
       throw ExternalError.fromCode(new IdentityInvalidErrorCode());
     }
@@ -10402,7 +10438,7 @@ const _HttpAgent = class _HttpAgent {
       if (error instanceof AgentError) {
         if (error.hasCode(IngressExpiryInvalidErrorCode) && !__privateGet(this, _hasSyncedTime)) {
           await this.syncTime(ecid);
-          return this.query(canisterId, fields, identity2);
+          return this.query(canisterId, fields, identity);
         }
         error.code.requestContext = {
           requestId,
@@ -10418,9 +10454,9 @@ const _HttpAgent = class _HttpAgent {
       throw queryError;
     }
   }
-  async createReadStateRequest(fields, identity2) {
+  async createReadStateRequest(fields, identity) {
     await __privateMethod(this, _HttpAgent_instances, asyncGuard_fn).call(this);
-    const id2 = await (identity2 ?? __privateGet(this, _identity));
+    const id2 = await (identity ?? __privateGet(this, _identity));
     if (!id2) {
       throw ExternalError.fromCode(new IdentityInvalidErrorCode());
     }
@@ -10461,11 +10497,11 @@ const _HttpAgent = class _HttpAgent {
       transformedRequest = request2;
     } else {
       requestId = getRequestId(fields);
-      const identity2 = await __privateGet(this, _identity);
-      if (!identity2) {
+      const identity = await __privateGet(this, _identity);
+      if (!identity) {
         throw ExternalError.fromCode(new IdentityInvalidErrorCode());
       }
-      transformedRequest = await this.createReadStateRequest(fields, identity2);
+      transformedRequest = await this.createReadStateRequest(fields, identity);
     }
     const url = new URL(`/api/v3/canister/${canister.toString()}/read_state`, this.host);
     return await __privateMethod(this, _HttpAgent_instances, readStateInner_fn).call(this, url, { canisterId: canister }, transformedRequest, requestId);
@@ -10615,8 +10651,8 @@ const _HttpAgent = class _HttpAgent {
   invalidateIdentity() {
     __privateSet(this, _identity, null);
   }
-  replaceIdentity(identity2) {
-    __privateSet(this, _identity, Promise.resolve(identity2));
+  replaceIdentity(identity) {
+    __privateSet(this, _identity, Promise.resolve(identity));
   }
   async fetchSubnetKeys(canisterId) {
     const effectiveCanisterId = Principal$1.from(canisterId);
@@ -11261,9 +11297,386 @@ function _createActorMethod(actor, methodName, func, blsVerify2) {
   handler.withOptions = (options) => (...args) => caller(options, ...args);
   return handler;
 }
-new TextEncoder().encode("icfs-chunk/");
-new TextEncoder().encode("icfs-metadata/");
-new TextEncoder().encode("ynode/");
+const MAXIMUM_CONCURRENT_UPLOADS = 10;
+const MAX_RETRIES = 3;
+const BASE_DELAY_MS = 1e3;
+const MAX_DELAY_MS = 3e4;
+const GATEWAY_VERSION = "v1";
+const HASH_ALGORITHM = "SHA-256";
+const SHA256_PREFIX = "sha256:";
+const DOMAIN_SEPARATOR_FOR_CHUNKS = new TextEncoder().encode("icfs-chunk/");
+const DOMAIN_SEPARATOR_FOR_METADATA = new TextEncoder().encode("icfs-metadata/");
+const DOMAIN_SEPARATOR_FOR_NODES = new TextEncoder().encode("ynode/");
+async function withRetry(operation) {
+  let lastError;
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      return await operation();
+    } catch (error) {
+      lastError = error instanceof Error ? error : new Error(String(error));
+      const shouldRetry = isRetriableError(error);
+      if (attempt === MAX_RETRIES || !shouldRetry) {
+        if (!shouldRetry && attempt < MAX_RETRIES) {
+          console.warn(`Non-retriable error encountered: ${lastError.message}. Not retrying.`);
+        }
+        throw error;
+      }
+      const delay2 = Math.min(BASE_DELAY_MS * 2 ** attempt + Math.random() * 1e3, MAX_DELAY_MS);
+      console.warn(`Request failed (attempt ${attempt + 1}/${MAX_RETRIES + 1}): ${lastError.message}. Retrying in ${Math.round(delay2)}ms...`);
+      await new Promise((resolve) => setTimeout(resolve, delay2));
+    }
+  }
+  throw lastError || new Error("Unknown error occurred during retry attempts");
+}
+function isRetriableError(error) {
+  var _a2, _b2;
+  const errorMessage = ((_a2 = error == null ? void 0 : error.message) == null ? void 0 : _a2.toLowerCase()) || "";
+  if ((_b2 = error == null ? void 0 : error.response) == null ? void 0 : _b2.status) {
+    const status = error.response.status;
+    if (status === 408 || status === 429)
+      return true;
+    if (status >= 400 && status < 500)
+      return false;
+    if (status >= 500)
+      return true;
+  }
+  if (errorMessage.includes("ssl") || errorMessage.includes("tls") || errorMessage.includes("network error") || errorMessage.includes("connection") || errorMessage.includes("timeout") || errorMessage.includes("fetch")) {
+    return true;
+  }
+  if (errorMessage.includes("validation") || errorMessage.includes("invalid") || errorMessage.includes("malformed") || errorMessage.includes("unauthorized") || errorMessage.includes("forbidden") || errorMessage.includes("not found")) {
+    return false;
+  }
+  return true;
+}
+function validateHashFormat(hash, context) {
+  if (!hash) {
+    throw new Error(`${context}: Hash cannot be empty`);
+  }
+  if (!hash.startsWith(SHA256_PREFIX)) {
+    throw new Error(`${context}: Invalid hash format. Expected format: ${SHA256_PREFIX}<64-char-hex>, got: ${hash}`);
+  }
+  const hexPart = hash.substring(SHA256_PREFIX.length);
+  if (hexPart.length !== 64) {
+    throw new Error(`${context}: Invalid hash format. Expected 64 hex characters after ${SHA256_PREFIX}, got ${hexPart.length} characters: ${hash}`);
+  }
+  if (!/^[0-9a-f]{64}$/i.test(hexPart)) {
+    throw new Error(`${context}: Invalid hash format. Hash must contain only hex characters (0-9, a-f), got: ${hash}`);
+  }
+}
+class YHash {
+  constructor(bytes) {
+    __publicField(this, "bytes");
+    if (bytes.length !== 32) {
+      throw new Error(`YHash must be exactly 32 bytes, got ${bytes.length}`);
+    }
+    this.bytes = new Uint8Array(bytes);
+  }
+  static async fromNodes(left, right) {
+    const leftBytes = left instanceof YHash ? left.bytes : new TextEncoder().encode("UNBALANCED");
+    const rightBytes = right instanceof YHash ? right.bytes : new TextEncoder().encode("UNBALANCED");
+    const combined = new Uint8Array(DOMAIN_SEPARATOR_FOR_NODES.length + leftBytes.length + rightBytes.length);
+    const arrays = [DOMAIN_SEPARATOR_FOR_NODES, leftBytes, rightBytes];
+    let offset2 = 0;
+    for (const data of arrays) {
+      combined.set(data, offset2);
+      offset2 += data.length;
+    }
+    const hashBuffer = await crypto.subtle.digest(HASH_ALGORITHM, combined);
+    return new YHash(new Uint8Array(hashBuffer));
+  }
+  static async fromChunk(data) {
+    return YHash.fromBytes(DOMAIN_SEPARATOR_FOR_CHUNKS, data);
+  }
+  static async fromHeaders(headers) {
+    const headerLines = [];
+    for (const [key, value] of Object.entries(headers)) {
+      headerLines.push(`${key.trim()}: ${value.trim()}
+`);
+    }
+    headerLines.sort();
+    const hash = await YHash.fromBytes(DOMAIN_SEPARATOR_FOR_METADATA, new TextEncoder().encode(headerLines.join("")));
+    return hash;
+  }
+  static async fromBytes(domainSeparator, data) {
+    const combined = new Uint8Array(domainSeparator.length + data.length);
+    combined.set(domainSeparator);
+    combined.set(data, domainSeparator.length);
+    const hashBuffer = await crypto.subtle.digest(HASH_ALGORITHM, combined);
+    return new YHash(new Uint8Array(hashBuffer));
+  }
+  static fromHex(hexString) {
+    const bytes = new Uint8Array(hexString.match(/.{1,2}/g).map((byte) => Number.parseInt(byte, 16)));
+    return new YHash(bytes);
+  }
+  toShaString() {
+    return `${SHA256_PREFIX}${this.toHex()}`;
+  }
+  toString() {
+    throw new Error("toString is not supported for YHash");
+  }
+  toHex() {
+    return Array.from(this.bytes).map((b2) => b2.toString(16).padStart(2, "0")).join("");
+  }
+}
+function nodeToJSON(node) {
+  return {
+    hash: node.hash.toShaString(),
+    left: node.left ? nodeToJSON(node.left) : null,
+    right: node.right ? nodeToJSON(node.right) : null
+  };
+}
+class BlobHashTree {
+  constructor(chunk_hashes, tree, headers = null) {
+    __publicField(this, "tree_type");
+    __publicField(this, "chunk_hashes");
+    __publicField(this, "tree");
+    __publicField(this, "headers");
+    this.tree_type = "DSBMTWH";
+    this.chunk_hashes = chunk_hashes;
+    this.tree = tree;
+    if (headers == null) {
+      this.headers = [];
+    } else if (Array.isArray(headers)) {
+      this.headers = headers;
+    } else {
+      this.headers = Object.entries(headers).map(([key, value]) => `${key.trim()}: ${value.trim()}`);
+    }
+    this.headers.sort();
+  }
+  static async build(chunkHashes, headers = {}) {
+    if (chunkHashes.length === 0) {
+      const hex2 = "8b8e620f084e48da0be2287fd12c5aaa4dbe14b468fd2e360f48d741fe7628a0";
+      const bytes = new TextEncoder().encode(hex2);
+      chunkHashes.push(new YHash(bytes));
+    }
+    let level = chunkHashes.map((hash) => ({
+      hash,
+      left: null,
+      right: null
+    }));
+    while (level.length > 1) {
+      const nextLevel = [];
+      for (let i = 0; i < level.length; i += 2) {
+        const left = level[i];
+        const right = level[i + 1] || null;
+        const parentHash = await YHash.fromNodes(left.hash, right ? right.hash : null);
+        nextLevel.push({
+          hash: parentHash,
+          left,
+          right
+        });
+      }
+      level = nextLevel;
+    }
+    const chunksRoot = level[0];
+    if (headers && Object.keys(headers).length > 0) {
+      const metadataRootHash = await YHash.fromHeaders(headers);
+      const metadataRoot = {
+        hash: metadataRootHash,
+        left: null,
+        right: null
+      };
+      const combinedRootHash = await YHash.fromNodes(chunksRoot.hash, metadataRoot.hash);
+      const combinedRoot = {
+        hash: combinedRootHash,
+        left: chunksRoot,
+        right: metadataRoot
+      };
+      return new BlobHashTree(chunkHashes, combinedRoot, headers);
+    }
+    return new BlobHashTree(chunkHashes, chunksRoot, headers);
+  }
+  toJSON() {
+    return {
+      tree_type: this.tree_type,
+      chunk_hashes: this.chunk_hashes.map((h2) => h2.toShaString()),
+      tree: nodeToJSON(this.tree),
+      headers: this.headers
+    };
+  }
+}
+class StorageGatewayClient {
+  constructor(storageGatewayUrl) {
+    __publicField(this, "storageGatewayUrl");
+    this.storageGatewayUrl = storageGatewayUrl;
+  }
+  getStorageGatewayUrl() {
+    return this.storageGatewayUrl;
+  }
+  async uploadChunk(params) {
+    const blobHashString = params.blobRootHash.toShaString();
+    const chunkHashString = params.chunkHash.toShaString();
+    validateHashFormat(blobHashString, `uploadChunk[${params.chunkIndex}] blob_hash`);
+    validateHashFormat(chunkHashString, `uploadChunk[${params.chunkIndex}] chunk_hash`);
+    return await withRetry(async () => {
+      const queryParams = new URLSearchParams({
+        owner_id: params.owner,
+        blob_hash: blobHashString,
+        chunk_hash: chunkHashString,
+        chunk_index: params.chunkIndex.toString(),
+        bucket_name: params.bucketName,
+        project_id: params.projectId
+      });
+      const url = `${this.storageGatewayUrl}/${GATEWAY_VERSION}/chunk/?${queryParams.toString()}`;
+      const response = await fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/octet-stream",
+          "X-Caffeine-Project-ID": params.projectId
+        },
+        body: params.chunkData
+      });
+      if (!response.ok) {
+        const errorText = await response.text();
+        const error = new Error(`Failed to upload chunk ${params.chunkIndex}: ${response.status} ${response.statusText} - ${errorText}`);
+        error.response = { status: response.status };
+        throw error;
+      }
+      const result = await response.json();
+      return {
+        isComplete: result.status === "blob_complete"
+      };
+    });
+  }
+  async uploadBlobTree(blobHashTree, bucketName, numBlobBytes, owner, projectId, certificateBytes) {
+    const treeJSON = blobHashTree.toJSON();
+    validateHashFormat(treeJSON.tree.hash, "uploadBlobTree root hash");
+    treeJSON.chunk_hashes.forEach((hash, index2) => {
+      validateHashFormat(hash, `uploadBlobTree chunk_hash[${index2}]`);
+    });
+    return await withRetry(async () => {
+      const url = `${this.storageGatewayUrl}/${GATEWAY_VERSION}/blob-tree/`;
+      const requestBody = {
+        blob_tree: treeJSON,
+        bucket_name: bucketName,
+        num_blob_bytes: numBlobBytes,
+        owner,
+        project_id: projectId,
+        headers: blobHashTree.headers,
+        auth: {
+          OwnerEgressSignature: Array.from(certificateBytes)
+        }
+      };
+      const response = await fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Caffeine-Project-ID": projectId
+        },
+        body: JSON.stringify(requestBody)
+      });
+      if (!response.ok) {
+        const errorText = await response.text();
+        const error = new Error(`Failed to upload blob tree: ${response.status} ${response.statusText} - ${errorText}`);
+        error.response = { status: response.status };
+        throw error;
+      }
+    });
+  }
+}
+class StorageClient {
+  constructor(bucket, storageGatewayUrl, backendCanisterId, projectId, agent) {
+    __publicField(this, "bucket");
+    __publicField(this, "backendCanisterId");
+    __publicField(this, "projectId");
+    __publicField(this, "agent");
+    __publicField(this, "storageGatewayClient");
+    this.bucket = bucket;
+    this.backendCanisterId = backendCanisterId;
+    this.projectId = projectId;
+    this.agent = agent;
+    this.storageGatewayClient = new StorageGatewayClient(storageGatewayUrl);
+  }
+  async getCertificate(hash) {
+    const args = encode$2([Text], [hash]);
+    const result = await this.agent.call(this.backendCanisterId, {
+      methodName: "_immutableObjectStorageCreateCertificate",
+      arg: args,
+      effectiveCanisterId: this.backendCanisterId
+    });
+    const respone = result.response.body;
+    if (isV4ResponseBody(respone)) {
+      console.log("Certificate:", respone.certificate);
+      return respone.certificate;
+    }
+    throw new Error("Expected v4 response body");
+  }
+  async putFile(blobBytes, onProgress) {
+    const httpHeaders = {
+      "Content-Type": "application/json"
+    };
+    const file = new Blob([new Uint8Array(blobBytes)], {
+      type: "application/octet-stream"
+    });
+    const fileHeaders = {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": file.size.toString()
+    };
+    const { chunks, chunkHashes, blobHashTree } = await this.processFileForUpload(file, fileHeaders);
+    const blobRootHash = blobHashTree.tree.hash;
+    const hashString2 = blobRootHash.toShaString();
+    const certificateBytes = await this.getCertificate(hashString2);
+    await this.storageGatewayClient.uploadBlobTree(blobHashTree, this.bucket, file.size, this.backendCanisterId, this.projectId, certificateBytes);
+    await this.parallelUpload(chunks, chunkHashes, blobRootHash, httpHeaders, onProgress);
+    return { hash: hashString2 };
+  }
+  async getDirectURL(hash) {
+    if (!hash) {
+      throw new Error("Hash must not be empty");
+    }
+    validateHashFormat(hash, `getDirectURL for path '${hash}'`);
+    return `${this.storageGatewayClient.getStorageGatewayUrl()}/${GATEWAY_VERSION}/blob/?blob_hash=${encodeURIComponent(hash)}&owner_id=${encodeURIComponent(this.backendCanisterId)}&project_id=${encodeURIComponent(this.projectId)}`;
+  }
+  async processFileForUpload(file, headers) {
+    const chunks = this.createFileChunks(file);
+    const chunkHashes = [];
+    for (let i = 0; i < chunks.length; i++) {
+      const chunkData = new Uint8Array(await chunks[i].arrayBuffer());
+      const hash = await YHash.fromChunk(chunkData);
+      chunkHashes.push(hash);
+    }
+    const blobHashTree = await BlobHashTree.build(chunkHashes, headers);
+    return { chunks, chunkHashes, blobHashTree };
+  }
+  async parallelUpload(chunks, chunkHashes, blobRootHash, httpHeaders, onProgress) {
+    let completedChunks = 0;
+    const uploadSingleChunk = async (index2) => {
+      const chunkData = new Uint8Array(await chunks[index2].arrayBuffer());
+      const chunkHash = chunkHashes[index2];
+      await this.storageGatewayClient.uploadChunk({
+        blobRootHash,
+        chunkHash,
+        chunkIndex: index2,
+        chunkData,
+        bucketName: this.bucket,
+        owner: this.backendCanisterId,
+        projectId: this.projectId,
+        httpHeaders
+      });
+      const currentCompleted = ++completedChunks;
+      if (onProgress != null) {
+        const percentage = chunks.length === 0 ? 100 : Math.round(currentCompleted / chunks.length * 100);
+        onProgress(percentage);
+      }
+    };
+    await Promise.all(Array.from({ length: MAXIMUM_CONCURRENT_UPLOADS }, async (_2, workerId) => {
+      for (let i = workerId; i < chunks.length; i += MAXIMUM_CONCURRENT_UPLOADS) {
+        await uploadSingleChunk(i);
+      }
+    }));
+  }
+  createFileChunks(file, chunkSize = 1024 * 1024) {
+    const chunks = [];
+    const totalChunks = Math.ceil(file.size / chunkSize);
+    for (let index2 = 0; index2 < totalChunks; index2++) {
+      const start = index2 * chunkSize;
+      const end = Math.min(start + chunkSize, file.size);
+      const chunk = file.slice(start, end);
+      chunks.push(chunk);
+    }
+    return chunks;
+  }
+}
 var define_process_env_default$1 = {};
 const DEFAULT_STORAGE_GATEWAY_URL = "https://blob.caffeine.ai";
 const DEFAULT_BUCKET_NAME = "default-bucket";
@@ -11309,6 +11722,59 @@ async function loadConfig() {
     };
     return fallbackConfig;
   }
+}
+function extractAgentErrorMessage(error) {
+  const errorString = String(error);
+  const match = errorString.match(/with message:\s*'([^']+)'/s);
+  return match ? match[1] : errorString;
+}
+function processError(e) {
+  if (e && typeof e === "object" && "message" in e) {
+    throw new Error(extractAgentErrorMessage(`${e.message}`));
+  }
+  throw e;
+}
+async function maybeLoadMockBackend() {
+  {
+    return null;
+  }
+}
+async function createActorWithConfig(createActor2, options) {
+  var _a2;
+  const mock = await maybeLoadMockBackend();
+  if (mock) {
+    return mock;
+  }
+  const config = await loadConfig();
+  const resolvedOptions = options ?? {};
+  const agent = new HttpAgent({
+    ...resolvedOptions.agentOptions,
+    host: config.backend_host
+  });
+  if ((_a2 = config.backend_host) == null ? void 0 : _a2.includes("localhost")) {
+    await agent.fetchRootKey().catch((err) => {
+      console.warn("Unable to fetch root key. Check to ensure that your local replica is running");
+      console.error(err);
+    });
+  }
+  const actorOptions = {
+    ...resolvedOptions,
+    agent,
+    processError
+  };
+  const storageClient = new StorageClient(config.bucket_name, config.storage_gateway_url, config.backend_canister_id, config.project_id, agent);
+  const MOTOKO_DEDUPLICATION_SENTINEL = "!caf!";
+  const uploadFile = async (file) => {
+    const { hash } = await storageClient.putFile(await file.getBytes(), file.onProgress);
+    return new TextEncoder().encode(MOTOKO_DEDUPLICATION_SENTINEL + hash);
+  };
+  const downloadFile = async (bytes) => {
+    const hashWithPrefix = new TextDecoder().decode(new Uint8Array(bytes));
+    const hash = hashWithPrefix.substring(MOTOKO_DEDUPLICATION_SENTINEL.length);
+    const url = await storageClient.getDirectURL(hash);
+    return ExternalBlob.fromURL(url);
+  };
+  return createActor2(config.backend_canister_id, uploadFile, downloadFile, actorOptions);
 }
 var Subscribable = class {
   constructor() {
@@ -11527,7 +11993,7 @@ function hashQueryKeyByOptions(queryKey, options) {
 function hashKey(queryKey) {
   return JSON.stringify(
     queryKey,
-    (_2, val) => isPlainObject$2(val) ? Object.keys(val).sort().reduce((result, key) => {
+    (_2, val) => isPlainObject$1(val) ? Object.keys(val).sort().reduce((result, key) => {
       result[key] = val[key];
       return result;
     }, {}) : val
@@ -11552,7 +12018,7 @@ function replaceEqualDeep$1(a2, b2, depth = 0) {
   }
   if (depth > 500) return b2;
   const array = isPlainArray$1(a2) && isPlainArray$1(b2);
-  if (!array && !(isPlainObject$2(a2) && isPlainObject$2(b2))) return b2;
+  if (!array && !(isPlainObject$1(a2) && isPlainObject$1(b2))) return b2;
   const aItems = array ? a2 : Object.keys(a2);
   const aSize = aItems.length;
   const bItems = array ? b2 : Object.keys(b2);
@@ -11578,10 +12044,21 @@ function replaceEqualDeep$1(a2, b2, depth = 0) {
   }
   return aSize === bSize && equalItems === aSize ? a2 : copy;
 }
+function shallowEqualObjects(a2, b2) {
+  if (!b2 || Object.keys(a2).length !== Object.keys(b2).length) {
+    return false;
+  }
+  for (const key in a2) {
+    if (a2[key] !== b2[key]) {
+      return false;
+    }
+  }
+  return true;
+}
 function isPlainArray$1(value) {
   return Array.isArray(value) && value.length === Object.keys(value).length;
 }
-function isPlainObject$2(o) {
+function isPlainObject$1(o) {
   if (!hasObjectPrototype$1(o)) {
     return false;
   }
@@ -11634,6 +12111,12 @@ function ensureQueryFn(options, fetchOptions) {
     return () => Promise.reject(new Error(`Missing queryFn: '${options.queryHash}'`));
   }
   return options.queryFn;
+}
+function shouldThrowError(throwOnError, params) {
+  if (typeof throwOnError === "function") {
+    return throwOnError(...params);
+  }
+  return !!throwOnError;
 }
 function addConsumeAwareSignal(object, getSignal, onCancelled) {
   let consumed = false;
@@ -12106,13 +12589,13 @@ var Query = (_f = class extends Removable {
   }
   onFocus() {
     var _a2;
-    const observer2 = this.observers.find((x3) => x3.shouldFetchOnWindowFocus());
+    const observer2 = this.observers.find((x2) => x2.shouldFetchOnWindowFocus());
     observer2 == null ? void 0 : observer2.refetch({ cancelRefetch: false });
     (_a2 = __privateGet(this, _retryer)) == null ? void 0 : _a2.continue();
   }
   onOnline() {
     var _a2;
-    const observer2 = this.observers.find((x3) => x3.shouldFetchOnReconnect());
+    const observer2 = this.observers.find((x2) => x2.shouldFetchOnReconnect());
     observer2 == null ? void 0 : observer2.refetch({ cancelRefetch: false });
     (_a2 = __privateGet(this, _retryer)) == null ? void 0 : _a2.continue();
   }
@@ -12125,7 +12608,7 @@ var Query = (_f = class extends Removable {
   }
   removeObserver(observer2) {
     if (this.observers.includes(observer2)) {
-      this.observers = this.observers.filter((x3) => x3 !== observer2);
+      this.observers = this.observers.filter((x2) => x2 !== observer2);
       if (!this.observers.length) {
         if (__privateGet(this, _retryer)) {
           if (__privateGet(this, _abortSignalConsumed) || __privateMethod(this, _Query_instances, isInitialPausedFetch_fn).call(this)) {
@@ -12148,7 +12631,7 @@ var Query = (_f = class extends Removable {
     }
   }
   async fetch(options, fetchOptions) {
-    var _a2, _b2, _c2, _d2, _e2, _f2, _g2, _h2, _i2, _j2, _k, _l;
+    var _a2, _b2, _c2, _d2, _e2, _f2, _g2, _h2, _i2, _j2, _k2, _l2;
     if (this.state.fetchStatus !== "idle" && // If the promise in the retryer is already rejected, we have to definitely
     // re-start the fetch; there is a chance that the query is still in a
     // pending state when that happens
@@ -12164,7 +12647,7 @@ var Query = (_f = class extends Removable {
       this.setOptions(options);
     }
     if (!this.options.queryFn) {
-      const observer2 = this.observers.find((x3) => x3.options.queryFn);
+      const observer2 = this.observers.find((x2) => x2.options.queryFn);
       if (observer2) {
         this.setOptions(observer2.options);
       }
@@ -12280,8 +12763,8 @@ var Query = (_f = class extends Removable {
         error,
         this
       );
-      (_l = (_k = __privateGet(this, _cache).config).onSettled) == null ? void 0 : _l.call(
-        _k,
+      (_l2 = (_k2 = __privateGet(this, _cache).config).onSettled) == null ? void 0 : _l2.call(
+        _k2,
         this.state.data,
         error,
         this
@@ -12405,6 +12888,450 @@ function getDefaultState$1(options) {
     fetchStatus: "idle"
   };
 }
+var QueryObserver = (_g = class extends Subscribable {
+  constructor(client2, options) {
+    super();
+    __privateAdd(this, _QueryObserver_instances);
+    __privateAdd(this, _client2);
+    __privateAdd(this, _currentQuery);
+    __privateAdd(this, _currentQueryInitialState);
+    __privateAdd(this, _currentResult);
+    __privateAdd(this, _currentResultState);
+    __privateAdd(this, _currentResultOptions);
+    __privateAdd(this, _currentThenable);
+    __privateAdd(this, _selectError);
+    __privateAdd(this, _selectFn);
+    __privateAdd(this, _selectResult);
+    // This property keeps track of the last query with defined data.
+    // It will be used to pass the previous data and query to the placeholder function between renders.
+    __privateAdd(this, _lastQueryWithDefinedData);
+    __privateAdd(this, _staleTimeoutId);
+    __privateAdd(this, _refetchIntervalId);
+    __privateAdd(this, _currentRefetchInterval);
+    __privateAdd(this, _trackedProps, /* @__PURE__ */ new Set());
+    this.options = options;
+    __privateSet(this, _client2, client2);
+    __privateSet(this, _selectError, null);
+    __privateSet(this, _currentThenable, pendingThenable());
+    this.bindMethods();
+    this.setOptions(options);
+  }
+  bindMethods() {
+    this.refetch = this.refetch.bind(this);
+  }
+  onSubscribe() {
+    if (this.listeners.size === 1) {
+      __privateGet(this, _currentQuery).addObserver(this);
+      if (shouldFetchOnMount(__privateGet(this, _currentQuery), this.options)) {
+        __privateMethod(this, _QueryObserver_instances, executeFetch_fn).call(this);
+      } else {
+        this.updateResult();
+      }
+      __privateMethod(this, _QueryObserver_instances, updateTimers_fn).call(this);
+    }
+  }
+  onUnsubscribe() {
+    if (!this.hasListeners()) {
+      this.destroy();
+    }
+  }
+  shouldFetchOnReconnect() {
+    return shouldFetchOn(
+      __privateGet(this, _currentQuery),
+      this.options,
+      this.options.refetchOnReconnect
+    );
+  }
+  shouldFetchOnWindowFocus() {
+    return shouldFetchOn(
+      __privateGet(this, _currentQuery),
+      this.options,
+      this.options.refetchOnWindowFocus
+    );
+  }
+  destroy() {
+    this.listeners = /* @__PURE__ */ new Set();
+    __privateMethod(this, _QueryObserver_instances, clearStaleTimeout_fn).call(this);
+    __privateMethod(this, _QueryObserver_instances, clearRefetchInterval_fn).call(this);
+    __privateGet(this, _currentQuery).removeObserver(this);
+  }
+  setOptions(options) {
+    const prevOptions = this.options;
+    const prevQuery = __privateGet(this, _currentQuery);
+    this.options = __privateGet(this, _client2).defaultQueryOptions(options);
+    if (this.options.enabled !== void 0 && typeof this.options.enabled !== "boolean" && typeof this.options.enabled !== "function" && typeof resolveEnabled(this.options.enabled, __privateGet(this, _currentQuery)) !== "boolean") {
+      throw new Error(
+        "Expected enabled to be a boolean or a callback that returns a boolean"
+      );
+    }
+    __privateMethod(this, _QueryObserver_instances, updateQuery_fn).call(this);
+    __privateGet(this, _currentQuery).setOptions(this.options);
+    if (prevOptions._defaulted && !shallowEqualObjects(this.options, prevOptions)) {
+      __privateGet(this, _client2).getQueryCache().notify({
+        type: "observerOptionsUpdated",
+        query: __privateGet(this, _currentQuery),
+        observer: this
+      });
+    }
+    const mounted = this.hasListeners();
+    if (mounted && shouldFetchOptionally(
+      __privateGet(this, _currentQuery),
+      prevQuery,
+      this.options,
+      prevOptions
+    )) {
+      __privateMethod(this, _QueryObserver_instances, executeFetch_fn).call(this);
+    }
+    this.updateResult();
+    if (mounted && (__privateGet(this, _currentQuery) !== prevQuery || resolveEnabled(this.options.enabled, __privateGet(this, _currentQuery)) !== resolveEnabled(prevOptions.enabled, __privateGet(this, _currentQuery)) || resolveStaleTime(this.options.staleTime, __privateGet(this, _currentQuery)) !== resolveStaleTime(prevOptions.staleTime, __privateGet(this, _currentQuery)))) {
+      __privateMethod(this, _QueryObserver_instances, updateStaleTimeout_fn).call(this);
+    }
+    const nextRefetchInterval = __privateMethod(this, _QueryObserver_instances, computeRefetchInterval_fn).call(this);
+    if (mounted && (__privateGet(this, _currentQuery) !== prevQuery || resolveEnabled(this.options.enabled, __privateGet(this, _currentQuery)) !== resolveEnabled(prevOptions.enabled, __privateGet(this, _currentQuery)) || nextRefetchInterval !== __privateGet(this, _currentRefetchInterval))) {
+      __privateMethod(this, _QueryObserver_instances, updateRefetchInterval_fn).call(this, nextRefetchInterval);
+    }
+  }
+  getOptimisticResult(options) {
+    const query = __privateGet(this, _client2).getQueryCache().build(__privateGet(this, _client2), options);
+    const result = this.createResult(query, options);
+    if (shouldAssignObserverCurrentProperties(this, result)) {
+      __privateSet(this, _currentResult, result);
+      __privateSet(this, _currentResultOptions, this.options);
+      __privateSet(this, _currentResultState, __privateGet(this, _currentQuery).state);
+    }
+    return result;
+  }
+  getCurrentResult() {
+    return __privateGet(this, _currentResult);
+  }
+  trackResult(result, onPropTracked) {
+    return new Proxy(result, {
+      get: (target, key) => {
+        this.trackProp(key);
+        onPropTracked == null ? void 0 : onPropTracked(key);
+        if (key === "promise") {
+          this.trackProp("data");
+          if (!this.options.experimental_prefetchInRender && __privateGet(this, _currentThenable).status === "pending") {
+            __privateGet(this, _currentThenable).reject(
+              new Error(
+                "experimental_prefetchInRender feature flag is not enabled"
+              )
+            );
+          }
+        }
+        return Reflect.get(target, key);
+      }
+    });
+  }
+  trackProp(key) {
+    __privateGet(this, _trackedProps).add(key);
+  }
+  getCurrentQuery() {
+    return __privateGet(this, _currentQuery);
+  }
+  refetch({ ...options } = {}) {
+    return this.fetch({
+      ...options
+    });
+  }
+  fetchOptimistic(options) {
+    const defaultedOptions = __privateGet(this, _client2).defaultQueryOptions(options);
+    const query = __privateGet(this, _client2).getQueryCache().build(__privateGet(this, _client2), defaultedOptions);
+    return query.fetch().then(() => this.createResult(query, defaultedOptions));
+  }
+  fetch(fetchOptions) {
+    return __privateMethod(this, _QueryObserver_instances, executeFetch_fn).call(this, {
+      ...fetchOptions,
+      cancelRefetch: fetchOptions.cancelRefetch ?? true
+    }).then(() => {
+      this.updateResult();
+      return __privateGet(this, _currentResult);
+    });
+  }
+  createResult(query, options) {
+    var _a2;
+    const prevQuery = __privateGet(this, _currentQuery);
+    const prevOptions = this.options;
+    const prevResult = __privateGet(this, _currentResult);
+    const prevResultState = __privateGet(this, _currentResultState);
+    const prevResultOptions = __privateGet(this, _currentResultOptions);
+    const queryChange = query !== prevQuery;
+    const queryInitialState = queryChange ? query.state : __privateGet(this, _currentQueryInitialState);
+    const { state } = query;
+    let newState = { ...state };
+    let isPlaceholderData = false;
+    let data;
+    if (options._optimisticResults) {
+      const mounted = this.hasListeners();
+      const fetchOnMount = !mounted && shouldFetchOnMount(query, options);
+      const fetchOptionally = mounted && shouldFetchOptionally(query, prevQuery, options, prevOptions);
+      if (fetchOnMount || fetchOptionally) {
+        newState = {
+          ...newState,
+          ...fetchState(state.data, query.options)
+        };
+      }
+      if (options._optimisticResults === "isRestoring") {
+        newState.fetchStatus = "idle";
+      }
+    }
+    let { error, errorUpdatedAt, status } = newState;
+    data = newState.data;
+    let skipSelect = false;
+    if (options.placeholderData !== void 0 && data === void 0 && status === "pending") {
+      let placeholderData;
+      if ((prevResult == null ? void 0 : prevResult.isPlaceholderData) && options.placeholderData === (prevResultOptions == null ? void 0 : prevResultOptions.placeholderData)) {
+        placeholderData = prevResult.data;
+        skipSelect = true;
+      } else {
+        placeholderData = typeof options.placeholderData === "function" ? options.placeholderData(
+          (_a2 = __privateGet(this, _lastQueryWithDefinedData)) == null ? void 0 : _a2.state.data,
+          __privateGet(this, _lastQueryWithDefinedData)
+        ) : options.placeholderData;
+      }
+      if (placeholderData !== void 0) {
+        status = "success";
+        data = replaceData(
+          prevResult == null ? void 0 : prevResult.data,
+          placeholderData,
+          options
+        );
+        isPlaceholderData = true;
+      }
+    }
+    if (options.select && data !== void 0 && !skipSelect) {
+      if (prevResult && data === (prevResultState == null ? void 0 : prevResultState.data) && options.select === __privateGet(this, _selectFn)) {
+        data = __privateGet(this, _selectResult);
+      } else {
+        try {
+          __privateSet(this, _selectFn, options.select);
+          data = options.select(data);
+          data = replaceData(prevResult == null ? void 0 : prevResult.data, data, options);
+          __privateSet(this, _selectResult, data);
+          __privateSet(this, _selectError, null);
+        } catch (selectError) {
+          __privateSet(this, _selectError, selectError);
+        }
+      }
+    }
+    if (__privateGet(this, _selectError)) {
+      error = __privateGet(this, _selectError);
+      data = __privateGet(this, _selectResult);
+      errorUpdatedAt = Date.now();
+      status = "error";
+    }
+    const isFetching = newState.fetchStatus === "fetching";
+    const isPending = status === "pending";
+    const isError = status === "error";
+    const isLoading = isPending && isFetching;
+    const hasData = data !== void 0;
+    const result = {
+      status,
+      fetchStatus: newState.fetchStatus,
+      isPending,
+      isSuccess: status === "success",
+      isError,
+      isInitialLoading: isLoading,
+      isLoading,
+      data,
+      dataUpdatedAt: newState.dataUpdatedAt,
+      error,
+      errorUpdatedAt,
+      failureCount: newState.fetchFailureCount,
+      failureReason: newState.fetchFailureReason,
+      errorUpdateCount: newState.errorUpdateCount,
+      isFetched: query.isFetched(),
+      isFetchedAfterMount: newState.dataUpdateCount > queryInitialState.dataUpdateCount || newState.errorUpdateCount > queryInitialState.errorUpdateCount,
+      isFetching,
+      isRefetching: isFetching && !isPending,
+      isLoadingError: isError && !hasData,
+      isPaused: newState.fetchStatus === "paused",
+      isPlaceholderData,
+      isRefetchError: isError && hasData,
+      isStale: isStale(query, options),
+      refetch: this.refetch,
+      promise: __privateGet(this, _currentThenable),
+      isEnabled: resolveEnabled(options.enabled, query) !== false
+    };
+    const nextResult = result;
+    if (this.options.experimental_prefetchInRender) {
+      const hasResultData = nextResult.data !== void 0;
+      const isErrorWithoutData = nextResult.status === "error" && !hasResultData;
+      const finalizeThenableIfPossible = (thenable) => {
+        if (isErrorWithoutData) {
+          thenable.reject(nextResult.error);
+        } else if (hasResultData) {
+          thenable.resolve(nextResult.data);
+        }
+      };
+      const recreateThenable = () => {
+        const pending = __privateSet(this, _currentThenable, nextResult.promise = pendingThenable());
+        finalizeThenableIfPossible(pending);
+      };
+      const prevThenable = __privateGet(this, _currentThenable);
+      switch (prevThenable.status) {
+        case "pending":
+          if (query.queryHash === prevQuery.queryHash) {
+            finalizeThenableIfPossible(prevThenable);
+          }
+          break;
+        case "fulfilled":
+          if (isErrorWithoutData || nextResult.data !== prevThenable.value) {
+            recreateThenable();
+          }
+          break;
+        case "rejected":
+          if (!isErrorWithoutData || nextResult.error !== prevThenable.reason) {
+            recreateThenable();
+          }
+          break;
+      }
+    }
+    return nextResult;
+  }
+  updateResult() {
+    const prevResult = __privateGet(this, _currentResult);
+    const nextResult = this.createResult(__privateGet(this, _currentQuery), this.options);
+    __privateSet(this, _currentResultState, __privateGet(this, _currentQuery).state);
+    __privateSet(this, _currentResultOptions, this.options);
+    if (__privateGet(this, _currentResultState).data !== void 0) {
+      __privateSet(this, _lastQueryWithDefinedData, __privateGet(this, _currentQuery));
+    }
+    if (shallowEqualObjects(nextResult, prevResult)) {
+      return;
+    }
+    __privateSet(this, _currentResult, nextResult);
+    const shouldNotifyListeners = () => {
+      if (!prevResult) {
+        return true;
+      }
+      const { notifyOnChangeProps } = this.options;
+      const notifyOnChangePropsValue = typeof notifyOnChangeProps === "function" ? notifyOnChangeProps() : notifyOnChangeProps;
+      if (notifyOnChangePropsValue === "all" || !notifyOnChangePropsValue && !__privateGet(this, _trackedProps).size) {
+        return true;
+      }
+      const includedProps = new Set(
+        notifyOnChangePropsValue ?? __privateGet(this, _trackedProps)
+      );
+      if (this.options.throwOnError) {
+        includedProps.add("error");
+      }
+      return Object.keys(__privateGet(this, _currentResult)).some((key) => {
+        const typedKey = key;
+        const changed = __privateGet(this, _currentResult)[typedKey] !== prevResult[typedKey];
+        return changed && includedProps.has(typedKey);
+      });
+    };
+    __privateMethod(this, _QueryObserver_instances, notify_fn).call(this, { listeners: shouldNotifyListeners() });
+  }
+  onQueryUpdate() {
+    this.updateResult();
+    if (this.hasListeners()) {
+      __privateMethod(this, _QueryObserver_instances, updateTimers_fn).call(this);
+    }
+  }
+}, _client2 = new WeakMap(), _currentQuery = new WeakMap(), _currentQueryInitialState = new WeakMap(), _currentResult = new WeakMap(), _currentResultState = new WeakMap(), _currentResultOptions = new WeakMap(), _currentThenable = new WeakMap(), _selectError = new WeakMap(), _selectFn = new WeakMap(), _selectResult = new WeakMap(), _lastQueryWithDefinedData = new WeakMap(), _staleTimeoutId = new WeakMap(), _refetchIntervalId = new WeakMap(), _currentRefetchInterval = new WeakMap(), _trackedProps = new WeakMap(), _QueryObserver_instances = new WeakSet(), executeFetch_fn = function(fetchOptions) {
+  __privateMethod(this, _QueryObserver_instances, updateQuery_fn).call(this);
+  let promise = __privateGet(this, _currentQuery).fetch(
+    this.options,
+    fetchOptions
+  );
+  if (!(fetchOptions == null ? void 0 : fetchOptions.throwOnError)) {
+    promise = promise.catch(noop$7);
+  }
+  return promise;
+}, updateStaleTimeout_fn = function() {
+  __privateMethod(this, _QueryObserver_instances, clearStaleTimeout_fn).call(this);
+  const staleTime = resolveStaleTime(
+    this.options.staleTime,
+    __privateGet(this, _currentQuery)
+  );
+  if (environmentManager.isServer() || __privateGet(this, _currentResult).isStale || !isValidTimeout(staleTime)) {
+    return;
+  }
+  const time2 = timeUntilStale(__privateGet(this, _currentResult).dataUpdatedAt, staleTime);
+  const timeout2 = time2 + 1;
+  __privateSet(this, _staleTimeoutId, timeoutManager.setTimeout(() => {
+    if (!__privateGet(this, _currentResult).isStale) {
+      this.updateResult();
+    }
+  }, timeout2));
+}, computeRefetchInterval_fn = function() {
+  return (typeof this.options.refetchInterval === "function" ? this.options.refetchInterval(__privateGet(this, _currentQuery)) : this.options.refetchInterval) ?? false;
+}, updateRefetchInterval_fn = function(nextInterval) {
+  __privateMethod(this, _QueryObserver_instances, clearRefetchInterval_fn).call(this);
+  __privateSet(this, _currentRefetchInterval, nextInterval);
+  if (environmentManager.isServer() || resolveEnabled(this.options.enabled, __privateGet(this, _currentQuery)) === false || !isValidTimeout(__privateGet(this, _currentRefetchInterval)) || __privateGet(this, _currentRefetchInterval) === 0) {
+    return;
+  }
+  __privateSet(this, _refetchIntervalId, timeoutManager.setInterval(() => {
+    if (this.options.refetchIntervalInBackground || focusManager.isFocused()) {
+      __privateMethod(this, _QueryObserver_instances, executeFetch_fn).call(this);
+    }
+  }, __privateGet(this, _currentRefetchInterval)));
+}, updateTimers_fn = function() {
+  __privateMethod(this, _QueryObserver_instances, updateStaleTimeout_fn).call(this);
+  __privateMethod(this, _QueryObserver_instances, updateRefetchInterval_fn).call(this, __privateMethod(this, _QueryObserver_instances, computeRefetchInterval_fn).call(this));
+}, clearStaleTimeout_fn = function() {
+  if (__privateGet(this, _staleTimeoutId)) {
+    timeoutManager.clearTimeout(__privateGet(this, _staleTimeoutId));
+    __privateSet(this, _staleTimeoutId, void 0);
+  }
+}, clearRefetchInterval_fn = function() {
+  if (__privateGet(this, _refetchIntervalId)) {
+    timeoutManager.clearInterval(__privateGet(this, _refetchIntervalId));
+    __privateSet(this, _refetchIntervalId, void 0);
+  }
+}, updateQuery_fn = function() {
+  const query = __privateGet(this, _client2).getQueryCache().build(__privateGet(this, _client2), this.options);
+  if (query === __privateGet(this, _currentQuery)) {
+    return;
+  }
+  const prevQuery = __privateGet(this, _currentQuery);
+  __privateSet(this, _currentQuery, query);
+  __privateSet(this, _currentQueryInitialState, query.state);
+  if (this.hasListeners()) {
+    prevQuery == null ? void 0 : prevQuery.removeObserver(this);
+    query.addObserver(this);
+  }
+}, notify_fn = function(notifyOptions) {
+  notifyManager.batch(() => {
+    if (notifyOptions.listeners) {
+      this.listeners.forEach((listener) => {
+        listener(__privateGet(this, _currentResult));
+      });
+    }
+    __privateGet(this, _client2).getQueryCache().notify({
+      query: __privateGet(this, _currentQuery),
+      type: "observerResultsUpdated"
+    });
+  });
+}, _g);
+function shouldLoadOnMount(query, options) {
+  return resolveEnabled(options.enabled, query) !== false && query.state.data === void 0 && !(query.state.status === "error" && options.retryOnMount === false);
+}
+function shouldFetchOnMount(query, options) {
+  return shouldLoadOnMount(query, options) || query.state.data !== void 0 && shouldFetchOn(query, options, options.refetchOnMount);
+}
+function shouldFetchOn(query, options, field) {
+  if (resolveEnabled(options.enabled, query) !== false && resolveStaleTime(options.staleTime, query) !== "static") {
+    const value = typeof field === "function" ? field(query) : field;
+    return value === "always" || value !== false && isStale(query, options);
+  }
+  return false;
+}
+function shouldFetchOptionally(query, prevQuery, options, prevOptions) {
+  return (query !== prevQuery || resolveEnabled(prevOptions.enabled, query) === false) && (!options.suspense || query.state.status !== "error") && isStale(query, options);
+}
+function isStale(query, options) {
+  return resolveEnabled(options.enabled, query) !== false && query.isStaleByTime(resolveStaleTime(options.staleTime, query));
+}
+function shouldAssignObserverCurrentProperties(observer2, optimisticResult) {
+  if (!shallowEqualObjects(observer2.getCurrentResult(), optimisticResult)) {
+    return true;
+  }
+  return false;
+}
 function infiniteQueryBehavior(pages) {
   return {
     onFetch: (context, query) => {
@@ -12508,15 +13435,15 @@ function getPreviousPageParam(options, { pages, pageParams }) {
   var _a2;
   return pages.length > 0 ? (_a2 = options.getPreviousPageParam) == null ? void 0 : _a2.call(options, pages[0], pages, pageParams[0], pageParams) : void 0;
 }
-var Mutation = (_g = class extends Removable {
+var Mutation = (_h = class extends Removable {
   constructor(config) {
     super();
     __privateAdd(this, _Mutation_instances);
-    __privateAdd(this, _client2);
+    __privateAdd(this, _client3);
     __privateAdd(this, _observers);
     __privateAdd(this, _mutationCache);
     __privateAdd(this, _retryer2);
-    __privateSet(this, _client2, config.client);
+    __privateSet(this, _client3, config.client);
     this.mutationId = config.mutationId;
     __privateSet(this, _mutationCache, config.mutationCache);
     __privateSet(this, _observers, []);
@@ -12543,7 +13470,7 @@ var Mutation = (_g = class extends Removable {
     }
   }
   removeObserver(observer2) {
-    __privateSet(this, _observers, __privateGet(this, _observers).filter((x3) => x3 !== observer2));
+    __privateSet(this, _observers, __privateGet(this, _observers).filter((x2) => x2 !== observer2));
     this.scheduleGc();
     __privateGet(this, _mutationCache).notify({
       type: "observerRemoved",
@@ -12566,12 +13493,12 @@ var Mutation = (_g = class extends Removable {
     this.execute(this.state.variables);
   }
   async execute(variables) {
-    var _a2, _b2, _c2, _d2, _e2, _f2, _g2, _h2, _i2, _j2, _k, _l, _m, _n, _o, _p, _q, _r;
+    var _a2, _b2, _c2, _d2, _e2, _f2, _g2, _h2, _i2, _j2, _k2, _l2, _m, _n, _o, _p, _q, _r;
     const onContinue = () => {
       __privateMethod(this, _Mutation_instances, dispatch_fn2).call(this, { type: "continue" });
     };
     const mutationFnContext = {
-      client: __privateGet(this, _client2),
+      client: __privateGet(this, _client3),
       meta: this.options.meta,
       mutationKey: this.options.mutationKey
     };
@@ -12659,8 +13586,8 @@ var Mutation = (_g = class extends Removable {
       return data;
     } catch (error) {
       try {
-        await ((_l = (_k = __privateGet(this, _mutationCache).config).onError) == null ? void 0 : _l.call(
-          _k,
+        await ((_l2 = (_k2 = __privateGet(this, _mutationCache).config).onError) == null ? void 0 : _l2.call(
+          _k2,
           error,
           variables,
           this.state.context,
@@ -12712,7 +13639,7 @@ var Mutation = (_g = class extends Removable {
       __privateGet(this, _mutationCache).runNext(this);
     }
   }
-}, _client2 = new WeakMap(), _observers = new WeakMap(), _mutationCache = new WeakMap(), _retryer2 = new WeakMap(), _Mutation_instances = new WeakSet(), dispatch_fn2 = function(action) {
+}, _client3 = new WeakMap(), _observers = new WeakMap(), _mutationCache = new WeakMap(), _retryer2 = new WeakMap(), _Mutation_instances = new WeakSet(), dispatch_fn2 = function(action) {
   const reducer = (state) => {
     switch (action.type) {
       case "failed":
@@ -12777,7 +13704,7 @@ var Mutation = (_g = class extends Removable {
       action
     });
   });
-}, _g);
+}, _h);
 function getDefaultState() {
   return {
     context: void 0,
@@ -12791,7 +13718,7 @@ function getDefaultState() {
     submittedAt: 0
   };
 }
-var MutationCache = (_h = class extends Subscribable {
+var MutationCache = (_i = class extends Subscribable {
   constructor(config = {}) {
     super();
     __privateAdd(this, _mutations);
@@ -12896,19 +13823,159 @@ var MutationCache = (_h = class extends Subscribable {
     });
   }
   resumePausedMutations() {
-    const pausedMutations = this.getAll().filter((x3) => x3.state.isPaused);
+    const pausedMutations = this.getAll().filter((x2) => x2.state.isPaused);
     return notifyManager.batch(
       () => Promise.all(
         pausedMutations.map((mutation) => mutation.continue().catch(noop$7))
       )
     );
   }
-}, _mutations = new WeakMap(), _scopes = new WeakMap(), _mutationId = new WeakMap(), _h);
+}, _mutations = new WeakMap(), _scopes = new WeakMap(), _mutationId = new WeakMap(), _i);
 function scopeFor(mutation) {
   var _a2;
   return (_a2 = mutation.options.scope) == null ? void 0 : _a2.id;
 }
-var QueryCache = (_i = class extends Subscribable {
+var MutationObserver$1 = (_j = class extends Subscribable {
+  constructor(client2, options) {
+    super();
+    __privateAdd(this, _MutationObserver_instances);
+    __privateAdd(this, _client4);
+    __privateAdd(this, _currentResult2);
+    __privateAdd(this, _currentMutation);
+    __privateAdd(this, _mutateOptions);
+    __privateSet(this, _client4, client2);
+    this.setOptions(options);
+    this.bindMethods();
+    __privateMethod(this, _MutationObserver_instances, updateResult_fn).call(this);
+  }
+  bindMethods() {
+    this.mutate = this.mutate.bind(this);
+    this.reset = this.reset.bind(this);
+  }
+  setOptions(options) {
+    var _a2;
+    const prevOptions = this.options;
+    this.options = __privateGet(this, _client4).defaultMutationOptions(options);
+    if (!shallowEqualObjects(this.options, prevOptions)) {
+      __privateGet(this, _client4).getMutationCache().notify({
+        type: "observerOptionsUpdated",
+        mutation: __privateGet(this, _currentMutation),
+        observer: this
+      });
+    }
+    if ((prevOptions == null ? void 0 : prevOptions.mutationKey) && this.options.mutationKey && hashKey(prevOptions.mutationKey) !== hashKey(this.options.mutationKey)) {
+      this.reset();
+    } else if (((_a2 = __privateGet(this, _currentMutation)) == null ? void 0 : _a2.state.status) === "pending") {
+      __privateGet(this, _currentMutation).setOptions(this.options);
+    }
+  }
+  onUnsubscribe() {
+    var _a2;
+    if (!this.hasListeners()) {
+      (_a2 = __privateGet(this, _currentMutation)) == null ? void 0 : _a2.removeObserver(this);
+    }
+  }
+  onMutationUpdate(action) {
+    __privateMethod(this, _MutationObserver_instances, updateResult_fn).call(this);
+    __privateMethod(this, _MutationObserver_instances, notify_fn2).call(this, action);
+  }
+  getCurrentResult() {
+    return __privateGet(this, _currentResult2);
+  }
+  reset() {
+    var _a2;
+    (_a2 = __privateGet(this, _currentMutation)) == null ? void 0 : _a2.removeObserver(this);
+    __privateSet(this, _currentMutation, void 0);
+    __privateMethod(this, _MutationObserver_instances, updateResult_fn).call(this);
+    __privateMethod(this, _MutationObserver_instances, notify_fn2).call(this);
+  }
+  mutate(variables, options) {
+    var _a2;
+    __privateSet(this, _mutateOptions, options);
+    (_a2 = __privateGet(this, _currentMutation)) == null ? void 0 : _a2.removeObserver(this);
+    __privateSet(this, _currentMutation, __privateGet(this, _client4).getMutationCache().build(__privateGet(this, _client4), this.options));
+    __privateGet(this, _currentMutation).addObserver(this);
+    return __privateGet(this, _currentMutation).execute(variables);
+  }
+}, _client4 = new WeakMap(), _currentResult2 = new WeakMap(), _currentMutation = new WeakMap(), _mutateOptions = new WeakMap(), _MutationObserver_instances = new WeakSet(), updateResult_fn = function() {
+  var _a2;
+  const state = ((_a2 = __privateGet(this, _currentMutation)) == null ? void 0 : _a2.state) ?? getDefaultState();
+  __privateSet(this, _currentResult2, {
+    ...state,
+    isPending: state.status === "pending",
+    isSuccess: state.status === "success",
+    isError: state.status === "error",
+    isIdle: state.status === "idle",
+    mutate: this.mutate,
+    reset: this.reset
+  });
+}, notify_fn2 = function(action) {
+  notifyManager.batch(() => {
+    var _a2, _b2, _c2, _d2, _e2, _f2, _g2, _h2;
+    if (__privateGet(this, _mutateOptions) && this.hasListeners()) {
+      const variables = __privateGet(this, _currentResult2).variables;
+      const onMutateResult = __privateGet(this, _currentResult2).context;
+      const context = {
+        client: __privateGet(this, _client4),
+        meta: this.options.meta,
+        mutationKey: this.options.mutationKey
+      };
+      if ((action == null ? void 0 : action.type) === "success") {
+        try {
+          (_b2 = (_a2 = __privateGet(this, _mutateOptions)).onSuccess) == null ? void 0 : _b2.call(
+            _a2,
+            action.data,
+            variables,
+            onMutateResult,
+            context
+          );
+        } catch (e) {
+          void Promise.reject(e);
+        }
+        try {
+          (_d2 = (_c2 = __privateGet(this, _mutateOptions)).onSettled) == null ? void 0 : _d2.call(
+            _c2,
+            action.data,
+            null,
+            variables,
+            onMutateResult,
+            context
+          );
+        } catch (e) {
+          void Promise.reject(e);
+        }
+      } else if ((action == null ? void 0 : action.type) === "error") {
+        try {
+          (_f2 = (_e2 = __privateGet(this, _mutateOptions)).onError) == null ? void 0 : _f2.call(
+            _e2,
+            action.error,
+            variables,
+            onMutateResult,
+            context
+          );
+        } catch (e) {
+          void Promise.reject(e);
+        }
+        try {
+          (_h2 = (_g2 = __privateGet(this, _mutateOptions)).onSettled) == null ? void 0 : _h2.call(
+            _g2,
+            void 0,
+            action.error,
+            variables,
+            onMutateResult,
+            context
+          );
+        } catch (e) {
+          void Promise.reject(e);
+        }
+      }
+    }
+    this.listeners.forEach((listener) => {
+      listener(__privateGet(this, _currentResult2));
+    });
+  });
+}, _j);
+var QueryCache = (_k = class extends Subscribable {
   constructor(config = {}) {
     super();
     __privateAdd(this, _queries);
@@ -12995,8 +14062,8 @@ var QueryCache = (_i = class extends Subscribable {
       });
     });
   }
-}, _queries = new WeakMap(), _i);
-var QueryClient = (_j = class {
+}, _queries = new WeakMap(), _k);
+var QueryClient = (_l = class {
   constructor(config = {}) {
     __privateAdd(this, _queryCache);
     __privateAdd(this, _mutationCache2);
@@ -13283,7 +14350,7 @@ var QueryClient = (_j = class {
     __privateGet(this, _queryCache).clear();
     __privateGet(this, _mutationCache2).clear();
   }
-}, _queryCache = new WeakMap(), _mutationCache2 = new WeakMap(), _defaultOptions2 = new WeakMap(), _queryDefaults = new WeakMap(), _mutationDefaults = new WeakMap(), _mountCount = new WeakMap(), _unsubscribeFocus = new WeakMap(), _unsubscribeOnline = new WeakMap(), _j);
+}, _queryCache = new WeakMap(), _mutationCache2 = new WeakMap(), _defaultOptions2 = new WeakMap(), _queryDefaults = new WeakMap(), _mutationDefaults = new WeakMap(), _mountCount = new WeakMap(), _unsubscribeFocus = new WeakMap(), _unsubscribeOnline = new WeakMap(), _l);
 var react = { exports: {} };
 var react_production = {};
 /**
@@ -13673,28 +14740,28 @@ react_production.useDebugValue = function() {
 react_production.useDeferredValue = function(value, initialValue) {
   return ReactSharedInternals$2.H.useDeferredValue(value, initialValue);
 };
-react_production.useEffect = function(create2, createDeps, update) {
+react_production.useEffect = function(create, createDeps, update) {
   var dispatcher = ReactSharedInternals$2.H;
   if ("function" === typeof update)
     throw Error(
       "useEffect CRUD overload is not enabled in this build of React."
     );
-  return dispatcher.useEffect(create2, createDeps);
+  return dispatcher.useEffect(create, createDeps);
 };
 react_production.useId = function() {
   return ReactSharedInternals$2.H.useId();
 };
-react_production.useImperativeHandle = function(ref, create2, deps) {
-  return ReactSharedInternals$2.H.useImperativeHandle(ref, create2, deps);
+react_production.useImperativeHandle = function(ref, create, deps) {
+  return ReactSharedInternals$2.H.useImperativeHandle(ref, create, deps);
 };
-react_production.useInsertionEffect = function(create2, deps) {
-  return ReactSharedInternals$2.H.useInsertionEffect(create2, deps);
+react_production.useInsertionEffect = function(create, deps) {
+  return ReactSharedInternals$2.H.useInsertionEffect(create, deps);
 };
-react_production.useLayoutEffect = function(create2, deps) {
-  return ReactSharedInternals$2.H.useLayoutEffect(create2, deps);
+react_production.useLayoutEffect = function(create, deps) {
+  return ReactSharedInternals$2.H.useLayoutEffect(create, deps);
 };
-react_production.useMemo = function(create2, deps) {
-  return ReactSharedInternals$2.H.useMemo(create2, deps);
+react_production.useMemo = function(create, deps) {
+  return ReactSharedInternals$2.H.useMemo(create, deps);
 };
 react_production.useOptimistic = function(passthrough, reducer) {
   return ReactSharedInternals$2.H.useOptimistic(passthrough, reducer);
@@ -13723,14 +14790,21 @@ react_production.version = "19.1.5";
   react.exports = react_production;
 }
 var reactExports = react.exports;
-const React$4 = /* @__PURE__ */ getDefaultExportFromCjs(reactExports);
-const React$5 = /* @__PURE__ */ _mergeNamespaces({
+const React2 = /* @__PURE__ */ getDefaultExportFromCjs(reactExports);
+const React$4 = /* @__PURE__ */ _mergeNamespaces({
   __proto__: null,
-  default: React$4
+  default: React2
 }, [reactExports]);
 var QueryClientContext = reactExports.createContext(
   void 0
 );
+var useQueryClient = (queryClient2) => {
+  const client2 = reactExports.useContext(QueryClientContext);
+  if (!client2) {
+    throw new Error("No QueryClient set, use QueryClientProvider to set one");
+  }
+  return client2;
+};
 var QueryClientProvider = ({
   client: client2,
   children
@@ -13743,7 +14817,170 @@ var QueryClientProvider = ({
   }, [client2]);
   return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientContext.Provider, { value: client2, children });
 };
-function isObject$2(value) {
+var IsRestoringContext = reactExports.createContext(false);
+var useIsRestoring = () => reactExports.useContext(IsRestoringContext);
+IsRestoringContext.Provider;
+function createValue() {
+  let isReset = false;
+  return {
+    clearReset: () => {
+      isReset = false;
+    },
+    reset: () => {
+      isReset = true;
+    },
+    isReset: () => {
+      return isReset;
+    }
+  };
+}
+var QueryErrorResetBoundaryContext = reactExports.createContext(createValue());
+var useQueryErrorResetBoundary = () => reactExports.useContext(QueryErrorResetBoundaryContext);
+var ensurePreventErrorBoundaryRetry = (options, errorResetBoundary, query) => {
+  const throwOnError = (query == null ? void 0 : query.state.error) && typeof options.throwOnError === "function" ? shouldThrowError(options.throwOnError, [query.state.error, query]) : options.throwOnError;
+  if (options.suspense || options.experimental_prefetchInRender || throwOnError) {
+    if (!errorResetBoundary.isReset()) {
+      options.retryOnMount = false;
+    }
+  }
+};
+var useClearResetErrorBoundary = (errorResetBoundary) => {
+  reactExports.useEffect(() => {
+    errorResetBoundary.clearReset();
+  }, [errorResetBoundary]);
+};
+var getHasError = ({
+  result,
+  errorResetBoundary,
+  throwOnError,
+  query,
+  suspense
+}) => {
+  return result.isError && !errorResetBoundary.isReset() && !result.isFetching && query && (suspense && result.data === void 0 || shouldThrowError(throwOnError, [result.error, query]));
+};
+var ensureSuspenseTimers = (defaultedOptions) => {
+  if (defaultedOptions.suspense) {
+    const MIN_SUSPENSE_TIME_MS = 1e3;
+    const clamp2 = (value) => value === "static" ? value : Math.max(value ?? MIN_SUSPENSE_TIME_MS, MIN_SUSPENSE_TIME_MS);
+    const originalStaleTime = defaultedOptions.staleTime;
+    defaultedOptions.staleTime = typeof originalStaleTime === "function" ? (...args) => clamp2(originalStaleTime(...args)) : clamp2(originalStaleTime);
+    if (typeof defaultedOptions.gcTime === "number") {
+      defaultedOptions.gcTime = Math.max(
+        defaultedOptions.gcTime,
+        MIN_SUSPENSE_TIME_MS
+      );
+    }
+  }
+};
+var willFetch = (result, isRestoring) => result.isLoading && result.isFetching && !isRestoring;
+var shouldSuspend = (defaultedOptions, result) => (defaultedOptions == null ? void 0 : defaultedOptions.suspense) && result.isPending;
+var fetchOptimistic = (defaultedOptions, observer2, errorResetBoundary) => observer2.fetchOptimistic(defaultedOptions).catch(() => {
+  errorResetBoundary.clearReset();
+});
+function useBaseQuery(options, Observer, queryClient2) {
+  var _a2, _b2, _c2, _d2;
+  const isRestoring = useIsRestoring();
+  const errorResetBoundary = useQueryErrorResetBoundary();
+  const client2 = useQueryClient();
+  const defaultedOptions = client2.defaultQueryOptions(options);
+  (_b2 = (_a2 = client2.getDefaultOptions().queries) == null ? void 0 : _a2._experimental_beforeQuery) == null ? void 0 : _b2.call(
+    _a2,
+    defaultedOptions
+  );
+  const query = client2.getQueryCache().get(defaultedOptions.queryHash);
+  defaultedOptions._optimisticResults = isRestoring ? "isRestoring" : "optimistic";
+  ensureSuspenseTimers(defaultedOptions);
+  ensurePreventErrorBoundaryRetry(defaultedOptions, errorResetBoundary, query);
+  useClearResetErrorBoundary(errorResetBoundary);
+  const isNewCacheEntry = !client2.getQueryCache().get(defaultedOptions.queryHash);
+  const [observer2] = reactExports.useState(
+    () => new Observer(
+      client2,
+      defaultedOptions
+    )
+  );
+  const result = observer2.getOptimisticResult(defaultedOptions);
+  const shouldSubscribe = !isRestoring && options.subscribed !== false;
+  reactExports.useSyncExternalStore(
+    reactExports.useCallback(
+      (onStoreChange) => {
+        const unsubscribe = shouldSubscribe ? observer2.subscribe(notifyManager.batchCalls(onStoreChange)) : noop$7;
+        observer2.updateResult();
+        return unsubscribe;
+      },
+      [observer2, shouldSubscribe]
+    ),
+    () => observer2.getCurrentResult(),
+    () => observer2.getCurrentResult()
+  );
+  reactExports.useEffect(() => {
+    observer2.setOptions(defaultedOptions);
+  }, [defaultedOptions, observer2]);
+  if (shouldSuspend(defaultedOptions, result)) {
+    throw fetchOptimistic(defaultedOptions, observer2, errorResetBoundary);
+  }
+  if (getHasError({
+    result,
+    errorResetBoundary,
+    throwOnError: defaultedOptions.throwOnError,
+    query,
+    suspense: defaultedOptions.suspense
+  })) {
+    throw result.error;
+  }
+  (_d2 = (_c2 = client2.getDefaultOptions().queries) == null ? void 0 : _c2._experimental_afterQuery) == null ? void 0 : _d2.call(
+    _c2,
+    defaultedOptions,
+    result
+  );
+  if (defaultedOptions.experimental_prefetchInRender && !environmentManager.isServer() && willFetch(result, isRestoring)) {
+    const promise = isNewCacheEntry ? (
+      // Fetch immediately on render in order to ensure `.promise` is resolved even if the component is unmounted
+      fetchOptimistic(defaultedOptions, observer2, errorResetBoundary)
+    ) : (
+      // subscribe to the "cache promise" so that we can finalize the currentThenable once data comes in
+      query == null ? void 0 : query.promise
+    );
+    promise == null ? void 0 : promise.catch(noop$7).finally(() => {
+      observer2.updateResult();
+    });
+  }
+  return !defaultedOptions.notifyOnChangeProps ? observer2.trackResult(result) : result;
+}
+function useQuery(options, queryClient2) {
+  return useBaseQuery(options, QueryObserver);
+}
+function useMutation(options, queryClient2) {
+  const client2 = useQueryClient();
+  const [observer2] = reactExports.useState(
+    () => new MutationObserver$1(
+      client2,
+      options
+    )
+  );
+  reactExports.useEffect(() => {
+    observer2.setOptions(options);
+  }, [observer2, options]);
+  const result = reactExports.useSyncExternalStore(
+    reactExports.useCallback(
+      (onStoreChange) => observer2.subscribe(notifyManager.batchCalls(onStoreChange)),
+      [observer2]
+    ),
+    () => observer2.getCurrentResult(),
+    () => observer2.getCurrentResult()
+  );
+  const mutate = reactExports.useCallback(
+    (variables, mutateOptions) => {
+      observer2.mutate(variables, mutateOptions).catch(noop$7);
+    },
+    [observer2]
+  );
+  if (result.error && shouldThrowError(observer2.options.throwOnError, [result.error])) {
+    throw result.error;
+  }
+  return { ...result, mutate, mutateAsync: result.mutate };
+}
+function isObject$1(value) {
   return value !== null && typeof value === "object";
 }
 const _Ed25519PublicKey = class _Ed25519PublicKey {
@@ -13767,9 +15004,9 @@ const _Ed25519PublicKey = class _Ed25519PublicKey {
       const key = hexToBytes(maybeKey);
       return this.fromRaw(key);
     }
-    if (isObject$2(maybeKey)) {
+    if (isObject$1(maybeKey)) {
       const key = maybeKey;
-      if (isObject$2(key) && Object.hasOwnProperty.call(key, "__derEncodedPublicKey__")) {
+      if (isObject$1(key) && Object.hasOwnProperty.call(key, "__derEncodedPublicKey__")) {
         return this.fromDer(key);
       }
       if (ArrayBuffer.isView(key)) {
@@ -13919,11 +15156,11 @@ const _Ed25519KeyIdentity = class _Ed25519KeyIdentity extends SignIdentity {
    * @returns - true if the signature is valid, false otherwise
    */
   static verify(sig, msg, pk) {
-    const [signature, message, publicKey] = [sig, msg, pk].map((x3) => {
-      if (typeof x3 === "string") {
-        x3 = hexToBytes(x3);
+    const [signature, message, publicKey] = [sig, msg, pk].map((x2) => {
+      if (typeof x2 === "string") {
+        x2 = hexToBytes(x2);
       }
-      return uint8FromBufLike$1(x3);
+      return uint8FromBufLike$1(x2);
     });
     return ed25519.verify(signature, message, publicKey);
   }
@@ -14823,7 +16060,7 @@ _status = new WeakMap();
 _HeartbeatClient_instances = new WeakSet();
 establish_fn = function() {
   let pending = [];
-  const create2 = () => {
+  const create = () => {
     const id2 = __privateGet(this, _options2).crypto.randomUUID();
     pending.push(id2);
     return id2;
@@ -14844,7 +16081,7 @@ establish_fn = function() {
     clearInterval(interval);
     __privateGet(this, _options2).onEstablishTimeout();
   }, __privateGet(this, _options2).establishTimeout);
-  const interval = setInterval(() => __privateMethod(this, _HeartbeatClient_instances, sendStatusRequest_fn).call(this, create2()), __privateGet(this, _options2).statusPollingRate);
+  const interval = setInterval(() => __privateMethod(this, _HeartbeatClient_instances, sendStatusRequest_fn).call(this, create()), __privateGet(this, _options2).statusPollingRate);
 };
 maintain_fn = function(origin, status) {
   let timeout2;
@@ -14856,7 +16093,7 @@ maintain_fn = function(origin, status) {
     }
     return index2 > -1;
   };
-  const create2 = () => {
+  const create = () => {
     const id2 = __privateGet(this, _options2).crypto.randomUUID();
     const time2 = Date.now();
     pending = pending.filter((entry) => time2 - __privateGet(this, _options2).disconnectTimeout > entry.time);
@@ -14878,10 +16115,10 @@ maintain_fn = function(origin, status) {
         __privateGet(this, _options2).onStatusChange(response.data.result);
       }
     }
-    setTimeout(() => __privateMethod(this, _HeartbeatClient_instances, sendStatusRequest_fn).call(this, create2()), __privateGet(this, _options2).statusPollingRate);
+    setTimeout(() => __privateMethod(this, _HeartbeatClient_instances, sendStatusRequest_fn).call(this, create()), __privateGet(this, _options2).statusPollingRate);
   });
   resetTimeout(status);
-  __privateMethod(this, _HeartbeatClient_instances, sendStatusRequest_fn).call(this, create2());
+  __privateMethod(this, _HeartbeatClient_instances, sendStatusRequest_fn).call(this, create());
 };
 receiveStatusResponse_fn = function(handler) {
   const listener = (event) => {
@@ -15885,12 +17122,12 @@ async function createAuthClient(createOptions) {
   };
   return new AuthClient(options);
 }
-async function createIIAttributesActor(identity2) {
+async function createIIAttributesActor(identity) {
   var _a2;
   const config = await loadConfig();
   const agent = new HttpAgent({
     host: config.backend_host,
-    identity: identity2
+    identity
   });
   if ((_a2 = config.backend_host) == null ? void 0 : _a2.includes("localhost")) {
     await agent.fetchRootKey().catch(() => {
@@ -15913,7 +17150,7 @@ const useInternetIdentity = () => {
 };
 function InternetIdentityProvider({ children, createOptions, withAttributes = {} }) {
   const [authClient, setAuthClient] = reactExports.useState(void 0);
-  const [identity2, setIdentity] = reactExports.useState(void 0);
+  const [identity, setIdentity] = reactExports.useState(void 0);
   const [loginStatus, setStatus] = reactExports.useState("initializing");
   const [loginError, setError] = reactExports.useState(void 0);
   const withAttributesRef = reactExports.useRef(withAttributes);
@@ -16041,7 +17278,7 @@ function InternetIdentityProvider({ children, createOptions, withAttributes = {}
     };
   }, [createOptions, authClient]);
   const value = reactExports.useMemo(() => ({
-    identity: identity2,
+    identity,
     login,
     clear,
     loginStatus,
@@ -16050,13 +17287,52 @@ function InternetIdentityProvider({ children, createOptions, withAttributes = {}
     isLoggingIn: loginStatus === "logging-in",
     isLoginSuccess: loginStatus === "success",
     isLoginError: loginStatus === "loginError",
-    isAuthenticated: !!identity2 && !identity2.getPrincipal().isAnonymous(),
+    isAuthenticated: !!identity && !identity.getPrincipal().isAnonymous(),
     loginError
-  }), [identity2, login, clear, loginStatus, loginError]);
+  }), [identity, login, clear, loginStatus, loginError]);
   return reactExports.createElement(InternetIdentityReactContext.Provider, {
     value,
     children
   });
+}
+const ACTOR_QUERY_KEY = "actor";
+function useActor(createActor2) {
+  const { identity, isAuthenticated } = useInternetIdentity();
+  const queryClient2 = useQueryClient();
+  const actorQuery = useQuery({
+    queryKey: [ACTOR_QUERY_KEY, identity == null ? void 0 : identity.getPrincipal().toString()],
+    queryFn: async () => {
+      if (!isAuthenticated) {
+        return await createActorWithConfig(createActor2);
+      }
+      const actor = await createActorWithConfig(createActor2, {
+        agentOptions: { identity }
+      });
+      return actor;
+    },
+    // Only refetch when identity changes
+    staleTime: Number.POSITIVE_INFINITY,
+    // This will cause the actor to be recreated when the identity changes
+    enabled: true
+  });
+  reactExports.useEffect(() => {
+    if (actorQuery.data) {
+      queryClient2.invalidateQueries({
+        predicate: (query) => {
+          return !query.queryKey.includes(ACTOR_QUERY_KEY);
+        }
+      });
+      queryClient2.refetchQueries({
+        predicate: (query) => {
+          return !query.queryKey.includes(ACTOR_QUERY_KEY);
+        }
+      });
+    }
+  }, [actorQuery.data, queryClient2]);
+  return {
+    actor: actorQuery.data || null,
+    isFetching: actorQuery.isFetching
+  };
 }
 var client = { exports: {} };
 var reactDomClient_production = {};
@@ -16664,7 +17940,7 @@ function getComponentNameFromType(type) {
         type = type._init;
         try {
           return getComponentNameFromType(type(innerType));
-        } catch (x3) {
+        } catch (x2) {
         }
     }
   return null;
@@ -16739,9 +18015,9 @@ function setIsStrictModeForDevtools(newIsStrictMode) {
     }
 }
 var clz32 = Math.clz32 ? Math.clz32 : clz32Fallback, log = Math.log, LN2 = Math.LN2;
-function clz32Fallback(x3) {
-  x3 >>>= 0;
-  return 0 === x3 ? 32 : 31 - (log(x3) / LN2 | 0) | 0;
+function clz32Fallback(x2) {
+  x2 >>>= 0;
+  return 0 === x2 ? 32 : 31 - (log(x2) / LN2 | 0) | 0;
 }
 var nextTransitionLane = 256, nextRetryLane = 4194304;
 function getHighestPriorityLanes(lanes) {
@@ -17091,10 +18367,10 @@ function describeBuiltInComponentFrame(name) {
   if (void 0 === prefix$1)
     try {
       throw Error();
-    } catch (x3) {
-      var match = x3.stack.trim().match(/\n( *(at )?)/);
+    } catch (x2) {
+      var match = x2.stack.trim().match(/\n( *(at )?)/);
       prefix$1 = match && match[1] || "";
-      suffix = -1 < x3.stack.indexOf("\n    at") ? " (<anonymous>)" : -1 < x3.stack.indexOf("@") ? "@unknown:0:0" : "";
+      suffix = -1 < x2.stack.indexOf("\n    at") ? " (<anonymous>)" : -1 < x2.stack.indexOf("@") ? "@unknown:0:0" : "";
     }
   return "\n" + prefix$1 + name + suffix;
 }
@@ -17120,8 +18396,8 @@ function describeNativeComponentFrame(fn, construct) {
             if ("object" === typeof Reflect && Reflect.construct) {
               try {
                 Reflect.construct(Fake, []);
-              } catch (x3) {
-                var control = x3;
+              } catch (x2) {
+                var control = x2;
               }
               Reflect.construct(fn, [], Fake);
             } else {
@@ -17221,8 +18497,8 @@ function getStackByFiberInDevAndProd(workInProgress2) {
       info += describeFiber(workInProgress2), workInProgress2 = workInProgress2.return;
     while (workInProgress2);
     return info;
-  } catch (x3) {
-    return "\nError generating stack: " + x3.message + "\n" + x3.stack;
+  } catch (x2) {
+    return "\nError generating stack: " + x2.message + "\n" + x2.stack;
   }
 }
 function getToStringValue(value) {
@@ -17249,15 +18525,15 @@ function trackValueOnNode(node) {
     valueField
   ), currentValue = "" + node[valueField];
   if (!node.hasOwnProperty(valueField) && "undefined" !== typeof descriptor && "function" === typeof descriptor.get && "function" === typeof descriptor.set) {
-    var get2 = descriptor.get, set2 = descriptor.set;
+    var get = descriptor.get, set = descriptor.set;
     Object.defineProperty(node, valueField, {
       configurable: true,
       get: function() {
-        return get2.call(this);
+        return get.call(this);
       },
       set: function(value) {
         currentValue = "" + value;
-        set2.call(this, value);
+        set.call(this, value);
       }
     });
     Object.defineProperty(node, valueField, {
@@ -17999,8 +19275,8 @@ function getTargetInstForInputOrChangeEvent(domEventName, targetInst) {
   if ("input" === domEventName || "change" === domEventName)
     return getInstIfValueChanged(targetInst);
 }
-function is$2(x3, y2) {
-  return x3 === y2 && (0 !== x3 || 1 / x3 === 1 / y2) || x3 !== x3 && y2 !== y2;
+function is$2(x2, y2) {
+  return x2 === y2 && (0 !== x2 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
 }
 var objectIs$2 = "function" === typeof Object.is ? Object.is : is$2;
 function shallowEqual(objA, objB) {
@@ -19262,8 +20538,8 @@ function updateSyncExternalStore(subscribe2, getSnapshot, getServerSnapshot) {
   );
   snapshotChanged && (hook.memoizedState = getServerSnapshot, didReceiveUpdate = true);
   hook = hook.queue;
-  var create2 = subscribeToStore.bind(null, fiber, hook, subscribe2);
-  updateEffectImpl(2048, 8, create2, [subscribe2]);
+  var create = subscribeToStore.bind(null, fiber, hook, subscribe2);
+  updateEffectImpl(2048, 8, create, [subscribe2]);
   if (hook.getSnapshot !== getSnapshot || snapshotChanged || null !== workInProgressHook && workInProgressHook.memoizedState.tag & 1) {
     fiber.flags |= 2048;
     pushSimpleEffect(
@@ -19522,9 +20798,9 @@ function updateActionStateImpl(stateHook, currentStateHook, action) {
   if ("object" === typeof currentStateHook && null !== currentStateHook && "function" === typeof currentStateHook.then)
     try {
       var state = useThenable(currentStateHook);
-    } catch (x3) {
-      if (x3 === SuspenseException) throw SuspenseActionException;
-      throw x3;
+    } catch (x2) {
+      if (x2 === SuspenseException) throw SuspenseActionException;
+      throw x2;
     }
   else state = currentStateHook;
   currentStateHook = updateWorkInProgressHook();
@@ -19551,12 +20827,12 @@ function rerenderActionState(action) {
   currentStateHook.memoizedState = action;
   return [stateHook, dispatch, false];
 }
-function pushSimpleEffect(tag, inst, create2, createDeps) {
-  tag = { tag, create: create2, deps: createDeps, inst, next: null };
+function pushSimpleEffect(tag, inst, create, createDeps) {
+  tag = { tag, create, deps: createDeps, inst, next: null };
   inst = currentlyRenderingFiber.updateQueue;
   null === inst && (inst = createFunctionComponentUpdateQueue(), currentlyRenderingFiber.updateQueue = inst);
-  create2 = inst.lastEffect;
-  null === create2 ? inst.lastEffect = tag.next = tag : (createDeps = create2.next, create2.next = tag, tag.next = createDeps, inst.lastEffect = tag);
+  create = inst.lastEffect;
+  null === create ? inst.lastEffect = tag.next = tag : (createDeps = create.next, create.next = tag, tag.next = createDeps, inst.lastEffect = tag);
   return tag;
 }
 function createEffectInstance() {
@@ -19565,56 +20841,56 @@ function createEffectInstance() {
 function updateRef() {
   return updateWorkInProgressHook().memoizedState;
 }
-function mountEffectImpl(fiberFlags, hookFlags, create2, createDeps) {
+function mountEffectImpl(fiberFlags, hookFlags, create, createDeps) {
   var hook = mountWorkInProgressHook();
   createDeps = void 0 === createDeps ? null : createDeps;
   currentlyRenderingFiber.flags |= fiberFlags;
   hook.memoizedState = pushSimpleEffect(
     1 | hookFlags,
     createEffectInstance(),
-    create2,
+    create,
     createDeps
   );
 }
-function updateEffectImpl(fiberFlags, hookFlags, create2, deps) {
+function updateEffectImpl(fiberFlags, hookFlags, create, deps) {
   var hook = updateWorkInProgressHook();
   deps = void 0 === deps ? null : deps;
   var inst = hook.memoizedState.inst;
-  null !== currentHook && null !== deps && areHookInputsEqual(deps, currentHook.memoizedState.deps) ? hook.memoizedState = pushSimpleEffect(hookFlags, inst, create2, deps) : (currentlyRenderingFiber.flags |= fiberFlags, hook.memoizedState = pushSimpleEffect(
+  null !== currentHook && null !== deps && areHookInputsEqual(deps, currentHook.memoizedState.deps) ? hook.memoizedState = pushSimpleEffect(hookFlags, inst, create, deps) : (currentlyRenderingFiber.flags |= fiberFlags, hook.memoizedState = pushSimpleEffect(
     1 | hookFlags,
     inst,
-    create2,
+    create,
     deps
   ));
 }
-function mountEffect(create2, createDeps) {
-  mountEffectImpl(8390656, 8, create2, createDeps);
+function mountEffect(create, createDeps) {
+  mountEffectImpl(8390656, 8, create, createDeps);
 }
-function updateEffect(create2, createDeps) {
-  updateEffectImpl(2048, 8, create2, createDeps);
+function updateEffect(create, createDeps) {
+  updateEffectImpl(2048, 8, create, createDeps);
 }
-function updateInsertionEffect(create2, deps) {
-  return updateEffectImpl(4, 2, create2, deps);
+function updateInsertionEffect(create, deps) {
+  return updateEffectImpl(4, 2, create, deps);
 }
-function updateLayoutEffect(create2, deps) {
-  return updateEffectImpl(4, 4, create2, deps);
+function updateLayoutEffect(create, deps) {
+  return updateEffectImpl(4, 4, create, deps);
 }
-function imperativeHandleEffect(create2, ref) {
+function imperativeHandleEffect(create, ref) {
   if ("function" === typeof ref) {
-    create2 = create2();
-    var refCleanup = ref(create2);
+    create = create();
+    var refCleanup = ref(create);
     return function() {
       "function" === typeof refCleanup ? refCleanup() : ref(null);
     };
   }
   if (null !== ref && void 0 !== ref)
-    return create2 = create2(), ref.current = create2, function() {
+    return create = create(), ref.current = create, function() {
       ref.current = null;
     };
 }
-function updateImperativeHandle(ref, create2, deps) {
+function updateImperativeHandle(ref, create, deps) {
   deps = null !== deps && void 0 !== deps ? deps.concat([ref]) : null;
-  updateEffectImpl(4, 4, imperativeHandleEffect.bind(null, create2, ref), deps);
+  updateEffectImpl(4, 4, imperativeHandleEffect.bind(null, create, ref), deps);
 }
 function mountDebugValue() {
 }
@@ -19902,20 +21178,20 @@ var ContextOnlyDispatcher = {
   },
   useContext: readContext,
   useEffect: mountEffect,
-  useImperativeHandle: function(ref, create2, deps) {
+  useImperativeHandle: function(ref, create, deps) {
     deps = null !== deps && void 0 !== deps ? deps.concat([ref]) : null;
     mountEffectImpl(
       4194308,
       4,
-      imperativeHandleEffect.bind(null, create2, ref),
+      imperativeHandleEffect.bind(null, create, ref),
       deps
     );
   },
-  useLayoutEffect: function(create2, deps) {
-    return mountEffectImpl(4194308, 4, create2, deps);
+  useLayoutEffect: function(create, deps) {
+    return mountEffectImpl(4194308, 4, create, deps);
   },
-  useInsertionEffect: function(create2, deps) {
-    mountEffectImpl(4, 2, create2, deps);
+  useInsertionEffect: function(create, deps) {
+    mountEffectImpl(4, 2, create, deps);
   },
   useMemo: function(nextCreate, deps) {
     var hook = mountWorkInProgressHook();
@@ -20612,9 +21888,9 @@ function createChildReconciler(shouldTrackSideEffects) {
       );
       thenableState = null;
       return firstChildFiber;
-    } catch (x3) {
-      if (x3 === SuspenseException || x3 === SuspenseActionException) throw x3;
-      var fiber = createFiberImplClass(29, x3, null, returnFiber.mode);
+    } catch (x2) {
+      if (x2 === SuspenseException || x2 === SuspenseActionException) throw x2;
+      var fiber = createFiberImplClass(29, x2, null, returnFiber.mode);
       fiber.lanes = lanes;
       fiber.return = returnFiber;
       return fiber;
@@ -22328,8 +23604,8 @@ function commitHookEffectListMount(flags, finishedWork) {
       do {
         if ((updateQueue.tag & flags) === flags) {
           lastEffect = void 0;
-          var create2 = updateQueue.create, inst = updateQueue.inst;
-          lastEffect = create2();
+          var create = updateQueue.create, inst = updateQueue.inst;
+          lastEffect = create();
           inst.destroy = lastEffect;
         }
         updateQueue = updateQueue.next;
@@ -28221,11 +29497,11 @@ function createRandomKey() {
 function last(arr) {
   return arr[arr.length - 1];
 }
-function isFunction$2(d2) {
+function isFunction$1(d2) {
   return typeof d2 === "function";
 }
 function functionalUpdate(updater, previous) {
-  if (isFunction$2(updater)) {
+  if (isFunction$1(updater)) {
     return updater(previous);
   }
   return updater;
@@ -28237,7 +29513,7 @@ function replaceEqualDeep(prev, _next) {
   }
   const next = _next;
   const array = isPlainArray(prev) && isPlainArray(next);
-  if (!array && !(isPlainObject$1(prev) && isPlainObject$1(next))) return next;
+  if (!array && !(isPlainObject(prev) && isPlainObject(next))) return next;
   const prevItems = array ? prev : getEnumerableOwnKeys(prev);
   if (!prevItems) return next;
   const nextItems = array ? next : getEnumerableOwnKeys(next);
@@ -28279,7 +29555,7 @@ function getEnumerableOwnKeys(o) {
   }
   return keys;
 }
-function isPlainObject$1(o) {
+function isPlainObject(o) {
   if (!hasObjectPrototype(o)) {
     return false;
   }
@@ -28302,7 +29578,7 @@ function hasObjectPrototype(o) {
 function isPlainArray(value) {
   return Array.isArray(value) && value.length === Object.keys(value).length;
 }
-function deepEqual$2(a2, b2, opts) {
+function deepEqual$1(a2, b2, opts) {
   if (a2 === b2) {
     return true;
   }
@@ -28312,16 +29588,16 @@ function deepEqual$2(a2, b2, opts) {
   if (Array.isArray(a2) && Array.isArray(b2)) {
     if (a2.length !== b2.length) return false;
     for (let i = 0, l2 = a2.length; i < l2; i++) {
-      if (!deepEqual$2(a2[i], b2[i], opts)) return false;
+      if (!deepEqual$1(a2[i], b2[i], opts)) return false;
     }
     return true;
   }
-  if (isPlainObject$1(a2) && isPlainObject$1(b2)) {
+  if (isPlainObject(a2) && isPlainObject(b2)) {
     const ignoreUndefined = (opts == null ? void 0 : opts.ignoreUndefined) ?? true;
     if (opts == null ? void 0 : opts.partial) {
       for (const k2 in b2) {
         if (!ignoreUndefined || b2[k2] !== void 0) {
-          if (!deepEqual$2(a2[k2], b2[k2], opts)) return false;
+          if (!deepEqual$1(a2[k2], b2[k2], opts)) return false;
         }
       }
       return true;
@@ -28338,7 +29614,7 @@ function deepEqual$2(a2, b2, opts) {
     for (const k2 in b2) {
       if (!ignoreUndefined || b2[k2] !== void 0) {
         bCount++;
-        if (bCount > aCount || !deepEqual$2(a2[k2], b2[k2], opts)) return false;
+        if (bCount > aCount || !deepEqual$1(a2[k2], b2[k2], opts)) return false;
       }
     }
     return aCount === bCount;
@@ -30413,7 +31689,7 @@ class RouterCore {
         ignoredProps.forEach((prop) => {
           next.state[prop] = this.latestLocation.state[prop];
         });
-        const isEqual = deepEqual$2(next.state, this.latestLocation.state);
+        const isEqual = deepEqual$1(next.state, this.latestLocation.state);
         ignoredProps.forEach((prop) => {
           delete next.state[prop];
         });
@@ -30878,12 +32154,12 @@ class RouterCore {
         return false;
       }
       if (location2.params) {
-        if (!deepEqual$2(match, location2.params, { partial: true })) {
+        if (!deepEqual$1(match, location2.params, { partial: true })) {
           return false;
         }
       }
       if (match && ((opts == null ? void 0 : opts.includeSearch) ?? true)) {
-        return deepEqual$2(baseLocation.search, next.search, { partial: true }) ? match : false;
+        return deepEqual$1(baseLocation.search, next.search, { partial: true }) ? match : false;
       }
       return match;
     };
@@ -31483,10 +32759,10 @@ function ErrorComponent({ error }) {
   ] });
 }
 function ClientOnly({ children, fallback = null }) {
-  return useHydrated() ? /* @__PURE__ */ jsxRuntimeExports.jsx(React$4.Fragment, { children }) : /* @__PURE__ */ jsxRuntimeExports.jsx(React$4.Fragment, { children: fallback });
+  return useHydrated() ? /* @__PURE__ */ jsxRuntimeExports.jsx(React2.Fragment, { children }) : /* @__PURE__ */ jsxRuntimeExports.jsx(React2.Fragment, { children: fallback });
 }
 function useHydrated() {
-  return React$4.useSyncExternalStore(
+  return React2.useSyncExternalStore(
     subscribe,
     () => true,
     () => false
@@ -31510,8 +32786,8 @@ var useSyncExternalStoreShim_production = {};
  * LICENSE file in the root directory of this source tree.
  */
 var React$1 = reactExports;
-function is$1(x3, y2) {
-  return x3 === y2 && (0 !== x3 || 1 / x3 === 1 / y2) || x3 !== x3 && y2 !== y2;
+function is$1(x2, y2) {
+  return x2 === y2 && (0 !== x2 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
 }
 var objectIs$1 = "function" === typeof Object.is ? Object.is : is$1, useState = React$1.useState, useEffect$1 = React$1.useEffect, useLayoutEffect$1 = React$1.useLayoutEffect, useDebugValue$1 = React$1.useDebugValue;
 function useSyncExternalStore$2(subscribe2, getSnapshot) {
@@ -31565,8 +32841,8 @@ var shimExports = shim$2.exports;
  * LICENSE file in the root directory of this source tree.
  */
 var React = reactExports, shim = shimExports;
-function is(x3, y2) {
-  return x3 === y2 && (0 !== x3 || 1 / x3 === 1 / y2) || x3 !== x3 && y2 !== y2;
+function is(x2, y2) {
+  return x2 === y2 && (0 !== x2 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
 }
 var objectIs = "function" === typeof Object.is ? Object.is : is, useSyncExternalStore = shim.useSyncExternalStore, useRef = React.useRef, useEffect = React.useEffect, useMemo = React.useMemo, useDebugValue = React.useDebugValue;
 withSelector_production.useSyncExternalStoreWithSelector = function(subscribe2, getSnapshot, getServerSnapshot, selector, isEqual) {
@@ -31624,7 +32900,7 @@ withSelector_production.useSyncExternalStoreWithSelector = function(subscribe2, 
   withSelector.exports = withSelector_production;
 }
 var withSelectorExports = withSelector.exports;
-function useStore$1(store, selector = (d2) => d2) {
+function useStore(store, selector = (d2) => d2) {
   const slice = withSelectorExports.useSyncExternalStoreWithSelector(
     store.subscribe,
     () => store.state,
@@ -31699,7 +32975,7 @@ function useRouterState(opts) {
   });
   const router2 = (opts == null ? void 0 : opts.router) || contextRouter;
   const previousResult = reactExports.useRef(void 0);
-  return useStore$1(router2.__store, (state) => {
+  return useStore(router2.__store, (state) => {
     if (opts == null ? void 0 : opts.select) {
       if (opts.structuralSharing ?? router2.options.defaultStructuralSharing) {
         const newSlice = replaceEqualDeep(
@@ -31936,7 +33212,7 @@ function useLinkProps(options, forwardedRef) {
         }
       }
       if ((activeOptions == null ? void 0 : activeOptions.includeSearch) ?? true) {
-        const searchTest = deepEqual$2(s.location.search, next.search, {
+        const searchTest = deepEqual$1(s.location.search, next.search, {
           partial: !(activeOptions == null ? void 0 : activeOptions.exact),
           ignoreUndefined: !(activeOptions == null ? void 0 : activeOptions.explicitUndefined)
         });
@@ -32170,7 +33446,7 @@ let Route$1 = class Route extends BaseRoute {
     this.useNavigate = () => {
       return useNavigate({ from: this.fullPath });
     };
-    this.Link = React$4.forwardRef(
+    this.Link = React2.forwardRef(
       (props, ref) => {
         return /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { ref, from: this.fullPath, ...props });
       }
@@ -32224,7 +33500,7 @@ class RootRoute extends BaseRootRoute {
     this.useNavigate = () => {
       return useNavigate({ from: this.fullPath });
     };
-    this.Link = React$4.forwardRef(
+    this.Link = React2.forwardRef(
       (props, ref) => {
         return /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { ref, from: this.fullPath, ...props });
       }
@@ -32896,35 +34172,16 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$Q = [
-  ["path", { d: "M12 5v14", key: "s699le" }],
-  ["path", { d: "m19 12-7 7-7-7", key: "1idqje" }]
-];
-const ArrowDown = createLucideIcon("arrow-down", __iconNode$Q);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$P = [
-  ["path", { d: "M8 3 4 7l4 4", key: "9rb6wj" }],
-  ["path", { d: "M4 7h16", key: "6tx8e3" }],
-  ["path", { d: "m16 21 4-4-4-4", key: "siv7j2" }],
-  ["path", { d: "M20 17H4", key: "h6l3hr" }]
-];
-const ArrowLeftRight = createLucideIcon("arrow-left-right", __iconNode$P);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
 const __iconNode$O = [
-  ["path", { d: "m12 19-7-7 7-7", key: "1l729n" }],
-  ["path", { d: "M19 12H5", key: "x3x0zl" }]
+  [
+    "path",
+    {
+      d: "M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2",
+      key: "169zse"
+    }
+  ]
 ];
-const ArrowLeft = createLucideIcon("arrow-left", __iconNode$O);
+const Activity = createLucideIcon("activity", __iconNode$O);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -32932,10 +34189,10 @@ const ArrowLeft = createLucideIcon("arrow-left", __iconNode$O);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$N = [
-  ["path", { d: "M5 12h14", key: "1ays0h" }],
-  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
+  ["path", { d: "M12 5v14", key: "s699le" }],
+  ["path", { d: "m19 12-7 7-7-7", key: "1idqje" }]
 ];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$N);
+const ArrowDown = createLucideIcon("arrow-down", __iconNode$N);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -32943,10 +34200,12 @@ const ArrowRight = createLucideIcon("arrow-right", __iconNode$N);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$M = [
-  ["path", { d: "m5 12 7-7 7 7", key: "hav0vg" }],
-  ["path", { d: "M12 19V5", key: "x0mq9r" }]
+  ["path", { d: "M8 3 4 7l4 4", key: "9rb6wj" }],
+  ["path", { d: "M4 7h16", key: "6tx8e3" }],
+  ["path", { d: "m16 21 4-4-4-4", key: "siv7j2" }],
+  ["path", { d: "M20 17H4", key: "h6l3hr" }]
 ];
-const ArrowUp = createLucideIcon("arrow-up", __iconNode$M);
+const ArrowLeftRight = createLucideIcon("arrow-left-right", __iconNode$M);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -32954,6 +34213,39 @@ const ArrowUp = createLucideIcon("arrow-up", __iconNode$M);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$L = [
+  ["path", { d: "m12 19-7-7 7-7", key: "1l729n" }],
+  ["path", { d: "M19 12H5", key: "x3x0zl" }]
+];
+const ArrowLeft = createLucideIcon("arrow-left", __iconNode$L);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$K = [
+  ["path", { d: "M7 7h10v10", key: "1tivn9" }],
+  ["path", { d: "M7 17 17 7", key: "1vkiza" }]
+];
+const ArrowUpRight = createLucideIcon("arrow-up-right", __iconNode$K);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$J = [
+  ["path", { d: "m5 12 7-7 7 7", key: "hav0vg" }],
+  ["path", { d: "M12 19V5", key: "x0mq9r" }]
+];
+const ArrowUp = createLucideIcon("arrow-up", __iconNode$J);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$I = [
   ["path", { d: "M12 7v14", key: "1akyts" }],
   [
     "path",
@@ -32963,14 +34255,14 @@ const __iconNode$L = [
     }
   ]
 ];
-const BookOpen = createLucideIcon("book-open", __iconNode$L);
+const BookOpen = createLucideIcon("book-open", __iconNode$I);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$K = [
+const __iconNode$H = [
   ["path", { d: "M12 8V4H8", key: "hb8ula" }],
   ["rect", { width: "16", height: "12", x: "4", y: "8", rx: "2", key: "enze0r" }],
   ["path", { d: "M2 14h2", key: "vft8re" }],
@@ -32978,77 +34270,39 @@ const __iconNode$K = [
   ["path", { d: "M15 13v2", key: "1xurst" }],
   ["path", { d: "M9 13v2", key: "rq6x2g" }]
 ];
-const Bot = createLucideIcon("bot", __iconNode$K);
+const Bot = createLucideIcon("bot", __iconNode$H);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$J = [
-  ["path", { d: "M3 3v16a2 2 0 0 0 2 2h16", key: "c24i48" }],
-  ["path", { d: "M18 17V9", key: "2bz60n" }],
-  ["path", { d: "M13 17V5", key: "1frdt8" }],
-  ["path", { d: "M8 17v-3", key: "17ska0" }]
-];
-const ChartColumn = createLucideIcon("chart-column", __iconNode$J);
+const __iconNode$G = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$G);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$I = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$I);
+const __iconNode$F = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
+const ChevronDown = createLucideIcon("chevron-down", __iconNode$F);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$H = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
-const ChevronDown = createLucideIcon("chevron-down", __iconNode$H);
+const __iconNode$E = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
+const ChevronRight = createLucideIcon("chevron-right", __iconNode$E);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$G = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
-const ChevronUp = createLucideIcon("chevron-up", __iconNode$G);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$F = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
-];
-const CircleCheck = createLucideIcon("circle-check", __iconNode$F);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$E = [
-  ["path", { d: "m16 18 6-6-6-6", key: "eg8j8" }],
-  ["path", { d: "m8 6-6 6 6 6", key: "ppft3o" }]
-];
-const Code = createLucideIcon("code", __iconNode$E);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$D = [
-  ["rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2", key: "17jyea" }],
-  ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2", key: "zix9uf" }]
-];
-const Copy = createLucideIcon("copy", __iconNode$D);
+const __iconNode$D = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
+const ChevronUp = createLucideIcon("chevron-up", __iconNode$D);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33056,11 +34310,10 @@ const Copy = createLucideIcon("copy", __iconNode$D);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$C = [
-  ["path", { d: "M12 15V3", key: "m9g1x1" }],
-  ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
-  ["path", { d: "m7 10 5 5 5-5", key: "brsn70" }]
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
 ];
-const Download = createLucideIcon("download", __iconNode$C);
+const Clock = createLucideIcon("clock", __iconNode$C);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33068,11 +34321,10 @@ const Download = createLucideIcon("download", __iconNode$C);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$B = [
-  ["circle", { cx: "12", cy: "12", r: "1", key: "41hilf" }],
-  ["circle", { cx: "19", cy: "12", r: "1", key: "1wjl8i" }],
-  ["circle", { cx: "5", cy: "12", r: "1", key: "1pcz8c" }]
+  ["path", { d: "m16 18 6-6-6-6", key: "eg8j8" }],
+  ["path", { d: "m8 6-6 6 6 6", key: "ppft3o" }]
 ];
-const Ellipsis = createLucideIcon("ellipsis", __iconNode$B);
+const Code = createLucideIcon("code", __iconNode$B);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33080,25 +34332,10 @@ const Ellipsis = createLucideIcon("ellipsis", __iconNode$B);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$A = [
-  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
-  ["path", { d: "m2.305 15.53.923-.382", key: "yfp9st" }],
-  ["path", { d: "m3.228 12.852-.924-.383", key: "bckynb" }],
-  [
-    "path",
-    {
-      d: "M4.677 21.5a2 2 0 0 0 1.313.5H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v2.5",
-      key: "1yo3oz"
-    }
-  ],
-  ["path", { d: "m4.852 11.228-.383-.923", key: "1j88i9" }],
-  ["path", { d: "m4.852 16.772-.383.924", key: "sag1dv" }],
-  ["path", { d: "m7.148 11.228.383-.923", key: "rj39hk" }],
-  ["path", { d: "m7.53 17.696-.382-.924", key: "1uu5cs" }],
-  ["path", { d: "m8.772 12.852.923-.383", key: "13811l" }],
-  ["path", { d: "m8.772 15.148.923.383", key: "z1a5l0" }],
-  ["circle", { cx: "6", cy: "14", r: "3", key: "a1xfv6" }]
+  ["rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2", key: "17jyea" }],
+  ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2", key: "zix9uf" }]
 ];
-const FileCog = createLucideIcon("file-cog", __iconNode$A);
+const Copy = createLucideIcon("copy", __iconNode$A);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33106,13 +34343,11 @@ const FileCog = createLucideIcon("file-cog", __iconNode$A);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$z = [
-  ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
-  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
-  ["path", { d: "M10 9H8", key: "b1mrlr" }],
-  ["path", { d: "M16 13H8", key: "t4e002" }],
-  ["path", { d: "M16 17H8", key: "z1uh3a" }]
+  ["path", { d: "M12 15V3", key: "m9g1x1" }],
+  ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
+  ["path", { d: "m7 10 5 5 5-5", key: "brsn70" }]
 ];
-const FileText = createLucideIcon("file-text", __iconNode$z);
+const Download = createLucideIcon("download", __iconNode$z);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33120,17 +34355,11 @@ const FileText = createLucideIcon("file-text", __iconNode$z);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$y = [
-  ["path", { d: "M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4", key: "1nerag" }],
-  ["path", { d: "M14 13.12c0 2.38 0 6.38-1 8.88", key: "o46ks0" }],
-  ["path", { d: "M17.29 21.02c.12-.6.43-2.3.5-3.02", key: "ptglia" }],
-  ["path", { d: "M2 12a10 10 0 0 1 18-6", key: "ydlgp0" }],
-  ["path", { d: "M2 16h.01", key: "1gqxmh" }],
-  ["path", { d: "M21.8 16c.2-2 .131-5.354 0-6", key: "drycrb" }],
-  ["path", { d: "M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2", key: "1tidbn" }],
-  ["path", { d: "M8.65 22c.21-.66.45-1.32.57-2", key: "13wd9y" }],
-  ["path", { d: "M9 6.8a6 6 0 0 1 9 5.2v2", key: "1fr1j5" }]
+  ["circle", { cx: "12", cy: "12", r: "1", key: "41hilf" }],
+  ["circle", { cx: "19", cy: "12", r: "1", key: "1wjl8i" }],
+  ["circle", { cx: "5", cy: "12", r: "1", key: "1pcz8c" }]
 ];
-const Fingerprint = createLucideIcon("fingerprint", __iconNode$y);
+const Ellipsis = createLucideIcon("ellipsis", __iconNode$y);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33138,15 +34367,12 @@ const Fingerprint = createLucideIcon("fingerprint", __iconNode$y);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$x = [
-  [
-    "path",
-    {
-      d: "m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2",
-      key: "usdka0"
-    }
-  ]
+  ["path", { d: "M10 12.5 8 15l2 2.5", key: "1tg20x" }],
+  ["path", { d: "m14 12.5 2 2.5-2 2.5", key: "yinavb" }],
+  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
+  ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z", key: "1mlx9k" }]
 ];
-const FolderOpen = createLucideIcon("folder-open", __iconNode$x);
+const FileCode = createLucideIcon("file-code", __iconNode$x);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33154,6 +34380,62 @@ const FolderOpen = createLucideIcon("folder-open", __iconNode$x);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$w = [
+  ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
+  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
+  ["path", { d: "M8 13h2", key: "yr2amv" }],
+  ["path", { d: "M14 13h2", key: "un5t4a" }],
+  ["path", { d: "M8 17h2", key: "2yhykz" }],
+  ["path", { d: "M14 17h2", key: "10kma7" }]
+];
+const FileSpreadsheet = createLucideIcon("file-spreadsheet", __iconNode$w);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$v = [
+  ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
+  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
+  ["path", { d: "M10 9H8", key: "b1mrlr" }],
+  ["path", { d: "M16 13H8", key: "t4e002" }],
+  ["path", { d: "M16 17H8", key: "z1uh3a" }]
+];
+const FileText = createLucideIcon("file-text", __iconNode$v);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$u = [
+  ["path", { d: "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4", key: "1pf5j1" }],
+  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
+  ["path", { d: "M2 13v-1h6v1", key: "1dh9dg" }],
+  ["path", { d: "M5 12v6", key: "150t9c" }],
+  ["path", { d: "M4 18h2", key: "1xrofg" }]
+];
+const FileType2 = createLucideIcon("file-type-2", __iconNode$u);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$t = [
+  ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
+  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
+  ["path", { d: "M12 12v6", key: "3ahymv" }],
+  ["path", { d: "m15 15-3-3-3 3", key: "15xj92" }]
+];
+const FileUp = createLucideIcon("file-up", __iconNode$t);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$s = [
   ["path", { d: "M12 10v6", key: "1bos4e" }],
   ["path", { d: "M9 13h6", key: "1uhe8q" }],
   [
@@ -33164,62 +34446,7 @@ const __iconNode$w = [
     }
   ]
 ];
-const FolderPlus = createLucideIcon("folder-plus", __iconNode$w);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$v = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
-  ["path", { d: "M2 12h20", key: "9i4pu4" }]
-];
-const Globe = createLucideIcon("globe", __iconNode$v);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$u = [
-  ["path", { d: "M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8", key: "5wwlr5" }],
-  [
-    "path",
-    {
-      d: "M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z",
-      key: "1d0kgt"
-    }
-  ]
-];
-const House = createLucideIcon("house", __iconNode$u);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$t = [
-  ["path", { d: "M16 5h6", key: "1vod17" }],
-  ["path", { d: "M19 2v6", key: "4bpg5p" }],
-  ["path", { d: "M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5", key: "1ue2ih" }],
-  ["path", { d: "m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21", key: "1xmnt7" }],
-  ["circle", { cx: "9", cy: "9", r: "2", key: "af1f0g" }]
-];
-const ImagePlus = createLucideIcon("image-plus", __iconNode$t);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$s = [
-  ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", ry: "2", key: "1m3agn" }],
-  ["circle", { cx: "9", cy: "9", r: "2", key: "af1f0g" }],
-  ["path", { d: "m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21", key: "1xmnt7" }]
-];
-const Image = createLucideIcon("image", __iconNode$s);
+const FolderPlus = createLucideIcon("folder-plus", __iconNode$s);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33227,6 +34454,56 @@ const Image = createLucideIcon("image", __iconNode$s);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$r = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
+  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+];
+const Globe = createLucideIcon("globe", __iconNode$r);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$q = [
+  ["path", { d: "M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8", key: "1357e3" }],
+  ["path", { d: "M3 3v5h5", key: "1xhq8a" }],
+  ["path", { d: "M12 7v5l4 2", key: "1fdv2h" }]
+];
+const History = createLucideIcon("history", __iconNode$q);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$p = [
+  ["path", { d: "M16 5h6", key: "1vod17" }],
+  ["path", { d: "M19 2v6", key: "4bpg5p" }],
+  ["path", { d: "M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5", key: "1ue2ih" }],
+  ["path", { d: "m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21", key: "1xmnt7" }],
+  ["circle", { cx: "9", cy: "9", r: "2", key: "af1f0g" }]
+];
+const ImagePlus = createLucideIcon("image-plus", __iconNode$p);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$o = [
+  ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", ry: "2", key: "1m3agn" }],
+  ["circle", { cx: "9", cy: "9", r: "2", key: "af1f0g" }],
+  ["path", { d: "m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21", key: "1xmnt7" }]
+];
+const Image = createLucideIcon("image", __iconNode$o);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$n = [
   [
     "path",
     {
@@ -33237,61 +34514,15 @@ const __iconNode$r = [
   ["path", { d: "M9 18h6", key: "x1upvd" }],
   ["path", { d: "M10 22h4", key: "ceow96" }]
 ];
-const Lightbulb = createLucideIcon("lightbulb", __iconNode$r);
+const Lightbulb = createLucideIcon("lightbulb", __iconNode$n);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$q = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56", key: "13zald" }]];
-const LoaderCircle = createLucideIcon("loader-circle", __iconNode$q);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$p = [
-  ["rect", { width: "18", height: "11", x: "3", y: "11", rx: "2", ry: "2", key: "1w4ew1" }],
-  ["path", { d: "M7 11V7a5 5 0 0 1 10 0v4", key: "fwvmzm" }]
-];
-const Lock = createLucideIcon("lock", __iconNode$p);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$o = [
-  ["path", { d: "m16 17 5-5-5-5", key: "1bji2h" }],
-  ["path", { d: "M21 12H9", key: "dn1m92" }],
-  ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4", key: "1uf3rs" }]
-];
-const LogOut = createLucideIcon("log-out", __iconNode$o);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$n = [
-  ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
-  ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
-];
-const Mail = createLucideIcon("mail", __iconNode$n);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$m = [
-  ["path", { d: "M4 12h16", key: "1lakjw" }],
-  ["path", { d: "M4 18h16", key: "19g7jn" }],
-  ["path", { d: "M4 6h16", key: "1o0s65" }]
-];
-const Menu$1 = createLucideIcon("menu", __iconNode$m);
+const __iconNode$m = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56", key: "13zald" }]];
+const LoaderCircle = createLucideIcon("loader-circle", __iconNode$m);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33299,9 +34530,10 @@ const Menu$1 = createLucideIcon("menu", __iconNode$m);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$l = [
-  ["path", { d: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z", key: "1lielz" }]
+  ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
+  ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
 ];
-const MessageSquare = createLucideIcon("message-square", __iconNode$l);
+const Mail = createLucideIcon("mail", __iconNode$l);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33309,11 +34541,11 @@ const MessageSquare = createLucideIcon("message-square", __iconNode$l);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$k = [
-  ["path", { d: "M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z", key: "131961" }],
-  ["path", { d: "M19 10v2a7 7 0 0 1-14 0v-2", key: "1vc78b" }],
-  ["line", { x1: "12", x2: "12", y1: "19", y2: "22", key: "x3vr5v" }]
+  ["path", { d: "M4 12h16", key: "1lakjw" }],
+  ["path", { d: "M4 18h16", key: "19g7jn" }],
+  ["path", { d: "M4 6h16", key: "1o0s65" }]
 ];
-const Mic = createLucideIcon("mic", __iconNode$k);
+const Menu$1 = createLucideIcon("menu", __iconNode$k);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33321,14 +34553,11 @@ const Mic = createLucideIcon("mic", __iconNode$k);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$j = [
-  ["path", { d: "M6 18h8", key: "1borvv" }],
-  ["path", { d: "M3 22h18", key: "8prr45" }],
-  ["path", { d: "M14 22a7 7 0 1 0 0-14h-1", key: "1jwaiy" }],
-  ["path", { d: "M9 14h2", key: "197e7h" }],
-  ["path", { d: "M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z", key: "1bmzmy" }],
-  ["path", { d: "M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3", key: "1drr47" }]
+  ["path", { d: "M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z", key: "131961" }],
+  ["path", { d: "M19 10v2a7 7 0 0 1-14 0v-2", key: "1vc78b" }],
+  ["line", { x1: "12", x2: "12", y1: "19", y2: "22", key: "x3vr5v" }]
 ];
-const Microscope = createLucideIcon("microscope", __iconNode$j);
+const Mic = createLucideIcon("mic", __iconNode$j);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33336,12 +34565,14 @@ const Microscope = createLucideIcon("microscope", __iconNode$j);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$i = [
-  ["path", { d: "m14 10 7-7", key: "oa77jy" }],
-  ["path", { d: "M20 10h-6V4", key: "mjg0md" }],
-  ["path", { d: "m3 21 7-7", key: "tjx5ai" }],
-  ["path", { d: "M4 14h6v6", key: "rmj7iw" }]
+  ["path", { d: "M6 18h8", key: "1borvv" }],
+  ["path", { d: "M3 22h18", key: "8prr45" }],
+  ["path", { d: "M14 22a7 7 0 1 0 0-14h-1", key: "1jwaiy" }],
+  ["path", { d: "M9 14h2", key: "197e7h" }],
+  ["path", { d: "M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z", key: "1bmzmy" }],
+  ["path", { d: "M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3", key: "1drr47" }]
 ];
-const Minimize2 = createLucideIcon("minimize-2", __iconNode$i);
+const Microscope = createLucideIcon("microscope", __iconNode$i);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33349,9 +34580,12 @@ const Minimize2 = createLucideIcon("minimize-2", __iconNode$i);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$h = [
-  ["path", { d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z", key: "a7tn18" }]
+  ["path", { d: "m14 10 7-7", key: "oa77jy" }],
+  ["path", { d: "M20 10h-6V4", key: "mjg0md" }],
+  ["path", { d: "m3 21 7-7", key: "tjx5ai" }],
+  ["path", { d: "M4 14h6v6", key: "rmj7iw" }]
 ];
-const Moon = createLucideIcon("moon", __iconNode$h);
+const Minimize2 = createLucideIcon("minimize-2", __iconNode$h);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33451,10 +34685,17 @@ const RefreshCw = createLucideIcon("refresh-cw", __iconNode$b);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$a = [
-  ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
-  ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
+  [
+    "path",
+    {
+      d: "M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z",
+      key: "1c8476"
+    }
+  ],
+  ["path", { d: "M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7", key: "1ydtos" }],
+  ["path", { d: "M7 3v4a1 1 0 0 0 1 1h7", key: "t51u73" }]
 ];
-const Search = createLucideIcon("search", __iconNode$a);
+const Save = createLucideIcon("save", __iconNode$a);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33462,16 +34703,10 @@ const Search = createLucideIcon("search", __iconNode$a);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$9 = [
-  [
-    "path",
-    {
-      d: "M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z",
-      key: "1qme2f"
-    }
-  ],
-  ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
+  ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
+  ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
 ];
-const Settings = createLucideIcon("settings", __iconNode$9);
+const Search = createLucideIcon("search", __iconNode$9);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33526,17 +34761,13 @@ const Square = createLucideIcon("square", __iconNode$6);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$5 = [
-  ["circle", { cx: "12", cy: "12", r: "4", key: "4exip2" }],
-  ["path", { d: "M12 2v2", key: "tus03m" }],
-  ["path", { d: "M12 20v2", key: "1lh1kg" }],
-  ["path", { d: "m4.93 4.93 1.41 1.41", key: "149t6j" }],
-  ["path", { d: "m17.66 17.66 1.41 1.41", key: "ptbguv" }],
-  ["path", { d: "M2 12h2", key: "1t8f8n" }],
-  ["path", { d: "M20 12h2", key: "1q8mjw" }],
-  ["path", { d: "m6.34 17.66-1.41 1.41", key: "1m8zz5" }],
-  ["path", { d: "m19.07 4.93-1.41 1.41", key: "1shlcs" }]
+  ["path", { d: "M3 6h18", key: "d0wm0j" }],
+  ["path", { d: "M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6", key: "4alrt4" }],
+  ["path", { d: "M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2", key: "v07s0e" }],
+  ["line", { x1: "10", x2: "10", y1: "11", y2: "17", key: "1uufr5" }],
+  ["line", { x1: "14", x2: "14", y1: "11", y2: "17", key: "xtxkd" }]
 ];
-const Sun = createLucideIcon("sun", __iconNode$5);
+const Trash2 = createLucideIcon("trash-2", __iconNode$5);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33544,13 +34775,11 @@ const Sun = createLucideIcon("sun", __iconNode$5);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$4 = [
-  ["path", { d: "M3 6h18", key: "d0wm0j" }],
-  ["path", { d: "M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6", key: "4alrt4" }],
-  ["path", { d: "M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2", key: "v07s0e" }],
-  ["line", { x1: "10", x2: "10", y1: "11", y2: "17", key: "1uufr5" }],
-  ["line", { x1: "14", x2: "14", y1: "11", y2: "17", key: "xtxkd" }]
+  ["path", { d: "M12 4v16", key: "1654pz" }],
+  ["path", { d: "M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2", key: "e0r10z" }],
+  ["path", { d: "M9 20h6", key: "s66wpe" }]
 ];
-const Trash2 = createLucideIcon("trash-2", __iconNode$4);
+const Type2 = createLucideIcon("type", __iconNode$4);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -33615,7 +34844,7 @@ function useConstant(init) {
   return ref.current;
 }
 const isBrowser$1 = typeof window !== "undefined";
-const useIsomorphicLayoutEffect$2 = isBrowser$1 ? reactExports.useLayoutEffect : reactExports.useEffect;
+const useIsomorphicLayoutEffect$1 = isBrowser$1 ? reactExports.useLayoutEffect : reactExports.useEffect;
 const PresenceContext = /* @__PURE__ */ reactExports.createContext(null);
 function addUniqueItem(arr, item) {
   if (arr.indexOf(item) === -1)
@@ -33637,7 +34866,7 @@ let invariant = () => {
 };
 const MotionGlobalConfig = {};
 const isNumericalString = (v2) => /^-?(?:\d+(?:\.\d+)?|\.\d+)$/u.test(v2);
-function isObject$1(value) {
+function isObject(value) {
   return typeof value === "object" && value !== null;
 }
 const isZeroValueString = (v2) => /^0[^.\s]+$/u.test(v2);
@@ -33693,13 +34922,13 @@ function velocityPerSecond(velocity, frameDuration) {
 const calcBezier = (t, a1, a2) => (((1 - 3 * a2 + 3 * a1) * t + (3 * a2 - 6 * a1)) * t + 3 * a1) * t;
 const subdivisionPrecision = 1e-7;
 const subdivisionMaxIterations = 12;
-function binarySubdivide(x3, lowerBound, upperBound, mX1, mX2) {
+function binarySubdivide(x2, lowerBound, upperBound, mX1, mX2) {
   let currentX;
   let currentT;
   let i = 0;
   do {
     currentT = lowerBound + (upperBound - lowerBound) / 2;
-    currentX = calcBezier(currentT, mX1, mX2) - x3;
+    currentX = calcBezier(currentT, mX1, mX2) - x2;
     if (currentX > 0) {
       upperBound = currentT;
     } else {
@@ -33749,8 +34978,8 @@ const isValidEasing = (easing) => {
 const easingDefinitionToFunction = (definition) => {
   if (isBezierDefinition(definition)) {
     invariant(definition.length === 4);
-    const [x1, y1, x22, y2] = definition;
-    return cubicBezier(x1, y1, x22, y2);
+    const [x1, y1, x2, y2] = definition;
+    return cubicBezier(x1, y1, x2, y2);
   } else if (isValidEasing(definition)) {
     return easingLookup[definition];
   }
@@ -35157,8 +36386,8 @@ function removeNonTranslationalTransform(visualElement) {
 }
 const positionalValues = {
   // Dimensions
-  width: ({ x: x3 }, { paddingLeft = "0", paddingRight = "0", boxSizing }) => {
-    const width = x3.max - x3.min;
+  width: ({ x: x2 }, { paddingLeft = "0", paddingRight = "0", boxSizing }) => {
+    const width = x2.max - x2.min;
     return boxSizing === "border-box" ? width : width - parseFloat(paddingLeft) - parseFloat(paddingRight);
   },
   height: ({ y: y2 }, { paddingTop = "0", paddingBottom = "0", boxSizing }) => {
@@ -35168,7 +36397,7 @@ const positionalValues = {
   top: (_bbox, { top }) => parseFloat(top),
   left: (_bbox, { left }) => parseFloat(left),
   bottom: ({ y: y2 }, { top }) => parseFloat(top) + (y2.max - y2.min),
-  right: ({ x: x3 }, { left }) => parseFloat(left) + (x3.max - x3.min),
+  right: ({ x: x2 }, { left }) => parseFloat(left) + (x2.max - x2.min),
   // Transform
   x: (_bbox, { transform }) => parseValueFromTransform(transform, "x"),
   y: (_bbox, { transform }) => parseValueFromTransform(transform, "y")
@@ -36722,8 +37951,8 @@ function resolveElements(elementOrSelector, scope, selectorCache) {
 const getValueAsType = (value, type) => {
   return type && typeof value === "number" ? type.transform(value) : value;
 };
-function isHTMLElement$2(element) {
-  return isObject$1(element) && "offsetHeight" in element && !("ownerSVGElement" in element);
+function isHTMLElement$1(element) {
+  return isObject(element) && "offsetHeight" in element && !("ownerSVGElement" in element);
 }
 const { schedule: microtask } = /* @__PURE__ */ createRenderBatcher(queueMicrotask, false);
 const isDragging = {
@@ -36923,7 +38152,7 @@ function press(targetOrSelector, onPressStart, options = {}) {
   targets.forEach((target) => {
     const pointerDownTarget = options.useGlobalTarget ? window : target;
     pointerDownTarget.addEventListener("pointerdown", startPress, eventOptions);
-    if (isHTMLElement$2(target)) {
+    if (isHTMLElement$1(target)) {
       target.addEventListener("focus", (event) => enableKeyboardPress(event, eventOptions));
       if (!isElementKeyboardAccessible(target) && !target.hasAttribute("tabindex")) {
         target.tabIndex = 0;
@@ -36933,7 +38162,7 @@ function press(targetOrSelector, onPressStart, options = {}) {
   return cancelEvents;
 }
 function isSVGElement(element) {
-  return isObject$1(element) && "ownerSVGElement" in element;
+  return isObject(element) && "ownerSVGElement" in element;
 }
 const resizeHandlers = /* @__PURE__ */ new WeakMap();
 let observer;
@@ -37554,8 +38783,8 @@ function convertBoundingBoxToBox({ top, left, right, bottom }) {
     y: { min: top, max: bottom }
   };
 }
-function convertBoxToBoundingBox({ x: x3, y: y2 }) {
-  return { top: y2.min, right: x3.max, bottom: y2.max, left: x3.min };
+function convertBoxToBoundingBox({ x: x2, y: y2 }) {
+  return { top: y2.min, right: x2.max, bottom: y2.max, left: x2.min };
 }
 function transformBoxPoints(point, transformPoint2) {
   if (!transformPoint2)
@@ -37599,8 +38828,8 @@ function applyAxisDelta(axis, translate = 0, scale2 = 1, originPoint, boxScale) 
   axis.min = applyPointDelta(axis.min, translate, scale2, originPoint, boxScale);
   axis.max = applyPointDelta(axis.max, translate, scale2, originPoint, boxScale);
 }
-function applyBoxDelta(box, { x: x3, y: y2 }) {
-  applyAxisDelta(box.x, x3.translate, x3.scale, x3.originPoint);
+function applyBoxDelta(box, { x: x2, y: y2 }) {
+  applyAxisDelta(box.x, x2.translate, x2.scale, x2.originPoint);
   applyAxisDelta(box.y, y2.translate, y2.scale, y2.originPoint);
 }
 const TREE_SCALE_SNAP_MIN = 0.999999999999;
@@ -37774,9 +39003,9 @@ const correctBorderRadius = {
         return latest;
       }
     }
-    const x3 = pixelsToPercent(latest, node.target.x);
+    const x2 = pixelsToPercent(latest, node.target.x);
     const y2 = pixelsToPercent(latest, node.target.y);
-    return `${x3}% ${y2}%`;
+    return `${x2}% ${y2}%`;
   }
 };
 const correctBoxShadow = {
@@ -39466,8 +40695,8 @@ function createProjectionNode$1({ attachResizeListener, defaultParent, measureSc
         transform = transformTemplate(valuesToRender, transform);
       }
       targetStyle.transform = transform;
-      const { x: x3, y: y2 } = this.projectionDelta;
-      targetStyle.transformOrigin = `${x3.origin * 100}% ${y2.origin * 100}% 0`;
+      const { x: x2, y: y2 } = this.projectionDelta;
+      targetStyle.transformOrigin = `${x2.origin * 100}% ${y2.origin * 100}% 0`;
       if (lead.animationValues) {
         targetStyle.opacity = lead === this ? valuesToRender.opacity ?? this.latestValues.opacity ?? 1 : this.preserveOpacity ? this.latestValues.opacity : valuesToRender.opacityExit;
       } else {
@@ -39716,155 +40945,6 @@ const MotionConfigContext = reactExports.createContext({
   isStatic: false,
   reducedMotion: "never"
 });
-function setRef$1(ref, value) {
-  if (typeof ref === "function") {
-    return ref(value);
-  } else if (ref !== null && ref !== void 0) {
-    ref.current = value;
-  }
-}
-function composeRefs$1(...refs) {
-  return (node) => {
-    let hasCleanup = false;
-    const cleanups = refs.map((ref) => {
-      const cleanup = setRef$1(ref, node);
-      if (!hasCleanup && typeof cleanup === "function") {
-        hasCleanup = true;
-      }
-      return cleanup;
-    });
-    if (hasCleanup) {
-      return () => {
-        for (let i = 0; i < cleanups.length; i++) {
-          const cleanup = cleanups[i];
-          if (typeof cleanup === "function") {
-            cleanup();
-          } else {
-            setRef$1(refs[i], null);
-          }
-        }
-      };
-    }
-  };
-}
-function useComposedRefs$1(...refs) {
-  return reactExports.useCallback(composeRefs$1(...refs), refs);
-}
-class PopChildMeasure extends reactExports.Component {
-  getSnapshotBeforeUpdate(prevProps) {
-    const element = this.props.childRef.current;
-    if (isHTMLElement$2(element) && prevProps.isPresent && !this.props.isPresent && this.props.pop !== false) {
-      const parent = element.offsetParent;
-      const parentWidth = isHTMLElement$2(parent) ? parent.offsetWidth || 0 : 0;
-      const parentHeight = isHTMLElement$2(parent) ? parent.offsetHeight || 0 : 0;
-      const computedStyle = getComputedStyle(element);
-      const size2 = this.props.sizeRef.current;
-      size2.height = parseFloat(computedStyle.height);
-      size2.width = parseFloat(computedStyle.width);
-      size2.top = element.offsetTop;
-      size2.left = element.offsetLeft;
-      size2.right = parentWidth - size2.width - size2.left;
-      size2.bottom = parentHeight - size2.height - size2.top;
-    }
-    return null;
-  }
-  /**
-   * Required with getSnapshotBeforeUpdate to stop React complaining.
-   */
-  componentDidUpdate() {
-  }
-  render() {
-    return this.props.children;
-  }
-}
-function PopChild({ children, isPresent, anchorX, anchorY, root: root2, pop: pop2 }) {
-  var _a2;
-  const id2 = reactExports.useId();
-  const ref = reactExports.useRef(null);
-  const size2 = reactExports.useRef({
-    width: 0,
-    height: 0,
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0
-  });
-  const { nonce } = reactExports.useContext(MotionConfigContext);
-  const childRef = ((_a2 = children.props) == null ? void 0 : _a2.ref) ?? (children == null ? void 0 : children.ref);
-  const composedRef = useComposedRefs$1(ref, childRef);
-  reactExports.useInsertionEffect(() => {
-    const { width, height, top, left, right, bottom } = size2.current;
-    if (isPresent || pop2 === false || !ref.current || !width || !height)
-      return;
-    const x3 = anchorX === "left" ? `left: ${left}` : `right: ${right}`;
-    const y2 = anchorY === "bottom" ? `bottom: ${bottom}` : `top: ${top}`;
-    ref.current.dataset.motionPopId = id2;
-    const style2 = document.createElement("style");
-    if (nonce)
-      style2.nonce = nonce;
-    const parent = root2 ?? document.head;
-    parent.appendChild(style2);
-    if (style2.sheet) {
-      style2.sheet.insertRule(`
-          [data-motion-pop-id="${id2}"] {
-            position: absolute !important;
-            width: ${width}px !important;
-            height: ${height}px !important;
-            ${x3}px !important;
-            ${y2}px !important;
-          }
-        `);
-    }
-    return () => {
-      var _a3;
-      (_a3 = ref.current) == null ? void 0 : _a3.removeAttribute("data-motion-pop-id");
-      if (parent.contains(style2)) {
-        parent.removeChild(style2);
-      }
-    };
-  }, [isPresent]);
-  return jsxRuntimeExports.jsx(PopChildMeasure, { isPresent, childRef: ref, sizeRef: size2, pop: pop2, children: pop2 === false ? children : reactExports.cloneElement(children, { ref: composedRef }) });
-}
-const PresenceChild = ({ children, initial, isPresent, onExitComplete, custom, presenceAffectsLayout, mode, anchorX, anchorY, root: root2 }) => {
-  const presenceChildren = useConstant(newChildrenMap);
-  const id2 = reactExports.useId();
-  let isReusedContext = true;
-  let context = reactExports.useMemo(() => {
-    isReusedContext = false;
-    return {
-      id: id2,
-      initial,
-      isPresent,
-      custom,
-      onExitComplete: (childId) => {
-        presenceChildren.set(childId, true);
-        for (const isComplete of presenceChildren.values()) {
-          if (!isComplete)
-            return;
-        }
-        onExitComplete && onExitComplete();
-      },
-      register: (childId) => {
-        presenceChildren.set(childId, false);
-        return () => presenceChildren.delete(childId);
-      }
-    };
-  }, [isPresent, presenceChildren, onExitComplete]);
-  if (presenceAffectsLayout && isReusedContext) {
-    context = { ...context };
-  }
-  reactExports.useMemo(() => {
-    presenceChildren.forEach((_2, key) => presenceChildren.set(key, false));
-  }, [isPresent]);
-  reactExports.useEffect(() => {
-    !isPresent && !presenceChildren.size && onExitComplete && onExitComplete();
-  }, [isPresent]);
-  children = jsxRuntimeExports.jsx(PopChild, { pop: mode === "popLayout", isPresent, anchorX, anchorY, root: root2, children });
-  return jsxRuntimeExports.jsx(PresenceContext.Provider, { value: context, children });
-};
-function newChildrenMap() {
-  return /* @__PURE__ */ new Map();
-}
 function usePresence$1(subscribe2 = true) {
   const context = reactExports.useContext(PresenceContext);
   if (context === null)
@@ -39879,87 +40959,6 @@ function usePresence$1(subscribe2 = true) {
   const safeToRemove = reactExports.useCallback(() => subscribe2 && onExitComplete && onExitComplete(id2), [id2, onExitComplete, subscribe2]);
   return !isPresent && onExitComplete ? [false, safeToRemove] : [true];
 }
-const getChildKey = (child) => child.key || "";
-function onlyElements(children) {
-  const filtered = [];
-  reactExports.Children.forEach(children, (child) => {
-    if (reactExports.isValidElement(child))
-      filtered.push(child);
-  });
-  return filtered;
-}
-const AnimatePresence = ({ children, custom, initial = true, onExitComplete, presenceAffectsLayout = true, mode = "sync", propagate = false, anchorX = "left", anchorY = "top", root: root2 }) => {
-  const [isParentPresent, safeToRemove] = usePresence$1(propagate);
-  const presentChildren = reactExports.useMemo(() => onlyElements(children), [children]);
-  const presentKeys = propagate && !isParentPresent ? [] : presentChildren.map(getChildKey);
-  const isInitialRender = reactExports.useRef(true);
-  const pendingPresentChildren = reactExports.useRef(presentChildren);
-  const exitComplete = useConstant(() => /* @__PURE__ */ new Map());
-  const exitingComponents = reactExports.useRef(/* @__PURE__ */ new Set());
-  const [diffedChildren, setDiffedChildren] = reactExports.useState(presentChildren);
-  const [renderedChildren, setRenderedChildren] = reactExports.useState(presentChildren);
-  useIsomorphicLayoutEffect$2(() => {
-    isInitialRender.current = false;
-    pendingPresentChildren.current = presentChildren;
-    for (let i = 0; i < renderedChildren.length; i++) {
-      const key = getChildKey(renderedChildren[i]);
-      if (!presentKeys.includes(key)) {
-        if (exitComplete.get(key) !== true) {
-          exitComplete.set(key, false);
-        }
-      } else {
-        exitComplete.delete(key);
-        exitingComponents.current.delete(key);
-      }
-    }
-  }, [renderedChildren, presentKeys.length, presentKeys.join("-")]);
-  const exitingChildren = [];
-  if (presentChildren !== diffedChildren) {
-    let nextChildren = [...presentChildren];
-    for (let i = 0; i < renderedChildren.length; i++) {
-      const child = renderedChildren[i];
-      const key = getChildKey(child);
-      if (!presentKeys.includes(key)) {
-        nextChildren.splice(i, 0, child);
-        exitingChildren.push(child);
-      }
-    }
-    if (mode === "wait" && exitingChildren.length) {
-      nextChildren = exitingChildren;
-    }
-    setRenderedChildren(onlyElements(nextChildren));
-    setDiffedChildren(presentChildren);
-    return null;
-  }
-  const { forceRender } = reactExports.useContext(LayoutGroupContext);
-  return jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: renderedChildren.map((child) => {
-    const key = getChildKey(child);
-    const isPresent = propagate && !isParentPresent ? false : presentChildren === renderedChildren || presentKeys.includes(key);
-    const onExit = () => {
-      if (exitingComponents.current.has(key)) {
-        return;
-      }
-      if (exitComplete.has(key)) {
-        exitingComponents.current.add(key);
-        exitComplete.set(key, true);
-      } else {
-        return;
-      }
-      let isEveryExitComplete = true;
-      exitComplete.forEach((isExitComplete) => {
-        if (!isExitComplete)
-          isEveryExitComplete = false;
-      });
-      if (isEveryExitComplete) {
-        forceRender == null ? void 0 : forceRender();
-        setRenderedChildren(pendingPresentChildren.current);
-        propagate && (safeToRemove == null ? void 0 : safeToRemove());
-        onExitComplete && onExitComplete();
-      }
-    };
-    return jsxRuntimeExports.jsx(PresenceChild, { isPresent, initial: !isInitialRender.current || initial ? void 0 : false, custom, presenceAffectsLayout, mode, root: root2, onExitComplete: isPresent ? void 0 : onExit, anchorX, anchorY, children: child }, key);
-  }) });
-};
 const LazyContext = reactExports.createContext({ strict: false });
 const featureProps = {
   animation: [
@@ -40351,7 +41350,7 @@ function useVisualElement(Component2, visualState, props, createVisualElement, P
   });
   const optimisedAppearId = props[optimizedAppearDataAttribute];
   const wantsHandoff = reactExports.useRef(Boolean(optimisedAppearId) && typeof window !== "undefined" && !((_a2 = window.MotionHandoffIsComplete) == null ? void 0 : _a2.call(window, optimisedAppearId)) && ((_b2 = window.MotionHasOptimisedAnimation) == null ? void 0 : _b2.call(window, optimisedAppearId)));
-  useIsomorphicLayoutEffect$2(() => {
+  useIsomorphicLayoutEffect$1(() => {
     hasMountedOnce.current = true;
     if (!visualElement)
       return;
@@ -41710,7 +42709,7 @@ function useComposedRefs(...refs) {
   return reactExports.useCallback(composeRefs(...refs), refs);
 }
 var REACT_LAZY_TYPE = Symbol.for("react.lazy");
-var use = React$5[" use ".trim().toString()];
+var use = React$4[" use ".trim().toString()];
 function isPromiseLike(value) {
   return typeof value === "object" && value !== null && "then" in value;
 }
@@ -42217,12 +43216,12 @@ const lengthUnitRegex = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|ca
 const colorFunctionRegex = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/;
 const shadowRegex = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/;
 const imageRegex = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/;
-const isLength = (value) => isNumber(value) || stringLengths.has(value) || fractionRegex.test(value);
+const isLength = (value) => isNumber$1(value) || stringLengths.has(value) || fractionRegex.test(value);
 const isArbitraryLength = (value) => getIsArbitraryValue(value, "length", isLengthOnly);
-const isNumber = (value) => Boolean(value) && !Number.isNaN(Number(value));
-const isArbitraryNumber = (value) => getIsArbitraryValue(value, "number", isNumber);
+const isNumber$1 = (value) => Boolean(value) && !Number.isNaN(Number(value));
+const isArbitraryNumber = (value) => getIsArbitraryValue(value, "number", isNumber$1);
 const isInteger = (value) => Boolean(value) && Number.isInteger(Number(value));
-const isPercent = (value) => value.endsWith("%") && isNumber(value.slice(0, -1));
+const isPercent = (value) => value.endsWith("%") && isNumber$1(value.slice(0, -1));
 const isArbitraryValue = (value) => arbitraryValueRegex.test(value);
 const isTshirtSize = (value) => tshirtUnitRegex.test(value);
 const sizeLabels = /* @__PURE__ */ new Set(["length", "size", "percentage"]);
@@ -42282,14 +43281,14 @@ const getDefaultConfig = () => {
   const getSpacingWithAutoAndArbitrary = () => ["auto", isArbitraryValue, spacing];
   const getSpacingWithArbitrary = () => [isArbitraryValue, spacing];
   const getLengthWithEmptyAndArbitrary = () => ["", isLength, isArbitraryLength];
-  const getNumberWithAutoAndArbitrary = () => ["auto", isNumber, isArbitraryValue];
+  const getNumberWithAutoAndArbitrary = () => ["auto", isNumber$1, isArbitraryValue];
   const getPositions = () => ["bottom", "center", "left", "left-bottom", "left-top", "right", "right-bottom", "right-top", "top"];
   const getLineStyles = () => ["solid", "dashed", "dotted", "double", "none"];
   const getBlendModes = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"];
   const getAlign = () => ["start", "end", "center", "between", "around", "evenly", "stretch"];
   const getZeroAndEmpty = () => ["", "0", isArbitraryValue];
   const getBreaks = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"];
-  const getNumberAndArbitrary = () => [isNumber, isArbitraryValue];
+  const getNumberAndArbitrary = () => [isNumber$1, isArbitraryValue];
   return {
     cacheSize: 500,
     separator: ":",
@@ -43028,7 +44027,7 @@ const getDefaultConfig = () => {
        * @see https://tailwindcss.com/docs/line-clamp
        */
       "line-clamp": [{
-        "line-clamp": ["none", isNumber, isArbitraryNumber]
+        "line-clamp": ["none", isNumber$1, isArbitraryNumber]
       }],
       /**
        * Line Height
@@ -44364,354 +45363,83 @@ function Button({
     }
   );
 }
-const createStoreImpl = (createState2) => {
-  let state;
-  const listeners = /* @__PURE__ */ new Set();
-  const setState = (partial, replace) => {
-    const nextState = typeof partial === "function" ? partial(state) : partial;
-    if (!Object.is(nextState, state)) {
-      const previousState = state;
-      state = (replace != null ? replace : typeof nextState !== "object" || nextState === null) ? nextState : Object.assign({}, state, nextState);
-      listeners.forEach((listener) => listener(state, previousState));
+const STORAGE_KEY = "nexus-session-id";
+function generateSessionId() {
+  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
+    try {
+      return crypto.randomUUID();
+    } catch {
     }
-  };
-  const getState2 = () => state;
-  const getInitialState = () => initialState;
-  const subscribe2 = (listener) => {
-    listeners.add(listener);
-    return () => listeners.delete(listener);
-  };
-  const api = { setState, getState: getState2, getInitialState, subscribe: subscribe2 };
-  const initialState = state = createState2(setState, getState2, api);
-  return api;
-};
-const createStore = (createState2) => createState2 ? createStoreImpl(createState2) : createStoreImpl;
-const identity = (arg) => arg;
-function useStore(api, selector = identity) {
-  const slice = React$4.useSyncExternalStore(
-    api.subscribe,
-    React$4.useCallback(() => selector(api.getState()), [api, selector]),
-    React$4.useCallback(() => selector(api.getInitialState()), [api, selector])
-  );
-  React$4.useDebugValue(slice);
-  return slice;
+  }
+  const bytes = new Uint8Array(16);
+  if (typeof crypto !== "undefined" && crypto.getRandomValues) {
+    crypto.getRandomValues(bytes);
+  } else {
+    for (let i = 0; i < 16; i++) bytes[i] = Math.floor(Math.random() * 256);
+  }
+  bytes[6] = bytes[6] & 15 | 64;
+  bytes[8] = bytes[8] & 63 | 128;
+  const hex2 = Array.from(bytes, (b2) => b2.toString(16).padStart(2, "0"));
+  return `${hex2.slice(0, 4).join("")}-${hex2.slice(4, 6).join("")}-${hex2.slice(6, 8).join("")}-${hex2.slice(8, 10).join("")}-${hex2.slice(10, 16).join("")}`;
 }
-const createImpl = (createState2) => {
-  const api = createStore(createState2);
-  const useBoundStore = (selector) => useStore(api, selector);
-  Object.assign(useBoundStore, api);
-  return useBoundStore;
-};
-const create = (createState2) => createImpl;
-function createJSONStorage(getStorage, options) {
-  let storage;
+function readSessionId() {
+  if (typeof window === "undefined") return generateSessionId();
   try {
-    storage = getStorage();
-  } catch (e) {
-    return;
+    const existing = window.localStorage.getItem(STORAGE_KEY);
+    if (existing && existing.trim().length > 0) return existing;
+  } catch {
   }
-  const persistStorage = {
-    getItem: (name) => {
-      var _a2;
-      const parse2 = (str2) => {
-        if (str2 === null) {
-          return null;
-        }
-        return JSON.parse(str2, void 0);
-      };
-      const str = (_a2 = storage.getItem(name)) != null ? _a2 : null;
-      if (str instanceof Promise) {
-        return str.then(parse2);
-      }
-      return parse2(str);
-    },
-    setItem: (name, newValue) => storage.setItem(name, JSON.stringify(newValue, void 0)),
-    removeItem: (name) => storage.removeItem(name)
-  };
-  return persistStorage;
-}
-const toThenable = (fn) => (input) => {
+  const id2 = generateSessionId();
   try {
-    const result = fn(input);
-    if (result instanceof Promise) {
-      return result;
-    }
-    return {
-      then(onFulfilled) {
-        return toThenable(onFulfilled)(result);
-      },
-      catch(_onRejected) {
-        return this;
-      }
-    };
-  } catch (e) {
-    return {
-      then(_onFulfilled) {
-        return this;
-      },
-      catch(onRejected) {
-        return toThenable(onRejected)(e);
-      }
-    };
+    window.localStorage.setItem(STORAGE_KEY, id2);
+  } catch {
   }
-};
-const persistImpl = (config, baseOptions) => (set2, get2, api) => {
-  let options = {
-    storage: createJSONStorage(() => window.localStorage),
-    partialize: (state) => state,
-    version: 0,
-    merge: (persistedState, currentState) => ({
-      ...currentState,
-      ...persistedState
-    }),
-    ...baseOptions
-  };
-  let hasHydrated = false;
-  let hydrationVersion = 0;
-  const hydrationListeners = /* @__PURE__ */ new Set();
-  const finishHydrationListeners = /* @__PURE__ */ new Set();
-  let storage = options.storage;
-  if (!storage) {
-    return config(
-      (...args) => {
-        console.warn(
-          `[zustand persist middleware] Unable to update item '${options.name}', the given storage is currently unavailable.`
-        );
-        set2(...args);
-      },
-      get2,
-      api
-    );
-  }
-  const setItem = () => {
-    const state = options.partialize({ ...get2() });
-    return storage.setItem(options.name, {
-      state,
-      version: options.version
-    });
-  };
-  const savedSetState = api.setState;
-  api.setState = (state, replace) => {
-    savedSetState(state, replace);
-    return setItem();
-  };
-  const configResult = config(
-    (...args) => {
-      set2(...args);
-      return setItem();
-    },
-    get2,
-    api
-  );
-  api.getInitialState = () => configResult;
-  let stateFromStorage;
-  const hydrate = () => {
-    var _a2, _b2;
-    if (!storage) return;
-    const currentVersion = ++hydrationVersion;
-    hasHydrated = false;
-    hydrationListeners.forEach((cb) => {
-      var _a22;
-      return cb((_a22 = get2()) != null ? _a22 : configResult);
-    });
-    const postRehydrationCallback = ((_b2 = options.onRehydrateStorage) == null ? void 0 : _b2.call(options, (_a2 = get2()) != null ? _a2 : configResult)) || void 0;
-    return toThenable(storage.getItem.bind(storage))(options.name).then((deserializedStorageValue) => {
-      if (deserializedStorageValue) {
-        if (typeof deserializedStorageValue.version === "number" && deserializedStorageValue.version !== options.version) {
-          if (options.migrate) {
-            const migration = options.migrate(
-              deserializedStorageValue.state,
-              deserializedStorageValue.version
-            );
-            if (migration instanceof Promise) {
-              return migration.then((result) => [true, result]);
-            }
-            return [true, migration];
-          }
-          console.error(
-            `State loaded from storage couldn't be migrated since no migrate function was provided`
-          );
-        } else {
-          return [false, deserializedStorageValue.state];
-        }
-      }
-      return [false, void 0];
-    }).then((migrationResult) => {
-      var _a22;
-      if (currentVersion !== hydrationVersion) {
-        return;
-      }
-      const [migrated, migratedState] = migrationResult;
-      stateFromStorage = options.merge(
-        migratedState,
-        (_a22 = get2()) != null ? _a22 : configResult
-      );
-      set2(stateFromStorage, true);
-      if (migrated) {
-        return setItem();
-      }
-    }).then(() => {
-      if (currentVersion !== hydrationVersion) {
-        return;
-      }
-      postRehydrationCallback == null ? void 0 : postRehydrationCallback(get2(), void 0);
-      stateFromStorage = get2();
-      hasHydrated = true;
-      finishHydrationListeners.forEach((cb) => cb(stateFromStorage));
-    }).catch((e) => {
-      if (currentVersion !== hydrationVersion) {
-        return;
-      }
-      postRehydrationCallback == null ? void 0 : postRehydrationCallback(void 0, e);
-    });
-  };
-  api.persist = {
-    setOptions: (newOptions) => {
-      options = {
-        ...options,
-        ...newOptions
-      };
-      if (newOptions.storage) {
-        storage = newOptions.storage;
-      }
-    },
-    clearStorage: () => {
-      storage == null ? void 0 : storage.removeItem(options.name);
-    },
-    getOptions: () => options,
-    rehydrate: () => hydrate(),
-    hasHydrated: () => hasHydrated,
-    onHydrate: (cb) => {
-      hydrationListeners.add(cb);
-      return () => {
-        hydrationListeners.delete(cb);
-      };
-    },
-    onFinishHydration: (cb) => {
-      finishHydrationListeners.add(cb);
-      return () => {
-        finishHydrationListeners.delete(cb);
-      };
-    }
-  };
-  if (!options.skipHydration) {
-    hydrate();
-  }
-  return stateFromStorage || configResult;
-};
-const persist = persistImpl;
-function deriveName(email) {
-  const local = email.split("@")[0] ?? email;
-  return local.replace(/[._-]+/g, " ").split(" ").filter(Boolean).map((w2) => w2.charAt(0).toUpperCase() + w2.slice(1)).join(" ");
+  return id2;
 }
-const useAuth = create()(
-  persist(
-    (set2) => ({
-      isAuthenticated: false,
-      user: null,
-      iiPrincipal: null,
-      loginWithEmail: (email, _password) => {
-        set2({
-          isAuthenticated: true,
-          user: {
-            id: `email-${btoa(email).slice(0, 12)}`,
-            email,
-            name: deriveName(email)
-          },
-          iiPrincipal: null
-        });
-      },
-      loginWithII: (principal) => {
-        set2({
-          isAuthenticated: true,
-          iiPrincipal: principal,
-          user: {
-            id: principal,
-            email: "",
-            name: `II · ${principal.slice(0, 8)}…`
-          }
-        });
-      },
-      logout: () => set2({ isAuthenticated: false, user: null, iiPrincipal: null })
-    }),
-    { name: "caffeine-auth" }
-  )
-);
+function useSession() {
+  const [sessionId, setSessionId] = reactExports.useState("");
+  const [ready, setReady] = reactExports.useState(false);
+  reactExports.useEffect(() => {
+    setSessionId(readSessionId());
+    setReady(true);
+  }, []);
+  return { sessionId, ready };
+}
 const NAV_ITEMS = [
-  { label: "Home", icon: House, to: "/dashboard", ocid: "nav.home.link" },
+  { label: "AI Chat", icon: Bot, to: "/", ocid: "nav.ai_chat.link" },
+  { label: "Tools", icon: Wrench, to: "/tools", ocid: "nav.tools.link" },
   {
-    label: "AI Chat",
-    icon: Bot,
-    to: "/dashboard/ai-chat",
-    ocid: "nav.ai_chat.link"
+    label: "Internet Search",
+    icon: Globe,
+    to: "/search",
+    ocid: "nav.internet_search.link"
   },
   {
     label: "Documents",
     icon: FileText,
-    to: "/dashboard/documents",
+    to: "/documents",
     ocid: "nav.documents.link"
   },
   {
-    label: "Workspace",
-    icon: FolderOpen,
-    to: "/dashboard/workspace",
-    ocid: "nav.workspace.link"
-  },
-  {
-    label: "Internet Search",
-    icon: Globe,
-    to: "/dashboard/internet-search",
-    ocid: "nav.internet_search.link"
-  },
-  {
-    label: "YouTube",
-    icon: Youtube,
-    to: "/dashboard/youtube",
-    ocid: "nav.youtube.link"
-  },
-  {
-    label: "Knowledge Base",
-    icon: BookOpen,
-    to: "/dashboard/knowledge-base",
-    ocid: "nav.knowledge_base.link"
-  },
-  {
-    label: "Tools",
-    icon: Wrench,
-    to: "/dashboard/tools",
-    ocid: "nav.tools.link"
-  },
-  {
-    label: "Settings",
-    icon: Settings,
-    to: "/dashboard/settings",
-    ocid: "nav.settings.link"
-  },
-  {
-    label: "Admin",
-    icon: ShieldCheck,
-    to: "/dashboard/admin",
-    ocid: "nav.admin.link"
+    label: "Activity Log",
+    icon: Activity,
+    to: "/activity",
+    ocid: "nav.activity.link"
   }
 ];
 function AppLayout({ children }) {
-  var _a2;
   const location2 = useLocation();
   const navigate = useNavigate();
-  const logout = useAuth((s) => s.logout);
-  const user = useAuth((s) => s.user);
+  const { sessionId, ready } = useSession();
   const [mobileOpen, setMobileOpen] = reactExports.useState(false);
   reactExports.useEffect(() => {
     setMobileOpen(false);
   }, []);
   function isActive(to) {
-    if (to === "/dashboard") return location2.pathname === "/dashboard";
-    return location2.pathname.startsWith(to);
+    if (to === "/") return location2.pathname === "/";
+    return location2.pathname === to || location2.pathname.startsWith(`${to}/`);
   }
-  function handleLogout() {
-    logout();
-    navigate({ to: "/login", replace: true });
-  }
+  const sessionLabel = ready && sessionId ? `${sessionId.slice(0, 8)}…` : "—";
   const SidebarContent = /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "flex h-full flex-col gap-1 p-3", "aria-label": "Primary", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 px-3 py-4", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-8 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "size-4", "aria-hidden": true }) }),
@@ -44741,29 +45469,41 @@ function AppLayout({ children }) {
         item.to
       );
     }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-2 border-t border-border p-3", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-2 flex items-center gap-3 px-1", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-semibold text-primary", children: (((_a2 = user == null ? void 0 : user.name) == null ? void 0 : _a2[0]) ?? "U").toUpperCase() }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-w-0 flex-1", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "truncate text-xs font-medium text-foreground", children: (user == null ? void 0 : user.name) ?? "User" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "truncate text-[11px] text-muted-foreground", children: (user == null ? void 0 : user.email) || "Signed in" })
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(
-        Button,
-        {
-          variant: "ghost",
-          size: "sm",
-          className: "w-full justify-start gap-2 text-muted-foreground hover:text-foreground",
-          onClick: handleLogout,
-          "data-ocid": "nav.logout.button",
-          children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(LogOut, { className: "size-4", "aria-hidden": true }),
-            "Sign out"
-          ]
-        }
-      )
-    ] })
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-2 border-t border-border p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "div",
+      {
+        className: "flex items-center gap-2 rounded-lg bg-muted/40 px-3 py-2",
+        "data-ocid": "nav.session.panel",
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex size-2 shrink-0", "aria-hidden": true, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/60 opacity-75" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex size-2 rounded-full bg-emerald-500" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-w-0 flex-1", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "truncate text-xs font-medium text-foreground", children: "Session active" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "p",
+              {
+                className: "truncate font-mono text-[11px] text-muted-foreground",
+                "data-ocid": "nav.session.id",
+                children: sessionLabel
+              }
+            )
+          ] })
+        ]
+      }
+    ) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "px-4 pb-4 pt-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "a",
+      {
+        href: "https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=nexus-ai",
+        target: "_blank",
+        rel: "noreferrer",
+        className: "text-[11px] leading-relaxed text-muted-foreground/60 transition-smooth hover:text-muted-foreground",
+        "data-ocid": "nav.attribution.link",
+        children: "Built with caffeine.ai"
+      }
+    ) })
   ] });
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex min-h-screen bg-background", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("aside", { className: "hidden w-64 shrink-0 border-r border-border bg-card/60 backdrop-blur md:block", children: SidebarContent }),
@@ -44828,186 +45568,17 @@ function AppLayout({ children }) {
 }
 function currentSectionLabel(pathname) {
   const match = NAV_ITEMS.find(
-    (item) => item.to === "/dashboard" ? pathname === "/dashboard" : pathname.startsWith(item.to)
+    (item) => item.to === "/" ? pathname === "/" : pathname === item.to || pathname.startsWith(`${item.to}/`)
   );
-  return (match == null ? void 0 : match.label) ?? "Dashboard";
+  return (match == null ? void 0 : match.label) ?? "Workspace";
 }
 const dashboardLayoutRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/dashboard",
-  component: DashboardLayout
+  id: "_workspace",
+  component: WorkspaceLayout
 });
-function DashboardLayout() {
-  const navigate = useNavigate();
-  const isAuthenticated = useAuth((s) => s.isAuthenticated);
-  reactExports.useEffect(() => {
-    if (!isAuthenticated) {
-      navigate({ to: "/login", replace: true });
-    }
-  }, [isAuthenticated, navigate]);
-  if (!isAuthenticated) return null;
+function WorkspaceLayout() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(AppLayout, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
-}
-const badgeVariants = cva(
-  "inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
-  {
-    variants: {
-      variant: {
-        default: "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
-        secondary: "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
-        destructive: "border-transparent bg-destructive text-destructive-foreground [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
-        outline: "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground"
-      }
-    },
-    defaultVariants: {
-      variant: "default"
-    }
-  }
-);
-function Badge({
-  className,
-  variant,
-  asChild = false,
-  ...props
-}) {
-  const Comp = asChild ? Slot$3 : "span";
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Comp,
-    {
-      "data-slot": "badge",
-      className: cn(badgeVariants({ variant }), className),
-      ...props
-    }
-  );
-}
-function Card({ className, ...props }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "div",
-    {
-      "data-slot": "card",
-      className: cn(
-        "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
-        className
-      ),
-      ...props
-    }
-  );
-}
-function CardHeader({ className, ...props }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "div",
-    {
-      "data-slot": "card-header",
-      className: cn(
-        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6",
-        className
-      ),
-      ...props
-    }
-  );
-}
-function CardTitle({ className, ...props }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "div",
-    {
-      "data-slot": "card-title",
-      className: cn("leading-none font-semibold", className),
-      ...props
-    }
-  );
-}
-function CardDescription({ className, ...props }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "div",
-    {
-      "data-slot": "card-description",
-      className: cn("text-muted-foreground text-sm", className),
-      ...props
-    }
-  );
-}
-function CardContent({ className, ...props }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "div",
-    {
-      "data-slot": "card-content",
-      className: cn("px-6", className),
-      ...props
-    }
-  );
-}
-function ComingSoonPage({
-  title,
-  description,
-  icon: Icon2
-}) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-[calc(100vh-4rem)] items-center justify-center px-4 py-16", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-    motion.div,
-    {
-      initial: { opacity: 0, y: 24, scale: 0.96 },
-      animate: { opacity: 1, y: 0, scale: 1 },
-      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-      className: "w-full max-w-lg",
-      "data-ocid": "coming_soon.section",
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "glass-strong relative overflow-hidden border-border/60 p-10 text-center shadow-xl", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "div",
-          {
-            "aria-hidden": true,
-            className: "pointer-events-none absolute -top-24 left-1/2 h-48 w-48 -translate-x-1/2 rounded-full opacity-30 blur-3xl gradient-primary"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex flex-col items-center gap-6", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            motion.div,
-            {
-              initial: { opacity: 0, scale: 0.6 },
-              animate: { opacity: 1, scale: 1 },
-              transition: {
-                delay: 0.15,
-                duration: 0.5,
-                ease: [0.22, 1, 0.36, 1]
-              },
-              className: "flex size-20 items-center justify-center rounded-2xl border border-primary/30 bg-primary/10 text-primary shadow-lg",
-              children: /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { className: "size-9", "aria-hidden": true })
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "font-display text-3xl font-semibold tracking-tight text-foreground", children: title }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mx-auto max-w-sm text-sm leading-relaxed text-muted-foreground", children: description })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            Badge,
-            {
-              variant: "secondary",
-              className: "gap-1.5 border-primary/20 bg-primary/10 px-3 py-1 text-primary",
-              "data-ocid": "coming_soon.badge",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "size-3", "aria-hidden": true }),
-                "Coming Soon"
-              ]
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground", children: "We're crafting this experience with care. Stay tuned." })
-        ] })
-      ] })
-    }
-  ) });
-}
-const adminRoute = createRoute({
-  getParentRoute: () => dashboardLayoutRoute,
-  path: "/admin",
-  component: AdminPage
-});
-function AdminPage() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    ComingSoonPage,
-    {
-      title: "Admin",
-      description: "Manage users, roles, permissions, analytics, storage, and platform logs.",
-      icon: ShieldCheck
-    }
-  );
 }
 var jt = (n) => {
   switch (n) {
@@ -45022,10 +45593,10 @@ var jt = (n) => {
     default:
       return null;
   }
-}, te = Array(12).fill(0), Yt = ({ visible: n, className: e }) => React$4.createElement("div", { className: ["sonner-loading-wrapper", e].filter(Boolean).join(" "), "data-visible": n }, React$4.createElement("div", { className: "sonner-spinner" }, te.map((t, a2) => React$4.createElement("div", { className: "sonner-loading-bar", key: `spinner-bar-${a2}` })))), ee = React$4.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 20 20", fill: "currentColor", height: "20", width: "20" }, React$4.createElement("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z", clipRule: "evenodd" })), oe = React$4.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "currentColor", height: "20", width: "20" }, React$4.createElement("path", { fillRule: "evenodd", d: "M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z", clipRule: "evenodd" })), ae = React$4.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 20 20", fill: "currentColor", height: "20", width: "20" }, React$4.createElement("path", { fillRule: "evenodd", d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z", clipRule: "evenodd" })), se = React$4.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 20 20", fill: "currentColor", height: "20", width: "20" }, React$4.createElement("path", { fillRule: "evenodd", d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z", clipRule: "evenodd" })), Ot = React$4.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round" }, React$4.createElement("line", { x1: "18", y1: "6", x2: "6", y2: "18" }), React$4.createElement("line", { x1: "6", y1: "6", x2: "18", y2: "18" }));
+}, te = Array(12).fill(0), Yt = ({ visible: n, className: e }) => React2.createElement("div", { className: ["sonner-loading-wrapper", e].filter(Boolean).join(" "), "data-visible": n }, React2.createElement("div", { className: "sonner-spinner" }, te.map((t, a2) => React2.createElement("div", { className: "sonner-loading-bar", key: `spinner-bar-${a2}` })))), ee = React2.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 20 20", fill: "currentColor", height: "20", width: "20" }, React2.createElement("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z", clipRule: "evenodd" })), oe = React2.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "currentColor", height: "20", width: "20" }, React2.createElement("path", { fillRule: "evenodd", d: "M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z", clipRule: "evenodd" })), ae = React2.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 20 20", fill: "currentColor", height: "20", width: "20" }, React2.createElement("path", { fillRule: "evenodd", d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z", clipRule: "evenodd" })), se = React2.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 20 20", fill: "currentColor", height: "20", width: "20" }, React2.createElement("path", { fillRule: "evenodd", d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z", clipRule: "evenodd" })), Ot = React2.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round" }, React2.createElement("line", { x1: "18", y1: "6", x2: "6", y2: "18" }), React2.createElement("line", { x1: "6", y1: "6", x2: "18", y2: "18" }));
 var Ft = () => {
-  let [n, e] = React$4.useState(document.hidden);
-  return React$4.useEffect(() => {
+  let [n, e] = React2.useState(document.hidden);
+  return React2.useEffect(() => {
     let t = () => {
       e(document.hidden);
     };
@@ -45063,7 +45634,7 @@ var bt = 1, yt = class {
       let a2;
       t.loading !== void 0 && (a2 = this.create({ ...t, promise: e, type: "loading", message: t.loading, description: typeof t.description != "function" ? t.description : void 0 }));
       let u2 = e instanceof Promise ? e : e(), f2 = a2 !== void 0, w2, S2 = u2.then(async (i) => {
-        if (w2 = ["resolve", i], React$4.isValidElement(i)) f2 = false, this.create({ id: a2, type: "default", message: i });
+        if (w2 = ["resolve", i], React2.isValidElement(i)) f2 = false, this.create({ id: a2, type: "default", message: i });
         else if (ie(i) && !i.ok) {
           f2 = false;
           let T2 = typeof t.error == "function" ? await t.error(`HTTP error! status: ${i.status}`) : t.error, F2 = typeof t.description == "function" ? await t.description(`HTTP error! status: ${i.status}`) : t.description;
@@ -45107,7 +45678,7 @@ function tt(n) {
   return n.label !== void 0;
 }
 var pe = 3, me = "32px", ge = "16px", Wt = 4e3, he = 356, be = 14, ye = 20, we = 200;
-function M$1(...n) {
+function M(...n) {
   return n.filter(Boolean).join(" ");
 }
 function xe(n) {
@@ -45116,33 +45687,33 @@ function xe(n) {
 }
 var ve = (n) => {
   var Dt, Pt, Nt, Bt, Ct, kt, It, Mt, Ht, At, Lt;
-  let { invert: e, toast: t, unstyled: a2, interacting: u2, setHeights: f2, visibleToasts: w2, heights: S2, index: g2, toasts: i, expanded: D, removeToast: T2, defaultRichColors: F2, closeButton: et2, style: ut2, cancelButtonStyle: ft2, actionButtonStyle: l2, className: ot2 = "", descriptionClassName: at = "", duration: X2, position: st2, gap: pt, loadingIcon: rt2, expandByDefault: B2, classNames: s, icons: P2, closeButtonAriaLabel: nt2 = "Close toast", pauseWhenPageIsHidden: it2 } = n, [Y2, C2] = React$4.useState(null), [lt, J2] = React$4.useState(null), [W2, H2] = React$4.useState(false), [A, mt] = React$4.useState(false), [L2, z2] = React$4.useState(false), [ct2, d2] = React$4.useState(false), [h2, y2] = React$4.useState(false), [R2, j2] = React$4.useState(0), [p2, _2] = React$4.useState(0), O2 = React$4.useRef(t.duration || X2 || Wt), G2 = React$4.useRef(null), k2 = React$4.useRef(null), Vt = g2 === 0, Ut = g2 + 1 <= w2, N2 = t.type, V2 = t.dismissible !== false, Kt = t.className || "", Xt = t.descriptionClassName || "", dt = React$4.useMemo(() => S2.findIndex((r2) => r2.toastId === t.id) || 0, [S2, t.id]), Jt = React$4.useMemo(() => {
+  let { invert: e, toast: t, unstyled: a2, interacting: u2, setHeights: f2, visibleToasts: w2, heights: S2, index: g2, toasts: i, expanded: D, removeToast: T2, defaultRichColors: F2, closeButton: et2, style: ut2, cancelButtonStyle: ft2, actionButtonStyle: l2, className: ot2 = "", descriptionClassName: at = "", duration: X2, position: st2, gap: pt, loadingIcon: rt2, expandByDefault: B2, classNames: s, icons: P2, closeButtonAriaLabel: nt2 = "Close toast", pauseWhenPageIsHidden: it2 } = n, [Y2, C2] = React2.useState(null), [lt, J2] = React2.useState(null), [W2, H2] = React2.useState(false), [A, mt] = React2.useState(false), [L2, z2] = React2.useState(false), [ct2, d2] = React2.useState(false), [h2, y2] = React2.useState(false), [R2, j2] = React2.useState(0), [p2, _2] = React2.useState(0), O2 = React2.useRef(t.duration || X2 || Wt), G2 = React2.useRef(null), k2 = React2.useRef(null), Vt = g2 === 0, Ut = g2 + 1 <= w2, N2 = t.type, V2 = t.dismissible !== false, Kt = t.className || "", Xt = t.descriptionClassName || "", dt = React2.useMemo(() => S2.findIndex((r2) => r2.toastId === t.id) || 0, [S2, t.id]), Jt = React2.useMemo(() => {
     var r2;
     return (r2 = t.closeButton) != null ? r2 : et2;
-  }, [t.closeButton, et2]), Tt = React$4.useMemo(() => t.duration || X2 || Wt, [t.duration, X2]), gt2 = React$4.useRef(0), U2 = React$4.useRef(0), St = React$4.useRef(0), K2 = React$4.useRef(null), [Gt, Qt] = st2.split("-"), Rt = React$4.useMemo(() => S2.reduce((r2, m2, c2) => c2 >= dt ? r2 : r2 + m2.height, 0), [S2, dt]), Et = Ft(), qt = t.invert || e, ht = N2 === "loading";
-  U2.current = React$4.useMemo(() => dt * pt + Rt, [dt, Rt]), React$4.useEffect(() => {
+  }, [t.closeButton, et2]), Tt = React2.useMemo(() => t.duration || X2 || Wt, [t.duration, X2]), gt2 = React2.useRef(0), U2 = React2.useRef(0), St = React2.useRef(0), K2 = React2.useRef(null), [Gt, Qt] = st2.split("-"), Rt = React2.useMemo(() => S2.reduce((r2, m2, c2) => c2 >= dt ? r2 : r2 + m2.height, 0), [S2, dt]), Et = Ft(), qt = t.invert || e, ht = N2 === "loading";
+  U2.current = React2.useMemo(() => dt * pt + Rt, [dt, Rt]), React2.useEffect(() => {
     O2.current = Tt;
-  }, [Tt]), React$4.useEffect(() => {
+  }, [Tt]), React2.useEffect(() => {
     H2(true);
-  }, []), React$4.useEffect(() => {
+  }, []), React2.useEffect(() => {
     let r2 = k2.current;
     if (r2) {
       let m2 = r2.getBoundingClientRect().height;
       return _2(m2), f2((c2) => [{ toastId: t.id, height: m2, position: t.position }, ...c2]), () => f2((c2) => c2.filter((b2) => b2.toastId !== t.id));
     }
-  }, [f2, t.id]), React$4.useLayoutEffect(() => {
+  }, [f2, t.id]), React2.useLayoutEffect(() => {
     if (!W2) return;
     let r2 = k2.current, m2 = r2.style.height;
     r2.style.height = "auto";
     let c2 = r2.getBoundingClientRect().height;
-    r2.style.height = m2, _2(c2), f2((b2) => b2.find((x3) => x3.toastId === t.id) ? b2.map((x3) => x3.toastId === t.id ? { ...x3, height: c2 } : x3) : [{ toastId: t.id, height: c2, position: t.position }, ...b2]);
+    r2.style.height = m2, _2(c2), f2((b2) => b2.find((x2) => x2.toastId === t.id) ? b2.map((x2) => x2.toastId === t.id ? { ...x2, height: c2 } : x2) : [{ toastId: t.id, height: c2, position: t.position }, ...b2]);
   }, [W2, t.title, t.description, f2, t.id]);
-  let $2 = React$4.useCallback(() => {
+  let $2 = React2.useCallback(() => {
     mt(true), j2(U2.current), f2((r2) => r2.filter((m2) => m2.toastId !== t.id)), setTimeout(() => {
       T2(t);
     }, we);
   }, [t, T2, f2, U2]);
-  React$4.useEffect(() => {
+  React2.useEffect(() => {
     if (t.promise && N2 === "loading" || t.duration === 1 / 0 || t.type === "loading") return;
     let r2;
     return D || u2 || it2 && Et ? (() => {
@@ -45157,22 +45728,22 @@ var ve = (n) => {
         (b2 = t.onAutoClose) == null || b2.call(t, t), $2();
       }, O2.current));
     })(), () => clearTimeout(r2);
-  }, [D, u2, t, N2, it2, Et, $2]), React$4.useEffect(() => {
+  }, [D, u2, t, N2, it2, Et, $2]), React2.useEffect(() => {
     t.delete && $2();
   }, [$2, t.delete]);
   function Zt() {
     var r2, m2, c2;
-    return P2 != null && P2.loading ? React$4.createElement("div", { className: M$1(s == null ? void 0 : s.loader, (r2 = t == null ? void 0 : t.classNames) == null ? void 0 : r2.loader, "sonner-loader"), "data-visible": N2 === "loading" }, P2.loading) : rt2 ? React$4.createElement("div", { className: M$1(s == null ? void 0 : s.loader, (m2 = t == null ? void 0 : t.classNames) == null ? void 0 : m2.loader, "sonner-loader"), "data-visible": N2 === "loading" }, rt2) : React$4.createElement(Yt, { className: M$1(s == null ? void 0 : s.loader, (c2 = t == null ? void 0 : t.classNames) == null ? void 0 : c2.loader), visible: N2 === "loading" });
+    return P2 != null && P2.loading ? React2.createElement("div", { className: M(s == null ? void 0 : s.loader, (r2 = t == null ? void 0 : t.classNames) == null ? void 0 : r2.loader, "sonner-loader"), "data-visible": N2 === "loading" }, P2.loading) : rt2 ? React2.createElement("div", { className: M(s == null ? void 0 : s.loader, (m2 = t == null ? void 0 : t.classNames) == null ? void 0 : m2.loader, "sonner-loader"), "data-visible": N2 === "loading" }, rt2) : React2.createElement(Yt, { className: M(s == null ? void 0 : s.loader, (c2 = t == null ? void 0 : t.classNames) == null ? void 0 : c2.loader), visible: N2 === "loading" });
   }
-  return React$4.createElement("li", { tabIndex: 0, ref: k2, className: M$1(ot2, Kt, s == null ? void 0 : s.toast, (Dt = t == null ? void 0 : t.classNames) == null ? void 0 : Dt.toast, s == null ? void 0 : s.default, s == null ? void 0 : s[N2], (Pt = t == null ? void 0 : t.classNames) == null ? void 0 : Pt[N2]), "data-sonner-toast": "", "data-rich-colors": (Nt = t.richColors) != null ? Nt : F2, "data-styled": !(t.jsx || t.unstyled || a2), "data-mounted": W2, "data-promise": !!t.promise, "data-swiped": h2, "data-removed": A, "data-visible": Ut, "data-y-position": Gt, "data-x-position": Qt, "data-index": g2, "data-front": Vt, "data-swiping": L2, "data-dismissible": V2, "data-type": N2, "data-invert": qt, "data-swipe-out": ct2, "data-swipe-direction": lt, "data-expanded": !!(D || B2 && W2), style: { "--index": g2, "--toasts-before": g2, "--z-index": i.length - g2, "--offset": `${A ? R2 : U2.current}px`, "--initial-height": B2 ? "auto" : `${p2}px`, ...ut2, ...t.style }, onDragEnd: () => {
+  return React2.createElement("li", { tabIndex: 0, ref: k2, className: M(ot2, Kt, s == null ? void 0 : s.toast, (Dt = t == null ? void 0 : t.classNames) == null ? void 0 : Dt.toast, s == null ? void 0 : s.default, s == null ? void 0 : s[N2], (Pt = t == null ? void 0 : t.classNames) == null ? void 0 : Pt[N2]), "data-sonner-toast": "", "data-rich-colors": (Nt = t.richColors) != null ? Nt : F2, "data-styled": !(t.jsx || t.unstyled || a2), "data-mounted": W2, "data-promise": !!t.promise, "data-swiped": h2, "data-removed": A, "data-visible": Ut, "data-y-position": Gt, "data-x-position": Qt, "data-index": g2, "data-front": Vt, "data-swiping": L2, "data-dismissible": V2, "data-type": N2, "data-invert": qt, "data-swipe-out": ct2, "data-swipe-direction": lt, "data-expanded": !!(D || B2 && W2), style: { "--index": g2, "--toasts-before": g2, "--z-index": i.length - g2, "--offset": `${A ? R2 : U2.current}px`, "--initial-height": B2 ? "auto" : `${p2}px`, ...ut2, ...t.style }, onDragEnd: () => {
     z2(false), C2(null), K2.current = null;
   }, onPointerDown: (r2) => {
     ht || !V2 || (G2.current = /* @__PURE__ */ new Date(), j2(U2.current), r2.target.setPointerCapture(r2.pointerId), r2.target.tagName !== "BUTTON" && (z2(true), K2.current = { x: r2.clientX, y: r2.clientY }));
   }, onPointerUp: () => {
-    var x3, Q2, q2, Z2;
+    var x2, Q2, q2, Z2;
     if (ct2 || !V2) return;
     K2.current = null;
-    let r2 = Number(((x3 = k2.current) == null ? void 0 : x3.style.getPropertyValue("--swipe-amount-x").replace("px", "")) || 0), m2 = Number(((Q2 = k2.current) == null ? void 0 : Q2.style.getPropertyValue("--swipe-amount-y").replace("px", "")) || 0), c2 = (/* @__PURE__ */ new Date()).getTime() - ((q2 = G2.current) == null ? void 0 : q2.getTime()), b2 = Y2 === "x" ? r2 : m2, I = Math.abs(b2) / c2;
+    let r2 = Number(((x2 = k2.current) == null ? void 0 : x2.style.getPropertyValue("--swipe-amount-x").replace("px", "")) || 0), m2 = Number(((Q2 = k2.current) == null ? void 0 : Q2.style.getPropertyValue("--swipe-amount-y").replace("px", "")) || 0), c2 = (/* @__PURE__ */ new Date()).getTime() - ((q2 = G2.current) == null ? void 0 : q2.getTime()), b2 = Y2 === "x" ? r2 : m2, I = Math.abs(b2) / c2;
     if (Math.abs(b2) >= ye || I > 0.11) {
       j2(U2.current), (Z2 = t.onDismiss) == null || Z2.call(t, t), J2(Y2 === "x" ? r2 > 0 ? "right" : "left" : m2 > 0 ? "down" : "up"), $2(), d2(true), y2(false);
       return;
@@ -45183,19 +45754,19 @@ var ve = (n) => {
     if (!K2.current || !V2 || ((Q2 = window.getSelection()) == null ? void 0 : Q2.toString().length) > 0) return;
     let c2 = r2.clientY - K2.current.y, b2 = r2.clientX - K2.current.x, I = (q2 = n.swipeDirections) != null ? q2 : xe(st2);
     !Y2 && (Math.abs(b2) > 1 || Math.abs(c2) > 1) && C2(Math.abs(b2) > Math.abs(c2) ? "x" : "y");
-    let x3 = { x: 0, y: 0 };
-    Y2 === "y" ? (I.includes("top") || I.includes("bottom")) && (I.includes("top") && c2 < 0 || I.includes("bottom") && c2 > 0) && (x3.y = c2) : Y2 === "x" && (I.includes("left") || I.includes("right")) && (I.includes("left") && b2 < 0 || I.includes("right") && b2 > 0) && (x3.x = b2), (Math.abs(x3.x) > 0 || Math.abs(x3.y) > 0) && y2(true), (Z2 = k2.current) == null || Z2.style.setProperty("--swipe-amount-x", `${x3.x}px`), (zt = k2.current) == null || zt.style.setProperty("--swipe-amount-y", `${x3.y}px`);
-  } }, Jt && !t.jsx ? React$4.createElement("button", { "aria-label": nt2, "data-disabled": ht, "data-close-button": true, onClick: ht || !V2 ? () => {
+    let x2 = { x: 0, y: 0 };
+    Y2 === "y" ? (I.includes("top") || I.includes("bottom")) && (I.includes("top") && c2 < 0 || I.includes("bottom") && c2 > 0) && (x2.y = c2) : Y2 === "x" && (I.includes("left") || I.includes("right")) && (I.includes("left") && b2 < 0 || I.includes("right") && b2 > 0) && (x2.x = b2), (Math.abs(x2.x) > 0 || Math.abs(x2.y) > 0) && y2(true), (Z2 = k2.current) == null || Z2.style.setProperty("--swipe-amount-x", `${x2.x}px`), (zt = k2.current) == null || zt.style.setProperty("--swipe-amount-y", `${x2.y}px`);
+  } }, Jt && !t.jsx ? React2.createElement("button", { "aria-label": nt2, "data-disabled": ht, "data-close-button": true, onClick: ht || !V2 ? () => {
   } : () => {
     var r2;
     $2(), (r2 = t.onDismiss) == null || r2.call(t, t);
-  }, className: M$1(s == null ? void 0 : s.closeButton, (Bt = t == null ? void 0 : t.classNames) == null ? void 0 : Bt.closeButton) }, (Ct = P2 == null ? void 0 : P2.close) != null ? Ct : Ot) : null, t.jsx || reactExports.isValidElement(t.title) ? t.jsx ? t.jsx : typeof t.title == "function" ? t.title() : t.title : React$4.createElement(React$4.Fragment, null, N2 || t.icon || t.promise ? React$4.createElement("div", { "data-icon": "", className: M$1(s == null ? void 0 : s.icon, (kt = t == null ? void 0 : t.classNames) == null ? void 0 : kt.icon) }, t.promise || t.type === "loading" && !t.icon ? t.icon || Zt() : null, t.type !== "loading" ? t.icon || (P2 == null ? void 0 : P2[N2]) || jt(N2) : null) : null, React$4.createElement("div", { "data-content": "", className: M$1(s == null ? void 0 : s.content, (It = t == null ? void 0 : t.classNames) == null ? void 0 : It.content) }, React$4.createElement("div", { "data-title": "", className: M$1(s == null ? void 0 : s.title, (Mt = t == null ? void 0 : t.classNames) == null ? void 0 : Mt.title) }, typeof t.title == "function" ? t.title() : t.title), t.description ? React$4.createElement("div", { "data-description": "", className: M$1(at, Xt, s == null ? void 0 : s.description, (Ht = t == null ? void 0 : t.classNames) == null ? void 0 : Ht.description) }, typeof t.description == "function" ? t.description() : t.description) : null), reactExports.isValidElement(t.cancel) ? t.cancel : t.cancel && tt(t.cancel) ? React$4.createElement("button", { "data-button": true, "data-cancel": true, style: t.cancelButtonStyle || ft2, onClick: (r2) => {
+  }, className: M(s == null ? void 0 : s.closeButton, (Bt = t == null ? void 0 : t.classNames) == null ? void 0 : Bt.closeButton) }, (Ct = P2 == null ? void 0 : P2.close) != null ? Ct : Ot) : null, t.jsx || reactExports.isValidElement(t.title) ? t.jsx ? t.jsx : typeof t.title == "function" ? t.title() : t.title : React2.createElement(React2.Fragment, null, N2 || t.icon || t.promise ? React2.createElement("div", { "data-icon": "", className: M(s == null ? void 0 : s.icon, (kt = t == null ? void 0 : t.classNames) == null ? void 0 : kt.icon) }, t.promise || t.type === "loading" && !t.icon ? t.icon || Zt() : null, t.type !== "loading" ? t.icon || (P2 == null ? void 0 : P2[N2]) || jt(N2) : null) : null, React2.createElement("div", { "data-content": "", className: M(s == null ? void 0 : s.content, (It = t == null ? void 0 : t.classNames) == null ? void 0 : It.content) }, React2.createElement("div", { "data-title": "", className: M(s == null ? void 0 : s.title, (Mt = t == null ? void 0 : t.classNames) == null ? void 0 : Mt.title) }, typeof t.title == "function" ? t.title() : t.title), t.description ? React2.createElement("div", { "data-description": "", className: M(at, Xt, s == null ? void 0 : s.description, (Ht = t == null ? void 0 : t.classNames) == null ? void 0 : Ht.description) }, typeof t.description == "function" ? t.description() : t.description) : null), reactExports.isValidElement(t.cancel) ? t.cancel : t.cancel && tt(t.cancel) ? React2.createElement("button", { "data-button": true, "data-cancel": true, style: t.cancelButtonStyle || ft2, onClick: (r2) => {
     var m2, c2;
     tt(t.cancel) && V2 && ((c2 = (m2 = t.cancel).onClick) == null || c2.call(m2, r2), $2());
-  }, className: M$1(s == null ? void 0 : s.cancelButton, (At = t == null ? void 0 : t.classNames) == null ? void 0 : At.cancelButton) }, t.cancel.label) : null, reactExports.isValidElement(t.action) ? t.action : t.action && tt(t.action) ? React$4.createElement("button", { "data-button": true, "data-action": true, style: t.actionButtonStyle || l2, onClick: (r2) => {
+  }, className: M(s == null ? void 0 : s.cancelButton, (At = t == null ? void 0 : t.classNames) == null ? void 0 : At.cancelButton) }, t.cancel.label) : null, reactExports.isValidElement(t.action) ? t.action : t.action && tt(t.action) ? React2.createElement("button", { "data-button": true, "data-action": true, style: t.actionButtonStyle || l2, onClick: (r2) => {
     var m2, c2;
     tt(t.action) && ((c2 = (m2 = t.action).onClick) == null || c2.call(m2, r2), !r2.defaultPrevented && $2());
-  }, className: M$1(s == null ? void 0 : s.actionButton, (Lt = t == null ? void 0 : t.classNames) == null ? void 0 : Lt.actionButton) }, t.action.label) : null));
+  }, className: M(s == null ? void 0 : s.actionButton, (Lt = t == null ? void 0 : t.classNames) == null ? void 0 : Lt.actionButton) }, t.action.label) : null));
 };
 function _t() {
   if (typeof window == "undefined" || typeof document == "undefined") return "ltr";
@@ -45217,13 +45788,13 @@ function Te(n, e) {
   }), t;
 }
 reactExports.forwardRef(function(e, t) {
-  let { invert: a2, position: u2 = "bottom-right", hotkey: f2 = ["altKey", "KeyT"], expand: w2, closeButton: S2, className: g2, offset: i, mobileOffset: D, theme: T2 = "light", richColors: F2, duration: et2, style: ut2, visibleToasts: ft2 = pe, toastOptions: l2, dir: ot2 = _t(), gap: at = be, loadingIcon: X2, icons: st2, containerAriaLabel: pt = "Notifications", pauseWhenPageIsHidden: rt2 } = e, [B2, s] = React$4.useState([]), P2 = React$4.useMemo(() => Array.from(new Set([u2].concat(B2.filter((d2) => d2.position).map((d2) => d2.position)))), [B2, u2]), [nt2, it2] = React$4.useState([]), [Y2, C2] = React$4.useState(false), [lt, J2] = React$4.useState(false), [W2, H2] = React$4.useState(T2 !== "system" ? T2 : typeof window != "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"), A = React$4.useRef(null), mt = f2.join("+").replace(/Key/g, "").replace(/Digit/g, ""), L2 = React$4.useRef(null), z2 = React$4.useRef(false), ct2 = React$4.useCallback((d2) => {
+  let { invert: a2, position: u2 = "bottom-right", hotkey: f2 = ["altKey", "KeyT"], expand: w2, closeButton: S2, className: g2, offset: i, mobileOffset: D, theme: T2 = "light", richColors: F2, duration: et2, style: ut2, visibleToasts: ft2 = pe, toastOptions: l2, dir: ot2 = _t(), gap: at = be, loadingIcon: X2, icons: st2, containerAriaLabel: pt = "Notifications", pauseWhenPageIsHidden: rt2 } = e, [B2, s] = React2.useState([]), P2 = React2.useMemo(() => Array.from(new Set([u2].concat(B2.filter((d2) => d2.position).map((d2) => d2.position)))), [B2, u2]), [nt2, it2] = React2.useState([]), [Y2, C2] = React2.useState(false), [lt, J2] = React2.useState(false), [W2, H2] = React2.useState(T2 !== "system" ? T2 : typeof window != "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"), A = React2.useRef(null), mt = f2.join("+").replace(/Key/g, "").replace(/Digit/g, ""), L2 = React2.useRef(null), z2 = React2.useRef(false), ct2 = React2.useCallback((d2) => {
     s((h2) => {
       var y2;
       return (y2 = h2.find((R2) => R2.id === d2.id)) != null && y2.delete || v.dismiss(d2.id), h2.filter(({ id: R2 }) => R2 !== d2.id);
     });
   }, []);
-  return React$4.useEffect(() => v.subscribe((d2) => {
+  return React2.useEffect(() => v.subscribe((d2) => {
     if (d2.dismiss) {
       s((h2) => h2.map((y2) => y2.id === d2.id ? { ...y2, delete: true } : y2));
       return;
@@ -45236,7 +45807,7 @@ reactExports.forwardRef(function(e, t) {
         });
       });
     });
-  }), []), React$4.useEffect(() => {
+  }), []), React2.useEffect(() => {
     if (T2 !== "system") {
       H2(T2);
       return;
@@ -45256,22 +45827,22 @@ reactExports.forwardRef(function(e, t) {
         }
       });
     }
-  }, [T2]), React$4.useEffect(() => {
+  }, [T2]), React2.useEffect(() => {
     B2.length <= 1 && C2(false);
-  }, [B2]), React$4.useEffect(() => {
+  }, [B2]), React2.useEffect(() => {
     let d2 = (h2) => {
       var R2, j2;
       f2.every((p2) => h2[p2] || h2.code === p2) && (C2(true), (R2 = A.current) == null || R2.focus()), h2.code === "Escape" && (document.activeElement === A.current || (j2 = A.current) != null && j2.contains(document.activeElement)) && C2(false);
     };
     return document.addEventListener("keydown", d2), () => document.removeEventListener("keydown", d2);
-  }, [f2]), React$4.useEffect(() => {
+  }, [f2]), React2.useEffect(() => {
     if (A.current) return () => {
       L2.current && (L2.current.focus({ preventScroll: true }), L2.current = null, z2.current = false);
     };
-  }, [A.current]), React$4.createElement("section", { ref: t, "aria-label": `${pt} ${mt}`, tabIndex: -1, "aria-live": "polite", "aria-relevant": "additions text", "aria-atomic": "false", suppressHydrationWarning: true }, P2.map((d2, h2) => {
+  }, [A.current]), React2.createElement("section", { ref: t, "aria-label": `${pt} ${mt}`, tabIndex: -1, "aria-live": "polite", "aria-relevant": "additions text", "aria-atomic": "false", suppressHydrationWarning: true }, P2.map((d2, h2) => {
     var j2;
     let [y2, R2] = d2.split("-");
-    return B2.length ? React$4.createElement("ol", { key: d2, dir: ot2 === "auto" ? _t() : ot2, tabIndex: -1, ref: A, className: g2, "data-sonner-toaster": true, "data-theme": W2, "data-y-position": y2, "data-lifted": Y2 && B2.length > 1 && !w2, "data-x-position": R2, style: { "--front-toast-height": `${((j2 = nt2[0]) == null ? void 0 : j2.height) || 0}px`, "--width": `${he}px`, "--gap": `${at}px`, ...ut2, ...Te(i, D) }, onBlur: (p2) => {
+    return B2.length ? React2.createElement("ol", { key: d2, dir: ot2 === "auto" ? _t() : ot2, tabIndex: -1, ref: A, className: g2, "data-sonner-toaster": true, "data-theme": W2, "data-y-position": y2, "data-lifted": Y2 && B2.length > 1 && !w2, "data-x-position": R2, style: { "--front-toast-height": `${((j2 = nt2[0]) == null ? void 0 : j2.height) || 0}px`, "--width": `${he}px`, "--gap": `${at}px`, ...ut2, ...Te(i, D) }, onBlur: (p2) => {
       z2.current && !p2.currentTarget.contains(p2.relatedTarget) && (z2.current = false, L2.current && (L2.current.focus({ preventScroll: true }), L2.current = null));
     }, onFocus: (p2) => {
       p2.target instanceof HTMLElement && p2.target.dataset.dismissible === "false" || z2.current || (z2.current = true, L2.current = p2.relatedTarget);
@@ -45281,31 +45852,10 @@ reactExports.forwardRef(function(e, t) {
       p2.target instanceof HTMLElement && p2.target.dataset.dismissible === "false" || J2(true);
     }, onPointerUp: () => J2(false) }, B2.filter((p2) => !p2.position && h2 === 0 || p2.position === d2).map((p2, _2) => {
       var O2, G2;
-      return React$4.createElement(ve, { key: p2.id, icons: st2, index: _2, toast: p2, defaultRichColors: F2, duration: (O2 = l2 == null ? void 0 : l2.duration) != null ? O2 : et2, className: l2 == null ? void 0 : l2.className, descriptionClassName: l2 == null ? void 0 : l2.descriptionClassName, invert: a2, visibleToasts: ft2, closeButton: (G2 = l2 == null ? void 0 : l2.closeButton) != null ? G2 : S2, interacting: lt, position: d2, style: l2 == null ? void 0 : l2.style, unstyled: l2 == null ? void 0 : l2.unstyled, classNames: l2 == null ? void 0 : l2.classNames, cancelButtonStyle: l2 == null ? void 0 : l2.cancelButtonStyle, actionButtonStyle: l2 == null ? void 0 : l2.actionButtonStyle, removeToast: ct2, toasts: B2.filter((k2) => k2.position == p2.position), heights: nt2.filter((k2) => k2.position == p2.position), setHeights: it2, expandByDefault: w2, gap: at, loadingIcon: X2, expanded: Y2, pauseWhenPageIsHidden: rt2, swipeDirections: e.swipeDirections });
+      return React2.createElement(ve, { key: p2.id, icons: st2, index: _2, toast: p2, defaultRichColors: F2, duration: (O2 = l2 == null ? void 0 : l2.duration) != null ? O2 : et2, className: l2 == null ? void 0 : l2.className, descriptionClassName: l2 == null ? void 0 : l2.descriptionClassName, invert: a2, visibleToasts: ft2, closeButton: (G2 = l2 == null ? void 0 : l2.closeButton) != null ? G2 : S2, interacting: lt, position: d2, style: l2 == null ? void 0 : l2.style, unstyled: l2 == null ? void 0 : l2.unstyled, classNames: l2 == null ? void 0 : l2.classNames, cancelButtonStyle: l2 == null ? void 0 : l2.cancelButtonStyle, actionButtonStyle: l2 == null ? void 0 : l2.actionButtonStyle, removeToast: ct2, toasts: B2.filter((k2) => k2.position == p2.position), heights: nt2.filter((k2) => k2.position == p2.position), setHeights: it2, expandByDefault: w2, gap: at, loadingIcon: X2, expanded: Y2, pauseWhenPageIsHidden: rt2, swipeDirections: e.swipeDirections });
     })) : null;
   }));
 });
-function Textarea({ className, ...props }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "textarea",
-    {
-      "data-slot": "textarea",
-      className: cn(
-        "border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content min-h-16 w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-        className
-      ),
-      ...props
-    }
-  );
-}
-function composeEventHandlers(originalEventHandler, ourEventHandler, { checkForDefaultPrevented = true } = {}) {
-  return function handleEvent(event) {
-    originalEventHandler == null ? void 0 : originalEventHandler(event);
-    if (checkForDefaultPrevented === false || !event.defaultPrevented) {
-      return ourEventHandler == null ? void 0 : ourEventHandler(event);
-    }
-  };
-}
 function createContext2(rootComponentName, defaultContext) {
   const Context = reactExports.createContext(defaultContext);
   const Provider2 = (props) => {
@@ -45322,7 +45872,7 @@ function createContext2(rootComponentName, defaultContext) {
   }
   return [Provider2, useContext2];
 }
-function createContextScope(scopeName, createContextScopeDeps = []) {
+function createContextScope$1(scopeName, createContextScopeDeps = []) {
   let defaultContexts = [];
   function createContext3(rootComponentName, defaultContext) {
     const BaseContext = reactExports.createContext(defaultContext);
@@ -45359,9 +45909,9 @@ function createContextScope(scopeName, createContextScopeDeps = []) {
     };
   };
   createScope.scopeName = scopeName;
-  return [createContext3, composeContextScopes(createScope, ...createContextScopeDeps)];
+  return [createContext3, composeContextScopes$1(createScope, ...createContextScopeDeps)];
 }
-function composeContextScopes(...scopes) {
+function composeContextScopes$1(...scopes) {
   const baseScope = scopes[0];
   if (scopes.length === 1) return baseScope;
   const createScope = () => {
@@ -45380,6 +45930,91 @@ function composeContextScopes(...scopes) {
   };
   createScope.scopeName = baseScope.scopeName;
   return createScope;
+}
+function composeEventHandlers(originalEventHandler, ourEventHandler, { checkForDefaultPrevented = true } = {}) {
+  return function handleEvent(event) {
+    originalEventHandler == null ? void 0 : originalEventHandler(event);
+    if (checkForDefaultPrevented === false || !event.defaultPrevented) {
+      return ourEventHandler == null ? void 0 : ourEventHandler(event);
+    }
+  };
+}
+var useLayoutEffect2 = (globalThis == null ? void 0 : globalThis.document) ? reactExports.useLayoutEffect : () => {
+};
+var useReactId = React$4[" useId ".trim().toString()] || (() => void 0);
+var count$1 = 0;
+function useId(deterministicId) {
+  const [id2, setId] = reactExports.useState(useReactId());
+  useLayoutEffect2(() => {
+    setId((reactId) => reactId ?? String(count$1++));
+  }, [deterministicId]);
+  return deterministicId || (id2 ? `radix-${id2}` : "");
+}
+var useInsertionEffect = React$4[" useInsertionEffect ".trim().toString()] || useLayoutEffect2;
+function useControllableState({
+  prop,
+  defaultProp,
+  onChange = () => {
+  },
+  caller
+}) {
+  const [uncontrolledProp, setUncontrolledProp, onChangeRef] = useUncontrolledState({
+    defaultProp,
+    onChange
+  });
+  const isControlled = prop !== void 0;
+  const value = isControlled ? prop : uncontrolledProp;
+  {
+    const isControlledRef = reactExports.useRef(prop !== void 0);
+    reactExports.useEffect(() => {
+      const wasControlled = isControlledRef.current;
+      if (wasControlled !== isControlled) {
+        const from = wasControlled ? "controlled" : "uncontrolled";
+        const to = isControlled ? "controlled" : "uncontrolled";
+        console.warn(
+          `${caller} is changing from ${from} to ${to}. Components should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled value for the lifetime of the component.`
+        );
+      }
+      isControlledRef.current = isControlled;
+    }, [isControlled, caller]);
+  }
+  const setValue = reactExports.useCallback(
+    (nextValue) => {
+      var _a2;
+      if (isControlled) {
+        const value2 = isFunction(nextValue) ? nextValue(prop) : nextValue;
+        if (value2 !== prop) {
+          (_a2 = onChangeRef.current) == null ? void 0 : _a2.call(onChangeRef, value2);
+        }
+      } else {
+        setUncontrolledProp(nextValue);
+      }
+    },
+    [isControlled, prop, setUncontrolledProp, onChangeRef]
+  );
+  return [value, setValue];
+}
+function useUncontrolledState({
+  defaultProp,
+  onChange
+}) {
+  const [value, setValue] = reactExports.useState(defaultProp);
+  const prevValueRef = reactExports.useRef(value);
+  const onChangeRef = reactExports.useRef(onChange);
+  useInsertionEffect(() => {
+    onChangeRef.current = onChange;
+  }, [onChange]);
+  reactExports.useEffect(() => {
+    var _a2;
+    if (prevValueRef.current !== value) {
+      (_a2 = onChangeRef.current) == null ? void 0 : _a2.call(onChangeRef, value);
+      prevValueRef.current = value;
+    }
+  }, [value, prevValueRef]);
+  return [value, setValue, onChangeRef];
+}
+function isFunction(value) {
+  return typeof value === "function";
 }
 // @__NO_SIDE_EFFECTS__
 function createSlot(ownerName) {
@@ -45731,16 +46366,4247 @@ function handleAndDispatchCustomEvent(name, handler, detail, { discrete }) {
     target.dispatchEvent(event);
   }
 }
-var useLayoutEffect2 = (globalThis == null ? void 0 : globalThis.document) ? reactExports.useLayoutEffect : () => {
+var AUTOFOCUS_ON_MOUNT = "focusScope.autoFocusOnMount";
+var AUTOFOCUS_ON_UNMOUNT = "focusScope.autoFocusOnUnmount";
+var EVENT_OPTIONS$1 = { bubbles: false, cancelable: true };
+var FOCUS_SCOPE_NAME = "FocusScope";
+var FocusScope = reactExports.forwardRef((props, forwardedRef) => {
+  const {
+    loop = false,
+    trapped = false,
+    onMountAutoFocus: onMountAutoFocusProp,
+    onUnmountAutoFocus: onUnmountAutoFocusProp,
+    ...scopeProps
+  } = props;
+  const [container, setContainer] = reactExports.useState(null);
+  const onMountAutoFocus = useCallbackRef$1(onMountAutoFocusProp);
+  const onUnmountAutoFocus = useCallbackRef$1(onUnmountAutoFocusProp);
+  const lastFocusedElementRef = reactExports.useRef(null);
+  const composedRefs = useComposedRefs(forwardedRef, (node) => setContainer(node));
+  const focusScope = reactExports.useRef({
+    paused: false,
+    pause() {
+      this.paused = true;
+    },
+    resume() {
+      this.paused = false;
+    }
+  }).current;
+  reactExports.useEffect(() => {
+    if (trapped) {
+      let handleFocusIn2 = function(event) {
+        if (focusScope.paused || !container) return;
+        const target = event.target;
+        if (container.contains(target)) {
+          lastFocusedElementRef.current = target;
+        } else {
+          focus(lastFocusedElementRef.current, { select: true });
+        }
+      }, handleFocusOut2 = function(event) {
+        if (focusScope.paused || !container) return;
+        const relatedTarget = event.relatedTarget;
+        if (relatedTarget === null) return;
+        if (!container.contains(relatedTarget)) {
+          focus(lastFocusedElementRef.current, { select: true });
+        }
+      }, handleMutations2 = function(mutations) {
+        const focusedElement = document.activeElement;
+        if (focusedElement !== document.body) return;
+        for (const mutation of mutations) {
+          if (mutation.removedNodes.length > 0) focus(container);
+        }
+      };
+      document.addEventListener("focusin", handleFocusIn2);
+      document.addEventListener("focusout", handleFocusOut2);
+      const mutationObserver = new MutationObserver(handleMutations2);
+      if (container) mutationObserver.observe(container, { childList: true, subtree: true });
+      return () => {
+        document.removeEventListener("focusin", handleFocusIn2);
+        document.removeEventListener("focusout", handleFocusOut2);
+        mutationObserver.disconnect();
+      };
+    }
+  }, [trapped, container, focusScope.paused]);
+  reactExports.useEffect(() => {
+    if (container) {
+      focusScopesStack.add(focusScope);
+      const previouslyFocusedElement = document.activeElement;
+      const hasFocusedCandidate = container.contains(previouslyFocusedElement);
+      if (!hasFocusedCandidate) {
+        const mountEvent = new CustomEvent(AUTOFOCUS_ON_MOUNT, EVENT_OPTIONS$1);
+        container.addEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus);
+        container.dispatchEvent(mountEvent);
+        if (!mountEvent.defaultPrevented) {
+          focusFirst$2(removeLinks(getTabbableCandidates(container)), { select: true });
+          if (document.activeElement === previouslyFocusedElement) {
+            focus(container);
+          }
+        }
+      }
+      return () => {
+        container.removeEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus);
+        setTimeout(() => {
+          const unmountEvent = new CustomEvent(AUTOFOCUS_ON_UNMOUNT, EVENT_OPTIONS$1);
+          container.addEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus);
+          container.dispatchEvent(unmountEvent);
+          if (!unmountEvent.defaultPrevented) {
+            focus(previouslyFocusedElement ?? document.body, { select: true });
+          }
+          container.removeEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus);
+          focusScopesStack.remove(focusScope);
+        }, 0);
+      };
+    }
+  }, [container, onMountAutoFocus, onUnmountAutoFocus, focusScope]);
+  const handleKeyDown = reactExports.useCallback(
+    (event) => {
+      if (!loop && !trapped) return;
+      if (focusScope.paused) return;
+      const isTabKey = event.key === "Tab" && !event.altKey && !event.ctrlKey && !event.metaKey;
+      const focusedElement = document.activeElement;
+      if (isTabKey && focusedElement) {
+        const container2 = event.currentTarget;
+        const [first, last2] = getTabbableEdges(container2);
+        const hasTabbableElementsInside = first && last2;
+        if (!hasTabbableElementsInside) {
+          if (focusedElement === container2) event.preventDefault();
+        } else {
+          if (!event.shiftKey && focusedElement === last2) {
+            event.preventDefault();
+            if (loop) focus(first, { select: true });
+          } else if (event.shiftKey && focusedElement === first) {
+            event.preventDefault();
+            if (loop) focus(last2, { select: true });
+          }
+        }
+      }
+    },
+    [loop, trapped, focusScope.paused]
+  );
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Primitive$1.div, { tabIndex: -1, ...scopeProps, ref: composedRefs, onKeyDown: handleKeyDown });
+});
+FocusScope.displayName = FOCUS_SCOPE_NAME;
+function focusFirst$2(candidates, { select = false } = {}) {
+  const previouslyFocusedElement = document.activeElement;
+  for (const candidate of candidates) {
+    focus(candidate, { select });
+    if (document.activeElement !== previouslyFocusedElement) return;
+  }
+}
+function getTabbableEdges(container) {
+  const candidates = getTabbableCandidates(container);
+  const first = findVisible(candidates, container);
+  const last2 = findVisible(candidates.reverse(), container);
+  return [first, last2];
+}
+function getTabbableCandidates(container) {
+  const nodes = [];
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, {
+    acceptNode: (node) => {
+      const isHiddenInput = node.tagName === "INPUT" && node.type === "hidden";
+      if (node.disabled || node.hidden || isHiddenInput) return NodeFilter.FILTER_SKIP;
+      return node.tabIndex >= 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+    }
+  });
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  return nodes;
+}
+function findVisible(elements, container) {
+  for (const element of elements) {
+    if (!isHidden(element, { upTo: container })) return element;
+  }
+}
+function isHidden(node, { upTo }) {
+  if (getComputedStyle(node).visibility === "hidden") return true;
+  while (node) {
+    if (upTo !== void 0 && node === upTo) return false;
+    if (getComputedStyle(node).display === "none") return true;
+    node = node.parentElement;
+  }
+  return false;
+}
+function isSelectableInput(element) {
+  return element instanceof HTMLInputElement && "select" in element;
+}
+function focus(element, { select = false } = {}) {
+  if (element && element.focus) {
+    const previouslyFocusedElement = document.activeElement;
+    element.focus({ preventScroll: true });
+    if (element !== previouslyFocusedElement && isSelectableInput(element) && select)
+      element.select();
+  }
+}
+var focusScopesStack = createFocusScopesStack();
+function createFocusScopesStack() {
+  let stack = [];
+  return {
+    add(focusScope) {
+      const activeFocusScope = stack[0];
+      if (focusScope !== activeFocusScope) {
+        activeFocusScope == null ? void 0 : activeFocusScope.pause();
+      }
+      stack = arrayRemove(stack, focusScope);
+      stack.unshift(focusScope);
+    },
+    remove(focusScope) {
+      var _a2;
+      stack = arrayRemove(stack, focusScope);
+      (_a2 = stack[0]) == null ? void 0 : _a2.resume();
+    }
+  };
+}
+function arrayRemove(array, item) {
+  const updatedArray = [...array];
+  const index2 = updatedArray.indexOf(item);
+  if (index2 !== -1) {
+    updatedArray.splice(index2, 1);
+  }
+  return updatedArray;
+}
+function removeLinks(items) {
+  return items.filter((item) => item.tagName !== "A");
+}
+var PORTAL_NAME$6 = "Portal";
+var Portal$4 = reactExports.forwardRef((props, forwardedRef) => {
+  var _a2;
+  const { container: containerProp, ...portalProps } = props;
+  const [mounted, setMounted] = reactExports.useState(false);
+  useLayoutEffect2(() => setMounted(true), []);
+  const container = containerProp || mounted && ((_a2 = globalThis == null ? void 0 : globalThis.document) == null ? void 0 : _a2.body);
+  return container ? ReactDOM$2.createPortal(/* @__PURE__ */ jsxRuntimeExports.jsx(Primitive$1.div, { ...portalProps, ref: forwardedRef }), container) : null;
+});
+Portal$4.displayName = PORTAL_NAME$6;
+function useStateMachine$1(initialState, machine) {
+  return reactExports.useReducer((state, event) => {
+    const nextState = machine[state][event];
+    return nextState ?? state;
+  }, initialState);
+}
+var Presence = (props) => {
+  const { present, children } = props;
+  const presence = usePresence(present);
+  const child = typeof children === "function" ? children({ present: presence.isPresent }) : reactExports.Children.only(children);
+  const ref = useComposedRefs(presence.ref, getElementRef(child));
+  const forceMount = typeof children === "function";
+  return forceMount || presence.isPresent ? reactExports.cloneElement(child, { ref }) : null;
 };
-var useReactId = React$5[" useId ".trim().toString()] || (() => void 0);
-var count$1 = 0;
-function useId(deterministicId) {
-  const [id2, setId] = reactExports.useState(useReactId());
+Presence.displayName = "Presence";
+function usePresence(present) {
+  const [node, setNode] = reactExports.useState();
+  const stylesRef = reactExports.useRef(null);
+  const prevPresentRef = reactExports.useRef(present);
+  const prevAnimationNameRef = reactExports.useRef("none");
+  const initialState = present ? "mounted" : "unmounted";
+  const [state, send] = useStateMachine$1(initialState, {
+    mounted: {
+      UNMOUNT: "unmounted",
+      ANIMATION_OUT: "unmountSuspended"
+    },
+    unmountSuspended: {
+      MOUNT: "mounted",
+      ANIMATION_END: "unmounted"
+    },
+    unmounted: {
+      MOUNT: "mounted"
+    }
+  });
+  reactExports.useEffect(() => {
+    const currentAnimationName = getAnimationName(stylesRef.current);
+    prevAnimationNameRef.current = state === "mounted" ? currentAnimationName : "none";
+  }, [state]);
   useLayoutEffect2(() => {
-    setId((reactId) => reactId ?? String(count$1++));
-  }, [deterministicId]);
-  return id2 ? `radix-${id2}` : "";
+    const styles = stylesRef.current;
+    const wasPresent = prevPresentRef.current;
+    const hasPresentChanged = wasPresent !== present;
+    if (hasPresentChanged) {
+      const prevAnimationName = prevAnimationNameRef.current;
+      const currentAnimationName = getAnimationName(styles);
+      if (present) {
+        send("MOUNT");
+      } else if (currentAnimationName === "none" || (styles == null ? void 0 : styles.display) === "none") {
+        send("UNMOUNT");
+      } else {
+        const isAnimating = prevAnimationName !== currentAnimationName;
+        if (wasPresent && isAnimating) {
+          send("ANIMATION_OUT");
+        } else {
+          send("UNMOUNT");
+        }
+      }
+      prevPresentRef.current = present;
+    }
+  }, [present, send]);
+  useLayoutEffect2(() => {
+    if (node) {
+      let timeoutId;
+      const ownerWindow = node.ownerDocument.defaultView ?? window;
+      const handleAnimationEnd = (event) => {
+        const currentAnimationName = getAnimationName(stylesRef.current);
+        const isCurrentAnimation = currentAnimationName.includes(CSS.escape(event.animationName));
+        if (event.target === node && isCurrentAnimation) {
+          send("ANIMATION_END");
+          if (!prevPresentRef.current) {
+            const currentFillMode = node.style.animationFillMode;
+            node.style.animationFillMode = "forwards";
+            timeoutId = ownerWindow.setTimeout(() => {
+              if (node.style.animationFillMode === "forwards") {
+                node.style.animationFillMode = currentFillMode;
+              }
+            });
+          }
+        }
+      };
+      const handleAnimationStart = (event) => {
+        if (event.target === node) {
+          prevAnimationNameRef.current = getAnimationName(stylesRef.current);
+        }
+      };
+      node.addEventListener("animationstart", handleAnimationStart);
+      node.addEventListener("animationcancel", handleAnimationEnd);
+      node.addEventListener("animationend", handleAnimationEnd);
+      return () => {
+        ownerWindow.clearTimeout(timeoutId);
+        node.removeEventListener("animationstart", handleAnimationStart);
+        node.removeEventListener("animationcancel", handleAnimationEnd);
+        node.removeEventListener("animationend", handleAnimationEnd);
+      };
+    } else {
+      send("ANIMATION_END");
+    }
+  }, [node, send]);
+  return {
+    isPresent: ["mounted", "unmountSuspended"].includes(state),
+    ref: reactExports.useCallback((node2) => {
+      stylesRef.current = node2 ? getComputedStyle(node2) : null;
+      setNode(node2);
+    }, [])
+  };
+}
+function getAnimationName(styles) {
+  return (styles == null ? void 0 : styles.animationName) || "none";
+}
+function getElementRef(element) {
+  var _a2, _b2;
+  let getter = (_a2 = Object.getOwnPropertyDescriptor(element.props, "ref")) == null ? void 0 : _a2.get;
+  let mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
+  if (mayWarn) {
+    return element.ref;
+  }
+  getter = (_b2 = Object.getOwnPropertyDescriptor(element, "ref")) == null ? void 0 : _b2.get;
+  mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
+  if (mayWarn) {
+    return element.props.ref;
+  }
+  return element.props.ref || element.ref;
+}
+var count = 0;
+function useFocusGuards() {
+  reactExports.useEffect(() => {
+    const edgeGuards = document.querySelectorAll("[data-radix-focus-guard]");
+    document.body.insertAdjacentElement("afterbegin", edgeGuards[0] ?? createFocusGuard());
+    document.body.insertAdjacentElement("beforeend", edgeGuards[1] ?? createFocusGuard());
+    count++;
+    return () => {
+      if (count === 1) {
+        document.querySelectorAll("[data-radix-focus-guard]").forEach((node) => node.remove());
+      }
+      count--;
+    };
+  }, []);
+}
+function createFocusGuard() {
+  const element = document.createElement("span");
+  element.setAttribute("data-radix-focus-guard", "");
+  element.tabIndex = 0;
+  element.style.outline = "none";
+  element.style.opacity = "0";
+  element.style.position = "fixed";
+  element.style.pointerEvents = "none";
+  return element;
+}
+var __assign = function() {
+  __assign = Object.assign || function __assign2(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+      for (var p2 in s) if (Object.prototype.hasOwnProperty.call(s, p2)) t[p2] = s[p2];
+    }
+    return t;
+  };
+  return __assign.apply(this, arguments);
+};
+function __rest(s, e) {
+  var t = {};
+  for (var p2 in s) if (Object.prototype.hasOwnProperty.call(s, p2) && e.indexOf(p2) < 0)
+    t[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t[p2[i]] = s[p2[i]];
+    }
+  return t;
+}
+function __spreadArray(to, from, pack) {
+  if (pack || arguments.length === 2) for (var i = 0, l2 = from.length, ar; i < l2; i++) {
+    if (ar || !(i in from)) {
+      if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+      ar[i] = from[i];
+    }
+  }
+  return to.concat(ar || Array.prototype.slice.call(from));
+}
+typeof SuppressedError === "function" ? SuppressedError : function(error, suppressed, message) {
+  var e = new Error(message);
+  return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
+};
+var zeroRightClassName = "right-scroll-bar-position";
+var fullWidthClassName = "width-before-scroll-bar";
+var noScrollbarsClassName = "with-scroll-bars-hidden";
+var removedBarSizeVariable = "--removed-body-scroll-bar-size";
+function assignRef(ref, value) {
+  if (typeof ref === "function") {
+    ref(value);
+  } else if (ref) {
+    ref.current = value;
+  }
+  return ref;
+}
+function useCallbackRef(initialValue, callback) {
+  var ref = reactExports.useState(function() {
+    return {
+      // value
+      value: initialValue,
+      // last callback
+      callback,
+      // "memoized" public interface
+      facade: {
+        get current() {
+          return ref.value;
+        },
+        set current(value) {
+          var last2 = ref.value;
+          if (last2 !== value) {
+            ref.value = value;
+            ref.callback(value, last2);
+          }
+        }
+      }
+    };
+  })[0];
+  ref.callback = callback;
+  return ref.facade;
+}
+var useIsomorphicLayoutEffect = typeof window !== "undefined" ? reactExports.useLayoutEffect : reactExports.useEffect;
+var currentValues = /* @__PURE__ */ new WeakMap();
+function useMergeRefs(refs, defaultValue) {
+  var callbackRef = useCallbackRef(null, function(newValue) {
+    return refs.forEach(function(ref) {
+      return assignRef(ref, newValue);
+    });
+  });
+  useIsomorphicLayoutEffect(function() {
+    var oldValue = currentValues.get(callbackRef);
+    if (oldValue) {
+      var prevRefs_1 = new Set(oldValue);
+      var nextRefs_1 = new Set(refs);
+      var current_1 = callbackRef.current;
+      prevRefs_1.forEach(function(ref) {
+        if (!nextRefs_1.has(ref)) {
+          assignRef(ref, null);
+        }
+      });
+      nextRefs_1.forEach(function(ref) {
+        if (!prevRefs_1.has(ref)) {
+          assignRef(ref, current_1);
+        }
+      });
+    }
+    currentValues.set(callbackRef, refs);
+  }, [refs]);
+  return callbackRef;
+}
+function ItoI(a2) {
+  return a2;
+}
+function innerCreateMedium(defaults, middleware) {
+  if (middleware === void 0) {
+    middleware = ItoI;
+  }
+  var buffer = [];
+  var assigned = false;
+  var medium = {
+    read: function() {
+      if (assigned) {
+        throw new Error("Sidecar: could not `read` from an `assigned` medium. `read` could be used only with `useMedium`.");
+      }
+      if (buffer.length) {
+        return buffer[buffer.length - 1];
+      }
+      return defaults;
+    },
+    useMedium: function(data) {
+      var item = middleware(data, assigned);
+      buffer.push(item);
+      return function() {
+        buffer = buffer.filter(function(x2) {
+          return x2 !== item;
+        });
+      };
+    },
+    assignSyncMedium: function(cb) {
+      assigned = true;
+      while (buffer.length) {
+        var cbs = buffer;
+        buffer = [];
+        cbs.forEach(cb);
+      }
+      buffer = {
+        push: function(x2) {
+          return cb(x2);
+        },
+        filter: function() {
+          return buffer;
+        }
+      };
+    },
+    assignMedium: function(cb) {
+      assigned = true;
+      var pendingQueue = [];
+      if (buffer.length) {
+        var cbs = buffer;
+        buffer = [];
+        cbs.forEach(cb);
+        pendingQueue = buffer;
+      }
+      var executeQueue = function() {
+        var cbs2 = pendingQueue;
+        pendingQueue = [];
+        cbs2.forEach(cb);
+      };
+      var cycle = function() {
+        return Promise.resolve().then(executeQueue);
+      };
+      cycle();
+      buffer = {
+        push: function(x2) {
+          pendingQueue.push(x2);
+          cycle();
+        },
+        filter: function(filter2) {
+          pendingQueue = pendingQueue.filter(filter2);
+          return buffer;
+        }
+      };
+    }
+  };
+  return medium;
+}
+function createSidecarMedium(options) {
+  if (options === void 0) {
+    options = {};
+  }
+  var medium = innerCreateMedium(null);
+  medium.options = __assign({ async: true, ssr: false }, options);
+  return medium;
+}
+var SideCar$1 = function(_a2) {
+  var sideCar = _a2.sideCar, rest = __rest(_a2, ["sideCar"]);
+  if (!sideCar) {
+    throw new Error("Sidecar: please provide `sideCar` property to import the right car");
+  }
+  var Target = sideCar.read();
+  if (!Target) {
+    throw new Error("Sidecar medium not found");
+  }
+  return reactExports.createElement(Target, __assign({}, rest));
+};
+SideCar$1.isSideCarExport = true;
+function exportSidecar(medium, exported) {
+  medium.useMedium(exported);
+  return SideCar$1;
+}
+var effectCar = createSidecarMedium();
+var nothing = function() {
+  return;
+};
+var RemoveScroll = reactExports.forwardRef(function(props, parentRef) {
+  var ref = reactExports.useRef(null);
+  var _a2 = reactExports.useState({
+    onScrollCapture: nothing,
+    onWheelCapture: nothing,
+    onTouchMoveCapture: nothing
+  }), callbacks = _a2[0], setCallbacks = _a2[1];
+  var forwardProps = props.forwardProps, children = props.children, className = props.className, removeScrollBar = props.removeScrollBar, enabled = props.enabled, shards = props.shards, sideCar = props.sideCar, noRelative = props.noRelative, noIsolation = props.noIsolation, inert = props.inert, allowPinchZoom = props.allowPinchZoom, _b2 = props.as, Container = _b2 === void 0 ? "div" : _b2, gapMode = props.gapMode, rest = __rest(props, ["forwardProps", "children", "className", "removeScrollBar", "enabled", "shards", "sideCar", "noRelative", "noIsolation", "inert", "allowPinchZoom", "as", "gapMode"]);
+  var SideCar2 = sideCar;
+  var containerRef = useMergeRefs([ref, parentRef]);
+  var containerProps = __assign(__assign({}, rest), callbacks);
+  return reactExports.createElement(
+    reactExports.Fragment,
+    null,
+    enabled && reactExports.createElement(SideCar2, { sideCar: effectCar, removeScrollBar, shards, noRelative, noIsolation, inert, setCallbacks, allowPinchZoom: !!allowPinchZoom, lockRef: ref, gapMode }),
+    forwardProps ? reactExports.cloneElement(reactExports.Children.only(children), __assign(__assign({}, containerProps), { ref: containerRef })) : reactExports.createElement(Container, __assign({}, containerProps, { className, ref: containerRef }), children)
+  );
+});
+RemoveScroll.defaultProps = {
+  enabled: true,
+  removeScrollBar: true,
+  inert: false
+};
+RemoveScroll.classNames = {
+  fullWidth: fullWidthClassName,
+  zeroRight: zeroRightClassName
+};
+var getNonce = function() {
+  if (typeof __webpack_nonce__ !== "undefined") {
+    return __webpack_nonce__;
+  }
+  return void 0;
+};
+function makeStyleTag() {
+  if (!document)
+    return null;
+  var tag = document.createElement("style");
+  tag.type = "text/css";
+  var nonce = getNonce();
+  if (nonce) {
+    tag.setAttribute("nonce", nonce);
+  }
+  return tag;
+}
+function injectStyles(tag, css) {
+  if (tag.styleSheet) {
+    tag.styleSheet.cssText = css;
+  } else {
+    tag.appendChild(document.createTextNode(css));
+  }
+}
+function insertStyleTag(tag) {
+  var head = document.head || document.getElementsByTagName("head")[0];
+  head.appendChild(tag);
+}
+var stylesheetSingleton = function() {
+  var counter = 0;
+  var stylesheet = null;
+  return {
+    add: function(style2) {
+      if (counter == 0) {
+        if (stylesheet = makeStyleTag()) {
+          injectStyles(stylesheet, style2);
+          insertStyleTag(stylesheet);
+        }
+      }
+      counter++;
+    },
+    remove: function() {
+      counter--;
+      if (!counter && stylesheet) {
+        stylesheet.parentNode && stylesheet.parentNode.removeChild(stylesheet);
+        stylesheet = null;
+      }
+    }
+  };
+};
+var styleHookSingleton = function() {
+  var sheet = stylesheetSingleton();
+  return function(styles, isDynamic) {
+    reactExports.useEffect(function() {
+      sheet.add(styles);
+      return function() {
+        sheet.remove();
+      };
+    }, [styles && isDynamic]);
+  };
+};
+var styleSingleton = function() {
+  var useStyle2 = styleHookSingleton();
+  var Sheet = function(_a2) {
+    var styles = _a2.styles, dynamic = _a2.dynamic;
+    useStyle2(styles, dynamic);
+    return null;
+  };
+  return Sheet;
+};
+var zeroGap = {
+  left: 0,
+  top: 0,
+  right: 0,
+  gap: 0
+};
+var parse = function(x2) {
+  return parseInt(x2 || "", 10) || 0;
+};
+var getOffset = function(gapMode) {
+  var cs = window.getComputedStyle(document.body);
+  var left = cs[gapMode === "padding" ? "paddingLeft" : "marginLeft"];
+  var top = cs[gapMode === "padding" ? "paddingTop" : "marginTop"];
+  var right = cs[gapMode === "padding" ? "paddingRight" : "marginRight"];
+  return [parse(left), parse(top), parse(right)];
+};
+var getGapWidth = function(gapMode) {
+  if (gapMode === void 0) {
+    gapMode = "margin";
+  }
+  if (typeof window === "undefined") {
+    return zeroGap;
+  }
+  var offsets = getOffset(gapMode);
+  var documentWidth = document.documentElement.clientWidth;
+  var windowWidth = window.innerWidth;
+  return {
+    left: offsets[0],
+    top: offsets[1],
+    right: offsets[2],
+    gap: Math.max(0, windowWidth - documentWidth + offsets[2] - offsets[0])
+  };
+};
+var Style = styleSingleton();
+var lockAttribute = "data-scroll-locked";
+var getStyles = function(_a2, allowRelative, gapMode, important) {
+  var left = _a2.left, top = _a2.top, right = _a2.right, gap = _a2.gap;
+  if (gapMode === void 0) {
+    gapMode = "margin";
+  }
+  return "\n  .".concat(noScrollbarsClassName, " {\n   overflow: hidden ").concat(important, ";\n   padding-right: ").concat(gap, "px ").concat(important, ";\n  }\n  body[").concat(lockAttribute, "] {\n    overflow: hidden ").concat(important, ";\n    overscroll-behavior: contain;\n    ").concat([
+    allowRelative && "position: relative ".concat(important, ";"),
+    gapMode === "margin" && "\n    padding-left: ".concat(left, "px;\n    padding-top: ").concat(top, "px;\n    padding-right: ").concat(right, "px;\n    margin-left:0;\n    margin-top:0;\n    margin-right: ").concat(gap, "px ").concat(important, ";\n    "),
+    gapMode === "padding" && "padding-right: ".concat(gap, "px ").concat(important, ";")
+  ].filter(Boolean).join(""), "\n  }\n  \n  .").concat(zeroRightClassName, " {\n    right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(fullWidthClassName, " {\n    margin-right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(zeroRightClassName, " .").concat(zeroRightClassName, " {\n    right: 0 ").concat(important, ";\n  }\n  \n  .").concat(fullWidthClassName, " .").concat(fullWidthClassName, " {\n    margin-right: 0 ").concat(important, ";\n  }\n  \n  body[").concat(lockAttribute, "] {\n    ").concat(removedBarSizeVariable, ": ").concat(gap, "px;\n  }\n");
+};
+var getCurrentUseCounter = function() {
+  var counter = parseInt(document.body.getAttribute(lockAttribute) || "0", 10);
+  return isFinite(counter) ? counter : 0;
+};
+var useLockAttribute = function() {
+  reactExports.useEffect(function() {
+    document.body.setAttribute(lockAttribute, (getCurrentUseCounter() + 1).toString());
+    return function() {
+      var newCounter = getCurrentUseCounter() - 1;
+      if (newCounter <= 0) {
+        document.body.removeAttribute(lockAttribute);
+      } else {
+        document.body.setAttribute(lockAttribute, newCounter.toString());
+      }
+    };
+  }, []);
+};
+var RemoveScrollBar = function(_a2) {
+  var noRelative = _a2.noRelative, noImportant = _a2.noImportant, _b2 = _a2.gapMode, gapMode = _b2 === void 0 ? "margin" : _b2;
+  useLockAttribute();
+  var gap = reactExports.useMemo(function() {
+    return getGapWidth(gapMode);
+  }, [gapMode]);
+  return reactExports.createElement(Style, { styles: getStyles(gap, !noRelative, gapMode, !noImportant ? "!important" : "") });
+};
+var passiveSupported = false;
+if (typeof window !== "undefined") {
+  try {
+    var options = Object.defineProperty({}, "passive", {
+      get: function() {
+        passiveSupported = true;
+        return true;
+      }
+    });
+    window.addEventListener("test", options, options);
+    window.removeEventListener("test", options, options);
+  } catch (err) {
+    passiveSupported = false;
+  }
+}
+var nonPassive = passiveSupported ? { passive: false } : false;
+var alwaysContainsScroll = function(node) {
+  return node.tagName === "TEXTAREA";
+};
+var elementCanBeScrolled = function(node, overflow) {
+  if (!(node instanceof Element)) {
+    return false;
+  }
+  var styles = window.getComputedStyle(node);
+  return (
+    // not-not-scrollable
+    styles[overflow] !== "hidden" && // contains scroll inside self
+    !(styles.overflowY === styles.overflowX && !alwaysContainsScroll(node) && styles[overflow] === "visible")
+  );
+};
+var elementCouldBeVScrolled = function(node) {
+  return elementCanBeScrolled(node, "overflowY");
+};
+var elementCouldBeHScrolled = function(node) {
+  return elementCanBeScrolled(node, "overflowX");
+};
+var locationCouldBeScrolled = function(axis, node) {
+  var ownerDocument = node.ownerDocument;
+  var current = node;
+  do {
+    if (typeof ShadowRoot !== "undefined" && current instanceof ShadowRoot) {
+      current = current.host;
+    }
+    var isScrollable = elementCouldBeScrolled(axis, current);
+    if (isScrollable) {
+      var _a2 = getScrollVariables(axis, current), scrollHeight = _a2[1], clientHeight = _a2[2];
+      if (scrollHeight > clientHeight) {
+        return true;
+      }
+    }
+    current = current.parentNode;
+  } while (current && current !== ownerDocument.body);
+  return false;
+};
+var getVScrollVariables = function(_a2) {
+  var scrollTop = _a2.scrollTop, scrollHeight = _a2.scrollHeight, clientHeight = _a2.clientHeight;
+  return [
+    scrollTop,
+    scrollHeight,
+    clientHeight
+  ];
+};
+var getHScrollVariables = function(_a2) {
+  var scrollLeft = _a2.scrollLeft, scrollWidth = _a2.scrollWidth, clientWidth = _a2.clientWidth;
+  return [
+    scrollLeft,
+    scrollWidth,
+    clientWidth
+  ];
+};
+var elementCouldBeScrolled = function(axis, node) {
+  return axis === "v" ? elementCouldBeVScrolled(node) : elementCouldBeHScrolled(node);
+};
+var getScrollVariables = function(axis, node) {
+  return axis === "v" ? getVScrollVariables(node) : getHScrollVariables(node);
+};
+var getDirectionFactor = function(axis, direction) {
+  return axis === "h" && direction === "rtl" ? -1 : 1;
+};
+var handleScroll = function(axis, endTarget, event, sourceDelta, noOverscroll) {
+  var directionFactor = getDirectionFactor(axis, window.getComputedStyle(endTarget).direction);
+  var delta = directionFactor * sourceDelta;
+  var target = event.target;
+  var targetInLock = endTarget.contains(target);
+  var shouldCancelScroll = false;
+  var isDeltaPositive = delta > 0;
+  var availableScroll = 0;
+  var availableScrollTop = 0;
+  do {
+    if (!target) {
+      break;
+    }
+    var _a2 = getScrollVariables(axis, target), position = _a2[0], scroll_1 = _a2[1], capacity = _a2[2];
+    var elementScroll = scroll_1 - capacity - directionFactor * position;
+    if (position || elementScroll) {
+      if (elementCouldBeScrolled(axis, target)) {
+        availableScroll += elementScroll;
+        availableScrollTop += position;
+      }
+    }
+    var parent_1 = target.parentNode;
+    target = parent_1 && parent_1.nodeType === Node.DOCUMENT_FRAGMENT_NODE ? parent_1.host : parent_1;
+  } while (
+    // portaled content
+    !targetInLock && target !== document.body || // self content
+    targetInLock && (endTarget.contains(target) || endTarget === target)
+  );
+  if (isDeltaPositive && (Math.abs(availableScroll) < 1 || false)) {
+    shouldCancelScroll = true;
+  } else if (!isDeltaPositive && (Math.abs(availableScrollTop) < 1 || false)) {
+    shouldCancelScroll = true;
+  }
+  return shouldCancelScroll;
+};
+var getTouchXY = function(event) {
+  return "changedTouches" in event ? [event.changedTouches[0].clientX, event.changedTouches[0].clientY] : [0, 0];
+};
+var getDeltaXY = function(event) {
+  return [event.deltaX, event.deltaY];
+};
+var extractRef = function(ref) {
+  return ref && "current" in ref ? ref.current : ref;
+};
+var deltaCompare = function(x2, y2) {
+  return x2[0] === y2[0] && x2[1] === y2[1];
+};
+var generateStyle = function(id2) {
+  return "\n  .block-interactivity-".concat(id2, " {pointer-events: none;}\n  .allow-interactivity-").concat(id2, " {pointer-events: all;}\n");
+};
+var idCounter = 0;
+var lockStack = [];
+function RemoveScrollSideCar(props) {
+  var shouldPreventQueue = reactExports.useRef([]);
+  var touchStartRef = reactExports.useRef([0, 0]);
+  var activeAxis = reactExports.useRef();
+  var id2 = reactExports.useState(idCounter++)[0];
+  var Style2 = reactExports.useState(styleSingleton)[0];
+  var lastProps = reactExports.useRef(props);
+  reactExports.useEffect(function() {
+    lastProps.current = props;
+  }, [props]);
+  reactExports.useEffect(function() {
+    if (props.inert) {
+      document.body.classList.add("block-interactivity-".concat(id2));
+      var allow_1 = __spreadArray([props.lockRef.current], (props.shards || []).map(extractRef), true).filter(Boolean);
+      allow_1.forEach(function(el) {
+        return el.classList.add("allow-interactivity-".concat(id2));
+      });
+      return function() {
+        document.body.classList.remove("block-interactivity-".concat(id2));
+        allow_1.forEach(function(el) {
+          return el.classList.remove("allow-interactivity-".concat(id2));
+        });
+      };
+    }
+    return;
+  }, [props.inert, props.lockRef.current, props.shards]);
+  var shouldCancelEvent = reactExports.useCallback(function(event, parent) {
+    if ("touches" in event && event.touches.length === 2 || event.type === "wheel" && event.ctrlKey) {
+      return !lastProps.current.allowPinchZoom;
+    }
+    var touch = getTouchXY(event);
+    var touchStart = touchStartRef.current;
+    var deltaX = "deltaX" in event ? event.deltaX : touchStart[0] - touch[0];
+    var deltaY = "deltaY" in event ? event.deltaY : touchStart[1] - touch[1];
+    var currentAxis;
+    var target = event.target;
+    var moveDirection = Math.abs(deltaX) > Math.abs(deltaY) ? "h" : "v";
+    if ("touches" in event && moveDirection === "h" && target.type === "range") {
+      return false;
+    }
+    var selection = window.getSelection();
+    var anchorNode = selection && selection.anchorNode;
+    var isTouchingSelection = anchorNode ? anchorNode === target || anchorNode.contains(target) : false;
+    if (isTouchingSelection) {
+      return false;
+    }
+    var canBeScrolledInMainDirection = locationCouldBeScrolled(moveDirection, target);
+    if (!canBeScrolledInMainDirection) {
+      return true;
+    }
+    if (canBeScrolledInMainDirection) {
+      currentAxis = moveDirection;
+    } else {
+      currentAxis = moveDirection === "v" ? "h" : "v";
+      canBeScrolledInMainDirection = locationCouldBeScrolled(moveDirection, target);
+    }
+    if (!canBeScrolledInMainDirection) {
+      return false;
+    }
+    if (!activeAxis.current && "changedTouches" in event && (deltaX || deltaY)) {
+      activeAxis.current = currentAxis;
+    }
+    if (!currentAxis) {
+      return true;
+    }
+    var cancelingAxis = activeAxis.current || currentAxis;
+    return handleScroll(cancelingAxis, parent, event, cancelingAxis === "h" ? deltaX : deltaY);
+  }, []);
+  var shouldPrevent = reactExports.useCallback(function(_event) {
+    var event = _event;
+    if (!lockStack.length || lockStack[lockStack.length - 1] !== Style2) {
+      return;
+    }
+    var delta = "deltaY" in event ? getDeltaXY(event) : getTouchXY(event);
+    var sourceEvent = shouldPreventQueue.current.filter(function(e) {
+      return e.name === event.type && (e.target === event.target || event.target === e.shadowParent) && deltaCompare(e.delta, delta);
+    })[0];
+    if (sourceEvent && sourceEvent.should) {
+      if (event.cancelable) {
+        event.preventDefault();
+      }
+      return;
+    }
+    if (!sourceEvent) {
+      var shardNodes = (lastProps.current.shards || []).map(extractRef).filter(Boolean).filter(function(node) {
+        return node.contains(event.target);
+      });
+      var shouldStop = shardNodes.length > 0 ? shouldCancelEvent(event, shardNodes[0]) : !lastProps.current.noIsolation;
+      if (shouldStop) {
+        if (event.cancelable) {
+          event.preventDefault();
+        }
+      }
+    }
+  }, []);
+  var shouldCancel = reactExports.useCallback(function(name, delta, target, should) {
+    var event = { name, delta, target, should, shadowParent: getOutermostShadowParent(target) };
+    shouldPreventQueue.current.push(event);
+    setTimeout(function() {
+      shouldPreventQueue.current = shouldPreventQueue.current.filter(function(e) {
+        return e !== event;
+      });
+    }, 1);
+  }, []);
+  var scrollTouchStart = reactExports.useCallback(function(event) {
+    touchStartRef.current = getTouchXY(event);
+    activeAxis.current = void 0;
+  }, []);
+  var scrollWheel = reactExports.useCallback(function(event) {
+    shouldCancel(event.type, getDeltaXY(event), event.target, shouldCancelEvent(event, props.lockRef.current));
+  }, []);
+  var scrollTouchMove = reactExports.useCallback(function(event) {
+    shouldCancel(event.type, getTouchXY(event), event.target, shouldCancelEvent(event, props.lockRef.current));
+  }, []);
+  reactExports.useEffect(function() {
+    lockStack.push(Style2);
+    props.setCallbacks({
+      onScrollCapture: scrollWheel,
+      onWheelCapture: scrollWheel,
+      onTouchMoveCapture: scrollTouchMove
+    });
+    document.addEventListener("wheel", shouldPrevent, nonPassive);
+    document.addEventListener("touchmove", shouldPrevent, nonPassive);
+    document.addEventListener("touchstart", scrollTouchStart, nonPassive);
+    return function() {
+      lockStack = lockStack.filter(function(inst) {
+        return inst !== Style2;
+      });
+      document.removeEventListener("wheel", shouldPrevent, nonPassive);
+      document.removeEventListener("touchmove", shouldPrevent, nonPassive);
+      document.removeEventListener("touchstart", scrollTouchStart, nonPassive);
+    };
+  }, []);
+  var removeScrollBar = props.removeScrollBar, inert = props.inert;
+  return reactExports.createElement(
+    reactExports.Fragment,
+    null,
+    inert ? reactExports.createElement(Style2, { styles: generateStyle(id2) }) : null,
+    removeScrollBar ? reactExports.createElement(RemoveScrollBar, { noRelative: props.noRelative, gapMode: props.gapMode }) : null
+  );
+}
+function getOutermostShadowParent(node) {
+  var shadowParent = null;
+  while (node !== null) {
+    if (node instanceof ShadowRoot) {
+      shadowParent = node.host;
+      node = node.host;
+    }
+    node = node.parentNode;
+  }
+  return shadowParent;
+}
+const SideCar = exportSidecar(effectCar, RemoveScrollSideCar);
+var ReactRemoveScroll = reactExports.forwardRef(function(props, ref) {
+  return reactExports.createElement(RemoveScroll, __assign({}, props, { ref, sideCar: SideCar }));
+});
+ReactRemoveScroll.classNames = RemoveScroll.classNames;
+var getDefaultParent = function(originalTarget) {
+  if (typeof document === "undefined") {
+    return null;
+  }
+  var sampleTarget = Array.isArray(originalTarget) ? originalTarget[0] : originalTarget;
+  return sampleTarget.ownerDocument.body;
+};
+var counterMap = /* @__PURE__ */ new WeakMap();
+var uncontrolledNodes = /* @__PURE__ */ new WeakMap();
+var markerMap = {};
+var lockCount = 0;
+var unwrapHost = function(node) {
+  return node && (node.host || unwrapHost(node.parentNode));
+};
+var correctTargets = function(parent, targets) {
+  return targets.map(function(target) {
+    if (parent.contains(target)) {
+      return target;
+    }
+    var correctedTarget = unwrapHost(target);
+    if (correctedTarget && parent.contains(correctedTarget)) {
+      return correctedTarget;
+    }
+    console.error("aria-hidden", target, "in not contained inside", parent, ". Doing nothing");
+    return null;
+  }).filter(function(x2) {
+    return Boolean(x2);
+  });
+};
+var applyAttributeToOthers = function(originalTarget, parentNode, markerName, controlAttribute) {
+  var targets = correctTargets(parentNode, Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
+  if (!markerMap[markerName]) {
+    markerMap[markerName] = /* @__PURE__ */ new WeakMap();
+  }
+  var markerCounter = markerMap[markerName];
+  var hiddenNodes = [];
+  var elementsToKeep = /* @__PURE__ */ new Set();
+  var elementsToStop = new Set(targets);
+  var keep = function(el) {
+    if (!el || elementsToKeep.has(el)) {
+      return;
+    }
+    elementsToKeep.add(el);
+    keep(el.parentNode);
+  };
+  targets.forEach(keep);
+  var deep = function(parent) {
+    if (!parent || elementsToStop.has(parent)) {
+      return;
+    }
+    Array.prototype.forEach.call(parent.children, function(node) {
+      if (elementsToKeep.has(node)) {
+        deep(node);
+      } else {
+        try {
+          var attr = node.getAttribute(controlAttribute);
+          var alreadyHidden = attr !== null && attr !== "false";
+          var counterValue = (counterMap.get(node) || 0) + 1;
+          var markerValue = (markerCounter.get(node) || 0) + 1;
+          counterMap.set(node, counterValue);
+          markerCounter.set(node, markerValue);
+          hiddenNodes.push(node);
+          if (counterValue === 1 && alreadyHidden) {
+            uncontrolledNodes.set(node, true);
+          }
+          if (markerValue === 1) {
+            node.setAttribute(markerName, "true");
+          }
+          if (!alreadyHidden) {
+            node.setAttribute(controlAttribute, "true");
+          }
+        } catch (e) {
+          console.error("aria-hidden: cannot operate on ", node, e);
+        }
+      }
+    });
+  };
+  deep(parentNode);
+  elementsToKeep.clear();
+  lockCount++;
+  return function() {
+    hiddenNodes.forEach(function(node) {
+      var counterValue = counterMap.get(node) - 1;
+      var markerValue = markerCounter.get(node) - 1;
+      counterMap.set(node, counterValue);
+      markerCounter.set(node, markerValue);
+      if (!counterValue) {
+        if (!uncontrolledNodes.has(node)) {
+          node.removeAttribute(controlAttribute);
+        }
+        uncontrolledNodes.delete(node);
+      }
+      if (!markerValue) {
+        node.removeAttribute(markerName);
+      }
+    });
+    lockCount--;
+    if (!lockCount) {
+      counterMap = /* @__PURE__ */ new WeakMap();
+      counterMap = /* @__PURE__ */ new WeakMap();
+      uncontrolledNodes = /* @__PURE__ */ new WeakMap();
+      markerMap = {};
+    }
+  };
+};
+var hideOthers = function(originalTarget, parentNode, markerName) {
+  if (markerName === void 0) {
+    markerName = "data-aria-hidden";
+  }
+  var targets = Array.from(Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
+  var activeParentNode = getDefaultParent(originalTarget);
+  if (!activeParentNode) {
+    return function() {
+      return null;
+    };
+  }
+  targets.push.apply(targets, Array.from(activeParentNode.querySelectorAll("[aria-live], script")));
+  return applyAttributeToOthers(targets, activeParentNode, markerName, "aria-hidden");
+};
+var DIALOG_NAME = "Dialog";
+var [createDialogContext, createDialogScope] = createContextScope$1(DIALOG_NAME);
+var [DialogProvider, useDialogContext] = createDialogContext(DIALOG_NAME);
+var Dialog$1 = (props) => {
+  const {
+    __scopeDialog,
+    children,
+    open: openProp,
+    defaultOpen,
+    onOpenChange,
+    modal = true
+  } = props;
+  const triggerRef = reactExports.useRef(null);
+  const contentRef = reactExports.useRef(null);
+  const [open, setOpen] = useControllableState({
+    prop: openProp,
+    defaultProp: defaultOpen ?? false,
+    onChange: onOpenChange,
+    caller: DIALOG_NAME
+  });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    DialogProvider,
+    {
+      scope: __scopeDialog,
+      triggerRef,
+      contentRef,
+      contentId: useId(),
+      titleId: useId(),
+      descriptionId: useId(),
+      open,
+      onOpenChange: setOpen,
+      onOpenToggle: reactExports.useCallback(() => setOpen((prevOpen) => !prevOpen), [setOpen]),
+      modal,
+      children
+    }
+  );
+};
+Dialog$1.displayName = DIALOG_NAME;
+var TRIGGER_NAME$6 = "DialogTrigger";
+var DialogTrigger = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeDialog, ...triggerProps } = props;
+    const context = useDialogContext(TRIGGER_NAME$6, __scopeDialog);
+    const composedTriggerRef = useComposedRefs(forwardedRef, context.triggerRef);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Primitive$1.button,
+      {
+        type: "button",
+        "aria-haspopup": "dialog",
+        "aria-expanded": context.open,
+        "aria-controls": context.contentId,
+        "data-state": getState$2(context.open),
+        ...triggerProps,
+        ref: composedTriggerRef,
+        onClick: composeEventHandlers(props.onClick, context.onOpenToggle)
+      }
+    );
+  }
+);
+DialogTrigger.displayName = TRIGGER_NAME$6;
+var PORTAL_NAME$5 = "DialogPortal";
+var [PortalProvider$2, usePortalContext$2] = createDialogContext(PORTAL_NAME$5, {
+  forceMount: void 0
+});
+var DialogPortal$1 = (props) => {
+  const { __scopeDialog, forceMount, children, container } = props;
+  const context = useDialogContext(PORTAL_NAME$5, __scopeDialog);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider$2, { scope: __scopeDialog, forceMount, children: reactExports.Children.map(children, (child) => /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$4, { asChild: true, container, children: child }) })) });
+};
+DialogPortal$1.displayName = PORTAL_NAME$5;
+var OVERLAY_NAME$1 = "DialogOverlay";
+var DialogOverlay$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const portalContext = usePortalContext$2(OVERLAY_NAME$1, props.__scopeDialog);
+    const { forceMount = portalContext.forceMount, ...overlayProps } = props;
+    const context = useDialogContext(OVERLAY_NAME$1, props.__scopeDialog);
+    return context.modal ? /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(DialogOverlayImpl, { ...overlayProps, ref: forwardedRef }) }) : null;
+  }
+);
+DialogOverlay$1.displayName = OVERLAY_NAME$1;
+var Slot$2 = /* @__PURE__ */ createSlot("DialogOverlay.RemoveScroll");
+var DialogOverlayImpl = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeDialog, ...overlayProps } = props;
+    const context = useDialogContext(OVERLAY_NAME$1, __scopeDialog);
+    return (
+      // Make sure `Content` is scrollable even when it doesn't live inside `RemoveScroll`
+      // ie. when `Overlay` and `Content` are siblings
+      /* @__PURE__ */ jsxRuntimeExports.jsx(ReactRemoveScroll, { as: Slot$2, allowPinchZoom: true, shards: [context.contentRef], children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        Primitive$1.div,
+        {
+          "data-state": getState$2(context.open),
+          ...overlayProps,
+          ref: forwardedRef,
+          style: { pointerEvents: "auto", ...overlayProps.style }
+        }
+      ) })
+    );
+  }
+);
+var CONTENT_NAME$8 = "DialogContent";
+var DialogContent$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const portalContext = usePortalContext$2(CONTENT_NAME$8, props.__scopeDialog);
+    const { forceMount = portalContext.forceMount, ...contentProps } = props;
+    const context = useDialogContext(CONTENT_NAME$8, props.__scopeDialog);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: context.modal ? /* @__PURE__ */ jsxRuntimeExports.jsx(DialogContentModal, { ...contentProps, ref: forwardedRef }) : /* @__PURE__ */ jsxRuntimeExports.jsx(DialogContentNonModal, { ...contentProps, ref: forwardedRef }) });
+  }
+);
+DialogContent$1.displayName = CONTENT_NAME$8;
+var DialogContentModal = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const context = useDialogContext(CONTENT_NAME$8, props.__scopeDialog);
+    const contentRef = reactExports.useRef(null);
+    const composedRefs = useComposedRefs(forwardedRef, context.contentRef, contentRef);
+    reactExports.useEffect(() => {
+      const content = contentRef.current;
+      if (content) return hideOthers(content);
+    }, []);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      DialogContentImpl,
+      {
+        ...props,
+        ref: composedRefs,
+        trapFocus: context.open,
+        disableOutsidePointerEvents: true,
+        onCloseAutoFocus: composeEventHandlers(props.onCloseAutoFocus, (event) => {
+          var _a2;
+          event.preventDefault();
+          (_a2 = context.triggerRef.current) == null ? void 0 : _a2.focus();
+        }),
+        onPointerDownOutside: composeEventHandlers(props.onPointerDownOutside, (event) => {
+          const originalEvent = event.detail.originalEvent;
+          const ctrlLeftClick = originalEvent.button === 0 && originalEvent.ctrlKey === true;
+          const isRightClick = originalEvent.button === 2 || ctrlLeftClick;
+          if (isRightClick) event.preventDefault();
+        }),
+        onFocusOutside: composeEventHandlers(
+          props.onFocusOutside,
+          (event) => event.preventDefault()
+        )
+      }
+    );
+  }
+);
+var DialogContentNonModal = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const context = useDialogContext(CONTENT_NAME$8, props.__scopeDialog);
+    const hasInteractedOutsideRef = reactExports.useRef(false);
+    const hasPointerDownOutsideRef = reactExports.useRef(false);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      DialogContentImpl,
+      {
+        ...props,
+        ref: forwardedRef,
+        trapFocus: false,
+        disableOutsidePointerEvents: false,
+        onCloseAutoFocus: (event) => {
+          var _a2, _b2;
+          (_a2 = props.onCloseAutoFocus) == null ? void 0 : _a2.call(props, event);
+          if (!event.defaultPrevented) {
+            if (!hasInteractedOutsideRef.current) (_b2 = context.triggerRef.current) == null ? void 0 : _b2.focus();
+            event.preventDefault();
+          }
+          hasInteractedOutsideRef.current = false;
+          hasPointerDownOutsideRef.current = false;
+        },
+        onInteractOutside: (event) => {
+          var _a2, _b2;
+          (_a2 = props.onInteractOutside) == null ? void 0 : _a2.call(props, event);
+          if (!event.defaultPrevented) {
+            hasInteractedOutsideRef.current = true;
+            if (event.detail.originalEvent.type === "pointerdown") {
+              hasPointerDownOutsideRef.current = true;
+            }
+          }
+          const target = event.target;
+          const targetIsTrigger = (_b2 = context.triggerRef.current) == null ? void 0 : _b2.contains(target);
+          if (targetIsTrigger) event.preventDefault();
+          if (event.detail.originalEvent.type === "focusin" && hasPointerDownOutsideRef.current) {
+            event.preventDefault();
+          }
+        }
+      }
+    );
+  }
+);
+var DialogContentImpl = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeDialog, trapFocus, onOpenAutoFocus, onCloseAutoFocus, ...contentProps } = props;
+    const context = useDialogContext(CONTENT_NAME$8, __scopeDialog);
+    const contentRef = reactExports.useRef(null);
+    const composedRefs = useComposedRefs(forwardedRef, contentRef);
+    useFocusGuards();
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        FocusScope,
+        {
+          asChild: true,
+          loop: true,
+          trapped: trapFocus,
+          onMountAutoFocus: onOpenAutoFocus,
+          onUnmountAutoFocus: onCloseAutoFocus,
+          children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            DismissableLayer,
+            {
+              role: "dialog",
+              id: context.contentId,
+              "aria-describedby": context.descriptionId,
+              "aria-labelledby": context.titleId,
+              "data-state": getState$2(context.open),
+              ...contentProps,
+              ref: composedRefs,
+              onDismiss: () => context.onOpenChange(false)
+            }
+          )
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(TitleWarning, { titleId: context.titleId }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(DescriptionWarning$1, { contentRef, descriptionId: context.descriptionId })
+      ] })
+    ] });
+  }
+);
+var TITLE_NAME$1 = "DialogTitle";
+var DialogTitle$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeDialog, ...titleProps } = props;
+    const context = useDialogContext(TITLE_NAME$1, __scopeDialog);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Primitive$1.h2, { id: context.titleId, ...titleProps, ref: forwardedRef });
+  }
+);
+DialogTitle$1.displayName = TITLE_NAME$1;
+var DESCRIPTION_NAME$1 = "DialogDescription";
+var DialogDescription$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeDialog, ...descriptionProps } = props;
+    const context = useDialogContext(DESCRIPTION_NAME$1, __scopeDialog);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Primitive$1.p, { id: context.descriptionId, ...descriptionProps, ref: forwardedRef });
+  }
+);
+DialogDescription$1.displayName = DESCRIPTION_NAME$1;
+var CLOSE_NAME = "DialogClose";
+var DialogClose = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeDialog, ...closeProps } = props;
+    const context = useDialogContext(CLOSE_NAME, __scopeDialog);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Primitive$1.button,
+      {
+        type: "button",
+        ...closeProps,
+        ref: forwardedRef,
+        onClick: composeEventHandlers(props.onClick, () => context.onOpenChange(false))
+      }
+    );
+  }
+);
+DialogClose.displayName = CLOSE_NAME;
+function getState$2(open) {
+  return open ? "open" : "closed";
+}
+var TITLE_WARNING_NAME = "DialogTitleWarning";
+var [WarningProvider, useWarningContext] = createContext2(TITLE_WARNING_NAME, {
+  contentName: CONTENT_NAME$8,
+  titleName: TITLE_NAME$1,
+  docsSlug: "dialog"
+});
+var TitleWarning = ({ titleId }) => {
+  const titleWarningContext = useWarningContext(TITLE_WARNING_NAME);
+  const MESSAGE = `\`${titleWarningContext.contentName}\` requires a \`${titleWarningContext.titleName}\` for the component to be accessible for screen reader users.
+
+If you want to hide the \`${titleWarningContext.titleName}\`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/${titleWarningContext.docsSlug}`;
+  reactExports.useEffect(() => {
+    if (titleId) {
+      const hasTitle = document.getElementById(titleId);
+      if (!hasTitle) console.error(MESSAGE);
+    }
+  }, [MESSAGE, titleId]);
+  return null;
+};
+var DESCRIPTION_WARNING_NAME = "DialogDescriptionWarning";
+var DescriptionWarning$1 = ({ contentRef, descriptionId }) => {
+  const descriptionWarningContext = useWarningContext(DESCRIPTION_WARNING_NAME);
+  const MESSAGE = `Warning: Missing \`Description\` or \`aria-describedby={undefined}\` for {${descriptionWarningContext.contentName}}.`;
+  reactExports.useEffect(() => {
+    var _a2;
+    const describedById = (_a2 = contentRef.current) == null ? void 0 : _a2.getAttribute("aria-describedby");
+    if (descriptionId && describedById) {
+      const hasDescription = document.getElementById(descriptionId);
+      if (!hasDescription) console.warn(MESSAGE);
+    }
+  }, [MESSAGE, contentRef, descriptionId]);
+  return null;
+};
+var Root$9 = Dialog$1;
+var Trigger$4 = DialogTrigger;
+var Portal$3 = DialogPortal$1;
+var Overlay = DialogOverlay$1;
+var Content$1 = DialogContent$1;
+var Title = DialogTitle$1;
+var Description = DialogDescription$1;
+var Close = DialogClose;
+var ROOT_NAME = "AlertDialog";
+var [createAlertDialogContext] = createContextScope$1(ROOT_NAME, [
+  createDialogScope
+]);
+var useDialogScope = createDialogScope();
+var AlertDialog$1 = (props) => {
+  const { __scopeAlertDialog, ...alertDialogProps } = props;
+  const dialogScope = useDialogScope(__scopeAlertDialog);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root$9, { ...dialogScope, ...alertDialogProps, modal: true });
+};
+AlertDialog$1.displayName = ROOT_NAME;
+var TRIGGER_NAME$5 = "AlertDialogTrigger";
+var AlertDialogTrigger$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeAlertDialog, ...triggerProps } = props;
+    const dialogScope = useDialogScope(__scopeAlertDialog);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Trigger$4, { ...dialogScope, ...triggerProps, ref: forwardedRef });
+  }
+);
+AlertDialogTrigger$1.displayName = TRIGGER_NAME$5;
+var PORTAL_NAME$4 = "AlertDialogPortal";
+var AlertDialogPortal$1 = (props) => {
+  const { __scopeAlertDialog, ...portalProps } = props;
+  const dialogScope = useDialogScope(__scopeAlertDialog);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$3, { ...dialogScope, ...portalProps });
+};
+AlertDialogPortal$1.displayName = PORTAL_NAME$4;
+var OVERLAY_NAME = "AlertDialogOverlay";
+var AlertDialogOverlay$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeAlertDialog, ...overlayProps } = props;
+    const dialogScope = useDialogScope(__scopeAlertDialog);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Overlay, { ...dialogScope, ...overlayProps, ref: forwardedRef });
+  }
+);
+AlertDialogOverlay$1.displayName = OVERLAY_NAME;
+var CONTENT_NAME$7 = "AlertDialogContent";
+var [AlertDialogContentProvider, useAlertDialogContentContext] = createAlertDialogContext(CONTENT_NAME$7);
+var Slottable$1 = /* @__PURE__ */ createSlottable("AlertDialogContent");
+var AlertDialogContent$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeAlertDialog, children, ...contentProps } = props;
+    const dialogScope = useDialogScope(__scopeAlertDialog);
+    const contentRef = reactExports.useRef(null);
+    const composedRefs = useComposedRefs(forwardedRef, contentRef);
+    const cancelRef = reactExports.useRef(null);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      WarningProvider,
+      {
+        contentName: CONTENT_NAME$7,
+        titleName: TITLE_NAME,
+        docsSlug: "alert-dialog",
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDialogContentProvider, { scope: __scopeAlertDialog, cancelRef, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          Content$1,
+          {
+            role: "alertdialog",
+            ...dialogScope,
+            ...contentProps,
+            ref: composedRefs,
+            onOpenAutoFocus: composeEventHandlers(contentProps.onOpenAutoFocus, (event) => {
+              var _a2;
+              event.preventDefault();
+              (_a2 = cancelRef.current) == null ? void 0 : _a2.focus({ preventScroll: true });
+            }),
+            onPointerDownOutside: (event) => event.preventDefault(),
+            onInteractOutside: (event) => event.preventDefault(),
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Slottable$1, { children }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(DescriptionWarning, { contentRef })
+            ]
+          }
+        ) })
+      }
+    );
+  }
+);
+AlertDialogContent$1.displayName = CONTENT_NAME$7;
+var TITLE_NAME = "AlertDialogTitle";
+var AlertDialogTitle$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeAlertDialog, ...titleProps } = props;
+    const dialogScope = useDialogScope(__scopeAlertDialog);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Title, { ...dialogScope, ...titleProps, ref: forwardedRef });
+  }
+);
+AlertDialogTitle$1.displayName = TITLE_NAME;
+var DESCRIPTION_NAME = "AlertDialogDescription";
+var AlertDialogDescription$1 = reactExports.forwardRef((props, forwardedRef) => {
+  const { __scopeAlertDialog, ...descriptionProps } = props;
+  const dialogScope = useDialogScope(__scopeAlertDialog);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Description, { ...dialogScope, ...descriptionProps, ref: forwardedRef });
+});
+AlertDialogDescription$1.displayName = DESCRIPTION_NAME;
+var ACTION_NAME = "AlertDialogAction";
+var AlertDialogAction$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeAlertDialog, ...actionProps } = props;
+    const dialogScope = useDialogScope(__scopeAlertDialog);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Close, { ...dialogScope, ...actionProps, ref: forwardedRef });
+  }
+);
+AlertDialogAction$1.displayName = ACTION_NAME;
+var CANCEL_NAME = "AlertDialogCancel";
+var AlertDialogCancel$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeAlertDialog, ...cancelProps } = props;
+    const { cancelRef } = useAlertDialogContentContext(CANCEL_NAME, __scopeAlertDialog);
+    const dialogScope = useDialogScope(__scopeAlertDialog);
+    const ref = useComposedRefs(forwardedRef, cancelRef);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Close, { ...dialogScope, ...cancelProps, ref });
+  }
+);
+AlertDialogCancel$1.displayName = CANCEL_NAME;
+var DescriptionWarning = ({ contentRef }) => {
+  const MESSAGE = `\`${CONTENT_NAME$7}\` requires a description for the component to be accessible for screen reader users.
+
+You can add a description to the \`${CONTENT_NAME$7}\` by passing a \`${DESCRIPTION_NAME}\` component as a child, which also benefits sighted users by adding visible context to the dialog.
+
+Alternatively, you can use your own component as a description by assigning it an \`id\` and passing the same value to the \`aria-describedby\` prop in \`${CONTENT_NAME$7}\`. If the description is confusing or duplicative for sighted users, you can use the \`@radix-ui/react-visually-hidden\` primitive as a wrapper around your description component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/alert-dialog`;
+  reactExports.useEffect(() => {
+    var _a2;
+    const hasDescription = document.getElementById(
+      (_a2 = contentRef.current) == null ? void 0 : _a2.getAttribute("aria-describedby")
+    );
+    if (!hasDescription) console.warn(MESSAGE);
+  }, [MESSAGE, contentRef]);
+  return null;
+};
+var Root2$4 = AlertDialog$1;
+var Trigger2 = AlertDialogTrigger$1;
+var Portal2$1 = AlertDialogPortal$1;
+var Overlay2 = AlertDialogOverlay$1;
+var Content2$4 = AlertDialogContent$1;
+var Action = AlertDialogAction$1;
+var Cancel = AlertDialogCancel$1;
+var Title2 = AlertDialogTitle$1;
+var Description2 = AlertDialogDescription$1;
+function AlertDialog({
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$4, { "data-slot": "alert-dialog", ...props });
+}
+function AlertDialogTrigger({
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Trigger2, { "data-slot": "alert-dialog-trigger", ...props });
+}
+function AlertDialogPortal({
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal2$1, { "data-slot": "alert-dialog-portal", ...props });
+}
+function AlertDialogOverlay({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Overlay2,
+    {
+      "data-slot": "alert-dialog-overlay",
+      className: cn(
+        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
+        className
+      ),
+      ...props
+    }
+  );
+}
+function AlertDialogContent({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(AlertDialogPortal, { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDialogOverlay, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Content2$4,
+      {
+        "data-slot": "alert-dialog-content",
+        className: cn(
+          "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 sm:max-w-lg",
+          className
+        ),
+        ...props
+      }
+    )
+  ] });
+}
+function AlertDialogHeader({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      "data-slot": "alert-dialog-header",
+      className: cn("flex flex-col gap-2 text-center sm:text-left", className),
+      ...props
+    }
+  );
+}
+function AlertDialogFooter({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      "data-slot": "alert-dialog-footer",
+      className: cn(
+        "flex flex-col-reverse gap-2 sm:flex-row sm:justify-end",
+        className
+      ),
+      ...props
+    }
+  );
+}
+function AlertDialogTitle({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Title2,
+    {
+      "data-slot": "alert-dialog-title",
+      className: cn("text-lg font-semibold", className),
+      ...props
+    }
+  );
+}
+function AlertDialogDescription({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Description2,
+    {
+      "data-slot": "alert-dialog-description",
+      className: cn("text-muted-foreground text-sm", className),
+      ...props
+    }
+  );
+}
+function AlertDialogAction({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Action,
+    {
+      className: cn(buttonVariants(), className),
+      ...props
+    }
+  );
+}
+function AlertDialogCancel({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Cancel,
+    {
+      className: cn(buttonVariants({ variant: "outline" }), className),
+      ...props
+    }
+  );
+}
+const badgeVariants = cva(
+  "inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
+  {
+    variants: {
+      variant: {
+        default: "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
+        secondary: "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
+        destructive: "border-transparent bg-destructive text-destructive-foreground [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+        outline: "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground"
+      }
+    },
+    defaultVariants: {
+      variant: "default"
+    }
+  }
+);
+function Badge$1({
+  className,
+  variant,
+  asChild = false,
+  ...props
+}) {
+  const Comp = asChild ? Slot$3 : "span";
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Comp,
+    {
+      "data-slot": "badge",
+      className: cn(badgeVariants({ variant }), className),
+      ...props
+    }
+  );
+}
+function Card({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      "data-slot": "card",
+      className: cn(
+        "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
+        className
+      ),
+      ...props
+    }
+  );
+}
+var COLLAPSIBLE_NAME = "Collapsible";
+var [createCollapsibleContext] = createContextScope$1(COLLAPSIBLE_NAME);
+var [CollapsibleProvider, useCollapsibleContext] = createCollapsibleContext(COLLAPSIBLE_NAME);
+var Collapsible$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const {
+      __scopeCollapsible,
+      open: openProp,
+      defaultOpen,
+      disabled,
+      onOpenChange,
+      ...collapsibleProps
+    } = props;
+    const [open, setOpen] = useControllableState({
+      prop: openProp,
+      defaultProp: defaultOpen ?? false,
+      onChange: onOpenChange,
+      caller: COLLAPSIBLE_NAME
+    });
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      CollapsibleProvider,
+      {
+        scope: __scopeCollapsible,
+        disabled,
+        contentId: useId(),
+        open,
+        onOpenToggle: reactExports.useCallback(() => setOpen((prevOpen) => !prevOpen), [setOpen]),
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Primitive$1.div,
+          {
+            "data-state": getState$1(open),
+            "data-disabled": disabled ? "" : void 0,
+            ...collapsibleProps,
+            ref: forwardedRef
+          }
+        )
+      }
+    );
+  }
+);
+Collapsible$1.displayName = COLLAPSIBLE_NAME;
+var TRIGGER_NAME$4 = "CollapsibleTrigger";
+var CollapsibleTrigger$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeCollapsible, ...triggerProps } = props;
+    const context = useCollapsibleContext(TRIGGER_NAME$4, __scopeCollapsible);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Primitive$1.button,
+      {
+        type: "button",
+        "aria-controls": context.contentId,
+        "aria-expanded": context.open || false,
+        "data-state": getState$1(context.open),
+        "data-disabled": context.disabled ? "" : void 0,
+        disabled: context.disabled,
+        ...triggerProps,
+        ref: forwardedRef,
+        onClick: composeEventHandlers(props.onClick, context.onOpenToggle)
+      }
+    );
+  }
+);
+CollapsibleTrigger$1.displayName = TRIGGER_NAME$4;
+var CONTENT_NAME$6 = "CollapsibleContent";
+var CollapsibleContent$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { forceMount, ...contentProps } = props;
+    const context = useCollapsibleContext(CONTENT_NAME$6, props.__scopeCollapsible);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: ({ present }) => /* @__PURE__ */ jsxRuntimeExports.jsx(CollapsibleContentImpl, { ...contentProps, ref: forwardedRef, present }) });
+  }
+);
+CollapsibleContent$1.displayName = CONTENT_NAME$6;
+var CollapsibleContentImpl = reactExports.forwardRef((props, forwardedRef) => {
+  const { __scopeCollapsible, present, children, ...contentProps } = props;
+  const context = useCollapsibleContext(CONTENT_NAME$6, __scopeCollapsible);
+  const [isPresent, setIsPresent] = reactExports.useState(present);
+  const ref = reactExports.useRef(null);
+  const composedRefs = useComposedRefs(forwardedRef, ref);
+  const heightRef = reactExports.useRef(0);
+  const height = heightRef.current;
+  const widthRef = reactExports.useRef(0);
+  const width = widthRef.current;
+  const isOpen = context.open || isPresent;
+  const isMountAnimationPreventedRef = reactExports.useRef(isOpen);
+  const originalStylesRef = reactExports.useRef(void 0);
+  reactExports.useEffect(() => {
+    const rAF = requestAnimationFrame(() => isMountAnimationPreventedRef.current = false);
+    return () => cancelAnimationFrame(rAF);
+  }, []);
+  useLayoutEffect2(() => {
+    const node = ref.current;
+    if (node) {
+      originalStylesRef.current = originalStylesRef.current || {
+        transitionDuration: node.style.transitionDuration,
+        animationName: node.style.animationName
+      };
+      node.style.transitionDuration = "0s";
+      node.style.animationName = "none";
+      const rect = node.getBoundingClientRect();
+      heightRef.current = rect.height;
+      widthRef.current = rect.width;
+      if (!isMountAnimationPreventedRef.current) {
+        node.style.transitionDuration = originalStylesRef.current.transitionDuration;
+        node.style.animationName = originalStylesRef.current.animationName;
+      }
+      setIsPresent(present);
+    }
+  }, [context.open, present]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Primitive$1.div,
+    {
+      "data-state": getState$1(context.open),
+      "data-disabled": context.disabled ? "" : void 0,
+      id: context.contentId,
+      hidden: !isOpen,
+      ...contentProps,
+      ref: composedRefs,
+      style: {
+        [`--radix-collapsible-content-height`]: height ? `${height}px` : void 0,
+        [`--radix-collapsible-content-width`]: width ? `${width}px` : void 0,
+        ...props.style
+      },
+      children: isOpen && children
+    }
+  );
+});
+function getState$1(open) {
+  return open ? "open" : "closed";
+}
+var Root$8 = Collapsible$1;
+function Collapsible({
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root$8, { "data-slot": "collapsible", ...props });
+}
+function CollapsibleTrigger({
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    CollapsibleTrigger$1,
+    {
+      "data-slot": "collapsible-trigger",
+      ...props
+    }
+  );
+}
+function CollapsibleContent({
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    CollapsibleContent$1,
+    {
+      "data-slot": "collapsible-content",
+      ...props
+    }
+  );
+}
+function Input({ className, type, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "input",
+    {
+      type,
+      "data-slot": "input",
+      className: cn(
+        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+        className
+      ),
+      ...props
+    }
+  );
+}
+function Skeleton({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      "data-slot": "skeleton",
+      className: cn("bg-accent animate-pulse rounded-md", className),
+      ...props
+    }
+  );
+}
+function createCollection(name) {
+  const PROVIDER_NAME2 = name + "CollectionProvider";
+  const [createCollectionContext, createCollectionScope2] = createContextScope$1(PROVIDER_NAME2);
+  const [CollectionProviderImpl, useCollectionContext] = createCollectionContext(
+    PROVIDER_NAME2,
+    { collectionRef: { current: null }, itemMap: /* @__PURE__ */ new Map() }
+  );
+  const CollectionProvider = (props) => {
+    const { scope, children } = props;
+    const ref = React2.useRef(null);
+    const itemMap = React2.useRef(/* @__PURE__ */ new Map()).current;
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(CollectionProviderImpl, { scope, itemMap, collectionRef: ref, children });
+  };
+  CollectionProvider.displayName = PROVIDER_NAME2;
+  const COLLECTION_SLOT_NAME = name + "CollectionSlot";
+  const CollectionSlotImpl = /* @__PURE__ */ createSlot(COLLECTION_SLOT_NAME);
+  const CollectionSlot = React2.forwardRef(
+    (props, forwardedRef) => {
+      const { scope, children } = props;
+      const context = useCollectionContext(COLLECTION_SLOT_NAME, scope);
+      const composedRefs = useComposedRefs(forwardedRef, context.collectionRef);
+      return /* @__PURE__ */ jsxRuntimeExports.jsx(CollectionSlotImpl, { ref: composedRefs, children });
+    }
+  );
+  CollectionSlot.displayName = COLLECTION_SLOT_NAME;
+  const ITEM_SLOT_NAME = name + "CollectionItemSlot";
+  const ITEM_DATA_ATTR = "data-radix-collection-item";
+  const CollectionItemSlotImpl = /* @__PURE__ */ createSlot(ITEM_SLOT_NAME);
+  const CollectionItemSlot = React2.forwardRef(
+    (props, forwardedRef) => {
+      const { scope, children, ...itemData } = props;
+      const ref = React2.useRef(null);
+      const composedRefs = useComposedRefs(forwardedRef, ref);
+      const context = useCollectionContext(ITEM_SLOT_NAME, scope);
+      React2.useEffect(() => {
+        context.itemMap.set(ref, { ref, ...itemData });
+        return () => void context.itemMap.delete(ref);
+      });
+      return /* @__PURE__ */ jsxRuntimeExports.jsx(CollectionItemSlotImpl, { ...{ [ITEM_DATA_ATTR]: "" }, ref: composedRefs, children });
+    }
+  );
+  CollectionItemSlot.displayName = ITEM_SLOT_NAME;
+  function useCollection2(scope) {
+    const context = useCollectionContext(name + "CollectionConsumer", scope);
+    const getItems = React2.useCallback(() => {
+      const collectionNode = context.collectionRef.current;
+      if (!collectionNode) return [];
+      const orderedNodes = Array.from(collectionNode.querySelectorAll(`[${ITEM_DATA_ATTR}]`));
+      const items = Array.from(context.itemMap.values());
+      const orderedItems = items.sort(
+        (a2, b2) => orderedNodes.indexOf(a2.ref.current) - orderedNodes.indexOf(b2.ref.current)
+      );
+      return orderedItems;
+    }, [context.collectionRef, context.itemMap]);
+    return getItems;
+  }
+  return [
+    { Provider: CollectionProvider, Slot: CollectionSlot, ItemSlot: CollectionItemSlot },
+    useCollection2,
+    createCollectionScope2
+  ];
+}
+var DirectionContext = reactExports.createContext(void 0);
+function useDirection(localDir) {
+  const globalDir = reactExports.useContext(DirectionContext);
+  return localDir || globalDir || "ltr";
+}
+var ENTRY_FOCUS = "rovingFocusGroup.onEntryFocus";
+var EVENT_OPTIONS = { bubbles: false, cancelable: true };
+var GROUP_NAME$3 = "RovingFocusGroup";
+var [Collection$3, useCollection$3, createCollectionScope$3] = createCollection(GROUP_NAME$3);
+var [createRovingFocusGroupContext, createRovingFocusGroupScope] = createContextScope$1(
+  GROUP_NAME$3,
+  [createCollectionScope$3]
+);
+var [RovingFocusProvider, useRovingFocusContext] = createRovingFocusGroupContext(GROUP_NAME$3);
+var RovingFocusGroup = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Collection$3.Provider, { scope: props.__scopeRovingFocusGroup, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Collection$3.Slot, { scope: props.__scopeRovingFocusGroup, children: /* @__PURE__ */ jsxRuntimeExports.jsx(RovingFocusGroupImpl, { ...props, ref: forwardedRef }) }) });
+  }
+);
+RovingFocusGroup.displayName = GROUP_NAME$3;
+var RovingFocusGroupImpl = reactExports.forwardRef((props, forwardedRef) => {
+  const {
+    __scopeRovingFocusGroup,
+    orientation,
+    loop = false,
+    dir,
+    currentTabStopId: currentTabStopIdProp,
+    defaultCurrentTabStopId,
+    onCurrentTabStopIdChange,
+    onEntryFocus,
+    preventScrollOnEntryFocus = false,
+    ...groupProps
+  } = props;
+  const ref = reactExports.useRef(null);
+  const composedRefs = useComposedRefs(forwardedRef, ref);
+  const direction = useDirection(dir);
+  const [currentTabStopId, setCurrentTabStopId] = useControllableState({
+    prop: currentTabStopIdProp,
+    defaultProp: defaultCurrentTabStopId ?? null,
+    onChange: onCurrentTabStopIdChange,
+    caller: GROUP_NAME$3
+  });
+  const [isTabbingBackOut, setIsTabbingBackOut] = reactExports.useState(false);
+  const handleEntryFocus = useCallbackRef$1(onEntryFocus);
+  const getItems = useCollection$3(__scopeRovingFocusGroup);
+  const isClickFocusRef = reactExports.useRef(false);
+  const [focusableItemsCount, setFocusableItemsCount] = reactExports.useState(0);
+  reactExports.useEffect(() => {
+    const node = ref.current;
+    if (node) {
+      node.addEventListener(ENTRY_FOCUS, handleEntryFocus);
+      return () => node.removeEventListener(ENTRY_FOCUS, handleEntryFocus);
+    }
+  }, [handleEntryFocus]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    RovingFocusProvider,
+    {
+      scope: __scopeRovingFocusGroup,
+      orientation,
+      dir: direction,
+      loop,
+      currentTabStopId,
+      onItemFocus: reactExports.useCallback(
+        (tabStopId) => setCurrentTabStopId(tabStopId),
+        [setCurrentTabStopId]
+      ),
+      onItemShiftTab: reactExports.useCallback(() => setIsTabbingBackOut(true), []),
+      onFocusableItemAdd: reactExports.useCallback(
+        () => setFocusableItemsCount((prevCount) => prevCount + 1),
+        []
+      ),
+      onFocusableItemRemove: reactExports.useCallback(
+        () => setFocusableItemsCount((prevCount) => prevCount - 1),
+        []
+      ),
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        Primitive$1.div,
+        {
+          tabIndex: isTabbingBackOut || focusableItemsCount === 0 ? -1 : 0,
+          "data-orientation": orientation,
+          ...groupProps,
+          ref: composedRefs,
+          style: { outline: "none", ...props.style },
+          onMouseDown: composeEventHandlers(props.onMouseDown, () => {
+            isClickFocusRef.current = true;
+          }),
+          onFocus: composeEventHandlers(props.onFocus, (event) => {
+            const isKeyboardFocus = !isClickFocusRef.current;
+            if (event.target === event.currentTarget && isKeyboardFocus && !isTabbingBackOut) {
+              const entryFocusEvent = new CustomEvent(ENTRY_FOCUS, EVENT_OPTIONS);
+              event.currentTarget.dispatchEvent(entryFocusEvent);
+              if (!entryFocusEvent.defaultPrevented) {
+                const items = getItems().filter((item) => item.focusable);
+                const activeItem = items.find((item) => item.active);
+                const currentItem = items.find((item) => item.id === currentTabStopId);
+                const candidateItems = [activeItem, currentItem, ...items].filter(
+                  Boolean
+                );
+                const candidateNodes = candidateItems.map((item) => item.ref.current);
+                focusFirst$1(candidateNodes, preventScrollOnEntryFocus);
+              }
+            }
+            isClickFocusRef.current = false;
+          }),
+          onBlur: composeEventHandlers(props.onBlur, () => setIsTabbingBackOut(false))
+        }
+      )
+    }
+  );
+});
+var ITEM_NAME$3 = "RovingFocusGroupItem";
+var RovingFocusGroupItem = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const {
+      __scopeRovingFocusGroup,
+      focusable = true,
+      active = false,
+      tabStopId,
+      children,
+      ...itemProps
+    } = props;
+    const autoId = useId();
+    const id2 = tabStopId || autoId;
+    const context = useRovingFocusContext(ITEM_NAME$3, __scopeRovingFocusGroup);
+    const isCurrentTabStop = context.currentTabStopId === id2;
+    const getItems = useCollection$3(__scopeRovingFocusGroup);
+    const { onFocusableItemAdd, onFocusableItemRemove, currentTabStopId } = context;
+    reactExports.useEffect(() => {
+      if (focusable) {
+        onFocusableItemAdd();
+        return () => onFocusableItemRemove();
+      }
+    }, [focusable, onFocusableItemAdd, onFocusableItemRemove]);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Collection$3.ItemSlot,
+      {
+        scope: __scopeRovingFocusGroup,
+        id: id2,
+        focusable,
+        active,
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Primitive$1.span,
+          {
+            tabIndex: isCurrentTabStop ? 0 : -1,
+            "data-orientation": context.orientation,
+            ...itemProps,
+            ref: forwardedRef,
+            onMouseDown: composeEventHandlers(props.onMouseDown, (event) => {
+              if (!focusable) event.preventDefault();
+              else context.onItemFocus(id2);
+            }),
+            onFocus: composeEventHandlers(props.onFocus, () => context.onItemFocus(id2)),
+            onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
+              if (event.key === "Tab" && event.shiftKey) {
+                context.onItemShiftTab();
+                return;
+              }
+              if (event.target !== event.currentTarget) return;
+              const focusIntent = getFocusIntent(event, context.orientation, context.dir);
+              if (focusIntent !== void 0) {
+                if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+                event.preventDefault();
+                const items = getItems().filter((item) => item.focusable);
+                let candidateNodes = items.map((item) => item.ref.current);
+                if (focusIntent === "last") candidateNodes.reverse();
+                else if (focusIntent === "prev" || focusIntent === "next") {
+                  if (focusIntent === "prev") candidateNodes.reverse();
+                  const currentIndex = candidateNodes.indexOf(event.currentTarget);
+                  candidateNodes = context.loop ? wrapArray$2(candidateNodes, currentIndex + 1) : candidateNodes.slice(currentIndex + 1);
+                }
+                setTimeout(() => focusFirst$1(candidateNodes));
+              }
+            }),
+            children: typeof children === "function" ? children({ isCurrentTabStop, hasTabStop: currentTabStopId != null }) : children
+          }
+        )
+      }
+    );
+  }
+);
+RovingFocusGroupItem.displayName = ITEM_NAME$3;
+var MAP_KEY_TO_FOCUS_INTENT = {
+  ArrowLeft: "prev",
+  ArrowUp: "prev",
+  ArrowRight: "next",
+  ArrowDown: "next",
+  PageUp: "first",
+  Home: "first",
+  PageDown: "last",
+  End: "last"
+};
+function getDirectionAwareKey(key, dir) {
+  if (dir !== "rtl") return key;
+  return key === "ArrowLeft" ? "ArrowRight" : key === "ArrowRight" ? "ArrowLeft" : key;
+}
+function getFocusIntent(event, orientation, dir) {
+  const key = getDirectionAwareKey(event.key, dir);
+  if (orientation === "vertical" && ["ArrowLeft", "ArrowRight"].includes(key)) return void 0;
+  if (orientation === "horizontal" && ["ArrowUp", "ArrowDown"].includes(key)) return void 0;
+  return MAP_KEY_TO_FOCUS_INTENT[key];
+}
+function focusFirst$1(candidates, preventScroll = false) {
+  const PREVIOUSLY_FOCUSED_ELEMENT = document.activeElement;
+  for (const candidate of candidates) {
+    if (candidate === PREVIOUSLY_FOCUSED_ELEMENT) return;
+    candidate.focus({ preventScroll });
+    if (document.activeElement !== PREVIOUSLY_FOCUSED_ELEMENT) return;
+  }
+}
+function wrapArray$2(array, startIndex) {
+  return array.map((_2, index2) => array[(startIndex + index2) % array.length]);
+}
+var Root$7 = RovingFocusGroup;
+var Item$1 = RovingFocusGroupItem;
+var TABS_NAME = "Tabs";
+var [createTabsContext] = createContextScope$1(TABS_NAME, [
+  createRovingFocusGroupScope
+]);
+var useRovingFocusGroupScope$1 = createRovingFocusGroupScope();
+var [TabsProvider, useTabsContext] = createTabsContext(TABS_NAME);
+var Tabs$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const {
+      __scopeTabs,
+      value: valueProp,
+      onValueChange,
+      defaultValue,
+      orientation = "horizontal",
+      dir,
+      activationMode = "automatic",
+      ...tabsProps
+    } = props;
+    const direction = useDirection(dir);
+    const [value, setValue] = useControllableState({
+      prop: valueProp,
+      onChange: onValueChange,
+      defaultProp: defaultValue ?? "",
+      caller: TABS_NAME
+    });
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      TabsProvider,
+      {
+        scope: __scopeTabs,
+        baseId: useId(),
+        value,
+        onValueChange: setValue,
+        orientation,
+        dir: direction,
+        activationMode,
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Primitive$1.div,
+          {
+            dir: direction,
+            "data-orientation": orientation,
+            ...tabsProps,
+            ref: forwardedRef
+          }
+        )
+      }
+    );
+  }
+);
+Tabs$1.displayName = TABS_NAME;
+var TAB_LIST_NAME = "TabsList";
+var TabsList$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeTabs, loop = true, ...listProps } = props;
+    const context = useTabsContext(TAB_LIST_NAME, __scopeTabs);
+    const rovingFocusGroupScope = useRovingFocusGroupScope$1(__scopeTabs);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Root$7,
+      {
+        asChild: true,
+        ...rovingFocusGroupScope,
+        orientation: context.orientation,
+        dir: context.dir,
+        loop,
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Primitive$1.div,
+          {
+            role: "tablist",
+            "aria-orientation": context.orientation,
+            ...listProps,
+            ref: forwardedRef
+          }
+        )
+      }
+    );
+  }
+);
+TabsList$1.displayName = TAB_LIST_NAME;
+var TRIGGER_NAME$3 = "TabsTrigger";
+var TabsTrigger$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeTabs, value, disabled = false, ...triggerProps } = props;
+    const context = useTabsContext(TRIGGER_NAME$3, __scopeTabs);
+    const rovingFocusGroupScope = useRovingFocusGroupScope$1(__scopeTabs);
+    const triggerId = makeTriggerId(context.baseId, value);
+    const contentId = makeContentId(context.baseId, value);
+    const isSelected = value === context.value;
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Item$1,
+      {
+        asChild: true,
+        ...rovingFocusGroupScope,
+        focusable: !disabled,
+        active: isSelected,
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Primitive$1.button,
+          {
+            type: "button",
+            role: "tab",
+            "aria-selected": isSelected,
+            "aria-controls": contentId,
+            "data-state": isSelected ? "active" : "inactive",
+            "data-disabled": disabled ? "" : void 0,
+            disabled,
+            id: triggerId,
+            ...triggerProps,
+            ref: forwardedRef,
+            onMouseDown: composeEventHandlers(props.onMouseDown, (event) => {
+              if (!disabled && event.button === 0 && event.ctrlKey === false) {
+                context.onValueChange(value);
+              } else {
+                event.preventDefault();
+              }
+            }),
+            onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
+              if ([" ", "Enter"].includes(event.key)) context.onValueChange(value);
+            }),
+            onFocus: composeEventHandlers(props.onFocus, () => {
+              const isAutomaticActivation = context.activationMode !== "manual";
+              if (!isSelected && !disabled && isAutomaticActivation) {
+                context.onValueChange(value);
+              }
+            })
+          }
+        )
+      }
+    );
+  }
+);
+TabsTrigger$1.displayName = TRIGGER_NAME$3;
+var CONTENT_NAME$5 = "TabsContent";
+var TabsContent = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeTabs, value, forceMount, children, ...contentProps } = props;
+    const context = useTabsContext(CONTENT_NAME$5, __scopeTabs);
+    const triggerId = makeTriggerId(context.baseId, value);
+    const contentId = makeContentId(context.baseId, value);
+    const isSelected = value === context.value;
+    const isMountAnimationPreventedRef = reactExports.useRef(isSelected);
+    reactExports.useEffect(() => {
+      const rAF = requestAnimationFrame(() => isMountAnimationPreventedRef.current = false);
+      return () => cancelAnimationFrame(rAF);
+    }, []);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || isSelected, children: ({ present }) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Primitive$1.div,
+      {
+        "data-state": isSelected ? "active" : "inactive",
+        "data-orientation": context.orientation,
+        role: "tabpanel",
+        "aria-labelledby": triggerId,
+        hidden: !present,
+        id: contentId,
+        tabIndex: 0,
+        ...contentProps,
+        ref: forwardedRef,
+        style: {
+          ...props.style,
+          animationDuration: isMountAnimationPreventedRef.current ? "0s" : void 0
+        },
+        children: present && children
+      }
+    ) });
+  }
+);
+TabsContent.displayName = CONTENT_NAME$5;
+function makeTriggerId(baseId, value) {
+  return `${baseId}-trigger-${value}`;
+}
+function makeContentId(baseId, value) {
+  return `${baseId}-content-${value}`;
+}
+var Root2$3 = Tabs$1;
+var List = TabsList$1;
+var Trigger$3 = TabsTrigger$1;
+function Tabs({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Root2$3,
+    {
+      "data-slot": "tabs",
+      className: cn("flex flex-col gap-2", className),
+      ...props
+    }
+  );
+}
+function TabsList({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    List,
+    {
+      "data-slot": "tabs-list",
+      className: cn(
+        "bg-muted text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-lg p-[3px]",
+        className
+      ),
+      ...props
+    }
+  );
+}
+function TabsTrigger({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Trigger$3,
+    {
+      "data-slot": "tabs-trigger",
+      className: cn(
+        "data-[state=active]:bg-background dark:data-[state=active]:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 text-foreground dark:text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        className
+      ),
+      ...props
+    }
+  );
+}
+const SessionId = Text;
+const ActivityEntry = Record({
+  "id": Nat,
+  "activityType": Text,
+  "summary": Text,
+  "timestamp": Int,
+  "details": Text
+});
+const Model = Variant({
+  "gpt": Null,
+  "claude": Null,
+  "mistral": Null,
+  "qwen": Null,
+  "llama": Null,
+  "gemini": Null,
+  "ollama": Null,
+  "deepseek": Null
+});
+const Mode = Variant({
+  "normal": Null,
+  "research": Null,
+  "codingAssistant": Null,
+  "documentAssistant": Null,
+  "imageAnalysis": Null,
+  "internetSearch": Null,
+  "youtubeSearch": Null,
+  "emailAssistant": Null,
+  "knowledgeBase": Null
+});
+const Role = Variant({
+  "systemMsg": Null,
+  "user": Null,
+  "assistant": Null
+});
+const Message = Record({
+  "model": Opt(Model),
+  "content": Text,
+  "mode": Opt(Mode),
+  "role": Role,
+  "timestamp": Int
+});
+const Chat = Record({
+  "id": Nat,
+  "title": Text,
+  "messages": Vec(Message),
+  "createdAt": Int,
+  "updatedAt": Int,
+  "pinned": Bool,
+  "folder": Opt(Nat)
+});
+const DocumentRecord = Record({
+  "id": Nat,
+  "title": Text,
+  "content": Text,
+  "createdAt": Int,
+  "fileType": Text,
+  "updatedAt": Int
+});
+const Folder = Record({
+  "id": Nat,
+  "name": Text,
+  "createdAt": Int
+});
+const SearchRecord = Record({
+  "id": Nat,
+  "queryText": Text,
+  "timestamp": Int,
+  "resultCount": Nat
+});
+const ToolUsage = Record({
+  "id": Nat,
+  "inputSummary": Text,
+  "outputSummary": Text,
+  "timestamp": Int,
+  "toolName": Text
+});
+Service({
+  "__activity": Func(
+    [Opt(SessionId), Opt(Nat)],
+    [Vec(Tuple(SessionId, Vec(ActivityEntry)))],
+    ["query"]
+  ),
+  "__chats": Func(
+    [Opt(SessionId), Opt(Nat)],
+    [Vec(Tuple(SessionId, Vec(Chat)))],
+    ["query"]
+  ),
+  "__documents": Func(
+    [Opt(SessionId), Opt(Nat)],
+    [Vec(Tuple(SessionId, Vec(DocumentRecord)))],
+    ["query"]
+  ),
+  "__folders": Func(
+    [Opt(SessionId), Opt(Nat)],
+    [Vec(Tuple(SessionId, Vec(Folder)))],
+    ["query"]
+  ),
+  "__nextActivityId": Func([], [Reserved], ["query"]),
+  "__nextChatId": Func([], [Reserved], ["query"]),
+  "__nextDocumentId": Func([], [Reserved], ["query"]),
+  "__nextFolderId": Func([], [Reserved], ["query"]),
+  "__nextSearchId": Func([], [Reserved], ["query"]),
+  "__nextToolUsageId": Func([], [Reserved], ["query"]),
+  "__searchHistory": Func(
+    [Opt(SessionId), Opt(Nat)],
+    [Vec(Tuple(SessionId, Vec(SearchRecord)))],
+    ["query"]
+  ),
+  "__toolUsage": Func(
+    [Opt(SessionId), Opt(Nat)],
+    [Vec(Tuple(SessionId, Vec(ToolUsage)))],
+    ["query"]
+  ),
+  "addMessage": Func([SessionId, Nat, Message], [Opt(Chat)], []),
+  "clearActivity": Func([SessionId], [Bool], []),
+  "createChat": Func([SessionId, Text], [Chat], []),
+  "createDocument": Func(
+    [SessionId, Text, Text],
+    [DocumentRecord],
+    []
+  ),
+  "createFolder": Func([SessionId, Text], [Folder], []),
+  "deleteChat": Func([SessionId, Nat], [Bool], []),
+  "deleteDocument": Func([SessionId, Nat], [Bool], []),
+  "deleteFolder": Func([SessionId, Nat], [Bool], []),
+  "getChat": Func([SessionId, Nat], [Opt(Chat)], []),
+  "getDocument": Func([SessionId, Nat], [Opt(DocumentRecord)], []),
+  "listActivity": Func([SessionId], [Vec(ActivityEntry)], []),
+  "listChats": Func([SessionId], [Vec(Chat)], []),
+  "listDocuments": Func([SessionId], [Vec(DocumentRecord)], []),
+  "listFolders": Func([SessionId], [Vec(Folder)], []),
+  "listSearchHistory": Func([SessionId], [Vec(SearchRecord)], []),
+  "listToolUsage": Func([SessionId], [Vec(ToolUsage)], []),
+  "logActivity": Func(
+    [SessionId, Text, Text, Text],
+    [ActivityEntry],
+    []
+  ),
+  "logSearch": Func([SessionId, Text, Nat], [SearchRecord], []),
+  "logToolUsage": Func(
+    [SessionId, Text, Text, Text],
+    [ToolUsage],
+    []
+  ),
+  "renameFolder": Func(
+    [SessionId, Nat, Text],
+    [Opt(Folder)],
+    []
+  ),
+  "updateChat": Func(
+    [
+      SessionId,
+      Nat,
+      Opt(Text),
+      Opt(Opt(Nat)),
+      Opt(Bool)
+    ],
+    [Opt(Chat)],
+    []
+  ),
+  "updateDocument": Func(
+    [SessionId, Nat, Text, Text],
+    [Opt(DocumentRecord)],
+    []
+  )
+});
+const idlFactory = ({ IDL: IDL2 }) => {
+  const SessionId2 = IDL2.Text;
+  const ActivityEntry2 = IDL2.Record({
+    "id": IDL2.Nat,
+    "activityType": IDL2.Text,
+    "summary": IDL2.Text,
+    "timestamp": IDL2.Int,
+    "details": IDL2.Text
+  });
+  const Model2 = IDL2.Variant({
+    "gpt": IDL2.Null,
+    "claude": IDL2.Null,
+    "mistral": IDL2.Null,
+    "qwen": IDL2.Null,
+    "llama": IDL2.Null,
+    "gemini": IDL2.Null,
+    "ollama": IDL2.Null,
+    "deepseek": IDL2.Null
+  });
+  const Mode2 = IDL2.Variant({
+    "normal": IDL2.Null,
+    "research": IDL2.Null,
+    "codingAssistant": IDL2.Null,
+    "documentAssistant": IDL2.Null,
+    "imageAnalysis": IDL2.Null,
+    "internetSearch": IDL2.Null,
+    "youtubeSearch": IDL2.Null,
+    "emailAssistant": IDL2.Null,
+    "knowledgeBase": IDL2.Null
+  });
+  const Role2 = IDL2.Variant({
+    "systemMsg": IDL2.Null,
+    "user": IDL2.Null,
+    "assistant": IDL2.Null
+  });
+  const Message2 = IDL2.Record({
+    "model": IDL2.Opt(Model2),
+    "content": IDL2.Text,
+    "mode": IDL2.Opt(Mode2),
+    "role": Role2,
+    "timestamp": IDL2.Int
+  });
+  const Chat2 = IDL2.Record({
+    "id": IDL2.Nat,
+    "title": IDL2.Text,
+    "messages": IDL2.Vec(Message2),
+    "createdAt": IDL2.Int,
+    "updatedAt": IDL2.Int,
+    "pinned": IDL2.Bool,
+    "folder": IDL2.Opt(IDL2.Nat)
+  });
+  const DocumentRecord2 = IDL2.Record({
+    "id": IDL2.Nat,
+    "title": IDL2.Text,
+    "content": IDL2.Text,
+    "createdAt": IDL2.Int,
+    "fileType": IDL2.Text,
+    "updatedAt": IDL2.Int
+  });
+  const Folder2 = IDL2.Record({
+    "id": IDL2.Nat,
+    "name": IDL2.Text,
+    "createdAt": IDL2.Int
+  });
+  const SearchRecord2 = IDL2.Record({
+    "id": IDL2.Nat,
+    "queryText": IDL2.Text,
+    "timestamp": IDL2.Int,
+    "resultCount": IDL2.Nat
+  });
+  const ToolUsage2 = IDL2.Record({
+    "id": IDL2.Nat,
+    "inputSummary": IDL2.Text,
+    "outputSummary": IDL2.Text,
+    "timestamp": IDL2.Int,
+    "toolName": IDL2.Text
+  });
+  return IDL2.Service({
+    "__activity": IDL2.Func(
+      [IDL2.Opt(SessionId2), IDL2.Opt(IDL2.Nat)],
+      [IDL2.Vec(IDL2.Tuple(SessionId2, IDL2.Vec(ActivityEntry2)))],
+      ["query"]
+    ),
+    "__chats": IDL2.Func(
+      [IDL2.Opt(SessionId2), IDL2.Opt(IDL2.Nat)],
+      [IDL2.Vec(IDL2.Tuple(SessionId2, IDL2.Vec(Chat2)))],
+      ["query"]
+    ),
+    "__documents": IDL2.Func(
+      [IDL2.Opt(SessionId2), IDL2.Opt(IDL2.Nat)],
+      [IDL2.Vec(IDL2.Tuple(SessionId2, IDL2.Vec(DocumentRecord2)))],
+      ["query"]
+    ),
+    "__folders": IDL2.Func(
+      [IDL2.Opt(SessionId2), IDL2.Opt(IDL2.Nat)],
+      [IDL2.Vec(IDL2.Tuple(SessionId2, IDL2.Vec(Folder2)))],
+      ["query"]
+    ),
+    "__nextActivityId": IDL2.Func([], [IDL2.Reserved], ["query"]),
+    "__nextChatId": IDL2.Func([], [IDL2.Reserved], ["query"]),
+    "__nextDocumentId": IDL2.Func([], [IDL2.Reserved], ["query"]),
+    "__nextFolderId": IDL2.Func([], [IDL2.Reserved], ["query"]),
+    "__nextSearchId": IDL2.Func([], [IDL2.Reserved], ["query"]),
+    "__nextToolUsageId": IDL2.Func([], [IDL2.Reserved], ["query"]),
+    "__searchHistory": IDL2.Func(
+      [IDL2.Opt(SessionId2), IDL2.Opt(IDL2.Nat)],
+      [IDL2.Vec(IDL2.Tuple(SessionId2, IDL2.Vec(SearchRecord2)))],
+      ["query"]
+    ),
+    "__toolUsage": IDL2.Func(
+      [IDL2.Opt(SessionId2), IDL2.Opt(IDL2.Nat)],
+      [IDL2.Vec(IDL2.Tuple(SessionId2, IDL2.Vec(ToolUsage2)))],
+      ["query"]
+    ),
+    "addMessage": IDL2.Func([SessionId2, IDL2.Nat, Message2], [IDL2.Opt(Chat2)], []),
+    "clearActivity": IDL2.Func([SessionId2], [IDL2.Bool], []),
+    "createChat": IDL2.Func([SessionId2, IDL2.Text], [Chat2], []),
+    "createDocument": IDL2.Func(
+      [SessionId2, IDL2.Text, IDL2.Text],
+      [DocumentRecord2],
+      []
+    ),
+    "createFolder": IDL2.Func([SessionId2, IDL2.Text], [Folder2], []),
+    "deleteChat": IDL2.Func([SessionId2, IDL2.Nat], [IDL2.Bool], []),
+    "deleteDocument": IDL2.Func([SessionId2, IDL2.Nat], [IDL2.Bool], []),
+    "deleteFolder": IDL2.Func([SessionId2, IDL2.Nat], [IDL2.Bool], []),
+    "getChat": IDL2.Func([SessionId2, IDL2.Nat], [IDL2.Opt(Chat2)], []),
+    "getDocument": IDL2.Func(
+      [SessionId2, IDL2.Nat],
+      [IDL2.Opt(DocumentRecord2)],
+      []
+    ),
+    "listActivity": IDL2.Func([SessionId2], [IDL2.Vec(ActivityEntry2)], []),
+    "listChats": IDL2.Func([SessionId2], [IDL2.Vec(Chat2)], []),
+    "listDocuments": IDL2.Func([SessionId2], [IDL2.Vec(DocumentRecord2)], []),
+    "listFolders": IDL2.Func([SessionId2], [IDL2.Vec(Folder2)], []),
+    "listSearchHistory": IDL2.Func([SessionId2], [IDL2.Vec(SearchRecord2)], []),
+    "listToolUsage": IDL2.Func([SessionId2], [IDL2.Vec(ToolUsage2)], []),
+    "logActivity": IDL2.Func(
+      [SessionId2, IDL2.Text, IDL2.Text, IDL2.Text],
+      [ActivityEntry2],
+      []
+    ),
+    "logSearch": IDL2.Func([SessionId2, IDL2.Text, IDL2.Nat], [SearchRecord2], []),
+    "logToolUsage": IDL2.Func(
+      [SessionId2, IDL2.Text, IDL2.Text, IDL2.Text],
+      [ToolUsage2],
+      []
+    ),
+    "renameFolder": IDL2.Func(
+      [SessionId2, IDL2.Nat, IDL2.Text],
+      [IDL2.Opt(Folder2)],
+      []
+    ),
+    "updateChat": IDL2.Func(
+      [
+        SessionId2,
+        IDL2.Nat,
+        IDL2.Opt(IDL2.Text),
+        IDL2.Opt(IDL2.Opt(IDL2.Nat)),
+        IDL2.Opt(IDL2.Bool)
+      ],
+      [IDL2.Opt(Chat2)],
+      []
+    ),
+    "updateDocument": IDL2.Func(
+      [SessionId2, IDL2.Nat, IDL2.Text, IDL2.Text],
+      [IDL2.Opt(DocumentRecord2)],
+      []
+    )
+  });
+};
+function isNone(option) {
+  return option.__kind__ === "None";
+}
+function unwrap(option) {
+  if (isNone(option)) {
+    throw new Error("unwrap: none");
+  }
+  return option.value;
+}
+function candid_some(value) {
+  return [
+    value
+  ];
+}
+function candid_none() {
+  return [];
+}
+function record_opt_to_undefined(arg) {
+  return arg == null ? void 0 : arg;
+}
+class Backend {
+  constructor(actor, _uploadFile, _downloadFile, processError2) {
+    this.actor = actor;
+    this._uploadFile = _uploadFile;
+    this._downloadFile = _downloadFile;
+    this.processError = processError2;
+  }
+  async __activity(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__activity(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__activity(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+      return result;
+    }
+  }
+  async __chats(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__chats(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+        return from_candid_vec_n3(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__chats(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+      return from_candid_vec_n3(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async __documents(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__documents(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__documents(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+      return result;
+    }
+  }
+  async __folders(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__folders(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__folders(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+      return result;
+    }
+  }
+  async __nextActivityId() {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__nextActivityId();
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__nextActivityId();
+      return result;
+    }
+  }
+  async __nextChatId() {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__nextChatId();
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__nextChatId();
+      return result;
+    }
+  }
+  async __nextDocumentId() {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__nextDocumentId();
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__nextDocumentId();
+      return result;
+    }
+  }
+  async __nextFolderId() {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__nextFolderId();
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__nextFolderId();
+      return result;
+    }
+  }
+  async __nextSearchId() {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__nextSearchId();
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__nextSearchId();
+      return result;
+    }
+  }
+  async __nextToolUsageId() {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__nextToolUsageId();
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__nextToolUsageId();
+      return result;
+    }
+  }
+  async __searchHistory(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__searchHistory(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__searchHistory(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+      return result;
+    }
+  }
+  async __toolUsage(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.__toolUsage(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.__toolUsage(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+      return result;
+    }
+  }
+  async addMessage(arg0, arg1, arg2) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.addMessage(arg0, arg1, to_candid_Message_n20(this._uploadFile, this._downloadFile, arg2));
+        return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.addMessage(arg0, arg1, to_candid_Message_n20(this._uploadFile, this._downloadFile, arg2));
+      return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async clearActivity(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.clearActivity(arg0);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.clearActivity(arg0);
+      return result;
+    }
+  }
+  async createChat(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.createChat(arg0, arg1);
+        return from_candid_Chat_n6(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.createChat(arg0, arg1);
+      return from_candid_Chat_n6(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async createDocument(arg0, arg1, arg2) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.createDocument(arg0, arg1, arg2);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.createDocument(arg0, arg1, arg2);
+      return result;
+    }
+  }
+  async createFolder(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.createFolder(arg0, arg1);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.createFolder(arg0, arg1);
+      return result;
+    }
+  }
+  async deleteChat(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.deleteChat(arg0, arg1);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.deleteChat(arg0, arg1);
+      return result;
+    }
+  }
+  async deleteDocument(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.deleteDocument(arg0, arg1);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.deleteDocument(arg0, arg1);
+      return result;
+    }
+  }
+  async deleteFolder(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.deleteFolder(arg0, arg1);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.deleteFolder(arg0, arg1);
+      return result;
+    }
+  }
+  async getChat(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.getChat(arg0, arg1);
+        return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.getChat(arg0, arg1);
+      return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async getDocument(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.getDocument(arg0, arg1);
+        return from_candid_opt_n29(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.getDocument(arg0, arg1);
+      return from_candid_opt_n29(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async listActivity(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.listActivity(arg0);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.listActivity(arg0);
+      return result;
+    }
+  }
+  async listChats(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.listChats(arg0);
+        return from_candid_vec_n5(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.listChats(arg0);
+      return from_candid_vec_n5(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async listDocuments(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.listDocuments(arg0);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.listDocuments(arg0);
+      return result;
+    }
+  }
+  async listFolders(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.listFolders(arg0);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.listFolders(arg0);
+      return result;
+    }
+  }
+  async listSearchHistory(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.listSearchHistory(arg0);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.listSearchHistory(arg0);
+      return result;
+    }
+  }
+  async listToolUsage(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.listToolUsage(arg0);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.listToolUsage(arg0);
+      return result;
+    }
+  }
+  async logActivity(arg0, arg1, arg2, arg3) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.logActivity(arg0, arg1, arg2, arg3);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.logActivity(arg0, arg1, arg2, arg3);
+      return result;
+    }
+  }
+  async logSearch(arg0, arg1, arg2) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.logSearch(arg0, arg1, arg2);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.logSearch(arg0, arg1, arg2);
+      return result;
+    }
+  }
+  async logToolUsage(arg0, arg1, arg2, arg3) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.logToolUsage(arg0, arg1, arg2, arg3);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.logToolUsage(arg0, arg1, arg2, arg3);
+      return result;
+    }
+  }
+  async renameFolder(arg0, arg1, arg2) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.renameFolder(arg0, arg1, arg2);
+        return from_candid_opt_n30(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.renameFolder(arg0, arg1, arg2);
+      return from_candid_opt_n30(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async updateChat(arg0, arg1, arg2, arg3, arg4) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.updateChat(arg0, arg1, to_candid_opt_n31(this._uploadFile, this._downloadFile, arg2), to_candid_opt_n32(this._uploadFile, this._downloadFile, arg3), to_candid_opt_n33(this._uploadFile, this._downloadFile, arg4));
+        return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.updateChat(arg0, arg1, to_candid_opt_n31(this._uploadFile, this._downloadFile, arg2), to_candid_opt_n32(this._uploadFile, this._downloadFile, arg3), to_candid_opt_n33(this._uploadFile, this._downloadFile, arg4));
+      return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async updateDocument(arg0, arg1, arg2, arg3) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.updateDocument(arg0, arg1, arg2, arg3);
+        return from_candid_opt_n29(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.updateDocument(arg0, arg1, arg2, arg3);
+      return from_candid_opt_n29(this._uploadFile, this._downloadFile, result);
+    }
+  }
+}
+function from_candid_Chat_n6(_uploadFile, _downloadFile, value) {
+  return from_candid_record_n7(_uploadFile, _downloadFile, value);
+}
+function from_candid_Message_n9(_uploadFile, _downloadFile, value) {
+  return from_candid_record_n10(_uploadFile, _downloadFile, value);
+}
+function from_candid_Mode_n15(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n16(_uploadFile, _downloadFile, value);
+}
+function from_candid_Model_n12(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n13(_uploadFile, _downloadFile, value);
+}
+function from_candid_Role_n17(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n18(_uploadFile, _downloadFile, value);
+}
+function from_candid_opt_n11(_uploadFile, _downloadFile, value) {
+  return value.length === 0 ? null : from_candid_Model_n12(_uploadFile, _downloadFile, value[0]);
+}
+function from_candid_opt_n14(_uploadFile, _downloadFile, value) {
+  return value.length === 0 ? null : from_candid_Mode_n15(_uploadFile, _downloadFile, value[0]);
+}
+function from_candid_opt_n19(_uploadFile, _downloadFile, value) {
+  return value.length === 0 ? null : value[0];
+}
+function from_candid_opt_n28(_uploadFile, _downloadFile, value) {
+  return value.length === 0 ? null : from_candid_Chat_n6(_uploadFile, _downloadFile, value[0]);
+}
+function from_candid_opt_n29(_uploadFile, _downloadFile, value) {
+  return value.length === 0 ? null : value[0];
+}
+function from_candid_opt_n30(_uploadFile, _downloadFile, value) {
+  return value.length === 0 ? null : value[0];
+}
+function from_candid_record_n10(_uploadFile, _downloadFile, value) {
+  return {
+    model: record_opt_to_undefined(from_candid_opt_n11(_uploadFile, _downloadFile, value.model)),
+    content: value.content,
+    mode: record_opt_to_undefined(from_candid_opt_n14(_uploadFile, _downloadFile, value.mode)),
+    role: from_candid_Role_n17(_uploadFile, _downloadFile, value.role),
+    timestamp: value.timestamp
+  };
+}
+function from_candid_record_n7(_uploadFile, _downloadFile, value) {
+  return {
+    id: value.id,
+    title: value.title,
+    messages: from_candid_vec_n8(_uploadFile, _downloadFile, value.messages),
+    createdAt: value.createdAt,
+    updatedAt: value.updatedAt,
+    pinned: value.pinned,
+    folder: record_opt_to_undefined(from_candid_opt_n19(_uploadFile, _downloadFile, value.folder))
+  };
+}
+function from_candid_tuple_n4(_uploadFile, _downloadFile, value) {
+  return [
+    value[0],
+    from_candid_vec_n5(_uploadFile, _downloadFile, value[1])
+  ];
+}
+function from_candid_variant_n13(_uploadFile, _downloadFile, value) {
+  return "gpt" in value ? "gpt" : "claude" in value ? "claude" : "mistral" in value ? "mistral" : "qwen" in value ? "qwen" : "llama" in value ? "llama" : "gemini" in value ? "gemini" : "ollama" in value ? "ollama" : "deepseek" in value ? "deepseek" : value;
+}
+function from_candid_variant_n16(_uploadFile, _downloadFile, value) {
+  return "normal" in value ? "normal" : "research" in value ? "research" : "codingAssistant" in value ? "codingAssistant" : "documentAssistant" in value ? "documentAssistant" : "imageAnalysis" in value ? "imageAnalysis" : "internetSearch" in value ? "internetSearch" : "youtubeSearch" in value ? "youtubeSearch" : "emailAssistant" in value ? "emailAssistant" : "knowledgeBase" in value ? "knowledgeBase" : value;
+}
+function from_candid_variant_n18(_uploadFile, _downloadFile, value) {
+  return "systemMsg" in value ? "systemMsg" : "user" in value ? "user" : "assistant" in value ? "assistant" : value;
+}
+function from_candid_vec_n3(_uploadFile, _downloadFile, value) {
+  return value.map((x2) => from_candid_tuple_n4(_uploadFile, _downloadFile, x2));
+}
+function from_candid_vec_n5(_uploadFile, _downloadFile, value) {
+  return value.map((x2) => from_candid_Chat_n6(_uploadFile, _downloadFile, x2));
+}
+function from_candid_vec_n8(_uploadFile, _downloadFile, value) {
+  return value.map((x2) => from_candid_Message_n9(_uploadFile, _downloadFile, x2));
+}
+function to_candid_Message_n20(_uploadFile, _downloadFile, value) {
+  return to_candid_record_n21(_uploadFile, _downloadFile, value);
+}
+function to_candid_Mode_n24(_uploadFile, _downloadFile, value) {
+  return to_candid_variant_n25(_uploadFile, _downloadFile, value);
+}
+function to_candid_Model_n22(_uploadFile, _downloadFile, value) {
+  return to_candid_variant_n23(_uploadFile, _downloadFile, value);
+}
+function to_candid_Role_n26(_uploadFile, _downloadFile, value) {
+  return to_candid_variant_n27(_uploadFile, _downloadFile, value);
+}
+function to_candid_opt_n1(_uploadFile, _downloadFile, value) {
+  return value === null ? candid_none() : candid_some(value);
+}
+function to_candid_opt_n2(_uploadFile, _downloadFile, value) {
+  return value === null ? candid_none() : candid_some(value);
+}
+function to_candid_opt_n31(_uploadFile, _downloadFile, value) {
+  return value === null ? candid_none() : candid_some(value);
+}
+function to_candid_opt_n32(_uploadFile, _downloadFile, value) {
+  return isNone(value) ? candid_none() : candid_some(to_candid_opt_n2(_uploadFile, _downloadFile, unwrap(value)));
+}
+function to_candid_opt_n33(_uploadFile, _downloadFile, value) {
+  return value === null ? candid_none() : candid_some(value);
+}
+function to_candid_record_n21(_uploadFile, _downloadFile, value) {
+  return {
+    model: value.model ? candid_some(to_candid_Model_n22(_uploadFile, _downloadFile, value.model)) : candid_none(),
+    content: value.content,
+    mode: value.mode ? candid_some(to_candid_Mode_n24(_uploadFile, _downloadFile, value.mode)) : candid_none(),
+    role: to_candid_Role_n26(_uploadFile, _downloadFile, value.role),
+    timestamp: value.timestamp
+  };
+}
+function to_candid_variant_n23(_uploadFile, _downloadFile, value) {
+  return value == "gpt" ? {
+    gpt: null
+  } : value == "claude" ? {
+    claude: null
+  } : value == "mistral" ? {
+    mistral: null
+  } : value == "qwen" ? {
+    qwen: null
+  } : value == "llama" ? {
+    llama: null
+  } : value == "gemini" ? {
+    gemini: null
+  } : value == "ollama" ? {
+    ollama: null
+  } : value == "deepseek" ? {
+    deepseek: null
+  } : value;
+}
+function to_candid_variant_n25(_uploadFile, _downloadFile, value) {
+  return value == "normal" ? {
+    normal: null
+  } : value == "research" ? {
+    research: null
+  } : value == "codingAssistant" ? {
+    codingAssistant: null
+  } : value == "documentAssistant" ? {
+    documentAssistant: null
+  } : value == "imageAnalysis" ? {
+    imageAnalysis: null
+  } : value == "internetSearch" ? {
+    internetSearch: null
+  } : value == "youtubeSearch" ? {
+    youtubeSearch: null
+  } : value == "emailAssistant" ? {
+    emailAssistant: null
+  } : value == "knowledgeBase" ? {
+    knowledgeBase: null
+  } : value;
+}
+function to_candid_variant_n27(_uploadFile, _downloadFile, value) {
+  return value == "systemMsg" ? {
+    systemMsg: null
+  } : value == "user" ? {
+    user: null
+  } : value == "assistant" ? {
+    assistant: null
+  } : value;
+}
+function createActor(canisterId, _uploadFile, _downloadFile, options = {}) {
+  const agent = options.agent || HttpAgent.createSync({
+    ...options.agentOptions
+  });
+  if (options.agent && options.agentOptions) {
+    console.warn("Detected both agent and agentOptions passed to createActor. Ignoring agentOptions and proceeding with the provided agent.");
+  }
+  const actor = Actor.createActor(idlFactory, {
+    agent,
+    canisterId,
+    ...options.actorOptions
+  });
+  return new Backend(actor, _uploadFile, _downloadFile, options.processError);
+}
+function useBackend() {
+  const { actor, isFetching } = useActor(createActor);
+  return {
+    actor,
+    ready: !!actor && !isFetching,
+    isFetching
+  };
+}
+const qk = {
+  chats: (sid) => ["chats", sid],
+  chat: (sid, id2) => ["chat", sid, id2.toString()],
+  folders: (sid) => ["folders", sid],
+  documents: (sid) => ["documents", sid],
+  document: (sid, id2) => ["document", sid, id2.toString()],
+  activity: (sid) => ["activity", sid],
+  toolUsage: (sid) => ["toolUsage", sid],
+  searchHistory: (sid) => ["searchHistory", sid]
+};
+function useChats(sessionId) {
+  const { actor, ready } = useBackend();
+  return useQuery({
+    queryKey: qk.chats(sessionId),
+    queryFn: async () => {
+      if (!actor) return [];
+      return actor.listChats(sessionId);
+    },
+    enabled: ready && !!actor && sessionId.length > 0
+  });
+}
+function useCreateChat(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (title) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.createChat(sessionId, title);
+    },
+    onSuccess: () => {
+      void queryClient2.invalidateQueries({ queryKey: qk.chats(sessionId) });
+    }
+  });
+}
+function useUpdateChat(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (args) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.updateChat(
+        sessionId,
+        args.id,
+        args.title,
+        args.folder,
+        args.pinned
+      );
+    },
+    onSuccess: () => {
+      void queryClient2.invalidateQueries({ queryKey: qk.chats(sessionId) });
+    }
+  });
+}
+function useDeleteChat(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (id2) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.deleteChat(sessionId, id2);
+    },
+    onSuccess: () => {
+      void queryClient2.invalidateQueries({ queryKey: qk.chats(sessionId) });
+    }
+  });
+}
+function useAddMessage(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (args) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.addMessage(sessionId, args.chatId, args.message);
+    },
+    onSuccess: (data) => {
+      void queryClient2.invalidateQueries({ queryKey: qk.chats(sessionId) });
+      if (data) {
+        void queryClient2.invalidateQueries({
+          queryKey: qk.chat(sessionId, data.id)
+        });
+      }
+    }
+  });
+}
+function useFolders(sessionId) {
+  const { actor, ready } = useBackend();
+  return useQuery({
+    queryKey: qk.folders(sessionId),
+    queryFn: async () => {
+      if (!actor) return [];
+      return actor.listFolders(sessionId);
+    },
+    enabled: ready && !!actor && sessionId.length > 0
+  });
+}
+function useCreateFolder(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (name) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.createFolder(sessionId, name);
+    },
+    onSuccess: () => {
+      void queryClient2.invalidateQueries({ queryKey: qk.folders(sessionId) });
+    }
+  });
+}
+function useDeleteFolder(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (id2) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.deleteFolder(sessionId, id2);
+    },
+    onSuccess: () => {
+      void queryClient2.invalidateQueries({ queryKey: qk.folders(sessionId) });
+    }
+  });
+}
+function useActivity(sessionId) {
+  const { actor, ready } = useBackend();
+  return useQuery({
+    queryKey: qk.activity(sessionId),
+    queryFn: async () => {
+      if (!actor) return [];
+      return actor.listActivity(sessionId);
+    },
+    enabled: ready && !!actor && sessionId.length > 0
+  });
+}
+function useLogActivity(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (args) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.logActivity(
+        sessionId,
+        args.activityType,
+        args.summary,
+        args.details
+      );
+    },
+    onSuccess: () => {
+      void queryClient2.invalidateQueries({ queryKey: qk.activity(sessionId) });
+    }
+  });
+}
+function useClearActivity(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async () => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.clearActivity(sessionId);
+    },
+    onSuccess: () => {
+      void queryClient2.invalidateQueries({ queryKey: qk.activity(sessionId) });
+    }
+  });
+}
+function useDocuments(sessionId) {
+  const { actor, ready } = useBackend();
+  return useQuery({
+    queryKey: qk.documents(sessionId),
+    queryFn: async () => {
+      if (!actor) return [];
+      return actor.listDocuments(sessionId);
+    },
+    enabled: ready && !!actor && sessionId.length > 0
+  });
+}
+function useCreateDocument(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (args) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.createDocument(sessionId, args.title, args.content);
+    },
+    onSuccess: () => {
+      void queryClient2.invalidateQueries({ queryKey: qk.documents(sessionId) });
+    }
+  });
+}
+function useUpdateDocument(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (args) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.updateDocument(
+        sessionId,
+        args.docId,
+        args.title,
+        args.content
+      );
+    },
+    onSuccess: (data) => {
+      void queryClient2.invalidateQueries({ queryKey: qk.documents(sessionId) });
+      if (data) {
+        void queryClient2.invalidateQueries({
+          queryKey: qk.document(sessionId, data.id)
+        });
+      }
+    }
+  });
+}
+function useDeleteDocument(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (docId) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.deleteDocument(sessionId, docId);
+    },
+    onSuccess: () => {
+      void queryClient2.invalidateQueries({ queryKey: qk.documents(sessionId) });
+    }
+  });
+}
+function useToolUsage(sessionId) {
+  const { actor, ready } = useBackend();
+  return useQuery({
+    queryKey: qk.toolUsage(sessionId),
+    queryFn: async () => {
+      if (!actor) return [];
+      return actor.listToolUsage(sessionId);
+    },
+    enabled: ready && !!actor && sessionId.length > 0
+  });
+}
+function useLogToolUsage(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (args) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.logToolUsage(
+        sessionId,
+        args.toolName,
+        args.inputSummary,
+        args.outputSummary
+      );
+    },
+    onSuccess: () => {
+      void queryClient2.invalidateQueries({ queryKey: qk.toolUsage(sessionId) });
+    }
+  });
+}
+function useSearchHistory(sessionId) {
+  const { actor, ready } = useBackend();
+  return useQuery({
+    queryKey: qk.searchHistory(sessionId),
+    queryFn: async () => {
+      if (!actor) return [];
+      return actor.listSearchHistory(sessionId);
+    },
+    enabled: ready && !!actor && sessionId.length > 0
+  });
+}
+function useLogSearch(sessionId) {
+  const queryClient2 = useQueryClient();
+  const { actor } = useBackend();
+  return useMutation({
+    mutationFn: async (args) => {
+      if (!actor) throw new Error("Backend actor not ready");
+      return actor.logSearch(sessionId, args.queryText, args.resultCount);
+    },
+    onSuccess: () => {
+      void queryClient2.invalidateQueries({
+        queryKey: qk.searchHistory(sessionId)
+      });
+    }
+  });
+}
+const activityRoute = createRoute({
+  getParentRoute: () => dashboardLayoutRoute,
+  path: "/activity",
+  component: ActivityPage
+});
+const TYPE_META = {
+  chat: {
+    label: "Chat",
+    icon: Bot,
+    chip: "border-primary/30 bg-primary/10 text-primary",
+    badge: "border-primary/20 bg-primary/10 text-primary"
+  },
+  tool: {
+    label: "Tool",
+    icon: Wrench,
+    chip: "border-success/30 bg-success/10 text-success",
+    badge: "border-success/20 bg-success/10 text-success"
+  },
+  search: {
+    label: "Search",
+    icon: Search,
+    chip: "border-warning/30 bg-warning/15 text-warning",
+    badge: "border-warning/30 bg-warning/15 text-warning"
+  },
+  document: {
+    label: "Document",
+    icon: FileText,
+    chip: "border-accent/30 bg-accent/10 text-accent",
+    badge: "border-accent/30 bg-accent/10 text-accent"
+  }
+};
+function metaFor(type) {
+  return TYPE_META[type.toLowerCase()] ?? {
+    label: type || "Activity",
+    icon: Activity,
+    chip: "border-border bg-muted/60 text-muted-foreground",
+    badge: "border-border bg-muted/60 text-muted-foreground"
+  };
+}
+function formatTimestamp(ts) {
+  const date = new Date(ts);
+  if (Number.isNaN(date.getTime())) return "—";
+  const now2 = Date.now();
+  const diff = now2 - ts;
+  const sameDay = date.toDateString() === new Date(now2).toDateString();
+  if (sameDay) {
+    return `Today, ${date.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit"
+    })}`;
+  }
+  if (diff < 7 * 24 * 60 * 60 * 1e3) {
+    return date.toLocaleDateString([], {
+      weekday: "short",
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+  }
+  return date.toLocaleString([], {
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
+function ActivityPage() {
+  const { sessionId, ready: sessionReady } = useSession();
+  const activity = useActivity(sessionId);
+  const toolUsage = useToolUsage(sessionId);
+  const searchHistory = useSearchHistory(sessionId);
+  const clearActivity = useClearActivity(sessionId);
+  const [filter2, setFilter] = reactExports.useState("all");
+  const [query, setQuery] = reactExports.useState("");
+  const [expanded, setExpanded] = reactExports.useState(/* @__PURE__ */ new Set());
+  const loading = !sessionReady || activity.isLoading || toolUsage.isLoading || searchHistory.isLoading;
+  const entries = activity.data ?? [];
+  const tools = toolUsage.data ?? [];
+  const searches = searchHistory.data ?? [];
+  const sortedEntries = reactExports.useMemo(
+    () => [...entries].sort((a2, b2) => Number(b2.timestamp) - Number(a2.timestamp)),
+    [entries]
+  );
+  const filtered = reactExports.useMemo(() => {
+    const q2 = query.trim().toLowerCase();
+    return sortedEntries.filter((e) => {
+      if (filter2 !== "all" && e.activityType.toLowerCase() !== filter2) {
+        return false;
+      }
+      if (!q2) return true;
+      return e.summary.toLowerCase().includes(q2) || e.details.toLowerCase().includes(q2) || e.activityType.toLowerCase().includes(q2);
+    });
+  }, [sortedEntries, filter2, query]);
+  const counts = reactExports.useMemo(() => {
+    const c2 = {
+      all: sortedEntries.length,
+      chat: 0,
+      tool: 0,
+      search: 0,
+      document: 0
+    };
+    for (const e of sortedEntries) {
+      const k2 = e.activityType.toLowerCase();
+      if (k2 in c2) c2[k2] += 1;
+    }
+    return c2;
+  }, [sortedEntries]);
+  function toggleExpand(id2) {
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(id2)) next.delete(id2);
+      else next.add(id2);
+      return next;
+    });
+  }
+  function handleClear() {
+    clearActivity.mutate(void 0, {
+      onSuccess: () => {
+        ue.success("Activity history cleared");
+        setExpanded(/* @__PURE__ */ new Set());
+      },
+      onError: () => ue.error("Couldn't clear activity history")
+    });
+  }
+  const sessionLabel = sessionReady && sessionId ? `${sessionId.slice(0, 8)}…${sessionId.slice(-4)}` : "—";
+  const hasAny = sortedEntries.length > 0 || tools.length > 0 || searches.length > 0;
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto w-full max-w-4xl px-4 py-6 sm:px-6", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      motion.div,
+      {
+        initial: { opacity: 0, y: 12 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+        className: "mb-6 flex flex-col gap-1",
+        children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2.5", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-9 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-primary", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Activity, { className: "size-5", "aria-hidden": true }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "font-display text-2xl font-semibold tracking-tight text-foreground", children: "Activity Log" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground", children: "Every chat, tool run, search, and document edit in your session." })
+          ] })
+        ] })
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      Card,
+      {
+        className: "glass mb-5 border-border/60 p-4",
+        "data-ocid": "activity.session.card",
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap items-center justify-between gap-4", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-10 items-center justify-center rounded-lg border border-success/30 bg-success/10 text-success", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ShieldCheck, { className: "size-5", "aria-hidden": true }) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-w-0", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-medium text-foreground", children: "Anonymous session" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "p",
+                  {
+                    className: "truncate font-mono text-xs text-muted-foreground",
+                    "data-ocid": "activity.session.id",
+                    children: sessionLabel
+                  }
+                )
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-right", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-display text-2xl font-semibold text-foreground", children: sortedEntries.length }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground", children: "activities" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden h-10 w-px bg-border sm:block" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hidden text-right sm:block", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-display text-2xl font-semibold text-foreground", children: tools.length + searches.length }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground", children: "tools & searches" })
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-xs text-muted-foreground", children: "Data is scoped to this browser only — no account, no shared workspace." })
+        ]
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        Tabs,
+        {
+          value: filter2,
+          onValueChange: (v2) => setFilter(v2),
+          className: "w-full sm:w-auto",
+          children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            TabsList,
+            {
+              className: "flex w-full flex-wrap sm:w-auto",
+              "data-ocid": "activity.filter.tabs",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(TabsTrigger, { value: "all", "data-ocid": "activity.filter.tab.all", children: [
+                  "All (",
+                  counts.all,
+                  ")"
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(TabsTrigger, { value: "chat", "data-ocid": "activity.filter.tab.chat", children: [
+                  "Chat (",
+                  counts.chat,
+                  ")"
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(TabsTrigger, { value: "tool", "data-ocid": "activity.filter.tab.tool", children: [
+                  "Tool (",
+                  counts.tool,
+                  ")"
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(TabsTrigger, { value: "search", "data-ocid": "activity.filter.tab.search", children: [
+                  "Search (",
+                  counts.search,
+                  ")"
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  TabsTrigger,
+                  {
+                    value: "document",
+                    "data-ocid": "activity.filter.tab.document",
+                    children: [
+                      "Document (",
+                      counts.document,
+                      ")"
+                    ]
+                  }
+                )
+              ]
+            }
+          )
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex-1 sm:w-64", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Search,
+            {
+              className: "pointer-events-none absolute left-2.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground",
+              "aria-hidden": true
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Input,
+            {
+              value: query,
+              onChange: (e) => setQuery(e.target.value),
+              placeholder: "Search activity…",
+              className: "pl-8",
+              "aria-label": "Search activity",
+              "data-ocid": "activity.search_input"
+            }
+          )
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(AlertDialog, { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDialogTrigger, { asChild: true, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            Button,
+            {
+              variant: "outline",
+              size: "sm",
+              className: "gap-1.5 text-destructive hover:bg-destructive/10 hover:text-destructive",
+              disabled: !hasAny || clearActivity.isPending,
+              "data-ocid": "activity.clear_button",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { className: "size-3.5" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "hidden sm:inline", children: "Clear all" })
+              ]
+            }
+          ) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(AlertDialogContent, { "data-ocid": "activity.clear_dialog", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(AlertDialogHeader, { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDialogTitle, { children: "Clear all activity?" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDialogDescription, { children: "This wipes every chat, tool, search, and document entry from this browser's session. This cannot be undone." })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(AlertDialogFooter, { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDialogCancel, { "data-ocid": "activity.clear.cancel_button", children: "Cancel" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                AlertDialogAction,
+                {
+                  onClick: handleClear,
+                  className: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+                  "data-ocid": "activity.clear.confirm_button",
+                  children: "Clear all"
+                }
+              )
+            ] })
+          ] })
+        ] })
+      ] })
+    ] }),
+    loading ? /* @__PURE__ */ jsxRuntimeExports.jsx(ActivitySkeleton, {}) : filtered.length === 0 && tools.length === 0 && searches.length === 0 ? /* @__PURE__ */ jsxRuntimeExports.jsx(EmptyState$1, {}) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { "data-ocid": "activity.feed.section", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(SectionLabel, { icon: Activity, text: "Activity feed" }),
+        filtered.length === 0 ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "p",
+          {
+            className: "rounded-lg border border-dashed border-border bg-muted/30 px-4 py-8 text-center text-sm text-muted-foreground",
+            "data-ocid": "activity.feed.empty_state",
+            children: "No entries match your filter or search."
+          }
+        ) : /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-2", "data-ocid": "activity.feed.list", children: filtered.map((entry, idx) => {
+          const meta = metaFor(entry.activityType);
+          const id2 = `a-${entry.id.toString()}`;
+          const isOpen = expanded.has(id2);
+          const hasDetails = entry.details.trim().length > 0;
+          return /* @__PURE__ */ jsxRuntimeExports.jsx("li", { "data-ocid": `activity.item.${idx + 1}`, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "glass border-border/60 p-0 transition-smooth hover:border-primary/30", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "button",
+              {
+                type: "button",
+                onClick: () => hasDetails && toggleExpand(id2),
+                disabled: !hasDetails,
+                "aria-expanded": isOpen,
+                className: "flex w-full items-start gap-3 p-3 text-left disabled:cursor-default",
+                "data-ocid": `activity.row.${idx + 1}`,
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "div",
+                    {
+                      className: `mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg border ${meta.chip}`,
+                      children: /* @__PURE__ */ jsxRuntimeExports.jsx(meta.icon, { className: "size-4", "aria-hidden": true })
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-w-0 flex-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap items-center gap-2", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        Badge$1,
+                        {
+                          variant: "outline",
+                          className: meta.badge,
+                          "data-ocid": `activity.type_badge.${idx + 1}`,
+                          children: meta.label
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: formatTimestamp(Number(entry.timestamp)) })
+                    ] }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1.5 text-sm font-medium text-foreground break-words", children: entry.summary })
+                  ] }),
+                  hasDetails && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    ChevronDown,
+                    {
+                      className: `mt-1 size-4 shrink-0 text-muted-foreground transition-transform ${isOpen ? "rotate-180" : ""}`,
+                      "aria-hidden": true
+                    }
+                  )
+                ]
+              }
+            ),
+            hasDetails && isOpen && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-t border-border/60 px-3 py-2.5 pl-14", children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "whitespace-pre-wrap text-xs leading-relaxed text-muted-foreground break-words", children: entry.details }) })
+          ] }) }, id2);
+        }) })
+      ] }),
+      tools.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(
+        CollapsibleSection,
+        {
+          title: "Tool usage history",
+          icon: Wrench,
+          count: tools.length,
+          ocid: "activity.tools",
+          children: /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-2", children: [...tools].sort((a2, b2) => Number(b2.timestamp) - Number(a2.timestamp)).map((t, idx) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "li",
+            {
+              "data-ocid": `activity.tools.item.${idx + 1}`,
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx(Card, { className: "glass border-border/60 p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg border border-success/30 bg-success/10 text-success", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Wrench, { className: "size-4", "aria-hidden": true }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-w-0 flex-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap items-center gap-2", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      Badge$1,
+                      {
+                        variant: "outline",
+                        className: "border-success/20 bg-success/10 text-success",
+                        children: t.toolName
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: formatTimestamp(Number(t.timestamp)) })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1.5 text-sm font-medium text-foreground break-words", children: t.inputSummary }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-xs text-muted-foreground break-words", children: t.outputSummary })
+                ] })
+              ] }) })
+            },
+            `t-${t.id.toString()}`
+          )) })
+        }
+      ),
+      searches.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(
+        CollapsibleSection,
+        {
+          title: "Search history",
+          icon: Globe,
+          count: searches.length,
+          ocid: "activity.searches",
+          children: /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-2", children: [...searches].sort((a2, b2) => Number(b2.timestamp) - Number(a2.timestamp)).map((s, idx) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "li",
+            {
+              "data-ocid": `activity.searches.item.${idx + 1}`,
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx(Card, { className: "glass border-border/60 p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg border border-warning/30 bg-warning/15 text-warning", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Search, { className: "size-4", "aria-hidden": true }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-w-0 flex-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap items-center gap-2", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      Badge$1,
+                      {
+                        variant: "outline",
+                        className: "border-warning/30 bg-warning/15 text-warning",
+                        children: [
+                          s.resultCount.toString(),
+                          " results"
+                        ]
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: formatTimestamp(Number(s.timestamp)) })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1.5 text-sm font-medium text-foreground break-words", children: s.queryText })
+                ] })
+              ] }) })
+            },
+            `s-${s.id.toString()}`
+          )) })
+        }
+      )
+    ] })
+  ] });
+}
+function SectionLabel({
+  icon: Icon2,
+  text
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-2 flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-muted-foreground", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { className: "size-3.5", "aria-hidden": true }),
+    text
+  ] });
+}
+function CollapsibleSection({
+  title,
+  icon: Icon2,
+  count: count2,
+  ocid,
+  children
+}) {
+  const [open, setOpen] = reactExports.useState(false);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(Collapsible, { open, onOpenChange: setOpen, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(CollapsibleTrigger, { asChild: true, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "button",
+      {
+        type: "button",
+        className: "flex w-full items-center gap-2 rounded-lg border border-border/60 bg-card/60 px-3 py-2.5 text-left transition-smooth hover:bg-card",
+        "data-ocid": `${ocid}.toggle`,
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { className: "size-4 text-muted-foreground", "aria-hidden": true }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "flex-1 text-sm font-medium text-foreground", children: title }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Badge$1, { variant: "secondary", className: "bg-muted text-muted-foreground", children: count2 }),
+          open ? /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronDown, { className: "size-4 text-muted-foreground", "aria-hidden": true }) : /* @__PURE__ */ jsxRuntimeExports.jsx(
+            ChevronRight,
+            {
+              className: "size-4 text-muted-foreground",
+              "aria-hidden": true
+            }
+          )
+        ]
+      }
+    ) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(CollapsibleContent, { className: "mt-2", "data-ocid": `${ocid}.panel`, children })
+  ] });
+}
+function EmptyState$1() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    motion.div,
+    {
+      initial: { opacity: 0, y: 12 },
+      animate: { opacity: 1, y: 0 },
+      transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+      className: "flex flex-col items-center justify-center rounded-xl border border-dashed border-border bg-muted/20 px-6 py-16 text-center",
+      "data-ocid": "activity.empty_state",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-14 items-center justify-center rounded-2xl border border-primary/30 bg-primary/10 text-primary", children: /* @__PURE__ */ jsxRuntimeExports.jsx(History, { className: "size-7", "aria-hidden": true }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "mt-4 font-display text-lg font-semibold text-foreground", children: "No activity yet" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 max-w-sm text-sm text-muted-foreground", children: "Start chatting, using tools, or searching to see your history here. Everything is saved to this browser's anonymous session." })
+      ]
+    }
+  );
+}
+function ActivitySkeleton() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-2", "data-ocid": "activity.loading_state", children: Array.from({ length: 5 }).map((_2, i) => (
+    // biome-ignore lint/suspicious/noArrayIndexKey: static skeleton placeholders
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Card, { className: "glass border-border/60 p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "size-8 rounded-lg" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 space-y-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "h-4 w-24" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "h-4 w-3/4" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "h-3 w-1/2" })
+      ] })
+    ] }) }, i)
+  )) });
+}
+function Textarea({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "textarea",
+    {
+      "data-slot": "textarea",
+      className: cn(
+        "border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content min-h-16 w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        className
+      ),
+      ...props
+    }
+  );
 }
 const sides = ["top", "right", "bottom", "left"];
 const min = Math.min;
@@ -45853,7 +50719,7 @@ function getPaddingObject(padding) {
 }
 function rectToClientRect(rect) {
   const {
-    x: x3,
+    x: x2,
     y: y2,
     width,
     height
@@ -45862,10 +50728,10 @@ function rectToClientRect(rect) {
     width,
     height,
     top: y2,
-    left: x3,
-    right: x3 + width,
+    left: x2,
+    right: x2 + width,
     bottom: y2 + height,
-    x: x3,
+    x: x2,
     y: y2
   };
 }
@@ -45930,7 +50796,7 @@ async function detectOverflow(state, options) {
     options = {};
   }
   const {
-    x: x3,
+    x: x2,
     y: y2,
     platform: platform2,
     rects,
@@ -45954,7 +50820,7 @@ async function detectOverflow(state, options) {
     strategy
   }));
   const rect = elementContext === "floating" ? {
-    x: x3,
+    x: x2,
     y: y2,
     width: rects.floating.width,
     height: rects.floating.height
@@ -45999,7 +50865,7 @@ const computePosition$1 = async (reference, floating, config) => {
     strategy
   });
   let {
-    x: x3,
+    x: x2,
     y: y2
   } = computeCoordsFromPlacement(rects, placement, rtl);
   let statefulPlacement = placement;
@@ -46020,7 +50886,7 @@ const computePosition$1 = async (reference, floating, config) => {
       data,
       reset
     } = await fn({
-      x: x3,
+      x: x2,
       y: y2,
       initialPlacement: placement,
       placement: statefulPlacement,
@@ -46033,7 +50899,7 @@ const computePosition$1 = async (reference, floating, config) => {
         floating
       }
     });
-    x3 = nextX != null ? nextX : x3;
+    x2 = nextX != null ? nextX : x2;
     y2 = nextY != null ? nextY : y2;
     middlewareData[name] = {
       ...middlewareData[name],
@@ -46053,7 +50919,7 @@ const computePosition$1 = async (reference, floating, config) => {
           }) : reset.rects;
         }
         ({
-          x: x3,
+          x: x2,
           y: y2
         } = computeCoordsFromPlacement(rects, statefulPlacement, rtl));
       }
@@ -46061,7 +50927,7 @@ const computePosition$1 = async (reference, floating, config) => {
     }
   }
   return {
-    x: x3,
+    x: x2,
     y: y2,
     placement: statefulPlacement,
     strategy,
@@ -46073,7 +50939,7 @@ const arrow$3 = (options) => ({
   options,
   async fn(state) {
     const {
-      x: x3,
+      x: x2,
       y: y2,
       placement,
       rects,
@@ -46090,7 +50956,7 @@ const arrow$3 = (options) => ({
     }
     const paddingObject = getPaddingObject(padding);
     const coords = {
-      x: x3,
+      x: x2,
       y: y2
     };
     const axis = getAlignmentAxis(placement);
@@ -46348,7 +51214,7 @@ const offset$2 = function(options) {
     async fn(state) {
       var _middlewareData$offse, _middlewareData$arrow;
       const {
-        x: x3,
+        x: x2,
         y: y2,
         placement,
         middlewareData
@@ -46358,7 +51224,7 @@ const offset$2 = function(options) {
         return {};
       }
       return {
-        x: x3 + diffCoords.x,
+        x: x2 + diffCoords.x,
         y: y2 + diffCoords.y,
         data: {
           ...diffCoords,
@@ -46377,7 +51243,7 @@ const shift$2 = function(options) {
     options,
     async fn(state) {
       const {
-        x: x3,
+        x: x2,
         y: y2,
         placement,
         platform: platform2
@@ -46388,11 +51254,11 @@ const shift$2 = function(options) {
         limiter = {
           fn: (_ref) => {
             let {
-              x: x4,
+              x: x3,
               y: y3
             } = _ref;
             return {
-              x: x4,
+              x: x3,
               y: y3
             };
           }
@@ -46400,7 +51266,7 @@ const shift$2 = function(options) {
         ...detectOverflowOptions
       } = evaluate(options, state);
       const coords = {
-        x: x3,
+        x: x2,
         y: y2
       };
       const overflow = await platform2.detectOverflow(state, detectOverflowOptions);
@@ -46430,7 +51296,7 @@ const shift$2 = function(options) {
       return {
         ...limitedCoords,
         data: {
-          x: limitedCoords.x - x3,
+          x: limitedCoords.x - x2,
           y: limitedCoords.y - y2,
           enabled: {
             [mainAxis]: checkMainAxis,
@@ -46449,7 +51315,7 @@ const limitShift$2 = function(options) {
     options,
     fn(state) {
       const {
-        x: x3,
+        x: x2,
         y: y2,
         placement,
         rects,
@@ -46461,7 +51327,7 @@ const limitShift$2 = function(options) {
         crossAxis: checkCrossAxis = true
       } = evaluate(options, state);
       const coords = {
-        x: x3,
+        x: x2,
         y: y2
       };
       const crossAxis = getSideAxis(placement);
@@ -46613,7 +51479,7 @@ function isElement(value) {
   }
   return value instanceof Element || value instanceof getWindow(value).Element;
 }
-function isHTMLElement$1(value) {
+function isHTMLElement(value) {
   if (!hasWindow()) {
     return false;
   }
@@ -46660,7 +51526,7 @@ function isContainingBlock(elementOrCss) {
 }
 function getContainingBlock(element) {
   let currentNode = getParentNode(element);
-  while (isHTMLElement$1(currentNode) && !isLastTraversableNode(currentNode)) {
+  while (isHTMLElement(currentNode) && !isLastTraversableNode(currentNode)) {
     if (isContainingBlock(currentNode)) {
       return currentNode;
     } else if (isTopLayer(currentNode)) {
@@ -46712,7 +51578,7 @@ function getNearestOverflowAncestor(node) {
   if (isLastTraversableNode(parentNode)) {
     return node.ownerDocument ? node.ownerDocument.body : node.body;
   }
-  if (isHTMLElement$1(parentNode) && isOverflowElement(parentNode)) {
+  if (isHTMLElement(parentNode) && isOverflowElement(parentNode)) {
     return parentNode;
   }
   return getNearestOverflowAncestor(parentNode);
@@ -46742,7 +51608,7 @@ function getCssDimensions(element) {
   const css = getComputedStyle$1(element);
   let width = parseFloat(css.width) || 0;
   let height = parseFloat(css.height) || 0;
-  const hasOffset = isHTMLElement$1(element);
+  const hasOffset = isHTMLElement(element);
   const offsetWidth = hasOffset ? element.offsetWidth : width;
   const offsetHeight = hasOffset ? element.offsetHeight : height;
   const shouldFallback = round(width) !== offsetWidth || round(height) !== offsetHeight;
@@ -46761,7 +51627,7 @@ function unwrapElement(element) {
 }
 function getScale(element) {
   const domElement = unwrapElement(element);
-  if (!isHTMLElement$1(domElement)) {
+  if (!isHTMLElement(domElement)) {
     return createCoords(1);
   }
   const rect = domElement.getBoundingClientRect();
@@ -46770,16 +51636,16 @@ function getScale(element) {
     height,
     $: $2
   } = getCssDimensions(domElement);
-  let x3 = ($2 ? round(rect.width) : rect.width) / width;
+  let x2 = ($2 ? round(rect.width) : rect.width) / width;
   let y2 = ($2 ? round(rect.height) : rect.height) / height;
-  if (!x3 || !Number.isFinite(x3)) {
-    x3 = 1;
+  if (!x2 || !Number.isFinite(x2)) {
+    x2 = 1;
   }
   if (!y2 || !Number.isFinite(y2)) {
     y2 = 1;
   }
   return {
-    x: x3,
+    x: x2,
     y: y2
   };
 }
@@ -46823,7 +51689,7 @@ function getBoundingClientRect(element, includeScale, isFixedStrategy, offsetPar
     }
   }
   const visualOffsets = shouldAddVisualOffsets(domElement, isFixedStrategy, offsetParent) ? getVisualOffsets(domElement) : createCoords(0);
-  let x3 = (clientRect.left + visualOffsets.x) / scale2.x;
+  let x2 = (clientRect.left + visualOffsets.x) / scale2.x;
   let y2 = (clientRect.top + visualOffsets.y) / scale2.y;
   let width = clientRect.width / scale2.x;
   let height = clientRect.height / scale2.y;
@@ -46838,11 +51704,11 @@ function getBoundingClientRect(element, includeScale, isFixedStrategy, offsetPar
       const css = getComputedStyle$1(currentIFrame);
       const left = iframeRect.left + (currentIFrame.clientLeft + parseFloat(css.paddingLeft)) * iframeScale.x;
       const top = iframeRect.top + (currentIFrame.clientTop + parseFloat(css.paddingTop)) * iframeScale.y;
-      x3 *= iframeScale.x;
+      x2 *= iframeScale.x;
       y2 *= iframeScale.y;
       width *= iframeScale.x;
       height *= iframeScale.y;
-      x3 += left;
+      x2 += left;
       y2 += top;
       currentWin = getWindow(currentIFrame);
       currentIFrame = getFrameElement(currentWin);
@@ -46851,7 +51717,7 @@ function getBoundingClientRect(element, includeScale, isFixedStrategy, offsetPar
   return rectToClientRect({
     width,
     height,
-    x: x3,
+    x: x2,
     y: y2
   });
 }
@@ -46864,10 +51730,10 @@ function getWindowScrollBarX(element, rect) {
 }
 function getHTMLOffset(documentElement, scroll) {
   const htmlRect = documentElement.getBoundingClientRect();
-  const x3 = htmlRect.left + scroll.scrollLeft - getWindowScrollBarX(documentElement, htmlRect);
+  const x2 = htmlRect.left + scroll.scrollLeft - getWindowScrollBarX(documentElement, htmlRect);
   const y2 = htmlRect.top + scroll.scrollTop;
   return {
-    x: x3,
+    x: x2,
     y: y2
   };
 }
@@ -46890,7 +51756,7 @@ function convertOffsetParentRelativeRectToViewportRelativeRect(_ref) {
   };
   let scale2 = createCoords(1);
   const offsets = createCoords(0);
-  const isOffsetParentAnElement = isHTMLElement$1(offsetParent);
+  const isOffsetParentAnElement = isHTMLElement(offsetParent);
   if (isOffsetParentAnElement || !isOffsetParentAnElement && !isFixed) {
     if (getNodeName(offsetParent) !== "body" || isOverflowElement(documentElement)) {
       scroll = getNodeScroll(offsetParent);
@@ -46919,15 +51785,15 @@ function getDocumentRect(element) {
   const body = element.ownerDocument.body;
   const width = max(html.scrollWidth, html.clientWidth, body.scrollWidth, body.clientWidth);
   const height = max(html.scrollHeight, html.clientHeight, body.scrollHeight, body.clientHeight);
-  let x3 = -scroll.scrollLeft + getWindowScrollBarX(element);
+  let x2 = -scroll.scrollLeft + getWindowScrollBarX(element);
   const y2 = -scroll.scrollTop;
   if (getComputedStyle$1(body).direction === "rtl") {
-    x3 += max(html.clientWidth, body.clientWidth) - width;
+    x2 += max(html.clientWidth, body.clientWidth) - width;
   }
   return {
     width,
     height,
-    x: x3,
+    x: x2,
     y: y2
   };
 }
@@ -46938,14 +51804,14 @@ function getViewportRect(element, strategy) {
   const visualViewport = win.visualViewport;
   let width = html.clientWidth;
   let height = html.clientHeight;
-  let x3 = 0;
+  let x2 = 0;
   let y2 = 0;
   if (visualViewport) {
     width = visualViewport.width;
     height = visualViewport.height;
     const visualViewportBased = isWebKit();
     if (!visualViewportBased || visualViewportBased && strategy === "fixed") {
-      x3 = visualViewport.offsetLeft;
+      x2 = visualViewport.offsetLeft;
       y2 = visualViewport.offsetTop;
     }
   }
@@ -46965,7 +51831,7 @@ function getViewportRect(element, strategy) {
   return {
     width,
     height,
-    x: x3,
+    x: x2,
     y: y2
   };
 }
@@ -46973,15 +51839,15 @@ function getInnerBoundingClientRect(element, strategy) {
   const clientRect = getBoundingClientRect(element, true, strategy === "fixed");
   const top = clientRect.top + element.clientTop;
   const left = clientRect.left + element.clientLeft;
-  const scale2 = isHTMLElement$1(element) ? getScale(element) : createCoords(1);
+  const scale2 = isHTMLElement(element) ? getScale(element) : createCoords(1);
   const width = element.clientWidth * scale2.x;
   const height = element.clientHeight * scale2.y;
-  const x3 = left * scale2.x;
+  const x2 = left * scale2.x;
   const y2 = top * scale2.y;
   return {
     width,
     height,
-    x: x3,
+    x: x2,
     y: y2
   };
 }
@@ -47076,7 +51942,7 @@ function getDimensions(element) {
   };
 }
 function getRectRelativeToOffsetParent(element, offsetParent, strategy) {
-  const isOffsetParentAnElement = isHTMLElement$1(offsetParent);
+  const isOffsetParentAnElement = isHTMLElement(offsetParent);
   const documentElement = getDocumentElement(offsetParent);
   const isFixed = strategy === "fixed";
   const rect = getBoundingClientRect(element, true, isFixed, offsetParent);
@@ -47104,10 +51970,10 @@ function getRectRelativeToOffsetParent(element, offsetParent, strategy) {
     setLeftRTLScrollbarOffset();
   }
   const htmlOffset = documentElement && !isOffsetParentAnElement && !isFixed ? getHTMLOffset(documentElement, scroll) : createCoords(0);
-  const x3 = rect.left + scroll.scrollLeft - offsets.x - htmlOffset.x;
+  const x2 = rect.left + scroll.scrollLeft - offsets.x - htmlOffset.x;
   const y2 = rect.top + scroll.scrollTop - offsets.y - htmlOffset.y;
   return {
-    x: x3,
+    x: x2,
     y: y2,
     width: rect.width,
     height: rect.height
@@ -47117,7 +51983,7 @@ function isStaticPositioned(element) {
   return getComputedStyle$1(element).position === "static";
 }
 function getTrueOffsetParent(element, polyfill2) {
-  if (!isHTMLElement$1(element) || getComputedStyle$1(element).position === "fixed") {
+  if (!isHTMLElement(element) || getComputedStyle$1(element).position === "fixed") {
     return null;
   }
   if (polyfill2) {
@@ -47134,7 +52000,7 @@ function getOffsetParent(element, polyfill2) {
   if (isTopLayer(element)) {
     return win;
   }
-  if (!isHTMLElement$1(element)) {
+  if (!isHTMLElement(element)) {
     let svgOffsetParent = getParentNode(element);
     while (svgOffsetParent && !isLastTraversableNode(svgOffsetParent)) {
       if (isElement(svgOffsetParent) && !isStaticPositioned(svgOffsetParent)) {
@@ -47355,7 +52221,7 @@ var isClient = typeof document !== "undefined";
 var noop = function noop2() {
 };
 var index = isClient ? reactExports.useLayoutEffect : noop;
-function deepEqual$1(a2, b2) {
+function deepEqual(a2, b2) {
   if (a2 === b2) {
     return true;
   }
@@ -47373,7 +52239,7 @@ function deepEqual$1(a2, b2) {
       length = a2.length;
       if (length !== b2.length) return false;
       for (i = length; i-- !== 0; ) {
-        if (!deepEqual$1(a2[i], b2[i])) {
+        if (!deepEqual(a2[i], b2[i])) {
           return false;
         }
       }
@@ -47394,7 +52260,7 @@ function deepEqual$1(a2, b2) {
       if (key === "_owner" && a2.$$typeof) {
         continue;
       }
-      if (!deepEqual$1(a2[key], b2[key])) {
+      if (!deepEqual(a2[key], b2[key])) {
         return false;
       }
     }
@@ -47446,7 +52312,7 @@ function useFloating(options) {
     isPositioned: false
   });
   const [latestMiddleware, setLatestMiddleware] = reactExports.useState(middleware);
-  if (!deepEqual$1(latestMiddleware, middleware)) {
+  if (!deepEqual(latestMiddleware, middleware)) {
     setLatestMiddleware(middleware);
   }
   const [_reference, _setReference] = reactExports.useState(null);
@@ -47493,7 +52359,7 @@ function useFloating(options) {
         // setting it to `true` when `open === false` (must be specified).
         isPositioned: openRef.current !== false
       };
-      if (isMountedRef.current && !deepEqual$1(dataRef.current, fullData)) {
+      if (isMountedRef.current && !deepEqual(dataRef.current, fullData)) {
         dataRef.current = fullData;
         reactDomExports.flushSync(() => {
           setData(fullData);
@@ -47546,12 +52412,12 @@ function useFloating(options) {
     if (!elements.floating) {
       return initialStyles;
     }
-    const x3 = roundByDPR(elements.floating, data.x);
+    const x2 = roundByDPR(elements.floating, data.x);
     const y2 = roundByDPR(elements.floating, data.y);
     if (transform) {
       return {
         ...initialStyles,
-        transform: "translate(" + x3 + "px, " + y2 + "px)",
+        transform: "translate(" + x2 + "px, " + y2 + "px)",
         ...getDPR(elements.floating) >= 1.5 && {
           willChange: "transform"
         }
@@ -47559,7 +52425,7 @@ function useFloating(options) {
     }
     return {
       position: strategy,
-      left: x3,
+      left: x2,
       top: y2
     };
   }, [strategy, transform, elements.floating, data.x, data.y]);
@@ -47710,7 +52576,7 @@ function useSize(element) {
   return size2;
 }
 var POPPER_NAME = "Popper";
-var [createPopperContext, createPopperScope] = createContextScope(POPPER_NAME);
+var [createPopperContext, createPopperScope] = createContextScope$1(POPPER_NAME);
 var [PopperProvider, usePopperContext] = createPopperContext(POPPER_NAME);
 var Popper = (props) => {
   const { __scopePopper, children } = props;
@@ -47737,8 +52603,8 @@ var PopperAnchor = reactExports.forwardRef(
   }
 );
 PopperAnchor.displayName = ANCHOR_NAME$1;
-var CONTENT_NAME$6 = "PopperContent";
-var [PopperContentProvider, useContentContext] = createPopperContext(CONTENT_NAME$6);
+var CONTENT_NAME$4 = "PopperContent";
+var [PopperContentProvider, useContentContext] = createPopperContext(CONTENT_NAME$4);
 var PopperContent = reactExports.forwardRef(
   (props, forwardedRef) => {
     var _a2, _b2, _c2, _d2, _e2, _f2;
@@ -47758,7 +52624,7 @@ var PopperContent = reactExports.forwardRef(
       onPlaced,
       ...contentProps
     } = props;
-    const context = usePopperContext(CONTENT_NAME$6, __scopePopper);
+    const context = usePopperContext(CONTENT_NAME$4, __scopePopper);
     const [content, setContent] = reactExports.useState(null);
     const composedRefs = useComposedRefs(forwardedRef, (node) => setContent(node));
     const [arrow$12, setArrow] = reactExports.useState(null);
@@ -47881,7 +52747,7 @@ var PopperContent = reactExports.forwardRef(
     );
   }
 );
-PopperContent.displayName = CONTENT_NAME$6;
+PopperContent.displayName = CONTENT_NAME$4;
 var ARROW_NAME$4 = "PopperArrow";
 var OPPOSITE_SIDE = {
   top: "bottom",
@@ -47954,231 +52820,32 @@ var transformOrigin = (options) => ({
     const noArrowAlign = { start: "0%", center: "50%", end: "100%" }[placedAlign];
     const arrowXCenter = (((_b2 = middlewareData.arrow) == null ? void 0 : _b2.x) ?? 0) + arrowWidth / 2;
     const arrowYCenter = (((_c2 = middlewareData.arrow) == null ? void 0 : _c2.y) ?? 0) + arrowHeight / 2;
-    let x3 = "";
+    let x2 = "";
     let y2 = "";
     if (placedSide === "bottom") {
-      x3 = isArrowHidden ? noArrowAlign : `${arrowXCenter}px`;
+      x2 = isArrowHidden ? noArrowAlign : `${arrowXCenter}px`;
       y2 = `${-arrowHeight}px`;
     } else if (placedSide === "top") {
-      x3 = isArrowHidden ? noArrowAlign : `${arrowXCenter}px`;
+      x2 = isArrowHidden ? noArrowAlign : `${arrowXCenter}px`;
       y2 = `${rects.floating.height + arrowHeight}px`;
     } else if (placedSide === "right") {
-      x3 = `${-arrowHeight}px`;
+      x2 = `${-arrowHeight}px`;
       y2 = isArrowHidden ? noArrowAlign : `${arrowYCenter}px`;
     } else if (placedSide === "left") {
-      x3 = `${rects.floating.width + arrowHeight}px`;
+      x2 = `${rects.floating.width + arrowHeight}px`;
       y2 = isArrowHidden ? noArrowAlign : `${arrowYCenter}px`;
     }
-    return { data: { x: x3, y: y2 } };
+    return { data: { x: x2, y: y2 } };
   }
 });
 function getSideAndAlignFromPlacement(placement) {
   const [side, align = "center"] = placement.split("-");
   return [side, align];
 }
-var Root2$3 = Popper;
+var Root2$2 = Popper;
 var Anchor = PopperAnchor;
-var Content$1 = PopperContent;
+var Content = PopperContent;
 var Arrow = PopperArrow;
-var PORTAL_NAME$5 = "Portal";
-var Portal$4 = reactExports.forwardRef((props, forwardedRef) => {
-  var _a2;
-  const { container: containerProp, ...portalProps } = props;
-  const [mounted, setMounted] = reactExports.useState(false);
-  useLayoutEffect2(() => setMounted(true), []);
-  const container = containerProp || mounted && ((_a2 = globalThis == null ? void 0 : globalThis.document) == null ? void 0 : _a2.body);
-  return container ? ReactDOM$2.createPortal(/* @__PURE__ */ jsxRuntimeExports.jsx(Primitive$1.div, { ...portalProps, ref: forwardedRef }), container) : null;
-});
-Portal$4.displayName = PORTAL_NAME$5;
-function useStateMachine(initialState, machine) {
-  return reactExports.useReducer((state, event) => {
-    const nextState = machine[state][event];
-    return nextState ?? state;
-  }, initialState);
-}
-var Presence = (props) => {
-  const { present, children } = props;
-  const presence = usePresence(present);
-  const child = typeof children === "function" ? children({ present: presence.isPresent }) : reactExports.Children.only(children);
-  const ref = useComposedRefs(presence.ref, getElementRef(child));
-  const forceMount = typeof children === "function";
-  return forceMount || presence.isPresent ? reactExports.cloneElement(child, { ref }) : null;
-};
-Presence.displayName = "Presence";
-function usePresence(present) {
-  const [node, setNode] = reactExports.useState();
-  const stylesRef = reactExports.useRef(null);
-  const prevPresentRef = reactExports.useRef(present);
-  const prevAnimationNameRef = reactExports.useRef("none");
-  const initialState = present ? "mounted" : "unmounted";
-  const [state, send] = useStateMachine(initialState, {
-    mounted: {
-      UNMOUNT: "unmounted",
-      ANIMATION_OUT: "unmountSuspended"
-    },
-    unmountSuspended: {
-      MOUNT: "mounted",
-      ANIMATION_END: "unmounted"
-    },
-    unmounted: {
-      MOUNT: "mounted"
-    }
-  });
-  reactExports.useEffect(() => {
-    const currentAnimationName = getAnimationName(stylesRef.current);
-    prevAnimationNameRef.current = state === "mounted" ? currentAnimationName : "none";
-  }, [state]);
-  useLayoutEffect2(() => {
-    const styles = stylesRef.current;
-    const wasPresent = prevPresentRef.current;
-    const hasPresentChanged = wasPresent !== present;
-    if (hasPresentChanged) {
-      const prevAnimationName = prevAnimationNameRef.current;
-      const currentAnimationName = getAnimationName(styles);
-      if (present) {
-        send("MOUNT");
-      } else if (currentAnimationName === "none" || (styles == null ? void 0 : styles.display) === "none") {
-        send("UNMOUNT");
-      } else {
-        const isAnimating = prevAnimationName !== currentAnimationName;
-        if (wasPresent && isAnimating) {
-          send("ANIMATION_OUT");
-        } else {
-          send("UNMOUNT");
-        }
-      }
-      prevPresentRef.current = present;
-    }
-  }, [present, send]);
-  useLayoutEffect2(() => {
-    if (node) {
-      let timeoutId;
-      const ownerWindow = node.ownerDocument.defaultView ?? window;
-      const handleAnimationEnd = (event) => {
-        const currentAnimationName = getAnimationName(stylesRef.current);
-        const isCurrentAnimation = currentAnimationName.includes(CSS.escape(event.animationName));
-        if (event.target === node && isCurrentAnimation) {
-          send("ANIMATION_END");
-          if (!prevPresentRef.current) {
-            const currentFillMode = node.style.animationFillMode;
-            node.style.animationFillMode = "forwards";
-            timeoutId = ownerWindow.setTimeout(() => {
-              if (node.style.animationFillMode === "forwards") {
-                node.style.animationFillMode = currentFillMode;
-              }
-            });
-          }
-        }
-      };
-      const handleAnimationStart = (event) => {
-        if (event.target === node) {
-          prevAnimationNameRef.current = getAnimationName(stylesRef.current);
-        }
-      };
-      node.addEventListener("animationstart", handleAnimationStart);
-      node.addEventListener("animationcancel", handleAnimationEnd);
-      node.addEventListener("animationend", handleAnimationEnd);
-      return () => {
-        ownerWindow.clearTimeout(timeoutId);
-        node.removeEventListener("animationstart", handleAnimationStart);
-        node.removeEventListener("animationcancel", handleAnimationEnd);
-        node.removeEventListener("animationend", handleAnimationEnd);
-      };
-    } else {
-      send("ANIMATION_END");
-    }
-  }, [node, send]);
-  return {
-    isPresent: ["mounted", "unmountSuspended"].includes(state),
-    ref: reactExports.useCallback((node2) => {
-      stylesRef.current = node2 ? getComputedStyle(node2) : null;
-      setNode(node2);
-    }, [])
-  };
-}
-function getAnimationName(styles) {
-  return (styles == null ? void 0 : styles.animationName) || "none";
-}
-function getElementRef(element) {
-  var _a2, _b2;
-  let getter = (_a2 = Object.getOwnPropertyDescriptor(element.props, "ref")) == null ? void 0 : _a2.get;
-  let mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
-  if (mayWarn) {
-    return element.ref;
-  }
-  getter = (_b2 = Object.getOwnPropertyDescriptor(element, "ref")) == null ? void 0 : _b2.get;
-  mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
-  if (mayWarn) {
-    return element.props.ref;
-  }
-  return element.props.ref || element.ref;
-}
-var useInsertionEffect = React$5[" useInsertionEffect ".trim().toString()] || useLayoutEffect2;
-function useControllableState({
-  prop,
-  defaultProp,
-  onChange = () => {
-  },
-  caller
-}) {
-  const [uncontrolledProp, setUncontrolledProp, onChangeRef] = useUncontrolledState({
-    defaultProp,
-    onChange
-  });
-  const isControlled = prop !== void 0;
-  const value = isControlled ? prop : uncontrolledProp;
-  {
-    const isControlledRef = reactExports.useRef(prop !== void 0);
-    reactExports.useEffect(() => {
-      const wasControlled = isControlledRef.current;
-      if (wasControlled !== isControlled) {
-        const from = wasControlled ? "controlled" : "uncontrolled";
-        const to = isControlled ? "controlled" : "uncontrolled";
-        console.warn(
-          `${caller} is changing from ${from} to ${to}. Components should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled value for the lifetime of the component.`
-        );
-      }
-      isControlledRef.current = isControlled;
-    }, [isControlled, caller]);
-  }
-  const setValue = reactExports.useCallback(
-    (nextValue) => {
-      var _a2;
-      if (isControlled) {
-        const value2 = isFunction$1(nextValue) ? nextValue(prop) : nextValue;
-        if (value2 !== prop) {
-          (_a2 = onChangeRef.current) == null ? void 0 : _a2.call(onChangeRef, value2);
-        }
-      } else {
-        setUncontrolledProp(nextValue);
-      }
-    },
-    [isControlled, prop, setUncontrolledProp, onChangeRef]
-  );
-  return [value, setValue];
-}
-function useUncontrolledState({
-  defaultProp,
-  onChange
-}) {
-  const [value, setValue] = reactExports.useState(defaultProp);
-  const prevValueRef = reactExports.useRef(value);
-  const onChangeRef = reactExports.useRef(onChange);
-  useInsertionEffect(() => {
-    onChangeRef.current = onChange;
-  }, [onChange]);
-  reactExports.useEffect(() => {
-    var _a2;
-    if (prevValueRef.current !== value) {
-      (_a2 = onChangeRef.current) == null ? void 0 : _a2.call(onChangeRef, value);
-      prevValueRef.current = value;
-    }
-  }, [value, prevValueRef]);
-  return [value, setValue, onChangeRef];
-}
-function isFunction$1(value) {
-  return typeof value === "function";
-}
 var VISUALLY_HIDDEN_STYLES = Object.freeze({
   // See: https://github.com/twbs/bootstrap/blob/main/scss/mixins/_visually-hidden.scss
   position: "absolute",
@@ -48207,7 +52874,7 @@ var VisuallyHidden = reactExports.forwardRef(
 );
 VisuallyHidden.displayName = NAME$1;
 var Root$5 = VisuallyHidden;
-var [createTooltipContext] = createContextScope("Tooltip", [
+var [createTooltipContext] = createContextScope$1("Tooltip", [
   createPopperScope
 ]);
 var usePopperScope$2 = createPopperScope();
@@ -48321,7 +52988,7 @@ var Tooltip$1 = (props) => {
       }
     };
   }, []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$3, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$2, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
     TooltipContextProvider,
     {
       scope: __scopeTooltip,
@@ -48350,12 +53017,12 @@ var Tooltip$1 = (props) => {
   ) });
 };
 Tooltip$1.displayName = TOOLTIP_NAME;
-var TRIGGER_NAME$4 = "TooltipTrigger";
+var TRIGGER_NAME$2 = "TooltipTrigger";
 var TooltipTrigger$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeTooltip, ...triggerProps } = props;
-    const context = useTooltipContext(TRIGGER_NAME$4, __scopeTooltip);
-    const providerContext = useTooltipProviderContext(TRIGGER_NAME$4, __scopeTooltip);
+    const context = useTooltipContext(TRIGGER_NAME$2, __scopeTooltip);
+    const providerContext = useTooltipProviderContext(TRIGGER_NAME$2, __scopeTooltip);
     const popperScope = usePopperScope$2(__scopeTooltip);
     const ref = reactExports.useRef(null);
     const composedRefs = useComposedRefs(forwardedRef, ref, context.onTriggerChange);
@@ -48399,29 +53066,29 @@ var TooltipTrigger$1 = reactExports.forwardRef(
     ) });
   }
 );
-TooltipTrigger$1.displayName = TRIGGER_NAME$4;
-var PORTAL_NAME$4 = "TooltipPortal";
-var [PortalProvider$2, usePortalContext$2] = createTooltipContext(PORTAL_NAME$4, {
+TooltipTrigger$1.displayName = TRIGGER_NAME$2;
+var PORTAL_NAME$3 = "TooltipPortal";
+var [PortalProvider$1, usePortalContext$1] = createTooltipContext(PORTAL_NAME$3, {
   forceMount: void 0
 });
 var TooltipPortal = (props) => {
   const { __scopeTooltip, forceMount, children, container } = props;
-  const context = useTooltipContext(PORTAL_NAME$4, __scopeTooltip);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider$2, { scope: __scopeTooltip, forceMount, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$4, { asChild: true, container, children }) }) });
+  const context = useTooltipContext(PORTAL_NAME$3, __scopeTooltip);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider$1, { scope: __scopeTooltip, forceMount, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$4, { asChild: true, container, children }) }) });
 };
-TooltipPortal.displayName = PORTAL_NAME$4;
-var CONTENT_NAME$5 = "TooltipContent";
+TooltipPortal.displayName = PORTAL_NAME$3;
+var CONTENT_NAME$3 = "TooltipContent";
 var TooltipContent$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
-    const portalContext = usePortalContext$2(CONTENT_NAME$5, props.__scopeTooltip);
+    const portalContext = usePortalContext$1(CONTENT_NAME$3, props.__scopeTooltip);
     const { forceMount = portalContext.forceMount, side = "top", ...contentProps } = props;
-    const context = useTooltipContext(CONTENT_NAME$5, props.__scopeTooltip);
+    const context = useTooltipContext(CONTENT_NAME$3, props.__scopeTooltip);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: context.disableHoverableContent ? /* @__PURE__ */ jsxRuntimeExports.jsx(TooltipContentImpl, { side, ...contentProps, ref: forwardedRef }) : /* @__PURE__ */ jsxRuntimeExports.jsx(TooltipContentHoverable, { side, ...contentProps, ref: forwardedRef }) });
   }
 );
 var TooltipContentHoverable = reactExports.forwardRef((props, forwardedRef) => {
-  const context = useTooltipContext(CONTENT_NAME$5, props.__scopeTooltip);
-  const providerContext = useTooltipProviderContext(CONTENT_NAME$5, props.__scopeTooltip);
+  const context = useTooltipContext(CONTENT_NAME$3, props.__scopeTooltip);
+  const providerContext = useTooltipProviderContext(CONTENT_NAME$3, props.__scopeTooltip);
   const ref = reactExports.useRef(null);
   const composedRefs = useComposedRefs(forwardedRef, ref);
   const [pointerGraceArea, setPointerGraceArea] = reactExports.useState(null);
@@ -48492,7 +53159,7 @@ var TooltipContentImpl = reactExports.forwardRef(
       onPointerDownOutside,
       ...contentProps
     } = props;
-    const context = useTooltipContext(CONTENT_NAME$5, __scopeTooltip);
+    const context = useTooltipContext(CONTENT_NAME$3, __scopeTooltip);
     const popperScope = usePopperScope$2(__scopeTooltip);
     const { onClose } = context;
     reactExports.useEffect(() => {
@@ -48519,7 +53186,7 @@ var TooltipContentImpl = reactExports.forwardRef(
         onFocusOutside: (event) => event.preventDefault(),
         onDismiss: onClose,
         children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Content$1,
+          Content,
           {
             "data-state": context.stateAttribute,
             ...popperScope,
@@ -48546,7 +53213,7 @@ var TooltipContentImpl = reactExports.forwardRef(
     );
   }
 );
-TooltipContent$1.displayName = CONTENT_NAME$5;
+TooltipContent$1.displayName = CONTENT_NAME$3;
 var ARROW_NAME$3 = "TooltipArrow";
 var TooltipArrow = reactExports.forwardRef(
   (props, forwardedRef) => {
@@ -48618,7 +53285,7 @@ function getPointsFromRect(rect) {
   ];
 }
 function isPointInPolygon$1(point, polygon) {
-  const { x: x3, y: y2 } = point;
+  const { x: x2, y: y2 } = point;
   let inside = false;
   for (let i = 0, j2 = polygon.length - 1; i < polygon.length; j2 = i++) {
     const ii = polygon[i];
@@ -48627,7 +53294,7 @@ function isPointInPolygon$1(point, polygon) {
     const yi = ii.y;
     const xj = jj.x;
     const yj = jj.y;
-    const intersect = yi > y2 !== yj > y2 && x3 < (xj - xi) * (y2 - yi) / (yj - yi) + xi;
+    const intersect = yi > y2 !== yj > y2 && x2 < (xj - xi) * (y2 - yi) / (yj - yi) + xi;
     if (intersect) inside = !inside;
   }
   return inside;
@@ -48677,8 +53344,8 @@ function getHullPresorted(points) {
 }
 var Provider = TooltipProvider$1;
 var Root3$1 = Tooltip$1;
-var Trigger$3 = TooltipTrigger$1;
-var Portal$3 = TooltipPortal;
+var Trigger$2 = TooltipTrigger$1;
+var Portal$2 = TooltipPortal;
 var Content2$3 = TooltipContent$1;
 var Arrow2$1 = TooltipArrow;
 function TooltipProvider({
@@ -48702,7 +53369,7 @@ function Tooltip({
 function TooltipTrigger({
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Trigger$3, { "data-slot": "tooltip-trigger", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Trigger$2, { "data-slot": "tooltip-trigger", ...props });
 }
 function TooltipContent({
   className,
@@ -48710,7 +53377,7 @@ function TooltipContent({
   children,
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$3, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$2, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
     Content2$3,
     {
       "data-slot": "tooltip-content",
@@ -48909,1286 +53576,6 @@ function ChatComposer({
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1.5 text-center text-[11px] text-muted-foreground", children: "Nexus AI can make mistakes. Verify important information." })
   ] }) });
 }
-function createCollection(name) {
-  const PROVIDER_NAME2 = name + "CollectionProvider";
-  const [createCollectionContext, createCollectionScope2] = createContextScope(PROVIDER_NAME2);
-  const [CollectionProviderImpl, useCollectionContext] = createCollectionContext(
-    PROVIDER_NAME2,
-    { collectionRef: { current: null }, itemMap: /* @__PURE__ */ new Map() }
-  );
-  const CollectionProvider = (props) => {
-    const { scope, children } = props;
-    const ref = React$4.useRef(null);
-    const itemMap = React$4.useRef(/* @__PURE__ */ new Map()).current;
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(CollectionProviderImpl, { scope, itemMap, collectionRef: ref, children });
-  };
-  CollectionProvider.displayName = PROVIDER_NAME2;
-  const COLLECTION_SLOT_NAME = name + "CollectionSlot";
-  const CollectionSlotImpl = /* @__PURE__ */ createSlot(COLLECTION_SLOT_NAME);
-  const CollectionSlot = React$4.forwardRef(
-    (props, forwardedRef) => {
-      const { scope, children } = props;
-      const context = useCollectionContext(COLLECTION_SLOT_NAME, scope);
-      const composedRefs = useComposedRefs(forwardedRef, context.collectionRef);
-      return /* @__PURE__ */ jsxRuntimeExports.jsx(CollectionSlotImpl, { ref: composedRefs, children });
-    }
-  );
-  CollectionSlot.displayName = COLLECTION_SLOT_NAME;
-  const ITEM_SLOT_NAME = name + "CollectionItemSlot";
-  const ITEM_DATA_ATTR = "data-radix-collection-item";
-  const CollectionItemSlotImpl = /* @__PURE__ */ createSlot(ITEM_SLOT_NAME);
-  const CollectionItemSlot = React$4.forwardRef(
-    (props, forwardedRef) => {
-      const { scope, children, ...itemData } = props;
-      const ref = React$4.useRef(null);
-      const composedRefs = useComposedRefs(forwardedRef, ref);
-      const context = useCollectionContext(ITEM_SLOT_NAME, scope);
-      React$4.useEffect(() => {
-        context.itemMap.set(ref, { ref, ...itemData });
-        return () => void context.itemMap.delete(ref);
-      });
-      return /* @__PURE__ */ jsxRuntimeExports.jsx(CollectionItemSlotImpl, { ...{ [ITEM_DATA_ATTR]: "" }, ref: composedRefs, children });
-    }
-  );
-  CollectionItemSlot.displayName = ITEM_SLOT_NAME;
-  function useCollection2(scope) {
-    const context = useCollectionContext(name + "CollectionConsumer", scope);
-    const getItems = React$4.useCallback(() => {
-      const collectionNode = context.collectionRef.current;
-      if (!collectionNode) return [];
-      const orderedNodes = Array.from(collectionNode.querySelectorAll(`[${ITEM_DATA_ATTR}]`));
-      const items = Array.from(context.itemMap.values());
-      const orderedItems = items.sort(
-        (a2, b2) => orderedNodes.indexOf(a2.ref.current) - orderedNodes.indexOf(b2.ref.current)
-      );
-      return orderedItems;
-    }, [context.collectionRef, context.itemMap]);
-    return getItems;
-  }
-  return [
-    { Provider: CollectionProvider, Slot: CollectionSlot, ItemSlot: CollectionItemSlot },
-    useCollection2,
-    createCollectionScope2
-  ];
-}
-var DirectionContext = reactExports.createContext(void 0);
-function useDirection(localDir) {
-  const globalDir = reactExports.useContext(DirectionContext);
-  return localDir || globalDir || "ltr";
-}
-var count = 0;
-function useFocusGuards() {
-  reactExports.useEffect(() => {
-    const edgeGuards = document.querySelectorAll("[data-radix-focus-guard]");
-    document.body.insertAdjacentElement("afterbegin", edgeGuards[0] ?? createFocusGuard());
-    document.body.insertAdjacentElement("beforeend", edgeGuards[1] ?? createFocusGuard());
-    count++;
-    return () => {
-      if (count === 1) {
-        document.querySelectorAll("[data-radix-focus-guard]").forEach((node) => node.remove());
-      }
-      count--;
-    };
-  }, []);
-}
-function createFocusGuard() {
-  const element = document.createElement("span");
-  element.setAttribute("data-radix-focus-guard", "");
-  element.tabIndex = 0;
-  element.style.outline = "none";
-  element.style.opacity = "0";
-  element.style.position = "fixed";
-  element.style.pointerEvents = "none";
-  return element;
-}
-var AUTOFOCUS_ON_MOUNT = "focusScope.autoFocusOnMount";
-var AUTOFOCUS_ON_UNMOUNT = "focusScope.autoFocusOnUnmount";
-var EVENT_OPTIONS$1 = { bubbles: false, cancelable: true };
-var FOCUS_SCOPE_NAME = "FocusScope";
-var FocusScope = reactExports.forwardRef((props, forwardedRef) => {
-  const {
-    loop = false,
-    trapped = false,
-    onMountAutoFocus: onMountAutoFocusProp,
-    onUnmountAutoFocus: onUnmountAutoFocusProp,
-    ...scopeProps
-  } = props;
-  const [container, setContainer] = reactExports.useState(null);
-  const onMountAutoFocus = useCallbackRef$1(onMountAutoFocusProp);
-  const onUnmountAutoFocus = useCallbackRef$1(onUnmountAutoFocusProp);
-  const lastFocusedElementRef = reactExports.useRef(null);
-  const composedRefs = useComposedRefs(forwardedRef, (node) => setContainer(node));
-  const focusScope = reactExports.useRef({
-    paused: false,
-    pause() {
-      this.paused = true;
-    },
-    resume() {
-      this.paused = false;
-    }
-  }).current;
-  reactExports.useEffect(() => {
-    if (trapped) {
-      let handleFocusIn2 = function(event) {
-        if (focusScope.paused || !container) return;
-        const target = event.target;
-        if (container.contains(target)) {
-          lastFocusedElementRef.current = target;
-        } else {
-          focus(lastFocusedElementRef.current, { select: true });
-        }
-      }, handleFocusOut2 = function(event) {
-        if (focusScope.paused || !container) return;
-        const relatedTarget = event.relatedTarget;
-        if (relatedTarget === null) return;
-        if (!container.contains(relatedTarget)) {
-          focus(lastFocusedElementRef.current, { select: true });
-        }
-      }, handleMutations2 = function(mutations) {
-        const focusedElement = document.activeElement;
-        if (focusedElement !== document.body) return;
-        for (const mutation of mutations) {
-          if (mutation.removedNodes.length > 0) focus(container);
-        }
-      };
-      document.addEventListener("focusin", handleFocusIn2);
-      document.addEventListener("focusout", handleFocusOut2);
-      const mutationObserver = new MutationObserver(handleMutations2);
-      if (container) mutationObserver.observe(container, { childList: true, subtree: true });
-      return () => {
-        document.removeEventListener("focusin", handleFocusIn2);
-        document.removeEventListener("focusout", handleFocusOut2);
-        mutationObserver.disconnect();
-      };
-    }
-  }, [trapped, container, focusScope.paused]);
-  reactExports.useEffect(() => {
-    if (container) {
-      focusScopesStack.add(focusScope);
-      const previouslyFocusedElement = document.activeElement;
-      const hasFocusedCandidate = container.contains(previouslyFocusedElement);
-      if (!hasFocusedCandidate) {
-        const mountEvent = new CustomEvent(AUTOFOCUS_ON_MOUNT, EVENT_OPTIONS$1);
-        container.addEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus);
-        container.dispatchEvent(mountEvent);
-        if (!mountEvent.defaultPrevented) {
-          focusFirst$2(removeLinks(getTabbableCandidates(container)), { select: true });
-          if (document.activeElement === previouslyFocusedElement) {
-            focus(container);
-          }
-        }
-      }
-      return () => {
-        container.removeEventListener(AUTOFOCUS_ON_MOUNT, onMountAutoFocus);
-        setTimeout(() => {
-          const unmountEvent = new CustomEvent(AUTOFOCUS_ON_UNMOUNT, EVENT_OPTIONS$1);
-          container.addEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus);
-          container.dispatchEvent(unmountEvent);
-          if (!unmountEvent.defaultPrevented) {
-            focus(previouslyFocusedElement ?? document.body, { select: true });
-          }
-          container.removeEventListener(AUTOFOCUS_ON_UNMOUNT, onUnmountAutoFocus);
-          focusScopesStack.remove(focusScope);
-        }, 0);
-      };
-    }
-  }, [container, onMountAutoFocus, onUnmountAutoFocus, focusScope]);
-  const handleKeyDown = reactExports.useCallback(
-    (event) => {
-      if (!loop && !trapped) return;
-      if (focusScope.paused) return;
-      const isTabKey = event.key === "Tab" && !event.altKey && !event.ctrlKey && !event.metaKey;
-      const focusedElement = document.activeElement;
-      if (isTabKey && focusedElement) {
-        const container2 = event.currentTarget;
-        const [first, last2] = getTabbableEdges(container2);
-        const hasTabbableElementsInside = first && last2;
-        if (!hasTabbableElementsInside) {
-          if (focusedElement === container2) event.preventDefault();
-        } else {
-          if (!event.shiftKey && focusedElement === last2) {
-            event.preventDefault();
-            if (loop) focus(first, { select: true });
-          } else if (event.shiftKey && focusedElement === first) {
-            event.preventDefault();
-            if (loop) focus(last2, { select: true });
-          }
-        }
-      }
-    },
-    [loop, trapped, focusScope.paused]
-  );
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Primitive$1.div, { tabIndex: -1, ...scopeProps, ref: composedRefs, onKeyDown: handleKeyDown });
-});
-FocusScope.displayName = FOCUS_SCOPE_NAME;
-function focusFirst$2(candidates, { select = false } = {}) {
-  const previouslyFocusedElement = document.activeElement;
-  for (const candidate of candidates) {
-    focus(candidate, { select });
-    if (document.activeElement !== previouslyFocusedElement) return;
-  }
-}
-function getTabbableEdges(container) {
-  const candidates = getTabbableCandidates(container);
-  const first = findVisible(candidates, container);
-  const last2 = findVisible(candidates.reverse(), container);
-  return [first, last2];
-}
-function getTabbableCandidates(container) {
-  const nodes = [];
-  const walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, {
-    acceptNode: (node) => {
-      const isHiddenInput = node.tagName === "INPUT" && node.type === "hidden";
-      if (node.disabled || node.hidden || isHiddenInput) return NodeFilter.FILTER_SKIP;
-      return node.tabIndex >= 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
-    }
-  });
-  while (walker.nextNode()) nodes.push(walker.currentNode);
-  return nodes;
-}
-function findVisible(elements, container) {
-  for (const element of elements) {
-    if (!isHidden(element, { upTo: container })) return element;
-  }
-}
-function isHidden(node, { upTo }) {
-  if (getComputedStyle(node).visibility === "hidden") return true;
-  while (node) {
-    if (upTo !== void 0 && node === upTo) return false;
-    if (getComputedStyle(node).display === "none") return true;
-    node = node.parentElement;
-  }
-  return false;
-}
-function isSelectableInput(element) {
-  return element instanceof HTMLInputElement && "select" in element;
-}
-function focus(element, { select = false } = {}) {
-  if (element && element.focus) {
-    const previouslyFocusedElement = document.activeElement;
-    element.focus({ preventScroll: true });
-    if (element !== previouslyFocusedElement && isSelectableInput(element) && select)
-      element.select();
-  }
-}
-var focusScopesStack = createFocusScopesStack();
-function createFocusScopesStack() {
-  let stack = [];
-  return {
-    add(focusScope) {
-      const activeFocusScope = stack[0];
-      if (focusScope !== activeFocusScope) {
-        activeFocusScope == null ? void 0 : activeFocusScope.pause();
-      }
-      stack = arrayRemove(stack, focusScope);
-      stack.unshift(focusScope);
-    },
-    remove(focusScope) {
-      var _a2;
-      stack = arrayRemove(stack, focusScope);
-      (_a2 = stack[0]) == null ? void 0 : _a2.resume();
-    }
-  };
-}
-function arrayRemove(array, item) {
-  const updatedArray = [...array];
-  const index2 = updatedArray.indexOf(item);
-  if (index2 !== -1) {
-    updatedArray.splice(index2, 1);
-  }
-  return updatedArray;
-}
-function removeLinks(items) {
-  return items.filter((item) => item.tagName !== "A");
-}
-var ENTRY_FOCUS = "rovingFocusGroup.onEntryFocus";
-var EVENT_OPTIONS = { bubbles: false, cancelable: true };
-var GROUP_NAME$3 = "RovingFocusGroup";
-var [Collection$3, useCollection$3, createCollectionScope$3] = createCollection(GROUP_NAME$3);
-var [createRovingFocusGroupContext, createRovingFocusGroupScope] = createContextScope(
-  GROUP_NAME$3,
-  [createCollectionScope$3]
-);
-var [RovingFocusProvider, useRovingFocusContext] = createRovingFocusGroupContext(GROUP_NAME$3);
-var RovingFocusGroup = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Collection$3.Provider, { scope: props.__scopeRovingFocusGroup, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Collection$3.Slot, { scope: props.__scopeRovingFocusGroup, children: /* @__PURE__ */ jsxRuntimeExports.jsx(RovingFocusGroupImpl, { ...props, ref: forwardedRef }) }) });
-  }
-);
-RovingFocusGroup.displayName = GROUP_NAME$3;
-var RovingFocusGroupImpl = reactExports.forwardRef((props, forwardedRef) => {
-  const {
-    __scopeRovingFocusGroup,
-    orientation,
-    loop = false,
-    dir,
-    currentTabStopId: currentTabStopIdProp,
-    defaultCurrentTabStopId,
-    onCurrentTabStopIdChange,
-    onEntryFocus,
-    preventScrollOnEntryFocus = false,
-    ...groupProps
-  } = props;
-  const ref = reactExports.useRef(null);
-  const composedRefs = useComposedRefs(forwardedRef, ref);
-  const direction = useDirection(dir);
-  const [currentTabStopId, setCurrentTabStopId] = useControllableState({
-    prop: currentTabStopIdProp,
-    defaultProp: defaultCurrentTabStopId ?? null,
-    onChange: onCurrentTabStopIdChange,
-    caller: GROUP_NAME$3
-  });
-  const [isTabbingBackOut, setIsTabbingBackOut] = reactExports.useState(false);
-  const handleEntryFocus = useCallbackRef$1(onEntryFocus);
-  const getItems = useCollection$3(__scopeRovingFocusGroup);
-  const isClickFocusRef = reactExports.useRef(false);
-  const [focusableItemsCount, setFocusableItemsCount] = reactExports.useState(0);
-  reactExports.useEffect(() => {
-    const node = ref.current;
-    if (node) {
-      node.addEventListener(ENTRY_FOCUS, handleEntryFocus);
-      return () => node.removeEventListener(ENTRY_FOCUS, handleEntryFocus);
-    }
-  }, [handleEntryFocus]);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    RovingFocusProvider,
-    {
-      scope: __scopeRovingFocusGroup,
-      orientation,
-      dir: direction,
-      loop,
-      currentTabStopId,
-      onItemFocus: reactExports.useCallback(
-        (tabStopId) => setCurrentTabStopId(tabStopId),
-        [setCurrentTabStopId]
-      ),
-      onItemShiftTab: reactExports.useCallback(() => setIsTabbingBackOut(true), []),
-      onFocusableItemAdd: reactExports.useCallback(
-        () => setFocusableItemsCount((prevCount) => prevCount + 1),
-        []
-      ),
-      onFocusableItemRemove: reactExports.useCallback(
-        () => setFocusableItemsCount((prevCount) => prevCount - 1),
-        []
-      ),
-      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-        Primitive$1.div,
-        {
-          tabIndex: isTabbingBackOut || focusableItemsCount === 0 ? -1 : 0,
-          "data-orientation": orientation,
-          ...groupProps,
-          ref: composedRefs,
-          style: { outline: "none", ...props.style },
-          onMouseDown: composeEventHandlers(props.onMouseDown, () => {
-            isClickFocusRef.current = true;
-          }),
-          onFocus: composeEventHandlers(props.onFocus, (event) => {
-            const isKeyboardFocus = !isClickFocusRef.current;
-            if (event.target === event.currentTarget && isKeyboardFocus && !isTabbingBackOut) {
-              const entryFocusEvent = new CustomEvent(ENTRY_FOCUS, EVENT_OPTIONS);
-              event.currentTarget.dispatchEvent(entryFocusEvent);
-              if (!entryFocusEvent.defaultPrevented) {
-                const items = getItems().filter((item) => item.focusable);
-                const activeItem = items.find((item) => item.active);
-                const currentItem = items.find((item) => item.id === currentTabStopId);
-                const candidateItems = [activeItem, currentItem, ...items].filter(
-                  Boolean
-                );
-                const candidateNodes = candidateItems.map((item) => item.ref.current);
-                focusFirst$1(candidateNodes, preventScrollOnEntryFocus);
-              }
-            }
-            isClickFocusRef.current = false;
-          }),
-          onBlur: composeEventHandlers(props.onBlur, () => setIsTabbingBackOut(false))
-        }
-      )
-    }
-  );
-});
-var ITEM_NAME$3 = "RovingFocusGroupItem";
-var RovingFocusGroupItem = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const {
-      __scopeRovingFocusGroup,
-      focusable = true,
-      active = false,
-      tabStopId,
-      children,
-      ...itemProps
-    } = props;
-    const autoId = useId();
-    const id2 = tabStopId || autoId;
-    const context = useRovingFocusContext(ITEM_NAME$3, __scopeRovingFocusGroup);
-    const isCurrentTabStop = context.currentTabStopId === id2;
-    const getItems = useCollection$3(__scopeRovingFocusGroup);
-    const { onFocusableItemAdd, onFocusableItemRemove, currentTabStopId } = context;
-    reactExports.useEffect(() => {
-      if (focusable) {
-        onFocusableItemAdd();
-        return () => onFocusableItemRemove();
-      }
-    }, [focusable, onFocusableItemAdd, onFocusableItemRemove]);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Collection$3.ItemSlot,
-      {
-        scope: __scopeRovingFocusGroup,
-        id: id2,
-        focusable,
-        active,
-        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Primitive$1.span,
-          {
-            tabIndex: isCurrentTabStop ? 0 : -1,
-            "data-orientation": context.orientation,
-            ...itemProps,
-            ref: forwardedRef,
-            onMouseDown: composeEventHandlers(props.onMouseDown, (event) => {
-              if (!focusable) event.preventDefault();
-              else context.onItemFocus(id2);
-            }),
-            onFocus: composeEventHandlers(props.onFocus, () => context.onItemFocus(id2)),
-            onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
-              if (event.key === "Tab" && event.shiftKey) {
-                context.onItemShiftTab();
-                return;
-              }
-              if (event.target !== event.currentTarget) return;
-              const focusIntent = getFocusIntent(event, context.orientation, context.dir);
-              if (focusIntent !== void 0) {
-                if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
-                event.preventDefault();
-                const items = getItems().filter((item) => item.focusable);
-                let candidateNodes = items.map((item) => item.ref.current);
-                if (focusIntent === "last") candidateNodes.reverse();
-                else if (focusIntent === "prev" || focusIntent === "next") {
-                  if (focusIntent === "prev") candidateNodes.reverse();
-                  const currentIndex = candidateNodes.indexOf(event.currentTarget);
-                  candidateNodes = context.loop ? wrapArray$2(candidateNodes, currentIndex + 1) : candidateNodes.slice(currentIndex + 1);
-                }
-                setTimeout(() => focusFirst$1(candidateNodes));
-              }
-            }),
-            children: typeof children === "function" ? children({ isCurrentTabStop, hasTabStop: currentTabStopId != null }) : children
-          }
-        )
-      }
-    );
-  }
-);
-RovingFocusGroupItem.displayName = ITEM_NAME$3;
-var MAP_KEY_TO_FOCUS_INTENT = {
-  ArrowLeft: "prev",
-  ArrowUp: "prev",
-  ArrowRight: "next",
-  ArrowDown: "next",
-  PageUp: "first",
-  Home: "first",
-  PageDown: "last",
-  End: "last"
-};
-function getDirectionAwareKey(key, dir) {
-  if (dir !== "rtl") return key;
-  return key === "ArrowLeft" ? "ArrowRight" : key === "ArrowRight" ? "ArrowLeft" : key;
-}
-function getFocusIntent(event, orientation, dir) {
-  const key = getDirectionAwareKey(event.key, dir);
-  if (orientation === "vertical" && ["ArrowLeft", "ArrowRight"].includes(key)) return void 0;
-  if (orientation === "horizontal" && ["ArrowUp", "ArrowDown"].includes(key)) return void 0;
-  return MAP_KEY_TO_FOCUS_INTENT[key];
-}
-function focusFirst$1(candidates, preventScroll = false) {
-  const PREVIOUSLY_FOCUSED_ELEMENT = document.activeElement;
-  for (const candidate of candidates) {
-    if (candidate === PREVIOUSLY_FOCUSED_ELEMENT) return;
-    candidate.focus({ preventScroll });
-    if (document.activeElement !== PREVIOUSLY_FOCUSED_ELEMENT) return;
-  }
-}
-function wrapArray$2(array, startIndex) {
-  return array.map((_2, index2) => array[(startIndex + index2) % array.length]);
-}
-var Root$4 = RovingFocusGroup;
-var Item$1 = RovingFocusGroupItem;
-var getDefaultParent = function(originalTarget) {
-  if (typeof document === "undefined") {
-    return null;
-  }
-  var sampleTarget = Array.isArray(originalTarget) ? originalTarget[0] : originalTarget;
-  return sampleTarget.ownerDocument.body;
-};
-var counterMap = /* @__PURE__ */ new WeakMap();
-var uncontrolledNodes = /* @__PURE__ */ new WeakMap();
-var markerMap = {};
-var lockCount = 0;
-var unwrapHost = function(node) {
-  return node && (node.host || unwrapHost(node.parentNode));
-};
-var correctTargets = function(parent, targets) {
-  return targets.map(function(target) {
-    if (parent.contains(target)) {
-      return target;
-    }
-    var correctedTarget = unwrapHost(target);
-    if (correctedTarget && parent.contains(correctedTarget)) {
-      return correctedTarget;
-    }
-    console.error("aria-hidden", target, "in not contained inside", parent, ". Doing nothing");
-    return null;
-  }).filter(function(x3) {
-    return Boolean(x3);
-  });
-};
-var applyAttributeToOthers = function(originalTarget, parentNode, markerName, controlAttribute) {
-  var targets = correctTargets(parentNode, Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
-  if (!markerMap[markerName]) {
-    markerMap[markerName] = /* @__PURE__ */ new WeakMap();
-  }
-  var markerCounter = markerMap[markerName];
-  var hiddenNodes = [];
-  var elementsToKeep = /* @__PURE__ */ new Set();
-  var elementsToStop = new Set(targets);
-  var keep = function(el) {
-    if (!el || elementsToKeep.has(el)) {
-      return;
-    }
-    elementsToKeep.add(el);
-    keep(el.parentNode);
-  };
-  targets.forEach(keep);
-  var deep = function(parent) {
-    if (!parent || elementsToStop.has(parent)) {
-      return;
-    }
-    Array.prototype.forEach.call(parent.children, function(node) {
-      if (elementsToKeep.has(node)) {
-        deep(node);
-      } else {
-        try {
-          var attr = node.getAttribute(controlAttribute);
-          var alreadyHidden = attr !== null && attr !== "false";
-          var counterValue = (counterMap.get(node) || 0) + 1;
-          var markerValue = (markerCounter.get(node) || 0) + 1;
-          counterMap.set(node, counterValue);
-          markerCounter.set(node, markerValue);
-          hiddenNodes.push(node);
-          if (counterValue === 1 && alreadyHidden) {
-            uncontrolledNodes.set(node, true);
-          }
-          if (markerValue === 1) {
-            node.setAttribute(markerName, "true");
-          }
-          if (!alreadyHidden) {
-            node.setAttribute(controlAttribute, "true");
-          }
-        } catch (e) {
-          console.error("aria-hidden: cannot operate on ", node, e);
-        }
-      }
-    });
-  };
-  deep(parentNode);
-  elementsToKeep.clear();
-  lockCount++;
-  return function() {
-    hiddenNodes.forEach(function(node) {
-      var counterValue = counterMap.get(node) - 1;
-      var markerValue = markerCounter.get(node) - 1;
-      counterMap.set(node, counterValue);
-      markerCounter.set(node, markerValue);
-      if (!counterValue) {
-        if (!uncontrolledNodes.has(node)) {
-          node.removeAttribute(controlAttribute);
-        }
-        uncontrolledNodes.delete(node);
-      }
-      if (!markerValue) {
-        node.removeAttribute(markerName);
-      }
-    });
-    lockCount--;
-    if (!lockCount) {
-      counterMap = /* @__PURE__ */ new WeakMap();
-      counterMap = /* @__PURE__ */ new WeakMap();
-      uncontrolledNodes = /* @__PURE__ */ new WeakMap();
-      markerMap = {};
-    }
-  };
-};
-var hideOthers = function(originalTarget, parentNode, markerName) {
-  if (markerName === void 0) {
-    markerName = "data-aria-hidden";
-  }
-  var targets = Array.from(Array.isArray(originalTarget) ? originalTarget : [originalTarget]);
-  var activeParentNode = getDefaultParent(originalTarget);
-  if (!activeParentNode) {
-    return function() {
-      return null;
-    };
-  }
-  targets.push.apply(targets, Array.from(activeParentNode.querySelectorAll("[aria-live], script")));
-  return applyAttributeToOthers(targets, activeParentNode, markerName, "aria-hidden");
-};
-var __assign = function() {
-  __assign = Object.assign || function __assign2(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-      s = arguments[i];
-      for (var p2 in s) if (Object.prototype.hasOwnProperty.call(s, p2)) t[p2] = s[p2];
-    }
-    return t;
-  };
-  return __assign.apply(this, arguments);
-};
-function __rest(s, e) {
-  var t = {};
-  for (var p2 in s) if (Object.prototype.hasOwnProperty.call(s, p2) && e.indexOf(p2) < 0)
-    t[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t[p2[i]] = s[p2[i]];
-    }
-  return t;
-}
-function __spreadArray(to, from, pack) {
-  if (pack || arguments.length === 2) for (var i = 0, l2 = from.length, ar; i < l2; i++) {
-    if (ar || !(i in from)) {
-      if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-      ar[i] = from[i];
-    }
-  }
-  return to.concat(ar || Array.prototype.slice.call(from));
-}
-typeof SuppressedError === "function" ? SuppressedError : function(error, suppressed, message) {
-  var e = new Error(message);
-  return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
-};
-var zeroRightClassName = "right-scroll-bar-position";
-var fullWidthClassName = "width-before-scroll-bar";
-var noScrollbarsClassName = "with-scroll-bars-hidden";
-var removedBarSizeVariable = "--removed-body-scroll-bar-size";
-function assignRef(ref, value) {
-  if (typeof ref === "function") {
-    ref(value);
-  } else if (ref) {
-    ref.current = value;
-  }
-  return ref;
-}
-function useCallbackRef(initialValue, callback) {
-  var ref = reactExports.useState(function() {
-    return {
-      // value
-      value: initialValue,
-      // last callback
-      callback,
-      // "memoized" public interface
-      facade: {
-        get current() {
-          return ref.value;
-        },
-        set current(value) {
-          var last2 = ref.value;
-          if (last2 !== value) {
-            ref.value = value;
-            ref.callback(value, last2);
-          }
-        }
-      }
-    };
-  })[0];
-  ref.callback = callback;
-  return ref.facade;
-}
-var useIsomorphicLayoutEffect$1 = typeof window !== "undefined" ? reactExports.useLayoutEffect : reactExports.useEffect;
-var currentValues = /* @__PURE__ */ new WeakMap();
-function useMergeRefs(refs, defaultValue) {
-  var callbackRef = useCallbackRef(null, function(newValue) {
-    return refs.forEach(function(ref) {
-      return assignRef(ref, newValue);
-    });
-  });
-  useIsomorphicLayoutEffect$1(function() {
-    var oldValue = currentValues.get(callbackRef);
-    if (oldValue) {
-      var prevRefs_1 = new Set(oldValue);
-      var nextRefs_1 = new Set(refs);
-      var current_1 = callbackRef.current;
-      prevRefs_1.forEach(function(ref) {
-        if (!nextRefs_1.has(ref)) {
-          assignRef(ref, null);
-        }
-      });
-      nextRefs_1.forEach(function(ref) {
-        if (!prevRefs_1.has(ref)) {
-          assignRef(ref, current_1);
-        }
-      });
-    }
-    currentValues.set(callbackRef, refs);
-  }, [refs]);
-  return callbackRef;
-}
-function ItoI(a2) {
-  return a2;
-}
-function innerCreateMedium(defaults, middleware) {
-  if (middleware === void 0) {
-    middleware = ItoI;
-  }
-  var buffer = [];
-  var assigned = false;
-  var medium = {
-    read: function() {
-      if (assigned) {
-        throw new Error("Sidecar: could not `read` from an `assigned` medium. `read` could be used only with `useMedium`.");
-      }
-      if (buffer.length) {
-        return buffer[buffer.length - 1];
-      }
-      return defaults;
-    },
-    useMedium: function(data) {
-      var item = middleware(data, assigned);
-      buffer.push(item);
-      return function() {
-        buffer = buffer.filter(function(x3) {
-          return x3 !== item;
-        });
-      };
-    },
-    assignSyncMedium: function(cb) {
-      assigned = true;
-      while (buffer.length) {
-        var cbs = buffer;
-        buffer = [];
-        cbs.forEach(cb);
-      }
-      buffer = {
-        push: function(x3) {
-          return cb(x3);
-        },
-        filter: function() {
-          return buffer;
-        }
-      };
-    },
-    assignMedium: function(cb) {
-      assigned = true;
-      var pendingQueue = [];
-      if (buffer.length) {
-        var cbs = buffer;
-        buffer = [];
-        cbs.forEach(cb);
-        pendingQueue = buffer;
-      }
-      var executeQueue = function() {
-        var cbs2 = pendingQueue;
-        pendingQueue = [];
-        cbs2.forEach(cb);
-      };
-      var cycle = function() {
-        return Promise.resolve().then(executeQueue);
-      };
-      cycle();
-      buffer = {
-        push: function(x3) {
-          pendingQueue.push(x3);
-          cycle();
-        },
-        filter: function(filter2) {
-          pendingQueue = pendingQueue.filter(filter2);
-          return buffer;
-        }
-      };
-    }
-  };
-  return medium;
-}
-function createSidecarMedium(options) {
-  if (options === void 0) {
-    options = {};
-  }
-  var medium = innerCreateMedium(null);
-  medium.options = __assign({ async: true, ssr: false }, options);
-  return medium;
-}
-var SideCar$1 = function(_a2) {
-  var sideCar = _a2.sideCar, rest = __rest(_a2, ["sideCar"]);
-  if (!sideCar) {
-    throw new Error("Sidecar: please provide `sideCar` property to import the right car");
-  }
-  var Target = sideCar.read();
-  if (!Target) {
-    throw new Error("Sidecar medium not found");
-  }
-  return reactExports.createElement(Target, __assign({}, rest));
-};
-SideCar$1.isSideCarExport = true;
-function exportSidecar(medium, exported) {
-  medium.useMedium(exported);
-  return SideCar$1;
-}
-var effectCar = createSidecarMedium();
-var nothing = function() {
-  return;
-};
-var RemoveScroll = reactExports.forwardRef(function(props, parentRef) {
-  var ref = reactExports.useRef(null);
-  var _a2 = reactExports.useState({
-    onScrollCapture: nothing,
-    onWheelCapture: nothing,
-    onTouchMoveCapture: nothing
-  }), callbacks = _a2[0], setCallbacks = _a2[1];
-  var forwardProps = props.forwardProps, children = props.children, className = props.className, removeScrollBar = props.removeScrollBar, enabled = props.enabled, shards = props.shards, sideCar = props.sideCar, noRelative = props.noRelative, noIsolation = props.noIsolation, inert = props.inert, allowPinchZoom = props.allowPinchZoom, _b2 = props.as, Container = _b2 === void 0 ? "div" : _b2, gapMode = props.gapMode, rest = __rest(props, ["forwardProps", "children", "className", "removeScrollBar", "enabled", "shards", "sideCar", "noRelative", "noIsolation", "inert", "allowPinchZoom", "as", "gapMode"]);
-  var SideCar2 = sideCar;
-  var containerRef = useMergeRefs([ref, parentRef]);
-  var containerProps = __assign(__assign({}, rest), callbacks);
-  return reactExports.createElement(
-    reactExports.Fragment,
-    null,
-    enabled && reactExports.createElement(SideCar2, { sideCar: effectCar, removeScrollBar, shards, noRelative, noIsolation, inert, setCallbacks, allowPinchZoom: !!allowPinchZoom, lockRef: ref, gapMode }),
-    forwardProps ? reactExports.cloneElement(reactExports.Children.only(children), __assign(__assign({}, containerProps), { ref: containerRef })) : reactExports.createElement(Container, __assign({}, containerProps, { className, ref: containerRef }), children)
-  );
-});
-RemoveScroll.defaultProps = {
-  enabled: true,
-  removeScrollBar: true,
-  inert: false
-};
-RemoveScroll.classNames = {
-  fullWidth: fullWidthClassName,
-  zeroRight: zeroRightClassName
-};
-var getNonce = function() {
-  if (typeof __webpack_nonce__ !== "undefined") {
-    return __webpack_nonce__;
-  }
-  return void 0;
-};
-function makeStyleTag() {
-  if (!document)
-    return null;
-  var tag = document.createElement("style");
-  tag.type = "text/css";
-  var nonce = getNonce();
-  if (nonce) {
-    tag.setAttribute("nonce", nonce);
-  }
-  return tag;
-}
-function injectStyles(tag, css) {
-  if (tag.styleSheet) {
-    tag.styleSheet.cssText = css;
-  } else {
-    tag.appendChild(document.createTextNode(css));
-  }
-}
-function insertStyleTag(tag) {
-  var head = document.head || document.getElementsByTagName("head")[0];
-  head.appendChild(tag);
-}
-var stylesheetSingleton = function() {
-  var counter = 0;
-  var stylesheet = null;
-  return {
-    add: function(style2) {
-      if (counter == 0) {
-        if (stylesheet = makeStyleTag()) {
-          injectStyles(stylesheet, style2);
-          insertStyleTag(stylesheet);
-        }
-      }
-      counter++;
-    },
-    remove: function() {
-      counter--;
-      if (!counter && stylesheet) {
-        stylesheet.parentNode && stylesheet.parentNode.removeChild(stylesheet);
-        stylesheet = null;
-      }
-    }
-  };
-};
-var styleHookSingleton = function() {
-  var sheet = stylesheetSingleton();
-  return function(styles, isDynamic) {
-    reactExports.useEffect(function() {
-      sheet.add(styles);
-      return function() {
-        sheet.remove();
-      };
-    }, [styles && isDynamic]);
-  };
-};
-var styleSingleton = function() {
-  var useStyle2 = styleHookSingleton();
-  var Sheet = function(_a2) {
-    var styles = _a2.styles, dynamic = _a2.dynamic;
-    useStyle2(styles, dynamic);
-    return null;
-  };
-  return Sheet;
-};
-var zeroGap = {
-  left: 0,
-  top: 0,
-  right: 0,
-  gap: 0
-};
-var parse = function(x3) {
-  return parseInt(x3 || "", 10) || 0;
-};
-var getOffset = function(gapMode) {
-  var cs = window.getComputedStyle(document.body);
-  var left = cs[gapMode === "padding" ? "paddingLeft" : "marginLeft"];
-  var top = cs[gapMode === "padding" ? "paddingTop" : "marginTop"];
-  var right = cs[gapMode === "padding" ? "paddingRight" : "marginRight"];
-  return [parse(left), parse(top), parse(right)];
-};
-var getGapWidth = function(gapMode) {
-  if (gapMode === void 0) {
-    gapMode = "margin";
-  }
-  if (typeof window === "undefined") {
-    return zeroGap;
-  }
-  var offsets = getOffset(gapMode);
-  var documentWidth = document.documentElement.clientWidth;
-  var windowWidth = window.innerWidth;
-  return {
-    left: offsets[0],
-    top: offsets[1],
-    right: offsets[2],
-    gap: Math.max(0, windowWidth - documentWidth + offsets[2] - offsets[0])
-  };
-};
-var Style = styleSingleton();
-var lockAttribute = "data-scroll-locked";
-var getStyles = function(_a2, allowRelative, gapMode, important) {
-  var left = _a2.left, top = _a2.top, right = _a2.right, gap = _a2.gap;
-  if (gapMode === void 0) {
-    gapMode = "margin";
-  }
-  return "\n  .".concat(noScrollbarsClassName, " {\n   overflow: hidden ").concat(important, ";\n   padding-right: ").concat(gap, "px ").concat(important, ";\n  }\n  body[").concat(lockAttribute, "] {\n    overflow: hidden ").concat(important, ";\n    overscroll-behavior: contain;\n    ").concat([
-    allowRelative && "position: relative ".concat(important, ";"),
-    gapMode === "margin" && "\n    padding-left: ".concat(left, "px;\n    padding-top: ").concat(top, "px;\n    padding-right: ").concat(right, "px;\n    margin-left:0;\n    margin-top:0;\n    margin-right: ").concat(gap, "px ").concat(important, ";\n    "),
-    gapMode === "padding" && "padding-right: ".concat(gap, "px ").concat(important, ";")
-  ].filter(Boolean).join(""), "\n  }\n  \n  .").concat(zeroRightClassName, " {\n    right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(fullWidthClassName, " {\n    margin-right: ").concat(gap, "px ").concat(important, ";\n  }\n  \n  .").concat(zeroRightClassName, " .").concat(zeroRightClassName, " {\n    right: 0 ").concat(important, ";\n  }\n  \n  .").concat(fullWidthClassName, " .").concat(fullWidthClassName, " {\n    margin-right: 0 ").concat(important, ";\n  }\n  \n  body[").concat(lockAttribute, "] {\n    ").concat(removedBarSizeVariable, ": ").concat(gap, "px;\n  }\n");
-};
-var getCurrentUseCounter = function() {
-  var counter = parseInt(document.body.getAttribute(lockAttribute) || "0", 10);
-  return isFinite(counter) ? counter : 0;
-};
-var useLockAttribute = function() {
-  reactExports.useEffect(function() {
-    document.body.setAttribute(lockAttribute, (getCurrentUseCounter() + 1).toString());
-    return function() {
-      var newCounter = getCurrentUseCounter() - 1;
-      if (newCounter <= 0) {
-        document.body.removeAttribute(lockAttribute);
-      } else {
-        document.body.setAttribute(lockAttribute, newCounter.toString());
-      }
-    };
-  }, []);
-};
-var RemoveScrollBar = function(_a2) {
-  var noRelative = _a2.noRelative, noImportant = _a2.noImportant, _b2 = _a2.gapMode, gapMode = _b2 === void 0 ? "margin" : _b2;
-  useLockAttribute();
-  var gap = reactExports.useMemo(function() {
-    return getGapWidth(gapMode);
-  }, [gapMode]);
-  return reactExports.createElement(Style, { styles: getStyles(gap, !noRelative, gapMode, !noImportant ? "!important" : "") });
-};
-var passiveSupported = false;
-if (typeof window !== "undefined") {
-  try {
-    var options = Object.defineProperty({}, "passive", {
-      get: function() {
-        passiveSupported = true;
-        return true;
-      }
-    });
-    window.addEventListener("test", options, options);
-    window.removeEventListener("test", options, options);
-  } catch (err) {
-    passiveSupported = false;
-  }
-}
-var nonPassive = passiveSupported ? { passive: false } : false;
-var alwaysContainsScroll = function(node) {
-  return node.tagName === "TEXTAREA";
-};
-var elementCanBeScrolled = function(node, overflow) {
-  if (!(node instanceof Element)) {
-    return false;
-  }
-  var styles = window.getComputedStyle(node);
-  return (
-    // not-not-scrollable
-    styles[overflow] !== "hidden" && // contains scroll inside self
-    !(styles.overflowY === styles.overflowX && !alwaysContainsScroll(node) && styles[overflow] === "visible")
-  );
-};
-var elementCouldBeVScrolled = function(node) {
-  return elementCanBeScrolled(node, "overflowY");
-};
-var elementCouldBeHScrolled = function(node) {
-  return elementCanBeScrolled(node, "overflowX");
-};
-var locationCouldBeScrolled = function(axis, node) {
-  var ownerDocument = node.ownerDocument;
-  var current = node;
-  do {
-    if (typeof ShadowRoot !== "undefined" && current instanceof ShadowRoot) {
-      current = current.host;
-    }
-    var isScrollable = elementCouldBeScrolled(axis, current);
-    if (isScrollable) {
-      var _a2 = getScrollVariables(axis, current), scrollHeight = _a2[1], clientHeight = _a2[2];
-      if (scrollHeight > clientHeight) {
-        return true;
-      }
-    }
-    current = current.parentNode;
-  } while (current && current !== ownerDocument.body);
-  return false;
-};
-var getVScrollVariables = function(_a2) {
-  var scrollTop = _a2.scrollTop, scrollHeight = _a2.scrollHeight, clientHeight = _a2.clientHeight;
-  return [
-    scrollTop,
-    scrollHeight,
-    clientHeight
-  ];
-};
-var getHScrollVariables = function(_a2) {
-  var scrollLeft = _a2.scrollLeft, scrollWidth = _a2.scrollWidth, clientWidth = _a2.clientWidth;
-  return [
-    scrollLeft,
-    scrollWidth,
-    clientWidth
-  ];
-};
-var elementCouldBeScrolled = function(axis, node) {
-  return axis === "v" ? elementCouldBeVScrolled(node) : elementCouldBeHScrolled(node);
-};
-var getScrollVariables = function(axis, node) {
-  return axis === "v" ? getVScrollVariables(node) : getHScrollVariables(node);
-};
-var getDirectionFactor = function(axis, direction) {
-  return axis === "h" && direction === "rtl" ? -1 : 1;
-};
-var handleScroll = function(axis, endTarget, event, sourceDelta, noOverscroll) {
-  var directionFactor = getDirectionFactor(axis, window.getComputedStyle(endTarget).direction);
-  var delta = directionFactor * sourceDelta;
-  var target = event.target;
-  var targetInLock = endTarget.contains(target);
-  var shouldCancelScroll = false;
-  var isDeltaPositive = delta > 0;
-  var availableScroll = 0;
-  var availableScrollTop = 0;
-  do {
-    if (!target) {
-      break;
-    }
-    var _a2 = getScrollVariables(axis, target), position = _a2[0], scroll_1 = _a2[1], capacity = _a2[2];
-    var elementScroll = scroll_1 - capacity - directionFactor * position;
-    if (position || elementScroll) {
-      if (elementCouldBeScrolled(axis, target)) {
-        availableScroll += elementScroll;
-        availableScrollTop += position;
-      }
-    }
-    var parent_1 = target.parentNode;
-    target = parent_1 && parent_1.nodeType === Node.DOCUMENT_FRAGMENT_NODE ? parent_1.host : parent_1;
-  } while (
-    // portaled content
-    !targetInLock && target !== document.body || // self content
-    targetInLock && (endTarget.contains(target) || endTarget === target)
-  );
-  if (isDeltaPositive && (Math.abs(availableScroll) < 1 || false)) {
-    shouldCancelScroll = true;
-  } else if (!isDeltaPositive && (Math.abs(availableScrollTop) < 1 || false)) {
-    shouldCancelScroll = true;
-  }
-  return shouldCancelScroll;
-};
-var getTouchXY = function(event) {
-  return "changedTouches" in event ? [event.changedTouches[0].clientX, event.changedTouches[0].clientY] : [0, 0];
-};
-var getDeltaXY = function(event) {
-  return [event.deltaX, event.deltaY];
-};
-var extractRef = function(ref) {
-  return ref && "current" in ref ? ref.current : ref;
-};
-var deltaCompare = function(x3, y2) {
-  return x3[0] === y2[0] && x3[1] === y2[1];
-};
-var generateStyle = function(id2) {
-  return "\n  .block-interactivity-".concat(id2, " {pointer-events: none;}\n  .allow-interactivity-").concat(id2, " {pointer-events: all;}\n");
-};
-var idCounter = 0;
-var lockStack = [];
-function RemoveScrollSideCar(props) {
-  var shouldPreventQueue = reactExports.useRef([]);
-  var touchStartRef = reactExports.useRef([0, 0]);
-  var activeAxis = reactExports.useRef();
-  var id2 = reactExports.useState(idCounter++)[0];
-  var Style2 = reactExports.useState(styleSingleton)[0];
-  var lastProps = reactExports.useRef(props);
-  reactExports.useEffect(function() {
-    lastProps.current = props;
-  }, [props]);
-  reactExports.useEffect(function() {
-    if (props.inert) {
-      document.body.classList.add("block-interactivity-".concat(id2));
-      var allow_1 = __spreadArray([props.lockRef.current], (props.shards || []).map(extractRef), true).filter(Boolean);
-      allow_1.forEach(function(el) {
-        return el.classList.add("allow-interactivity-".concat(id2));
-      });
-      return function() {
-        document.body.classList.remove("block-interactivity-".concat(id2));
-        allow_1.forEach(function(el) {
-          return el.classList.remove("allow-interactivity-".concat(id2));
-        });
-      };
-    }
-    return;
-  }, [props.inert, props.lockRef.current, props.shards]);
-  var shouldCancelEvent = reactExports.useCallback(function(event, parent) {
-    if ("touches" in event && event.touches.length === 2 || event.type === "wheel" && event.ctrlKey) {
-      return !lastProps.current.allowPinchZoom;
-    }
-    var touch = getTouchXY(event);
-    var touchStart = touchStartRef.current;
-    var deltaX = "deltaX" in event ? event.deltaX : touchStart[0] - touch[0];
-    var deltaY = "deltaY" in event ? event.deltaY : touchStart[1] - touch[1];
-    var currentAxis;
-    var target = event.target;
-    var moveDirection = Math.abs(deltaX) > Math.abs(deltaY) ? "h" : "v";
-    if ("touches" in event && moveDirection === "h" && target.type === "range") {
-      return false;
-    }
-    var selection = window.getSelection();
-    var anchorNode = selection && selection.anchorNode;
-    var isTouchingSelection = anchorNode ? anchorNode === target || anchorNode.contains(target) : false;
-    if (isTouchingSelection) {
-      return false;
-    }
-    var canBeScrolledInMainDirection = locationCouldBeScrolled(moveDirection, target);
-    if (!canBeScrolledInMainDirection) {
-      return true;
-    }
-    if (canBeScrolledInMainDirection) {
-      currentAxis = moveDirection;
-    } else {
-      currentAxis = moveDirection === "v" ? "h" : "v";
-      canBeScrolledInMainDirection = locationCouldBeScrolled(moveDirection, target);
-    }
-    if (!canBeScrolledInMainDirection) {
-      return false;
-    }
-    if (!activeAxis.current && "changedTouches" in event && (deltaX || deltaY)) {
-      activeAxis.current = currentAxis;
-    }
-    if (!currentAxis) {
-      return true;
-    }
-    var cancelingAxis = activeAxis.current || currentAxis;
-    return handleScroll(cancelingAxis, parent, event, cancelingAxis === "h" ? deltaX : deltaY);
-  }, []);
-  var shouldPrevent = reactExports.useCallback(function(_event) {
-    var event = _event;
-    if (!lockStack.length || lockStack[lockStack.length - 1] !== Style2) {
-      return;
-    }
-    var delta = "deltaY" in event ? getDeltaXY(event) : getTouchXY(event);
-    var sourceEvent = shouldPreventQueue.current.filter(function(e) {
-      return e.name === event.type && (e.target === event.target || event.target === e.shadowParent) && deltaCompare(e.delta, delta);
-    })[0];
-    if (sourceEvent && sourceEvent.should) {
-      if (event.cancelable) {
-        event.preventDefault();
-      }
-      return;
-    }
-    if (!sourceEvent) {
-      var shardNodes = (lastProps.current.shards || []).map(extractRef).filter(Boolean).filter(function(node) {
-        return node.contains(event.target);
-      });
-      var shouldStop = shardNodes.length > 0 ? shouldCancelEvent(event, shardNodes[0]) : !lastProps.current.noIsolation;
-      if (shouldStop) {
-        if (event.cancelable) {
-          event.preventDefault();
-        }
-      }
-    }
-  }, []);
-  var shouldCancel = reactExports.useCallback(function(name, delta, target, should) {
-    var event = { name, delta, target, should, shadowParent: getOutermostShadowParent(target) };
-    shouldPreventQueue.current.push(event);
-    setTimeout(function() {
-      shouldPreventQueue.current = shouldPreventQueue.current.filter(function(e) {
-        return e !== event;
-      });
-    }, 1);
-  }, []);
-  var scrollTouchStart = reactExports.useCallback(function(event) {
-    touchStartRef.current = getTouchXY(event);
-    activeAxis.current = void 0;
-  }, []);
-  var scrollWheel = reactExports.useCallback(function(event) {
-    shouldCancel(event.type, getDeltaXY(event), event.target, shouldCancelEvent(event, props.lockRef.current));
-  }, []);
-  var scrollTouchMove = reactExports.useCallback(function(event) {
-    shouldCancel(event.type, getTouchXY(event), event.target, shouldCancelEvent(event, props.lockRef.current));
-  }, []);
-  reactExports.useEffect(function() {
-    lockStack.push(Style2);
-    props.setCallbacks({
-      onScrollCapture: scrollWheel,
-      onWheelCapture: scrollWheel,
-      onTouchMoveCapture: scrollTouchMove
-    });
-    document.addEventListener("wheel", shouldPrevent, nonPassive);
-    document.addEventListener("touchmove", shouldPrevent, nonPassive);
-    document.addEventListener("touchstart", scrollTouchStart, nonPassive);
-    return function() {
-      lockStack = lockStack.filter(function(inst) {
-        return inst !== Style2;
-      });
-      document.removeEventListener("wheel", shouldPrevent, nonPassive);
-      document.removeEventListener("touchmove", shouldPrevent, nonPassive);
-      document.removeEventListener("touchstart", scrollTouchStart, nonPassive);
-    };
-  }, []);
-  var removeScrollBar = props.removeScrollBar, inert = props.inert;
-  return reactExports.createElement(
-    reactExports.Fragment,
-    null,
-    inert ? reactExports.createElement(Style2, { styles: generateStyle(id2) }) : null,
-    removeScrollBar ? reactExports.createElement(RemoveScrollBar, { noRelative: props.noRelative, gapMode: props.gapMode }) : null
-  );
-}
-function getOutermostShadowParent(node) {
-  var shadowParent = null;
-  while (node !== null) {
-    if (node instanceof ShadowRoot) {
-      shadowParent = node.host;
-      node = node.host;
-    }
-    node = node.parentNode;
-  }
-  return shadowParent;
-}
-const SideCar = exportSidecar(effectCar, RemoveScrollSideCar);
-var ReactRemoveScroll = reactExports.forwardRef(function(props, ref) {
-  return reactExports.createElement(RemoveScroll, __assign({}, props, { ref, sideCar: SideCar }));
-});
-ReactRemoveScroll.classNames = RemoveScroll.classNames;
 var SELECTION_KEYS$1 = ["Enter", " "];
 var FIRST_KEYS = ["ArrowDown", "PageUp", "Home"];
 var LAST_KEYS = ["ArrowUp", "PageDown", "End"];
@@ -50203,13 +53590,13 @@ var SUB_CLOSE_KEYS = {
 };
 var MENU_NAME = "Menu";
 var [Collection$2, useCollection$2, createCollectionScope$2] = createCollection(MENU_NAME);
-var [createMenuContext, createMenuScope] = createContextScope(MENU_NAME, [
+var [createMenuContext, createMenuScope] = createContextScope$1(MENU_NAME, [
   createCollectionScope$2,
   createPopperScope,
   createRovingFocusGroupScope
 ]);
 var usePopperScope$1 = createPopperScope();
-var useRovingFocusGroupScope$1 = createRovingFocusGroupScope();
+var useRovingFocusGroupScope = createRovingFocusGroupScope();
 var [MenuProvider, useMenuContext] = createMenuContext(MENU_NAME);
 var [MenuRootProvider, useMenuRootContext] = createMenuContext(MENU_NAME);
 var Menu = (props) => {
@@ -50233,7 +53620,7 @@ var Menu = (props) => {
       document.removeEventListener("pointermove", handlePointer, { capture: true });
     };
   }, []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$3, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$2, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
     MenuProvider,
     {
       scope: __scopeMenu,
@@ -50265,30 +53652,30 @@ var MenuAnchor = reactExports.forwardRef(
   }
 );
 MenuAnchor.displayName = ANCHOR_NAME;
-var PORTAL_NAME$3 = "MenuPortal";
-var [PortalProvider$1, usePortalContext$1] = createMenuContext(PORTAL_NAME$3, {
+var PORTAL_NAME$2 = "MenuPortal";
+var [PortalProvider, usePortalContext] = createMenuContext(PORTAL_NAME$2, {
   forceMount: void 0
 });
 var MenuPortal = (props) => {
   const { __scopeMenu, forceMount, children, container } = props;
-  const context = useMenuContext(PORTAL_NAME$3, __scopeMenu);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider$1, { scope: __scopeMenu, forceMount, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$4, { asChild: true, container, children }) }) });
+  const context = useMenuContext(PORTAL_NAME$2, __scopeMenu);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider, { scope: __scopeMenu, forceMount, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$4, { asChild: true, container, children }) }) });
 };
-MenuPortal.displayName = PORTAL_NAME$3;
-var CONTENT_NAME$4 = "MenuContent";
-var [MenuContentProvider, useMenuContentContext] = createMenuContext(CONTENT_NAME$4);
+MenuPortal.displayName = PORTAL_NAME$2;
+var CONTENT_NAME$2 = "MenuContent";
+var [MenuContentProvider, useMenuContentContext] = createMenuContext(CONTENT_NAME$2);
 var MenuContent = reactExports.forwardRef(
   (props, forwardedRef) => {
-    const portalContext = usePortalContext$1(CONTENT_NAME$4, props.__scopeMenu);
+    const portalContext = usePortalContext(CONTENT_NAME$2, props.__scopeMenu);
     const { forceMount = portalContext.forceMount, ...contentProps } = props;
-    const context = useMenuContext(CONTENT_NAME$4, props.__scopeMenu);
-    const rootContext = useMenuRootContext(CONTENT_NAME$4, props.__scopeMenu);
+    const context = useMenuContext(CONTENT_NAME$2, props.__scopeMenu);
+    const rootContext = useMenuRootContext(CONTENT_NAME$2, props.__scopeMenu);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(Collection$2.Provider, { scope: props.__scopeMenu, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Collection$2.Slot, { scope: props.__scopeMenu, children: rootContext.modal ? /* @__PURE__ */ jsxRuntimeExports.jsx(MenuRootContentModal, { ...contentProps, ref: forwardedRef }) : /* @__PURE__ */ jsxRuntimeExports.jsx(MenuRootContentNonModal, { ...contentProps, ref: forwardedRef }) }) }) });
   }
 );
 var MenuRootContentModal = reactExports.forwardRef(
   (props, forwardedRef) => {
-    const context = useMenuContext(CONTENT_NAME$4, props.__scopeMenu);
+    const context = useMenuContext(CONTENT_NAME$2, props.__scopeMenu);
     const ref = reactExports.useRef(null);
     const composedRefs = useComposedRefs(forwardedRef, ref);
     reactExports.useEffect(() => {
@@ -50314,7 +53701,7 @@ var MenuRootContentModal = reactExports.forwardRef(
   }
 );
 var MenuRootContentNonModal = reactExports.forwardRef((props, forwardedRef) => {
-  const context = useMenuContext(CONTENT_NAME$4, props.__scopeMenu);
+  const context = useMenuContext(CONTENT_NAME$2, props.__scopeMenu);
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     MenuContentImpl,
     {
@@ -50327,7 +53714,7 @@ var MenuRootContentNonModal = reactExports.forwardRef((props, forwardedRef) => {
     }
   );
 });
-var Slot$2 = /* @__PURE__ */ createSlot("MenuContent.ScrollLock");
+var Slot$1 = /* @__PURE__ */ createSlot("MenuContent.ScrollLock");
 var MenuContentImpl = reactExports.forwardRef(
   (props, forwardedRef) => {
     const {
@@ -50346,10 +53733,10 @@ var MenuContentImpl = reactExports.forwardRef(
       disableOutsideScroll,
       ...contentProps
     } = props;
-    const context = useMenuContext(CONTENT_NAME$4, __scopeMenu);
-    const rootContext = useMenuRootContext(CONTENT_NAME$4, __scopeMenu);
+    const context = useMenuContext(CONTENT_NAME$2, __scopeMenu);
+    const rootContext = useMenuRootContext(CONTENT_NAME$2, __scopeMenu);
     const popperScope = usePopperScope$1(__scopeMenu);
-    const rovingFocusGroupScope = useRovingFocusGroupScope$1(__scopeMenu);
+    const rovingFocusGroupScope = useRovingFocusGroupScope(__scopeMenu);
     const getItems = useCollection$2(__scopeMenu);
     const [currentItemId, setCurrentItemId] = reactExports.useState(null);
     const contentRef = reactExports.useRef(null);
@@ -50361,7 +53748,7 @@ var MenuContentImpl = reactExports.forwardRef(
     const pointerDirRef = reactExports.useRef("right");
     const lastPointerXRef = reactExports.useRef(0);
     const ScrollLockWrapper = disableOutsideScroll ? ReactRemoveScroll : reactExports.Fragment;
-    const scrollLockWrapperProps = disableOutsideScroll ? { as: Slot$2, allowPinchZoom: true } : void 0;
+    const scrollLockWrapperProps = disableOutsideScroll ? { as: Slot$1, allowPinchZoom: true } : void 0;
     const handleTypeaheadSearch = (key) => {
       var _a2, _b2;
       const search = searchRef.current + key;
@@ -50441,7 +53828,7 @@ var MenuContentImpl = reactExports.forwardRef(
                 onInteractOutside,
                 onDismiss,
                 children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  Root$4,
+                  Root$7,
                   {
                     asChild: true,
                     ...rovingFocusGroupScope,
@@ -50455,7 +53842,7 @@ var MenuContentImpl = reactExports.forwardRef(
                     }),
                     preventScrollOnEntryFocus: true,
                     children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      Content$1,
+                      Content,
                       {
                         role: "menu",
                         "aria-orientation": "vertical",
@@ -50514,7 +53901,7 @@ var MenuContentImpl = reactExports.forwardRef(
     );
   }
 );
-MenuContent.displayName = CONTENT_NAME$4;
+MenuContent.displayName = CONTENT_NAME$2;
 var GROUP_NAME$2 = "MenuGroup";
 var MenuGroup = reactExports.forwardRef(
   (props, forwardedRef) => {
@@ -50587,7 +53974,7 @@ var MenuItemImpl = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeMenu, disabled = false, textValue, ...itemProps } = props;
     const contentContext = useMenuContentContext(ITEM_NAME$2, __scopeMenu);
-    const rovingFocusGroupScope = useRovingFocusGroupScope$1(__scopeMenu);
+    const rovingFocusGroupScope = useRovingFocusGroupScope(__scopeMenu);
     const ref = reactExports.useRef(null);
     const composedRefs = useComposedRefs(forwardedRef, ref);
     const [isFocused, setIsFocused] = reactExports.useState(false);
@@ -50862,10 +54249,10 @@ MenuSubTrigger.displayName = SUB_TRIGGER_NAME$1;
 var SUB_CONTENT_NAME$1 = "MenuSubContent";
 var MenuSubContent = reactExports.forwardRef(
   (props, forwardedRef) => {
-    const portalContext = usePortalContext$1(CONTENT_NAME$4, props.__scopeMenu);
+    const portalContext = usePortalContext(CONTENT_NAME$2, props.__scopeMenu);
     const { forceMount = portalContext.forceMount, ...subContentProps } = props;
-    const context = useMenuContext(CONTENT_NAME$4, props.__scopeMenu);
-    const rootContext = useMenuRootContext(CONTENT_NAME$4, props.__scopeMenu);
+    const context = useMenuContext(CONTENT_NAME$2, props.__scopeMenu);
+    const rootContext = useMenuRootContext(CONTENT_NAME$2, props.__scopeMenu);
     const subContext = useMenuSubContext(SUB_CONTENT_NAME$1, props.__scopeMenu);
     const ref = reactExports.useRef(null);
     const composedRefs = useComposedRefs(forwardedRef, ref);
@@ -50942,7 +54329,7 @@ function getNextMatch(values, search, currentMatch) {
   return nextMatch !== currentMatch ? nextMatch : void 0;
 }
 function isPointInPolygon(point, polygon) {
-  const { x: x3, y: y2 } = point;
+  const { x: x2, y: y2 } = point;
   let inside = false;
   for (let i = 0, j2 = polygon.length - 1; i < polygon.length; j2 = i++) {
     const ii = polygon[i];
@@ -50951,7 +54338,7 @@ function isPointInPolygon(point, polygon) {
     const yi = ii.y;
     const xj = jj.x;
     const yj = jj.y;
-    const intersect = yi > y2 !== yj > y2 && x3 < (xj - xi) * (y2 - yi) / (yj - yi) + xi;
+    const intersect = yi > y2 !== yj > y2 && x2 < (xj - xi) * (y2 - yi) / (yj - yi) + xi;
     if (intersect) inside = !inside;
   }
   return inside;
@@ -50966,7 +54353,7 @@ function whenMouse(handler) {
 }
 var Root3 = Menu;
 var Anchor2 = MenuAnchor;
-var Portal$2 = MenuPortal;
+var Portal$1 = MenuPortal;
 var Content2$2 = MenuContent;
 var Group = MenuGroup;
 var Label$2 = MenuLabel;
@@ -50980,7 +54367,7 @@ var Arrow2 = MenuArrow;
 var SubTrigger = MenuSubTrigger;
 var SubContent = MenuSubContent;
 var DROPDOWN_MENU_NAME = "DropdownMenu";
-var [createDropdownMenuContext] = createContextScope(
+var [createDropdownMenuContext] = createContextScope$1(
   DROPDOWN_MENU_NAME,
   [createMenuScope]
 );
@@ -51020,11 +54407,11 @@ var DropdownMenu$1 = (props) => {
   );
 };
 DropdownMenu$1.displayName = DROPDOWN_MENU_NAME;
-var TRIGGER_NAME$3 = "DropdownMenuTrigger";
+var TRIGGER_NAME$1 = "DropdownMenuTrigger";
 var DropdownMenuTrigger$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeDropdownMenu, disabled = false, ...triggerProps } = props;
-    const context = useDropdownMenuContext(TRIGGER_NAME$3, __scopeDropdownMenu);
+    const context = useDropdownMenuContext(TRIGGER_NAME$1, __scopeDropdownMenu);
     const menuScope = useMenuScope(__scopeDropdownMenu);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(Anchor2, { asChild: true, ...menuScope, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       Primitive$1.button,
@@ -51055,19 +54442,19 @@ var DropdownMenuTrigger$1 = reactExports.forwardRef(
     ) });
   }
 );
-DropdownMenuTrigger$1.displayName = TRIGGER_NAME$3;
-var PORTAL_NAME$2 = "DropdownMenuPortal";
+DropdownMenuTrigger$1.displayName = TRIGGER_NAME$1;
+var PORTAL_NAME$1 = "DropdownMenuPortal";
 var DropdownMenuPortal = (props) => {
   const { __scopeDropdownMenu, ...portalProps } = props;
   const menuScope = useMenuScope(__scopeDropdownMenu);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$2, { ...menuScope, ...portalProps });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$1, { ...menuScope, ...portalProps });
 };
-DropdownMenuPortal.displayName = PORTAL_NAME$2;
-var CONTENT_NAME$3 = "DropdownMenuContent";
+DropdownMenuPortal.displayName = PORTAL_NAME$1;
+var CONTENT_NAME$1 = "DropdownMenuContent";
 var DropdownMenuContent$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeDropdownMenu, ...contentProps } = props;
-    const context = useDropdownMenuContext(CONTENT_NAME$3, __scopeDropdownMenu);
+    const context = useDropdownMenuContext(CONTENT_NAME$1, __scopeDropdownMenu);
     const menuScope = useMenuScope(__scopeDropdownMenu);
     const hasInteractedOutsideRef = reactExports.useRef(false);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -51105,7 +54492,7 @@ var DropdownMenuContent$1 = reactExports.forwardRef(
     );
   }
 );
-DropdownMenuContent$1.displayName = CONTENT_NAME$3;
+DropdownMenuContent$1.displayName = CONTENT_NAME$1;
 var GROUP_NAME$1 = "DropdownMenuGroup";
 var DropdownMenuGroup = reactExports.forwardRef(
   (props, forwardedRef) => {
@@ -51154,13 +54541,13 @@ var DropdownMenuRadioItem = reactExports.forwardRef((props, forwardedRef) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(RadioItem, { ...menuScope, ...radioItemProps, ref: forwardedRef });
 });
 DropdownMenuRadioItem.displayName = RADIO_ITEM_NAME;
-var INDICATOR_NAME = "DropdownMenuItemIndicator";
+var INDICATOR_NAME$1 = "DropdownMenuItemIndicator";
 var DropdownMenuItemIndicator = reactExports.forwardRef((props, forwardedRef) => {
   const { __scopeDropdownMenu, ...itemIndicatorProps } = props;
   const menuScope = useMenuScope(__scopeDropdownMenu);
   return /* @__PURE__ */ jsxRuntimeExports.jsx(ItemIndicator$1, { ...menuScope, ...itemIndicatorProps, ref: forwardedRef });
 });
-DropdownMenuItemIndicator.displayName = INDICATOR_NAME;
+DropdownMenuItemIndicator.displayName = INDICATOR_NAME$1;
 var SEPARATOR_NAME$1 = "DropdownMenuSeparator";
 var DropdownMenuSeparator$1 = reactExports.forwardRef((props, forwardedRef) => {
   const { __scopeDropdownMenu, ...separatorProps } = props;
@@ -51209,8 +54596,8 @@ var DropdownMenuSubContent = reactExports.forwardRef((props, forwardedRef) => {
   );
 });
 DropdownMenuSubContent.displayName = SUB_CONTENT_NAME;
-var Root2$2 = DropdownMenu$1;
-var Trigger$2 = DropdownMenuTrigger$1;
+var Root2$1 = DropdownMenu$1;
+var Trigger$1 = DropdownMenuTrigger$1;
 var Portal2 = DropdownMenuPortal;
 var Content2$1 = DropdownMenuContent$1;
 var Item2 = DropdownMenuItem$1;
@@ -51218,13 +54605,13 @@ var Separator2 = DropdownMenuSeparator$1;
 function DropdownMenu({
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$2, { "data-slot": "dropdown-menu", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$1, { "data-slot": "dropdown-menu", ...props });
 }
 function DropdownMenuTrigger({
   ...props
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Trigger$2,
+    Trigger$1,
     {
       "data-slot": "dropdown-menu-trigger",
       ...props
@@ -51278,22 +54665,6 @@ function DropdownMenuSeparator({
     {
       "data-slot": "dropdown-menu-separator",
       className: cn("bg-border -mx-1 my-1 h-px", className),
-      ...props
-    }
-  );
-}
-function Input({ className, type, ...props }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "input",
-    {
-      type,
-      "data-slot": "input",
-      className: cn(
-        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
-        className
-      ),
       ...props
     }
   );
@@ -51400,7 +54771,7 @@ function ChatHistory({
         },
         chat.id
       )) }),
-      folders.map((folder) => {
+      folders.map((folder, folderIdx) => {
         const items = folderChats(folder.id);
         if (items.length === 0) return null;
         return /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -51412,7 +54783,7 @@ function ChatHistory({
               {
                 type: "button",
                 onClick: () => onDeleteFolder(folder.id),
-                "data-ocid": `chat.history.delete_folder.${folder.id}`,
+                "data-ocid": `chat.history.delete_folder.${folderIdx + 1}`,
                 className: "text-muted-foreground hover:text-destructive",
                 "aria-label": `Delete folder ${folder.name}`,
                 children: /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { className: "size-3" })
@@ -51874,9 +55245,9 @@ function ChatMessage({
                     isUser ? "flex-row-reverse" : "flex-row"
                   ),
                   children: [
-                    !isUser && message.model && /* @__PURE__ */ jsxRuntimeExports.jsx(Badge, { variant: "secondary", className: "text-[10px] font-normal", children: MODEL_LABELS[message.model] }),
+                    !isUser && message.model && /* @__PURE__ */ jsxRuntimeExports.jsx(Badge$1, { variant: "secondary", className: "text-[10px] font-normal", children: MODEL_LABELS[message.model] }),
                     !isUser && /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      Badge,
+                      Badge$1,
                       {
                         variant: "outline",
                         className: "text-[10px] font-normal text-muted-foreground",
@@ -51936,7 +55307,7 @@ var OPEN_KEYS = [" ", "Enter", "ArrowUp", "ArrowDown"];
 var SELECTION_KEYS = [" ", "Enter"];
 var SELECT_NAME = "Select";
 var [Collection$1, useCollection$1, createCollectionScope$1] = createCollection(SELECT_NAME);
-var [createSelectContext] = createContextScope(SELECT_NAME, [
+var [createSelectContext] = createContextScope$1(SELECT_NAME, [
   createCollectionScope$1,
   createPopperScope
 ]);
@@ -51981,7 +55352,7 @@ var Select$1 = (props) => {
   const isFormControl = trigger ? form || !!trigger.closest("form") : true;
   const [nativeOptionsSet, setNativeOptionsSet] = reactExports.useState(/* @__PURE__ */ new Set());
   const nativeSelectKey = Array.from(nativeOptionsSet).map((option) => option.props.value).join(";");
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$3, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$2, { ...popperScope, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
     SelectProvider,
     {
       required,
@@ -52042,12 +55413,12 @@ var Select$1 = (props) => {
   ) });
 };
 Select$1.displayName = SELECT_NAME;
-var TRIGGER_NAME$2 = "SelectTrigger";
+var TRIGGER_NAME = "SelectTrigger";
 var SelectTrigger$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeSelect, disabled = false, ...triggerProps } = props;
     const popperScope = usePopperScope(__scopeSelect);
-    const context = useSelectContext(TRIGGER_NAME$2, __scopeSelect);
+    const context = useSelectContext(TRIGGER_NAME, __scopeSelect);
     const isDisabled = context.disabled || disabled;
     const composedRefs = useComposedRefs(forwardedRef, context.onTriggerChange);
     const getItems = useCollection$1(__scopeSelect);
@@ -52119,7 +55490,7 @@ var SelectTrigger$1 = reactExports.forwardRef(
     ) });
   }
 );
-SelectTrigger$1.displayName = TRIGGER_NAME$2;
+SelectTrigger$1.displayName = TRIGGER_NAME;
 var VALUE_NAME = "SelectValue";
 var SelectValue$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
@@ -52151,15 +55522,15 @@ var SelectIcon = reactExports.forwardRef(
   }
 );
 SelectIcon.displayName = ICON_NAME;
-var PORTAL_NAME$1 = "SelectPortal";
+var PORTAL_NAME = "SelectPortal";
 var SelectPortal = (props) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$4, { asChild: true, ...props });
 };
-SelectPortal.displayName = PORTAL_NAME$1;
-var CONTENT_NAME$2 = "SelectContent";
+SelectPortal.displayName = PORTAL_NAME;
+var CONTENT_NAME = "SelectContent";
 var SelectContent$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
-    const context = useSelectContext(CONTENT_NAME$2, props.__scopeSelect);
+    const context = useSelectContext(CONTENT_NAME, props.__scopeSelect);
     const [fragment, setFragment] = reactExports.useState();
     useLayoutEffect2(() => {
       setFragment(new DocumentFragment());
@@ -52174,11 +55545,11 @@ var SelectContent$1 = reactExports.forwardRef(
     return /* @__PURE__ */ jsxRuntimeExports.jsx(SelectContentImpl, { ...props, ref: forwardedRef });
   }
 );
-SelectContent$1.displayName = CONTENT_NAME$2;
+SelectContent$1.displayName = CONTENT_NAME;
 var CONTENT_MARGIN = 10;
-var [SelectContentProvider, useSelectContentContext] = createSelectContext(CONTENT_NAME$2);
+var [SelectContentProvider, useSelectContentContext] = createSelectContext(CONTENT_NAME);
 var CONTENT_IMPL_NAME = "SelectContentImpl";
-var Slot$1 = /* @__PURE__ */ createSlot("SelectContent.RemoveScroll");
+var Slot = /* @__PURE__ */ createSlot("SelectContent.RemoveScroll");
 var SelectContentImpl = reactExports.forwardRef(
   (props, forwardedRef) => {
     const {
@@ -52202,7 +55573,7 @@ var SelectContentImpl = reactExports.forwardRef(
       //
       ...contentProps
     } = props;
-    const context = useSelectContext(CONTENT_NAME$2, __scopeSelect);
+    const context = useSelectContext(CONTENT_NAME, __scopeSelect);
     const [content, setContent] = reactExports.useState(null);
     const [viewport, setViewport] = reactExports.useState(null);
     const composedRefs = useComposedRefs(forwardedRef, (node) => setContent(node));
@@ -52342,7 +55713,7 @@ var SelectContentImpl = reactExports.forwardRef(
         position,
         isPositioned,
         searchRef,
-        children: /* @__PURE__ */ jsxRuntimeExports.jsx(ReactRemoveScroll, { as: Slot$1, allowPinchZoom: true, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(ReactRemoveScroll, { as: Slot, allowPinchZoom: true, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
           FocusScope,
           {
             asChild: true,
@@ -52417,8 +55788,8 @@ SelectContentImpl.displayName = CONTENT_IMPL_NAME;
 var ITEM_ALIGNED_POSITION_NAME = "SelectItemAlignedPosition";
 var SelectItemAlignedPosition = reactExports.forwardRef((props, forwardedRef) => {
   const { __scopeSelect, onPlaced, ...popperProps } = props;
-  const context = useSelectContext(CONTENT_NAME$2, __scopeSelect);
-  const contentContext = useSelectContentContext(CONTENT_NAME$2, __scopeSelect);
+  const context = useSelectContext(CONTENT_NAME, __scopeSelect);
+  const contentContext = useSelectContentContext(CONTENT_NAME, __scopeSelect);
   const [contentWrapper, setContentWrapper] = reactExports.useState(null);
   const [content, setContent] = reactExports.useState(null);
   const composedRefs = useComposedRefs(forwardedRef, (node) => setContent(node));
@@ -52588,7 +55959,7 @@ var SelectPopperPosition = reactExports.forwardRef((props, forwardedRef) => {
   } = props;
   const popperScope = usePopperScope(__scopeSelect);
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Content$1,
+    Content,
     {
       ...popperScope,
       ...popperProps,
@@ -52612,13 +55983,13 @@ var SelectPopperPosition = reactExports.forwardRef((props, forwardedRef) => {
   );
 });
 SelectPopperPosition.displayName = POPPER_POSITION_NAME;
-var [SelectViewportProvider, useSelectViewportContext] = createSelectContext(CONTENT_NAME$2, {});
-var VIEWPORT_NAME = "SelectViewport";
+var [SelectViewportProvider, useSelectViewportContext] = createSelectContext(CONTENT_NAME, {});
+var VIEWPORT_NAME$1 = "SelectViewport";
 var SelectViewport = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeSelect, nonce, ...viewportProps } = props;
-    const contentContext = useSelectContentContext(VIEWPORT_NAME, __scopeSelect);
-    const viewportContext = useSelectViewportContext(VIEWPORT_NAME, __scopeSelect);
+    const contentContext = useSelectContentContext(VIEWPORT_NAME$1, __scopeSelect);
+    const viewportContext = useSelectViewportContext(VIEWPORT_NAME$1, __scopeSelect);
     const composedRefs = useComposedRefs(forwardedRef, contentContext.onViewportChange);
     const prevScrollTopRef = reactExports.useRef(0);
     return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
@@ -52680,7 +56051,7 @@ var SelectViewport = reactExports.forwardRef(
     ] });
   }
 );
-SelectViewport.displayName = VIEWPORT_NAME;
+SelectViewport.displayName = VIEWPORT_NAME$1;
 var GROUP_NAME = "SelectGroup";
 var [SelectGroupContextProvider, useSelectGroupContext] = createSelectContext(GROUP_NAME);
 var SelectGroup = reactExports.forwardRef(
@@ -53059,13 +56430,13 @@ function findNextItem(items, search, currentItem) {
 function wrapArray(array, startIndex) {
   return array.map((_2, index2) => array[(startIndex + index2) % array.length]);
 }
-var Root2$1 = Select$1;
-var Trigger$1 = SelectTrigger$1;
+var Root2 = Select$1;
+var Trigger = SelectTrigger$1;
 var Value = SelectValue$1;
 var Icon = SelectIcon;
-var Portal$1 = SelectPortal;
+var Portal = SelectPortal;
 var Content2 = SelectContent$1;
-var Viewport = SelectViewport;
+var Viewport$1 = SelectViewport;
 var Item = SelectItem$1;
 var ItemText = SelectItemText;
 var ItemIndicator = SelectItemIndicator;
@@ -53074,7 +56445,7 @@ var ScrollDownButton = SelectScrollDownButton$1;
 function Select({
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2$1, { "data-slot": "select", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root2, { "data-slot": "select", ...props });
 }
 function SelectValue({
   ...props
@@ -53088,7 +56459,7 @@ function SelectTrigger({
   ...props
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    Trigger$1,
+    Trigger,
     {
       "data-slot": "select-trigger",
       "data-size": size2,
@@ -53110,7 +56481,7 @@ function SelectContent({
   position = "popper",
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$1, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
     Content2,
     {
       "data-slot": "select-content",
@@ -53124,7 +56495,7 @@ function SelectContent({
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(SelectScrollUpButton, {}),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Viewport,
+          Viewport$1,
           {
             className: cn(
               "p-1",
@@ -53425,590 +56796,9 @@ async function streamMockResponse(prompt, mode, model, onToken, signal) {
     await sleep(TOKEN_DELAY_MS, signal);
   }
 }
-const Model = Variant({
-  "gpt": Null,
-  "claude": Null,
-  "mistral": Null,
-  "qwen": Null,
-  "llama": Null,
-  "gemini": Null,
-  "ollama": Null,
-  "deepseek": Null
-});
-const Mode = Variant({
-  "normal": Null,
-  "research": Null,
-  "codingAssistant": Null,
-  "documentAssistant": Null,
-  "imageAnalysis": Null,
-  "internetSearch": Null,
-  "youtubeSearch": Null,
-  "emailAssistant": Null,
-  "knowledgeBase": Null
-});
-const Role = Variant({
-  "systemMsg": Null,
-  "user": Null,
-  "assistant": Null
-});
-const Message = Record({
-  "model": Opt(Model),
-  "content": Text,
-  "mode": Opt(Mode),
-  "role": Role,
-  "timestamp": Int
-});
-const Chat = Record({
-  "id": Nat,
-  "title": Text,
-  "messages": Vec(Message),
-  "createdAt": Int,
-  "updatedAt": Int,
-  "pinned": Bool,
-  "folder": Opt(Nat)
-});
-const Folder = Record({
-  "id": Nat,
-  "name": Text,
-  "createdAt": Int
-});
-Service({
-  "__chats": Func(
-    [Opt(Principal2), Opt(Nat)],
-    [Vec(Tuple(Principal2, Vec(Chat)))],
-    ["query"]
-  ),
-  "__folders": Func(
-    [Opt(Principal2), Opt(Nat)],
-    [Vec(Tuple(Principal2, Vec(Folder)))],
-    ["query"]
-  ),
-  "__nextChatId": Func([], [Reserved], ["query"]),
-  "__nextFolderId": Func([], [Reserved], ["query"]),
-  "addMessage": Func([Nat, Message], [Opt(Chat)], []),
-  "createChat": Func([Text], [Chat], []),
-  "createFolder": Func([Text], [Folder], []),
-  "deleteChat": Func([Nat], [Bool], []),
-  "deleteFolder": Func([Nat], [Bool], []),
-  "getChat": Func([Nat], [Opt(Chat)], []),
-  "listChats": Func([], [Vec(Chat)], []),
-  "listFolders": Func([], [Vec(Folder)], []),
-  "renameFolder": Func([Nat, Text], [Opt(Folder)], []),
-  "updateChat": Func(
-    [
-      Nat,
-      Opt(Text),
-      Opt(Opt(Nat)),
-      Opt(Bool)
-    ],
-    [Opt(Chat)],
-    []
-  )
-});
-const idlFactory = ({ IDL: IDL2 }) => {
-  const Model2 = IDL2.Variant({
-    "gpt": IDL2.Null,
-    "claude": IDL2.Null,
-    "mistral": IDL2.Null,
-    "qwen": IDL2.Null,
-    "llama": IDL2.Null,
-    "gemini": IDL2.Null,
-    "ollama": IDL2.Null,
-    "deepseek": IDL2.Null
-  });
-  const Mode2 = IDL2.Variant({
-    "normal": IDL2.Null,
-    "research": IDL2.Null,
-    "codingAssistant": IDL2.Null,
-    "documentAssistant": IDL2.Null,
-    "imageAnalysis": IDL2.Null,
-    "internetSearch": IDL2.Null,
-    "youtubeSearch": IDL2.Null,
-    "emailAssistant": IDL2.Null,
-    "knowledgeBase": IDL2.Null
-  });
-  const Role2 = IDL2.Variant({
-    "systemMsg": IDL2.Null,
-    "user": IDL2.Null,
-    "assistant": IDL2.Null
-  });
-  const Message2 = IDL2.Record({
-    "model": IDL2.Opt(Model2),
-    "content": IDL2.Text,
-    "mode": IDL2.Opt(Mode2),
-    "role": Role2,
-    "timestamp": IDL2.Int
-  });
-  const Chat2 = IDL2.Record({
-    "id": IDL2.Nat,
-    "title": IDL2.Text,
-    "messages": IDL2.Vec(Message2),
-    "createdAt": IDL2.Int,
-    "updatedAt": IDL2.Int,
-    "pinned": IDL2.Bool,
-    "folder": IDL2.Opt(IDL2.Nat)
-  });
-  const Folder2 = IDL2.Record({
-    "id": IDL2.Nat,
-    "name": IDL2.Text,
-    "createdAt": IDL2.Int
-  });
-  return IDL2.Service({
-    "__chats": IDL2.Func(
-      [IDL2.Opt(IDL2.Principal), IDL2.Opt(IDL2.Nat)],
-      [IDL2.Vec(IDL2.Tuple(IDL2.Principal, IDL2.Vec(Chat2)))],
-      ["query"]
-    ),
-    "__folders": IDL2.Func(
-      [IDL2.Opt(IDL2.Principal), IDL2.Opt(IDL2.Nat)],
-      [IDL2.Vec(IDL2.Tuple(IDL2.Principal, IDL2.Vec(Folder2)))],
-      ["query"]
-    ),
-    "__nextChatId": IDL2.Func([], [IDL2.Reserved], ["query"]),
-    "__nextFolderId": IDL2.Func([], [IDL2.Reserved], ["query"]),
-    "addMessage": IDL2.Func([IDL2.Nat, Message2], [IDL2.Opt(Chat2)], []),
-    "createChat": IDL2.Func([IDL2.Text], [Chat2], []),
-    "createFolder": IDL2.Func([IDL2.Text], [Folder2], []),
-    "deleteChat": IDL2.Func([IDL2.Nat], [IDL2.Bool], []),
-    "deleteFolder": IDL2.Func([IDL2.Nat], [IDL2.Bool], []),
-    "getChat": IDL2.Func([IDL2.Nat], [IDL2.Opt(Chat2)], []),
-    "listChats": IDL2.Func([], [IDL2.Vec(Chat2)], []),
-    "listFolders": IDL2.Func([], [IDL2.Vec(Folder2)], []),
-    "renameFolder": IDL2.Func([IDL2.Nat, IDL2.Text], [IDL2.Opt(Folder2)], []),
-    "updateChat": IDL2.Func(
-      [
-        IDL2.Nat,
-        IDL2.Opt(IDL2.Text),
-        IDL2.Opt(IDL2.Opt(IDL2.Nat)),
-        IDL2.Opt(IDL2.Bool)
-      ],
-      [IDL2.Opt(Chat2)],
-      []
-    )
-  });
-};
-function isNone(option) {
-  return option.__kind__ === "None";
-}
-function unwrap(option) {
-  if (isNone(option)) {
-    throw new Error("unwrap: none");
-  }
-  return option.value;
-}
-function candid_some(value) {
-  return [
-    value
-  ];
-}
-function candid_none() {
-  return [];
-}
-function record_opt_to_undefined(arg) {
-  return arg == null ? void 0 : arg;
-}
-class Backend {
-  constructor(actor, _uploadFile, _downloadFile, processError) {
-    this.actor = actor;
-    this._uploadFile = _uploadFile;
-    this._downloadFile = _downloadFile;
-    this.processError = processError;
-  }
-  async __chats(arg0, arg1) {
-    if (this.processError) {
-      try {
-        const result = await this.actor.__chats(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
-        return from_candid_vec_n3(this._uploadFile, this._downloadFile, result);
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.__chats(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
-      return from_candid_vec_n3(this._uploadFile, this._downloadFile, result);
-    }
-  }
-  async __folders(arg0, arg1) {
-    if (this.processError) {
-      try {
-        const result = await this.actor.__folders(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
-        return result;
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.__folders(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
-      return result;
-    }
-  }
-  async __nextChatId() {
-    if (this.processError) {
-      try {
-        const result = await this.actor.__nextChatId();
-        return result;
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.__nextChatId();
-      return result;
-    }
-  }
-  async __nextFolderId() {
-    if (this.processError) {
-      try {
-        const result = await this.actor.__nextFolderId();
-        return result;
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.__nextFolderId();
-      return result;
-    }
-  }
-  async addMessage(arg0, arg1) {
-    if (this.processError) {
-      try {
-        const result = await this.actor.addMessage(arg0, to_candid_Message_n20(this._uploadFile, this._downloadFile, arg1));
-        return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.addMessage(arg0, to_candid_Message_n20(this._uploadFile, this._downloadFile, arg1));
-      return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
-    }
-  }
-  async createChat(arg0) {
-    if (this.processError) {
-      try {
-        const result = await this.actor.createChat(arg0);
-        return from_candid_Chat_n6(this._uploadFile, this._downloadFile, result);
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.createChat(arg0);
-      return from_candid_Chat_n6(this._uploadFile, this._downloadFile, result);
-    }
-  }
-  async createFolder(arg0) {
-    if (this.processError) {
-      try {
-        const result = await this.actor.createFolder(arg0);
-        return result;
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.createFolder(arg0);
-      return result;
-    }
-  }
-  async deleteChat(arg0) {
-    if (this.processError) {
-      try {
-        const result = await this.actor.deleteChat(arg0);
-        return result;
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.deleteChat(arg0);
-      return result;
-    }
-  }
-  async deleteFolder(arg0) {
-    if (this.processError) {
-      try {
-        const result = await this.actor.deleteFolder(arg0);
-        return result;
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.deleteFolder(arg0);
-      return result;
-    }
-  }
-  async getChat(arg0) {
-    if (this.processError) {
-      try {
-        const result = await this.actor.getChat(arg0);
-        return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.getChat(arg0);
-      return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
-    }
-  }
-  async listChats() {
-    if (this.processError) {
-      try {
-        const result = await this.actor.listChats();
-        return from_candid_vec_n5(this._uploadFile, this._downloadFile, result);
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.listChats();
-      return from_candid_vec_n5(this._uploadFile, this._downloadFile, result);
-    }
-  }
-  async listFolders() {
-    if (this.processError) {
-      try {
-        const result = await this.actor.listFolders();
-        return result;
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.listFolders();
-      return result;
-    }
-  }
-  async renameFolder(arg0, arg1) {
-    if (this.processError) {
-      try {
-        const result = await this.actor.renameFolder(arg0, arg1);
-        return from_candid_opt_n29(this._uploadFile, this._downloadFile, result);
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.renameFolder(arg0, arg1);
-      return from_candid_opt_n29(this._uploadFile, this._downloadFile, result);
-    }
-  }
-  async updateChat(arg0, arg1, arg2, arg3) {
-    if (this.processError) {
-      try {
-        const result = await this.actor.updateChat(arg0, to_candid_opt_n30(this._uploadFile, this._downloadFile, arg1), to_candid_opt_n31(this._uploadFile, this._downloadFile, arg2), to_candid_opt_n32(this._uploadFile, this._downloadFile, arg3));
-        return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
-      } catch (e) {
-        this.processError(e);
-        throw new Error("unreachable");
-      }
-    } else {
-      const result = await this.actor.updateChat(arg0, to_candid_opt_n30(this._uploadFile, this._downloadFile, arg1), to_candid_opt_n31(this._uploadFile, this._downloadFile, arg2), to_candid_opt_n32(this._uploadFile, this._downloadFile, arg3));
-      return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
-    }
-  }
-}
-function from_candid_Chat_n6(_uploadFile, _downloadFile, value) {
-  return from_candid_record_n7(_uploadFile, _downloadFile, value);
-}
-function from_candid_Message_n9(_uploadFile, _downloadFile, value) {
-  return from_candid_record_n10(_uploadFile, _downloadFile, value);
-}
-function from_candid_Mode_n15(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n16(_uploadFile, _downloadFile, value);
-}
-function from_candid_Model_n12(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n13(_uploadFile, _downloadFile, value);
-}
-function from_candid_Role_n17(_uploadFile, _downloadFile, value) {
-  return from_candid_variant_n18(_uploadFile, _downloadFile, value);
-}
-function from_candid_opt_n11(_uploadFile, _downloadFile, value) {
-  return value.length === 0 ? null : from_candid_Model_n12(_uploadFile, _downloadFile, value[0]);
-}
-function from_candid_opt_n14(_uploadFile, _downloadFile, value) {
-  return value.length === 0 ? null : from_candid_Mode_n15(_uploadFile, _downloadFile, value[0]);
-}
-function from_candid_opt_n19(_uploadFile, _downloadFile, value) {
-  return value.length === 0 ? null : value[0];
-}
-function from_candid_opt_n28(_uploadFile, _downloadFile, value) {
-  return value.length === 0 ? null : from_candid_Chat_n6(_uploadFile, _downloadFile, value[0]);
-}
-function from_candid_opt_n29(_uploadFile, _downloadFile, value) {
-  return value.length === 0 ? null : value[0];
-}
-function from_candid_record_n10(_uploadFile, _downloadFile, value) {
-  return {
-    model: record_opt_to_undefined(from_candid_opt_n11(_uploadFile, _downloadFile, value.model)),
-    content: value.content,
-    mode: record_opt_to_undefined(from_candid_opt_n14(_uploadFile, _downloadFile, value.mode)),
-    role: from_candid_Role_n17(_uploadFile, _downloadFile, value.role),
-    timestamp: value.timestamp
-  };
-}
-function from_candid_record_n7(_uploadFile, _downloadFile, value) {
-  return {
-    id: value.id,
-    title: value.title,
-    messages: from_candid_vec_n8(_uploadFile, _downloadFile, value.messages),
-    createdAt: value.createdAt,
-    updatedAt: value.updatedAt,
-    pinned: value.pinned,
-    folder: record_opt_to_undefined(from_candid_opt_n19(_uploadFile, _downloadFile, value.folder))
-  };
-}
-function from_candid_tuple_n4(_uploadFile, _downloadFile, value) {
-  return [
-    value[0],
-    from_candid_vec_n5(_uploadFile, _downloadFile, value[1])
-  ];
-}
-function from_candid_variant_n13(_uploadFile, _downloadFile, value) {
-  return "gpt" in value ? "gpt" : "claude" in value ? "claude" : "mistral" in value ? "mistral" : "qwen" in value ? "qwen" : "llama" in value ? "llama" : "gemini" in value ? "gemini" : "ollama" in value ? "ollama" : "deepseek" in value ? "deepseek" : value;
-}
-function from_candid_variant_n16(_uploadFile, _downloadFile, value) {
-  return "normal" in value ? "normal" : "research" in value ? "research" : "codingAssistant" in value ? "codingAssistant" : "documentAssistant" in value ? "documentAssistant" : "imageAnalysis" in value ? "imageAnalysis" : "internetSearch" in value ? "internetSearch" : "youtubeSearch" in value ? "youtubeSearch" : "emailAssistant" in value ? "emailAssistant" : "knowledgeBase" in value ? "knowledgeBase" : value;
-}
-function from_candid_variant_n18(_uploadFile, _downloadFile, value) {
-  return "systemMsg" in value ? "systemMsg" : "user" in value ? "user" : "assistant" in value ? "assistant" : value;
-}
-function from_candid_vec_n3(_uploadFile, _downloadFile, value) {
-  return value.map((x3) => from_candid_tuple_n4(_uploadFile, _downloadFile, x3));
-}
-function from_candid_vec_n5(_uploadFile, _downloadFile, value) {
-  return value.map((x3) => from_candid_Chat_n6(_uploadFile, _downloadFile, x3));
-}
-function from_candid_vec_n8(_uploadFile, _downloadFile, value) {
-  return value.map((x3) => from_candid_Message_n9(_uploadFile, _downloadFile, x3));
-}
-function to_candid_Message_n20(_uploadFile, _downloadFile, value) {
-  return to_candid_record_n21(_uploadFile, _downloadFile, value);
-}
-function to_candid_Mode_n24(_uploadFile, _downloadFile, value) {
-  return to_candid_variant_n25(_uploadFile, _downloadFile, value);
-}
-function to_candid_Model_n22(_uploadFile, _downloadFile, value) {
-  return to_candid_variant_n23(_uploadFile, _downloadFile, value);
-}
-function to_candid_Role_n26(_uploadFile, _downloadFile, value) {
-  return to_candid_variant_n27(_uploadFile, _downloadFile, value);
-}
-function to_candid_opt_n1(_uploadFile, _downloadFile, value) {
-  return value === null ? candid_none() : candid_some(value);
-}
-function to_candid_opt_n2(_uploadFile, _downloadFile, value) {
-  return value === null ? candid_none() : candid_some(value);
-}
-function to_candid_opt_n30(_uploadFile, _downloadFile, value) {
-  return value === null ? candid_none() : candid_some(value);
-}
-function to_candid_opt_n31(_uploadFile, _downloadFile, value) {
-  return isNone(value) ? candid_none() : candid_some(to_candid_opt_n2(_uploadFile, _downloadFile, unwrap(value)));
-}
-function to_candid_opt_n32(_uploadFile, _downloadFile, value) {
-  return value === null ? candid_none() : candid_some(value);
-}
-function to_candid_record_n21(_uploadFile, _downloadFile, value) {
-  return {
-    model: value.model ? candid_some(to_candid_Model_n22(_uploadFile, _downloadFile, value.model)) : candid_none(),
-    content: value.content,
-    mode: value.mode ? candid_some(to_candid_Mode_n24(_uploadFile, _downloadFile, value.mode)) : candid_none(),
-    role: to_candid_Role_n26(_uploadFile, _downloadFile, value.role),
-    timestamp: value.timestamp
-  };
-}
-function to_candid_variant_n23(_uploadFile, _downloadFile, value) {
-  return value == "gpt" ? {
-    gpt: null
-  } : value == "claude" ? {
-    claude: null
-  } : value == "mistral" ? {
-    mistral: null
-  } : value == "qwen" ? {
-    qwen: null
-  } : value == "llama" ? {
-    llama: null
-  } : value == "gemini" ? {
-    gemini: null
-  } : value == "ollama" ? {
-    ollama: null
-  } : value == "deepseek" ? {
-    deepseek: null
-  } : value;
-}
-function to_candid_variant_n25(_uploadFile, _downloadFile, value) {
-  return value == "normal" ? {
-    normal: null
-  } : value == "research" ? {
-    research: null
-  } : value == "codingAssistant" ? {
-    codingAssistant: null
-  } : value == "documentAssistant" ? {
-    documentAssistant: null
-  } : value == "imageAnalysis" ? {
-    imageAnalysis: null
-  } : value == "internetSearch" ? {
-    internetSearch: null
-  } : value == "youtubeSearch" ? {
-    youtubeSearch: null
-  } : value == "emailAssistant" ? {
-    emailAssistant: null
-  } : value == "knowledgeBase" ? {
-    knowledgeBase: null
-  } : value;
-}
-function to_candid_variant_n27(_uploadFile, _downloadFile, value) {
-  return value == "systemMsg" ? {
-    systemMsg: null
-  } : value == "user" ? {
-    user: null
-  } : value == "assistant" ? {
-    assistant: null
-  } : value;
-}
-function createActor(canisterId, _uploadFile, _downloadFile, options = {}) {
-  const agent = options.agent || HttpAgent.createSync({
-    ...options.agentOptions
-  });
-  if (options.agent && options.agentOptions) {
-    console.warn("Detected both agent and agentOptions passed to createActor. Ignoring agentOptions and proceeding with the provided agent.");
-  }
-  const actor = Actor.createActor(idlFactory, {
-    agent,
-    canisterId,
-    ...options.actorOptions
-  });
-  return new Backend(actor, _uploadFile, _downloadFile, options.processError);
-}
-function useBackend() {
-  const isAuthenticated = useAuth((s) => s.isAuthenticated);
-  const [actor, setActor] = reactExports.useState(null);
-  reactExports.useEffect(() => {
-    if (!isAuthenticated) {
-      setActor(null);
-      return;
-    }
-    try {
-      setActor(
-        createActor(
-          "rrkah-fqaaa-aaaaa-aaaaq-cai",
-          async () => new Uint8Array(),
-          async () => ({})
-        )
-      );
-    } catch {
-      setActor(null);
-    }
-  }, [isAuthenticated]);
-  return { actor, ready: actor !== null };
-}
 const aiChatRoute = createRoute({
   getParentRoute: () => dashboardLayoutRoute,
-  path: "/ai-chat",
+  path: "/",
   component: AiChatPage
 });
 const SUGGESTED_PROMPTS = [
@@ -54047,6 +56837,7 @@ function uid(prefix2) {
   return `${prefix2}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
 }
 function AiChatPage() {
+  const { sessionId } = useSession();
   const { actor } = useBackend();
   const [chats, setChats] = reactExports.useState([]);
   const [folders, setFolders] = reactExports.useState([]);
@@ -54057,30 +56848,51 @@ function AiChatPage() {
   const [showScrollButton, setShowScrollButton] = reactExports.useState(false);
   const abortRef = reactExports.useRef(null);
   const scrollRef = reactExports.useRef(null);
+  const chatsQuery = useChats(sessionId);
+  const foldersQuery = useFolders(sessionId);
+  const createChatMut = useCreateChat(sessionId);
+  const updateChatMut = useUpdateChat(sessionId);
+  const deleteChatMut = useDeleteChat(sessionId);
+  const addMessageMut = useAddMessage(sessionId);
+  const createFolderMut = useCreateFolder(sessionId);
+  const deleteFolderMut = useDeleteFolder(sessionId);
+  const logActivityMut = useLogActivity(sessionId);
   const activeChat = reactExports.useMemo(
     () => chats.find((c2) => c2.id === activeChatId) ?? null,
     [chats, activeChatId]
   );
   reactExports.useEffect(() => {
-    let cancelled = false;
-    async function load() {
-      if (!actor) return;
-      try {
-        const [backendChats, backendFolders] = await Promise.all([
-          actor.listChats(),
-          actor.listFolders()
-        ]);
-        if (cancelled) return;
-        setChats(backendChats.map(adaptChat));
-        setFolders(backendFolders.map(adaptFolder));
-      } catch {
-      }
+    if (chatsQuery.data) {
+      setChats((prev) => {
+        const streamingByChatId = /* @__PURE__ */ new Map();
+        for (const c2 of prev) {
+          const streaming = c2.messages.filter(
+            (m2) => m2.id.startsWith("msg-") && m2.role === "assistant"
+          );
+          if (streaming.length > 0) {
+            streamingByChatId.set(c2.id, streaming);
+          }
+        }
+        const next = chatsQuery.data.map(adaptChat);
+        for (const c2 of next) {
+          const extra = streamingByChatId.get(c2.id);
+          if (extra && extra.length > 0) {
+            const existingIds = new Set(c2.messages.map((m2) => m2.id));
+            c2.messages = [
+              ...c2.messages,
+              ...extra.filter((m2) => !existingIds.has(m2.id))
+            ];
+          }
+        }
+        return next;
+      });
     }
-    load();
-    return () => {
-      cancelled = true;
-    };
-  }, [actor]);
+  }, [chatsQuery.data]);
+  reactExports.useEffect(() => {
+    if (foldersQuery.data) {
+      setFolders(foldersQuery.data.map(adaptFolder));
+    }
+  }, [foldersQuery.data]);
   const scrollToBottom = reactExports.useCallback((smooth = true) => {
     const el = scrollRef.current;
     if (!el) return;
@@ -54099,19 +56911,34 @@ function AiChatPage() {
     setShowScrollButton(!nearBottom);
   }
   function persistMessage(chatId, message) {
-    if (!actor) return;
-    actor.addMessage(BigInt(chatId), {
-      role: message.role,
-      content: message.content,
-      model: message.model ?? void 0,
-      mode: message.mode,
-      timestamp: BigInt(message.createdAt)
-    }).catch(() => {
-    });
+    if (!actor || !sessionId) return;
+    addMessageMut.mutate(
+      {
+        chatId: BigInt(chatId),
+        message: {
+          role: message.role,
+          content: message.content,
+          model: message.model ?? void 0,
+          mode: message.mode,
+          timestamp: BigInt(message.createdAt)
+        }
+      },
+      { onError: () => {
+      } }
+    );
   }
-  function newChat() {
-    const chat = {
-      id: uid("chat"),
+  function recordActivity(summary, details) {
+    if (!sessionId) return;
+    logActivityMut.mutate(
+      { activityType: "chat", summary, details },
+      { onError: () => {
+      } }
+    );
+  }
+  async function newChat() {
+    const tempId = uid("chat");
+    const optimistic = {
+      id: tempId,
       title: "New chat",
       mode,
       model,
@@ -54120,17 +56947,25 @@ function AiChatPage() {
       createdAt: Date.now(),
       updatedAt: Date.now()
     };
-    setChats((prev) => [chat, ...prev]);
-    setActiveChatId(chat.id);
-    if (actor) {
-      actor.createChat(chat.title).catch(() => {
-      });
+    setChats((prev) => [optimistic, ...prev]);
+    setActiveChatId(tempId);
+    if (actor && sessionId) {
+      try {
+        const created = await createChatMut.mutateAsync(optimistic.title);
+        const realId = created.id.toString();
+        setChats(
+          (prev) => prev.map((c2) => c2.id === tempId ? { ...c2, id: realId } : c2)
+        );
+        setActiveChatId((cur) => cur === tempId ? realId : cur);
+        return { ...optimistic, id: realId };
+      } catch {
+      }
     }
-    return chat;
+    return optimistic;
   }
   function handleNewChat() {
     if (isStreaming) stopGeneration();
-    newChat();
+    void newChat();
   }
   function selectChat(id2) {
     if (isStreaming) stopGeneration();
@@ -54139,8 +56974,10 @@ function AiChatPage() {
   function deleteChat(id2) {
     setChats((prev) => prev.filter((c2) => c2.id !== id2));
     if (activeChatId === id2) setActiveChatId(null);
-    if (actor) actor.deleteChat(BigInt(id2)).catch(() => {
-    });
+    if (actor && sessionId) {
+      deleteChatMut.mutate(BigInt(id2), { onError: () => {
+      } });
+    }
     ue.success("Chat deleted");
   }
   function renameChat(id2, title) {
@@ -54149,31 +56986,50 @@ function AiChatPage() {
         (c2) => c2.id === id2 ? { ...c2, title, updatedAt: Date.now() } : c2
       )
     );
-    if (actor)
-      actor.updateChat(BigInt(id2), title, { __kind__: "None" }, null).catch(() => {
-      });
+    if (actor && sessionId) {
+      updateChatMut.mutate(
+        { id: BigInt(id2), title, folder: { __kind__: "None" }, pinned: null },
+        { onError: () => {
+        } }
+      );
+    }
   }
   function pinChat(id2) {
     setChats(
       (prev) => prev.map((c2) => c2.id === id2 ? { ...c2, updatedAt: Date.now() } : c2)
     );
-    if (actor)
-      actor.updateChat(BigInt(id2), null, { __kind__: "None" }, true).catch(() => {
-      });
+    if (actor && sessionId) {
+      updateChatMut.mutate(
+        {
+          id: BigInt(id2),
+          title: null,
+          folder: { __kind__: "None" },
+          pinned: true
+        },
+        { onError: () => {
+        } }
+      );
+    }
     ue.success("Chat pinned");
   }
   function newFolder() {
     const name = `Folder ${folders.length + 1}`;
-    const folder = { id: uid("folder"), name, createdAt: Date.now() };
-    setFolders((prev) => [...prev, folder]);
-    if (actor) actor.createFolder(name).catch(() => {
-    });
+    if (actor && sessionId) {
+      createFolderMut.mutate(name, {
+        onError: () => ue.error("Couldn't create folder")
+      });
+    } else {
+      const folder = { id: uid("folder"), name, createdAt: Date.now() };
+      setFolders((prev) => [...prev, folder]);
+    }
     ue.success("Folder created");
   }
   function deleteFolder(id2) {
     setFolders((prev) => prev.filter((f2) => f2.id !== id2));
-    if (actor) actor.deleteFolder(BigInt(id2)).catch(() => {
-    });
+    if (actor && sessionId) {
+      deleteFolderMut.mutate(BigInt(id2), { onError: () => {
+      } });
+    }
   }
   async function runStream(chatId, prompt, useMode, useModel) {
     const controller = new AbortController();
@@ -54218,10 +57074,21 @@ function AiChatPage() {
       );
       const finalChat = chatsRef.current.find((c2) => c2.id === chatId);
       const finalMsg = finalChat == null ? void 0 : finalChat.messages.find((m2) => m2.id === assistantId);
-      if (finalMsg) persistMessage(chatId, finalMsg);
+      if (finalMsg) {
+        persistMessage(chatId, finalMsg);
+        recordActivity(
+          `Assistant reply in "${(finalChat == null ? void 0 : finalChat.title) ?? "chat"}"`,
+          prompt.slice(0, 200)
+        );
+      }
     } catch (err) {
       if ((err == null ? void 0 : err.name) === "AbortError") {
         ue.info("Generation stopped");
+        const finalChat = chatsRef.current.find((c2) => c2.id === chatId);
+        const partial = finalChat == null ? void 0 : finalChat.messages.find((m2) => m2.id === assistantId);
+        if (partial && partial.content.length > 0) {
+          persistMessage(chatId, partial);
+        }
       } else {
         ue.error("Something went wrong while generating.");
       }
@@ -54238,9 +57105,9 @@ function AiChatPage() {
     var _a2;
     (_a2 = abortRef.current) == null ? void 0 : _a2.abort();
   }
-  function handleSend(text) {
+  async function handleSend(text) {
     let chat = activeChat;
-    if (!chat) chat = newChat();
+    if (!chat) chat = await newChat();
     const chatId = chat.id;
     const userMsg = {
       id: uid("msg"),
@@ -54261,6 +57128,7 @@ function AiChatPage() {
       )
     );
     persistMessage(chatId, userMsg);
+    recordActivity(`Sent message in "${chat.title}"`, text.slice(0, 200));
     void runStream(chatId, text, mode, model);
   }
   function handleRegenerate() {
@@ -54404,7 +57272,7 @@ ${m2.content}
             !hasMessages ? /* @__PURE__ */ jsxRuntimeExports.jsx(
               EmptyState,
               {
-                onPick: (p2) => handleSend(p2),
+                onPick: (p2) => void handleSend(p2),
                 onNewChat: handleNewChat
               }
             ) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto w-full max-w-3xl space-y-6 px-4 py-6 sm:px-6", children: [
@@ -54455,7 +57323,7 @@ ${m2.content}
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         ChatComposer,
         {
-          onSend: handleSend,
+          onSend: (t) => void handleSend(t),
           onStop: stopGeneration,
           isStreaming
         }
@@ -54548,97 +57416,1791 @@ function adaptFolder(f2) {
     createdAt: Number(f2.createdAt)
   };
 }
+var NODES = [
+  "a",
+  "button",
+  "div",
+  "form",
+  "h2",
+  "h3",
+  "img",
+  "input",
+  "label",
+  "li",
+  "nav",
+  "ol",
+  "p",
+  "select",
+  "span",
+  "svg",
+  "ul"
+];
+var Primitive = NODES.reduce((primitive, node) => {
+  const Slot2 = /* @__PURE__ */ createSlot$1(`Primitive.${node}`);
+  const Node2 = reactExports.forwardRef((props, forwardedRef) => {
+    const { asChild, ...primitiveProps } = props;
+    const Comp = asChild ? Slot2 : node;
+    if (typeof window !== "undefined") {
+      window[Symbol.for("radix-ui")] = true;
+    }
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Comp, { ...primitiveProps, ref: forwardedRef });
+  });
+  Node2.displayName = `Primitive.${node}`;
+  return { ...primitive, [node]: Node2 };
+}, {});
+var NAME = "Label";
+var Label$1 = reactExports.forwardRef((props, forwardedRef) => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Primitive.label,
+    {
+      ...props,
+      ref: forwardedRef,
+      onMouseDown: (event) => {
+        var _a2;
+        const target = event.target;
+        if (target.closest("button, input, select, textarea")) return;
+        (_a2 = props.onMouseDown) == null ? void 0 : _a2.call(props, event);
+        if (!event.defaultPrevented && event.detail > 1) event.preventDefault();
+      }
+    }
+  );
+});
+Label$1.displayName = NAME;
+var Root$4 = Label$1;
+function Label({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Root$4,
+    {
+      "data-slot": "label",
+      className: cn(
+        "flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
+        className
+      ),
+      ...props
+    }
+  );
+}
+function createContextScope(scopeName, createContextScopeDeps = []) {
+  let defaultContexts = [];
+  function createContext3(rootComponentName, defaultContext) {
+    const BaseContext = reactExports.createContext(defaultContext);
+    BaseContext.displayName = rootComponentName + "Context";
+    const index2 = defaultContexts.length;
+    defaultContexts = [...defaultContexts, defaultContext];
+    const Provider2 = (props) => {
+      var _a2;
+      const { scope, children, ...context } = props;
+      const Context = ((_a2 = scope == null ? void 0 : scope[scopeName]) == null ? void 0 : _a2[index2]) || BaseContext;
+      const value = reactExports.useMemo(() => context, Object.values(context));
+      return /* @__PURE__ */ jsxRuntimeExports.jsx(Context.Provider, { value, children });
+    };
+    Provider2.displayName = rootComponentName + "Provider";
+    function useContext2(consumerName, scope) {
+      var _a2;
+      const Context = ((_a2 = scope == null ? void 0 : scope[scopeName]) == null ? void 0 : _a2[index2]) || BaseContext;
+      const context = reactExports.useContext(Context);
+      if (context) return context;
+      if (defaultContext !== void 0) return defaultContext;
+      throw new Error(`\`${consumerName}\` must be used within \`${rootComponentName}\``);
+    }
+    return [Provider2, useContext2];
+  }
+  const createScope = () => {
+    const scopeContexts = defaultContexts.map((defaultContext) => {
+      return reactExports.createContext(defaultContext);
+    });
+    return function useScope(scope) {
+      const contexts = (scope == null ? void 0 : scope[scopeName]) || scopeContexts;
+      return reactExports.useMemo(
+        () => ({ [`__scope${scopeName}`]: { ...scope, [scopeName]: contexts } }),
+        [scope, contexts]
+      );
+    };
+  };
+  createScope.scopeName = scopeName;
+  return [createContext3, composeContextScopes(createScope, ...createContextScopeDeps)];
+}
+function composeContextScopes(...scopes) {
+  const baseScope = scopes[0];
+  if (scopes.length === 1) return baseScope;
+  const createScope = () => {
+    const scopeHooks = scopes.map((createScope2) => ({
+      useScope: createScope2(),
+      scopeName: createScope2.scopeName
+    }));
+    return function useComposedScopes(overrideScopes) {
+      const nextScopes = scopeHooks.reduce((nextScopes2, { useScope, scopeName }) => {
+        const scopeProps = useScope(overrideScopes);
+        const currentScope = scopeProps[`__scope${scopeName}`];
+        return { ...nextScopes2, ...currentScope };
+      }, {});
+      return reactExports.useMemo(() => ({ [`__scope${baseScope.scopeName}`]: nextScopes }), [nextScopes]);
+    };
+  };
+  createScope.scopeName = baseScope.scopeName;
+  return createScope;
+}
+var PROGRESS_NAME = "Progress";
+var DEFAULT_MAX = 100;
+var [createProgressContext] = createContextScope(PROGRESS_NAME);
+var [ProgressProvider, useProgressContext] = createProgressContext(PROGRESS_NAME);
+var Progress$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const {
+      __scopeProgress,
+      value: valueProp = null,
+      max: maxProp,
+      getValueLabel = defaultGetValueLabel,
+      ...progressProps
+    } = props;
+    if ((maxProp || maxProp === 0) && !isValidMaxNumber(maxProp)) {
+      console.error(getInvalidMaxError(`${maxProp}`, "Progress"));
+    }
+    const max2 = isValidMaxNumber(maxProp) ? maxProp : DEFAULT_MAX;
+    if (valueProp !== null && !isValidValueNumber(valueProp, max2)) {
+      console.error(getInvalidValueError(`${valueProp}`, "Progress"));
+    }
+    const value = isValidValueNumber(valueProp, max2) ? valueProp : null;
+    const valueLabel = isNumber(value) ? getValueLabel(value, max2) : void 0;
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(ProgressProvider, { scope: __scopeProgress, value, max: max2, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Primitive.div,
+      {
+        "aria-valuemax": max2,
+        "aria-valuemin": 0,
+        "aria-valuenow": isNumber(value) ? value : void 0,
+        "aria-valuetext": valueLabel,
+        role: "progressbar",
+        "data-state": getProgressState(value, max2),
+        "data-value": value ?? void 0,
+        "data-max": max2,
+        ...progressProps,
+        ref: forwardedRef
+      }
+    ) });
+  }
+);
+Progress$1.displayName = PROGRESS_NAME;
+var INDICATOR_NAME = "ProgressIndicator";
+var ProgressIndicator = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeProgress, ...indicatorProps } = props;
+    const context = useProgressContext(INDICATOR_NAME, __scopeProgress);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Primitive.div,
+      {
+        "data-state": getProgressState(context.value, context.max),
+        "data-value": context.value ?? void 0,
+        "data-max": context.max,
+        ...indicatorProps,
+        ref: forwardedRef
+      }
+    );
+  }
+);
+ProgressIndicator.displayName = INDICATOR_NAME;
+function defaultGetValueLabel(value, max2) {
+  return `${Math.round(value / max2 * 100)}%`;
+}
+function getProgressState(value, maxValue) {
+  return value == null ? "indeterminate" : value === maxValue ? "complete" : "loading";
+}
+function isNumber(value) {
+  return typeof value === "number";
+}
+function isValidMaxNumber(max2) {
+  return isNumber(max2) && !isNaN(max2) && max2 > 0;
+}
+function isValidValueNumber(value, max2) {
+  return isNumber(value) && !isNaN(value) && value <= max2 && value >= 0;
+}
+function getInvalidMaxError(propValue, componentName) {
+  return `Invalid prop \`max\` of value \`${propValue}\` supplied to \`${componentName}\`. Only numbers greater than 0 are valid max values. Defaulting to \`${DEFAULT_MAX}\`.`;
+}
+function getInvalidValueError(propValue, componentName) {
+  return `Invalid prop \`value\` of value \`${propValue}\` supplied to \`${componentName}\`. The \`value\` prop must be:
+  - a positive number
+  - less than the value passed to \`max\` (or ${DEFAULT_MAX} if no \`max\` prop is set)
+  - \`null\` or \`undefined\` if the progress is indeterminate.
+
+Defaulting to \`null\`.`;
+}
+var Root$3 = Progress$1;
+var Indicator = ProgressIndicator;
+function Progress({
+  className,
+  value,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Root$3,
+    {
+      "data-slot": "progress",
+      className: cn(
+        "bg-primary/20 relative h-2 w-full overflow-hidden rounded-full",
+        className
+      ),
+      ...props,
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        Indicator,
+        {
+          "data-slot": "progress-indicator",
+          className: "bg-primary h-full w-full flex-1 transition-all",
+          style: { transform: `translateX(-${100 - (value || 0)}%)` }
+        }
+      )
+    }
+  );
+}
+function useStateMachine(initialState, machine) {
+  return reactExports.useReducer((state, event) => {
+    const nextState = machine[state][event];
+    return nextState ?? state;
+  }, initialState);
+}
+var SCROLL_AREA_NAME = "ScrollArea";
+var [createScrollAreaContext] = createContextScope$1(SCROLL_AREA_NAME);
+var [ScrollAreaProvider, useScrollAreaContext] = createScrollAreaContext(SCROLL_AREA_NAME);
+var ScrollArea$1 = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const {
+      __scopeScrollArea,
+      type = "hover",
+      dir,
+      scrollHideDelay = 600,
+      ...scrollAreaProps
+    } = props;
+    const [scrollArea, setScrollArea] = reactExports.useState(null);
+    const [viewport, setViewport] = reactExports.useState(null);
+    const [content, setContent] = reactExports.useState(null);
+    const [scrollbarX, setScrollbarX] = reactExports.useState(null);
+    const [scrollbarY, setScrollbarY] = reactExports.useState(null);
+    const [cornerWidth, setCornerWidth] = reactExports.useState(0);
+    const [cornerHeight, setCornerHeight] = reactExports.useState(0);
+    const [scrollbarXEnabled, setScrollbarXEnabled] = reactExports.useState(false);
+    const [scrollbarYEnabled, setScrollbarYEnabled] = reactExports.useState(false);
+    const composedRefs = useComposedRefs(forwardedRef, (node) => setScrollArea(node));
+    const direction = useDirection(dir);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      ScrollAreaProvider,
+      {
+        scope: __scopeScrollArea,
+        type,
+        dir: direction,
+        scrollHideDelay,
+        scrollArea,
+        viewport,
+        onViewportChange: setViewport,
+        content,
+        onContentChange: setContent,
+        scrollbarX,
+        onScrollbarXChange: setScrollbarX,
+        scrollbarXEnabled,
+        onScrollbarXEnabledChange: setScrollbarXEnabled,
+        scrollbarY,
+        onScrollbarYChange: setScrollbarY,
+        scrollbarYEnabled,
+        onScrollbarYEnabledChange: setScrollbarYEnabled,
+        onCornerWidthChange: setCornerWidth,
+        onCornerHeightChange: setCornerHeight,
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Primitive$1.div,
+          {
+            dir: direction,
+            ...scrollAreaProps,
+            ref: composedRefs,
+            style: {
+              position: "relative",
+              // Pass corner sizes as CSS vars to reduce re-renders of context consumers
+              ["--radix-scroll-area-corner-width"]: cornerWidth + "px",
+              ["--radix-scroll-area-corner-height"]: cornerHeight + "px",
+              ...props.style
+            }
+          }
+        )
+      }
+    );
+  }
+);
+ScrollArea$1.displayName = SCROLL_AREA_NAME;
+var VIEWPORT_NAME = "ScrollAreaViewport";
+var ScrollAreaViewport = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeScrollArea, children, nonce, ...viewportProps } = props;
+    const context = useScrollAreaContext(VIEWPORT_NAME, __scopeScrollArea);
+    const ref = reactExports.useRef(null);
+    const composedRefs = useComposedRefs(forwardedRef, ref, context.onViewportChange);
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "style",
+        {
+          dangerouslySetInnerHTML: {
+            __html: `[data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}`
+          },
+          nonce
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        Primitive$1.div,
+        {
+          "data-radix-scroll-area-viewport": "",
+          ...viewportProps,
+          ref: composedRefs,
+          style: {
+            /**
+             * We don't support `visible` because the intention is to have at least one scrollbar
+             * if this component is used and `visible` will behave like `auto` in that case
+             * https://developer.mozilla.org/en-US/docs/Web/CSS/overflow#description
+             *
+             * We don't handle `auto` because the intention is for the native implementation
+             * to be hidden if using this component. We just want to ensure the node is scrollable
+             * so could have used either `scroll` or `auto` here. We picked `scroll` to prevent
+             * the browser from having to work out whether to render native scrollbars or not,
+             * we tell it to with the intention of hiding them in CSS.
+             */
+            overflowX: context.scrollbarXEnabled ? "scroll" : "hidden",
+            overflowY: context.scrollbarYEnabled ? "scroll" : "hidden",
+            ...props.style
+          },
+          children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { ref: context.onContentChange, style: { minWidth: "100%", display: "table" }, children })
+        }
+      )
+    ] });
+  }
+);
+ScrollAreaViewport.displayName = VIEWPORT_NAME;
+var SCROLLBAR_NAME = "ScrollAreaScrollbar";
+var ScrollAreaScrollbar = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { forceMount, ...scrollbarProps } = props;
+    const context = useScrollAreaContext(SCROLLBAR_NAME, props.__scopeScrollArea);
+    const { onScrollbarXEnabledChange, onScrollbarYEnabledChange } = context;
+    const isHorizontal = props.orientation === "horizontal";
+    reactExports.useEffect(() => {
+      isHorizontal ? onScrollbarXEnabledChange(true) : onScrollbarYEnabledChange(true);
+      return () => {
+        isHorizontal ? onScrollbarXEnabledChange(false) : onScrollbarYEnabledChange(false);
+      };
+    }, [isHorizontal, onScrollbarXEnabledChange, onScrollbarYEnabledChange]);
+    return context.type === "hover" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarHover, { ...scrollbarProps, ref: forwardedRef, forceMount }) : context.type === "scroll" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarScroll, { ...scrollbarProps, ref: forwardedRef, forceMount }) : context.type === "auto" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarAuto, { ...scrollbarProps, ref: forwardedRef, forceMount }) : context.type === "always" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaScrollbarVisible, { ...scrollbarProps, ref: forwardedRef }) : null;
+  }
+);
+ScrollAreaScrollbar.displayName = SCROLLBAR_NAME;
+var ScrollAreaScrollbarHover = reactExports.forwardRef((props, forwardedRef) => {
+  const { forceMount, ...scrollbarProps } = props;
+  const context = useScrollAreaContext(SCROLLBAR_NAME, props.__scopeScrollArea);
+  const [visible, setVisible] = reactExports.useState(false);
+  reactExports.useEffect(() => {
+    const scrollArea = context.scrollArea;
+    let hideTimer = 0;
+    if (scrollArea) {
+      const handlePointerEnter = () => {
+        window.clearTimeout(hideTimer);
+        setVisible(true);
+      };
+      const handlePointerLeave = () => {
+        hideTimer = window.setTimeout(() => setVisible(false), context.scrollHideDelay);
+      };
+      scrollArea.addEventListener("pointerenter", handlePointerEnter);
+      scrollArea.addEventListener("pointerleave", handlePointerLeave);
+      return () => {
+        window.clearTimeout(hideTimer);
+        scrollArea.removeEventListener("pointerenter", handlePointerEnter);
+        scrollArea.removeEventListener("pointerleave", handlePointerLeave);
+      };
+    }
+  }, [context.scrollArea, context.scrollHideDelay]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || visible, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+    ScrollAreaScrollbarAuto,
+    {
+      "data-state": visible ? "visible" : "hidden",
+      ...scrollbarProps,
+      ref: forwardedRef
+    }
+  ) });
+});
+var ScrollAreaScrollbarScroll = reactExports.forwardRef((props, forwardedRef) => {
+  const { forceMount, ...scrollbarProps } = props;
+  const context = useScrollAreaContext(SCROLLBAR_NAME, props.__scopeScrollArea);
+  const isHorizontal = props.orientation === "horizontal";
+  const debounceScrollEnd = useDebounceCallback(() => send("SCROLL_END"), 100);
+  const [state, send] = useStateMachine("hidden", {
+    hidden: {
+      SCROLL: "scrolling"
+    },
+    scrolling: {
+      SCROLL_END: "idle",
+      POINTER_ENTER: "interacting"
+    },
+    interacting: {
+      SCROLL: "interacting",
+      POINTER_LEAVE: "idle"
+    },
+    idle: {
+      HIDE: "hidden",
+      SCROLL: "scrolling",
+      POINTER_ENTER: "interacting"
+    }
+  });
+  reactExports.useEffect(() => {
+    if (state === "idle") {
+      const hideTimer = window.setTimeout(() => send("HIDE"), context.scrollHideDelay);
+      return () => window.clearTimeout(hideTimer);
+    }
+  }, [state, context.scrollHideDelay, send]);
+  reactExports.useEffect(() => {
+    const viewport = context.viewport;
+    const scrollDirection = isHorizontal ? "scrollLeft" : "scrollTop";
+    if (viewport) {
+      let prevScrollPos = viewport[scrollDirection];
+      const handleScroll2 = () => {
+        const scrollPos = viewport[scrollDirection];
+        const hasScrollInDirectionChanged = prevScrollPos !== scrollPos;
+        if (hasScrollInDirectionChanged) {
+          send("SCROLL");
+          debounceScrollEnd();
+        }
+        prevScrollPos = scrollPos;
+      };
+      viewport.addEventListener("scroll", handleScroll2);
+      return () => viewport.removeEventListener("scroll", handleScroll2);
+    }
+  }, [context.viewport, isHorizontal, send, debounceScrollEnd]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || state !== "hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+    ScrollAreaScrollbarVisible,
+    {
+      "data-state": state === "hidden" ? "hidden" : "visible",
+      ...scrollbarProps,
+      ref: forwardedRef,
+      onPointerEnter: composeEventHandlers(props.onPointerEnter, () => send("POINTER_ENTER")),
+      onPointerLeave: composeEventHandlers(props.onPointerLeave, () => send("POINTER_LEAVE"))
+    }
+  ) });
+});
+var ScrollAreaScrollbarAuto = reactExports.forwardRef((props, forwardedRef) => {
+  const context = useScrollAreaContext(SCROLLBAR_NAME, props.__scopeScrollArea);
+  const { forceMount, ...scrollbarProps } = props;
+  const [visible, setVisible] = reactExports.useState(false);
+  const isHorizontal = props.orientation === "horizontal";
+  const handleResize = useDebounceCallback(() => {
+    if (context.viewport) {
+      const isOverflowX = context.viewport.offsetWidth < context.viewport.scrollWidth;
+      const isOverflowY = context.viewport.offsetHeight < context.viewport.scrollHeight;
+      setVisible(isHorizontal ? isOverflowX : isOverflowY);
+    }
+  }, 10);
+  useResizeObserver(context.viewport, handleResize);
+  useResizeObserver(context.content, handleResize);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || visible, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+    ScrollAreaScrollbarVisible,
+    {
+      "data-state": visible ? "visible" : "hidden",
+      ...scrollbarProps,
+      ref: forwardedRef
+    }
+  ) });
+});
+var ScrollAreaScrollbarVisible = reactExports.forwardRef((props, forwardedRef) => {
+  const { orientation = "vertical", ...scrollbarProps } = props;
+  const context = useScrollAreaContext(SCROLLBAR_NAME, props.__scopeScrollArea);
+  const thumbRef = reactExports.useRef(null);
+  const pointerOffsetRef = reactExports.useRef(0);
+  const [sizes, setSizes] = reactExports.useState({
+    content: 0,
+    viewport: 0,
+    scrollbar: { size: 0, paddingStart: 0, paddingEnd: 0 }
+  });
+  const thumbRatio = getThumbRatio(sizes.viewport, sizes.content);
+  const commonProps = {
+    ...scrollbarProps,
+    sizes,
+    onSizesChange: setSizes,
+    hasThumb: Boolean(thumbRatio > 0 && thumbRatio < 1),
+    onThumbChange: (thumb) => thumbRef.current = thumb,
+    onThumbPointerUp: () => pointerOffsetRef.current = 0,
+    onThumbPointerDown: (pointerPos) => pointerOffsetRef.current = pointerPos
+  };
+  function getScrollPosition(pointerPos, dir) {
+    return getScrollPositionFromPointer(pointerPos, pointerOffsetRef.current, sizes, dir);
+  }
+  if (orientation === "horizontal") {
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      ScrollAreaScrollbarX,
+      {
+        ...commonProps,
+        ref: forwardedRef,
+        onThumbPositionChange: () => {
+          if (context.viewport && thumbRef.current) {
+            const scrollPos = context.viewport.scrollLeft;
+            const offset2 = getThumbOffsetFromScroll(scrollPos, sizes, context.dir);
+            thumbRef.current.style.transform = `translate3d(${offset2}px, 0, 0)`;
+          }
+        },
+        onWheelScroll: (scrollPos) => {
+          if (context.viewport) context.viewport.scrollLeft = scrollPos;
+        },
+        onDragScroll: (pointerPos) => {
+          if (context.viewport) {
+            context.viewport.scrollLeft = getScrollPosition(pointerPos, context.dir);
+          }
+        }
+      }
+    );
+  }
+  if (orientation === "vertical") {
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      ScrollAreaScrollbarY,
+      {
+        ...commonProps,
+        ref: forwardedRef,
+        onThumbPositionChange: () => {
+          if (context.viewport && thumbRef.current) {
+            const scrollPos = context.viewport.scrollTop;
+            const offset2 = getThumbOffsetFromScroll(scrollPos, sizes);
+            thumbRef.current.style.transform = `translate3d(0, ${offset2}px, 0)`;
+          }
+        },
+        onWheelScroll: (scrollPos) => {
+          if (context.viewport) context.viewport.scrollTop = scrollPos;
+        },
+        onDragScroll: (pointerPos) => {
+          if (context.viewport) context.viewport.scrollTop = getScrollPosition(pointerPos);
+        }
+      }
+    );
+  }
+  return null;
+});
+var ScrollAreaScrollbarX = reactExports.forwardRef((props, forwardedRef) => {
+  const { sizes, onSizesChange, ...scrollbarProps } = props;
+  const context = useScrollAreaContext(SCROLLBAR_NAME, props.__scopeScrollArea);
+  const [computedStyle, setComputedStyle] = reactExports.useState();
+  const ref = reactExports.useRef(null);
+  const composeRefs2 = useComposedRefs(forwardedRef, ref, context.onScrollbarXChange);
+  reactExports.useEffect(() => {
+    if (ref.current) setComputedStyle(getComputedStyle(ref.current));
+  }, [ref]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    ScrollAreaScrollbarImpl,
+    {
+      "data-orientation": "horizontal",
+      ...scrollbarProps,
+      ref: composeRefs2,
+      sizes,
+      style: {
+        bottom: 0,
+        left: context.dir === "rtl" ? "var(--radix-scroll-area-corner-width)" : 0,
+        right: context.dir === "ltr" ? "var(--radix-scroll-area-corner-width)" : 0,
+        ["--radix-scroll-area-thumb-width"]: getThumbSize(sizes) + "px",
+        ...props.style
+      },
+      onThumbPointerDown: (pointerPos) => props.onThumbPointerDown(pointerPos.x),
+      onDragScroll: (pointerPos) => props.onDragScroll(pointerPos.x),
+      onWheelScroll: (event, maxScrollPos) => {
+        if (context.viewport) {
+          const scrollPos = context.viewport.scrollLeft + event.deltaX;
+          props.onWheelScroll(scrollPos);
+          if (isScrollingWithinScrollbarBounds(scrollPos, maxScrollPos)) {
+            event.preventDefault();
+          }
+        }
+      },
+      onResize: () => {
+        if (ref.current && context.viewport && computedStyle) {
+          onSizesChange({
+            content: context.viewport.scrollWidth,
+            viewport: context.viewport.offsetWidth,
+            scrollbar: {
+              size: ref.current.clientWidth,
+              paddingStart: toInt(computedStyle.paddingLeft),
+              paddingEnd: toInt(computedStyle.paddingRight)
+            }
+          });
+        }
+      }
+    }
+  );
+});
+var ScrollAreaScrollbarY = reactExports.forwardRef((props, forwardedRef) => {
+  const { sizes, onSizesChange, ...scrollbarProps } = props;
+  const context = useScrollAreaContext(SCROLLBAR_NAME, props.__scopeScrollArea);
+  const [computedStyle, setComputedStyle] = reactExports.useState();
+  const ref = reactExports.useRef(null);
+  const composeRefs2 = useComposedRefs(forwardedRef, ref, context.onScrollbarYChange);
+  reactExports.useEffect(() => {
+    if (ref.current) setComputedStyle(getComputedStyle(ref.current));
+  }, [ref]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    ScrollAreaScrollbarImpl,
+    {
+      "data-orientation": "vertical",
+      ...scrollbarProps,
+      ref: composeRefs2,
+      sizes,
+      style: {
+        top: 0,
+        right: context.dir === "ltr" ? 0 : void 0,
+        left: context.dir === "rtl" ? 0 : void 0,
+        bottom: "var(--radix-scroll-area-corner-height)",
+        ["--radix-scroll-area-thumb-height"]: getThumbSize(sizes) + "px",
+        ...props.style
+      },
+      onThumbPointerDown: (pointerPos) => props.onThumbPointerDown(pointerPos.y),
+      onDragScroll: (pointerPos) => props.onDragScroll(pointerPos.y),
+      onWheelScroll: (event, maxScrollPos) => {
+        if (context.viewport) {
+          const scrollPos = context.viewport.scrollTop + event.deltaY;
+          props.onWheelScroll(scrollPos);
+          if (isScrollingWithinScrollbarBounds(scrollPos, maxScrollPos)) {
+            event.preventDefault();
+          }
+        }
+      },
+      onResize: () => {
+        if (ref.current && context.viewport && computedStyle) {
+          onSizesChange({
+            content: context.viewport.scrollHeight,
+            viewport: context.viewport.offsetHeight,
+            scrollbar: {
+              size: ref.current.clientHeight,
+              paddingStart: toInt(computedStyle.paddingTop),
+              paddingEnd: toInt(computedStyle.paddingBottom)
+            }
+          });
+        }
+      }
+    }
+  );
+});
+var [ScrollbarProvider, useScrollbarContext] = createScrollAreaContext(SCROLLBAR_NAME);
+var ScrollAreaScrollbarImpl = reactExports.forwardRef((props, forwardedRef) => {
+  const {
+    __scopeScrollArea,
+    sizes,
+    hasThumb,
+    onThumbChange,
+    onThumbPointerUp,
+    onThumbPointerDown,
+    onThumbPositionChange,
+    onDragScroll,
+    onWheelScroll,
+    onResize,
+    ...scrollbarProps
+  } = props;
+  const context = useScrollAreaContext(SCROLLBAR_NAME, __scopeScrollArea);
+  const [scrollbar, setScrollbar] = reactExports.useState(null);
+  const composeRefs2 = useComposedRefs(forwardedRef, (node) => setScrollbar(node));
+  const rectRef = reactExports.useRef(null);
+  const prevWebkitUserSelectRef = reactExports.useRef("");
+  const viewport = context.viewport;
+  const maxScrollPos = sizes.content - sizes.viewport;
+  const handleWheelScroll = useCallbackRef$1(onWheelScroll);
+  const handleThumbPositionChange = useCallbackRef$1(onThumbPositionChange);
+  const handleResize = useDebounceCallback(onResize, 10);
+  function handleDragScroll(event) {
+    if (rectRef.current) {
+      const x2 = event.clientX - rectRef.current.left;
+      const y2 = event.clientY - rectRef.current.top;
+      onDragScroll({ x: x2, y: y2 });
+    }
+  }
+  reactExports.useEffect(() => {
+    const handleWheel = (event) => {
+      const element = event.target;
+      const isScrollbarWheel = scrollbar == null ? void 0 : scrollbar.contains(element);
+      if (isScrollbarWheel) handleWheelScroll(event, maxScrollPos);
+    };
+    document.addEventListener("wheel", handleWheel, { passive: false });
+    return () => document.removeEventListener("wheel", handleWheel, { passive: false });
+  }, [viewport, scrollbar, maxScrollPos, handleWheelScroll]);
+  reactExports.useEffect(handleThumbPositionChange, [sizes, handleThumbPositionChange]);
+  useResizeObserver(scrollbar, handleResize);
+  useResizeObserver(context.content, handleResize);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    ScrollbarProvider,
+    {
+      scope: __scopeScrollArea,
+      scrollbar,
+      hasThumb,
+      onThumbChange: useCallbackRef$1(onThumbChange),
+      onThumbPointerUp: useCallbackRef$1(onThumbPointerUp),
+      onThumbPositionChange: handleThumbPositionChange,
+      onThumbPointerDown: useCallbackRef$1(onThumbPointerDown),
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        Primitive$1.div,
+        {
+          ...scrollbarProps,
+          ref: composeRefs2,
+          style: { position: "absolute", ...scrollbarProps.style },
+          onPointerDown: composeEventHandlers(props.onPointerDown, (event) => {
+            const mainPointer = 0;
+            if (event.button === mainPointer) {
+              const element = event.target;
+              element.setPointerCapture(event.pointerId);
+              rectRef.current = scrollbar.getBoundingClientRect();
+              prevWebkitUserSelectRef.current = document.body.style.webkitUserSelect;
+              document.body.style.webkitUserSelect = "none";
+              if (context.viewport) context.viewport.style.scrollBehavior = "auto";
+              handleDragScroll(event);
+            }
+          }),
+          onPointerMove: composeEventHandlers(props.onPointerMove, handleDragScroll),
+          onPointerUp: composeEventHandlers(props.onPointerUp, (event) => {
+            const element = event.target;
+            if (element.hasPointerCapture(event.pointerId)) {
+              element.releasePointerCapture(event.pointerId);
+            }
+            document.body.style.webkitUserSelect = prevWebkitUserSelectRef.current;
+            if (context.viewport) context.viewport.style.scrollBehavior = "";
+            rectRef.current = null;
+          })
+        }
+      )
+    }
+  );
+});
+var THUMB_NAME$2 = "ScrollAreaThumb";
+var ScrollAreaThumb = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { forceMount, ...thumbProps } = props;
+    const scrollbarContext = useScrollbarContext(THUMB_NAME$2, props.__scopeScrollArea);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || scrollbarContext.hasThumb, children: /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaThumbImpl, { ref: forwardedRef, ...thumbProps }) });
+  }
+);
+var ScrollAreaThumbImpl = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const { __scopeScrollArea, style: style2, ...thumbProps } = props;
+    const scrollAreaContext = useScrollAreaContext(THUMB_NAME$2, __scopeScrollArea);
+    const scrollbarContext = useScrollbarContext(THUMB_NAME$2, __scopeScrollArea);
+    const { onThumbPositionChange } = scrollbarContext;
+    const composedRef = useComposedRefs(
+      forwardedRef,
+      (node) => scrollbarContext.onThumbChange(node)
+    );
+    const removeUnlinkedScrollListenerRef = reactExports.useRef(void 0);
+    const debounceScrollEnd = useDebounceCallback(() => {
+      if (removeUnlinkedScrollListenerRef.current) {
+        removeUnlinkedScrollListenerRef.current();
+        removeUnlinkedScrollListenerRef.current = void 0;
+      }
+    }, 100);
+    reactExports.useEffect(() => {
+      const viewport = scrollAreaContext.viewport;
+      if (viewport) {
+        const handleScroll2 = () => {
+          debounceScrollEnd();
+          if (!removeUnlinkedScrollListenerRef.current) {
+            const listener = addUnlinkedScrollListener(viewport, onThumbPositionChange);
+            removeUnlinkedScrollListenerRef.current = listener;
+            onThumbPositionChange();
+          }
+        };
+        onThumbPositionChange();
+        viewport.addEventListener("scroll", handleScroll2);
+        return () => viewport.removeEventListener("scroll", handleScroll2);
+      }
+    }, [scrollAreaContext.viewport, debounceScrollEnd, onThumbPositionChange]);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Primitive$1.div,
+      {
+        "data-state": scrollbarContext.hasThumb ? "visible" : "hidden",
+        ...thumbProps,
+        ref: composedRef,
+        style: {
+          width: "var(--radix-scroll-area-thumb-width)",
+          height: "var(--radix-scroll-area-thumb-height)",
+          ...style2
+        },
+        onPointerDownCapture: composeEventHandlers(props.onPointerDownCapture, (event) => {
+          const thumb = event.target;
+          const thumbRect = thumb.getBoundingClientRect();
+          const x2 = event.clientX - thumbRect.left;
+          const y2 = event.clientY - thumbRect.top;
+          scrollbarContext.onThumbPointerDown({ x: x2, y: y2 });
+        }),
+        onPointerUp: composeEventHandlers(props.onPointerUp, scrollbarContext.onThumbPointerUp)
+      }
+    );
+  }
+);
+ScrollAreaThumb.displayName = THUMB_NAME$2;
+var CORNER_NAME = "ScrollAreaCorner";
+var ScrollAreaCorner = reactExports.forwardRef(
+  (props, forwardedRef) => {
+    const context = useScrollAreaContext(CORNER_NAME, props.__scopeScrollArea);
+    const hasBothScrollbarsVisible = Boolean(context.scrollbarX && context.scrollbarY);
+    const hasCorner = context.type !== "scroll" && hasBothScrollbarsVisible;
+    return hasCorner ? /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollAreaCornerImpl, { ...props, ref: forwardedRef }) : null;
+  }
+);
+ScrollAreaCorner.displayName = CORNER_NAME;
+var ScrollAreaCornerImpl = reactExports.forwardRef((props, forwardedRef) => {
+  const { __scopeScrollArea, ...cornerProps } = props;
+  const context = useScrollAreaContext(CORNER_NAME, __scopeScrollArea);
+  const [width, setWidth] = reactExports.useState(0);
+  const [height, setHeight] = reactExports.useState(0);
+  const hasSize = Boolean(width && height);
+  useResizeObserver(context.scrollbarX, () => {
+    var _a2;
+    const height2 = ((_a2 = context.scrollbarX) == null ? void 0 : _a2.offsetHeight) || 0;
+    context.onCornerHeightChange(height2);
+    setHeight(height2);
+  });
+  useResizeObserver(context.scrollbarY, () => {
+    var _a2;
+    const width2 = ((_a2 = context.scrollbarY) == null ? void 0 : _a2.offsetWidth) || 0;
+    context.onCornerWidthChange(width2);
+    setWidth(width2);
+  });
+  return hasSize ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Primitive$1.div,
+    {
+      ...cornerProps,
+      ref: forwardedRef,
+      style: {
+        width,
+        height,
+        position: "absolute",
+        right: context.dir === "ltr" ? 0 : void 0,
+        left: context.dir === "rtl" ? 0 : void 0,
+        bottom: 0,
+        ...props.style
+      }
+    }
+  ) : null;
+});
+function toInt(value) {
+  return value ? parseInt(value, 10) : 0;
+}
+function getThumbRatio(viewportSize, contentSize) {
+  const ratio = viewportSize / contentSize;
+  return isNaN(ratio) ? 0 : ratio;
+}
+function getThumbSize(sizes) {
+  const ratio = getThumbRatio(sizes.viewport, sizes.content);
+  const scrollbarPadding = sizes.scrollbar.paddingStart + sizes.scrollbar.paddingEnd;
+  const thumbSize = (sizes.scrollbar.size - scrollbarPadding) * ratio;
+  return Math.max(thumbSize, 18);
+}
+function getScrollPositionFromPointer(pointerPos, pointerOffset, sizes, dir = "ltr") {
+  const thumbSizePx = getThumbSize(sizes);
+  const thumbCenter = thumbSizePx / 2;
+  const offset2 = pointerOffset || thumbCenter;
+  const thumbOffsetFromEnd = thumbSizePx - offset2;
+  const minPointerPos = sizes.scrollbar.paddingStart + offset2;
+  const maxPointerPos = sizes.scrollbar.size - sizes.scrollbar.paddingEnd - thumbOffsetFromEnd;
+  const maxScrollPos = sizes.content - sizes.viewport;
+  const scrollRange = dir === "ltr" ? [0, maxScrollPos] : [maxScrollPos * -1, 0];
+  const interpolate2 = linearScale$1([minPointerPos, maxPointerPos], scrollRange);
+  return interpolate2(pointerPos);
+}
+function getThumbOffsetFromScroll(scrollPos, sizes, dir = "ltr") {
+  const thumbSizePx = getThumbSize(sizes);
+  const scrollbarPadding = sizes.scrollbar.paddingStart + sizes.scrollbar.paddingEnd;
+  const scrollbar = sizes.scrollbar.size - scrollbarPadding;
+  const maxScrollPos = sizes.content - sizes.viewport;
+  const maxThumbPos = scrollbar - thumbSizePx;
+  const scrollClampRange = dir === "ltr" ? [0, maxScrollPos] : [maxScrollPos * -1, 0];
+  const scrollWithoutMomentum = clamp(scrollPos, scrollClampRange);
+  const interpolate2 = linearScale$1([0, maxScrollPos], [0, maxThumbPos]);
+  return interpolate2(scrollWithoutMomentum);
+}
+function linearScale$1(input, output) {
+  return (value) => {
+    if (input[0] === input[1] || output[0] === output[1]) return output[0];
+    const ratio = (output[1] - output[0]) / (input[1] - input[0]);
+    return output[0] + ratio * (value - input[0]);
+  };
+}
+function isScrollingWithinScrollbarBounds(scrollPos, maxScrollPos) {
+  return scrollPos > 0 && scrollPos < maxScrollPos;
+}
+var addUnlinkedScrollListener = (node, handler = () => {
+}) => {
+  let prevPosition = { left: node.scrollLeft, top: node.scrollTop };
+  let rAF = 0;
+  (function loop() {
+    const position = { left: node.scrollLeft, top: node.scrollTop };
+    const isHorizontalScroll = prevPosition.left !== position.left;
+    const isVerticalScroll = prevPosition.top !== position.top;
+    if (isHorizontalScroll || isVerticalScroll) handler();
+    prevPosition = position;
+    rAF = window.requestAnimationFrame(loop);
+  })();
+  return () => window.cancelAnimationFrame(rAF);
+};
+function useDebounceCallback(callback, delay2) {
+  const handleCallback = useCallbackRef$1(callback);
+  const debounceTimerRef = reactExports.useRef(0);
+  reactExports.useEffect(() => () => window.clearTimeout(debounceTimerRef.current), []);
+  return reactExports.useCallback(() => {
+    window.clearTimeout(debounceTimerRef.current);
+    debounceTimerRef.current = window.setTimeout(handleCallback, delay2);
+  }, [handleCallback, delay2]);
+}
+function useResizeObserver(element, onResize) {
+  const handleResize = useCallbackRef$1(onResize);
+  useLayoutEffect2(() => {
+    let rAF = 0;
+    if (element) {
+      const resizeObserver = new ResizeObserver(() => {
+        cancelAnimationFrame(rAF);
+        rAF = window.requestAnimationFrame(handleResize);
+      });
+      resizeObserver.observe(element);
+      return () => {
+        window.cancelAnimationFrame(rAF);
+        resizeObserver.unobserve(element);
+      };
+    }
+  }, [element, handleResize]);
+}
+var Root$2 = ScrollArea$1;
+var Viewport = ScrollAreaViewport;
+var Corner = ScrollAreaCorner;
+function ScrollArea({
+  className,
+  children,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    Root$2,
+    {
+      "data-slot": "scroll-area",
+      className: cn("relative", className),
+      ...props,
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Viewport,
+          {
+            "data-slot": "scroll-area-viewport",
+            className: "focus-visible:ring-ring/50 size-full rounded-[inherit] transition-[color,box-shadow] outline-none focus-visible:ring-[3px] focus-visible:outline-1",
+            children
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollBar, {}),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Corner, {})
+      ]
+    }
+  );
+}
+function ScrollBar({
+  className,
+  orientation = "vertical",
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    ScrollAreaScrollbar,
+    {
+      "data-slot": "scroll-area-scrollbar",
+      orientation,
+      className: cn(
+        "flex touch-none p-px transition-colors select-none",
+        orientation === "vertical" && "h-full w-2.5 border-l border-l-transparent",
+        orientation === "horizontal" && "h-2.5 flex-col border-t border-t-transparent",
+        className
+      ),
+      ...props,
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        ScrollAreaThumb,
+        {
+          "data-slot": "scroll-area-thumb",
+          className: "bg-border relative flex-1 rounded-full"
+        }
+      )
+    }
+  );
+}
 const documentsRoute = createRoute({
   getParentRoute: () => dashboardLayoutRoute,
   path: "/documents",
   component: DocumentsPage
 });
 function DocumentsPage() {
+  const { sessionId, ready } = useSession();
+  const { data: documents = [], isLoading } = useDocuments(sessionId);
+  const createDoc = useCreateDocument(sessionId);
+  const updateDoc = useUpdateDocument(sessionId);
+  const deleteDoc = useDeleteDocument(sessionId);
+  const logActivity = useLogActivity(sessionId);
+  const [query, setQuery] = reactExports.useState("");
+  const [editing, setEditing] = reactExports.useState(null);
+  const [uploadProgress, setUploadProgress] = reactExports.useState(null);
+  const fileInputRef = reactExports.useRef(null);
+  const filtered = reactExports.useMemo(() => {
+    const q2 = query.trim().toLowerCase();
+    if (!q2) return documents;
+    return documents.filter((d2) => d2.title.toLowerCase().includes(q2));
+  }, [documents, query]);
+  const sorted = reactExports.useMemo(
+    () => [...filtered].sort((a2, b2) => Number(b2.updatedAt) - Number(a2.updatedAt)),
+    [filtered]
+  );
+  const startNew = reactExports.useCallback(() => {
+    setEditing({ id: null, title: "", content: "", fileType: "txt" });
+  }, []);
+  const openExisting = reactExports.useCallback((doc) => {
+    setEditing({
+      id: doc.id,
+      title: doc.title,
+      content: doc.content,
+      fileType: doc.fileType || "txt"
+    });
+  }, []);
+  const closeEditor = reactExports.useCallback(() => setEditing(null), []);
+  const handleSave = reactExports.useCallback(async () => {
+    if (!editing || !ready || sessionId.length === 0) return;
+    const title = editing.title.trim() || "Untitled document";
+    const content = editing.content;
+    try {
+      if (editing.id === null) {
+        const created = await createDoc.mutateAsync({ title, content });
+        await logActivity.mutateAsync({
+          activityType: "document",
+          summary: `Created "${title}"`,
+          details: `New ${editing.fileType} document, ${content.length} characters.`
+        });
+        ue.success(`Created "${title}"`);
+        if (created) openExisting(created);
+      } else {
+        await updateDoc.mutateAsync({
+          docId: editing.id,
+          title,
+          content
+        });
+        await logActivity.mutateAsync({
+          activityType: "document",
+          summary: `Updated "${title}"`,
+          details: `Edited ${editing.fileType} document, ${content.length} characters.`
+        });
+        ue.success(`Saved "${title}"`);
+        setEditing((prev) => prev ? { ...prev, title, content } : prev);
+      }
+    } catch {
+      ue.error("Couldn't save document. Please try again.");
+    }
+  }, [
+    editing,
+    ready,
+    sessionId,
+    createDoc,
+    updateDoc,
+    logActivity,
+    openExisting
+  ]);
+  const handleDelete = reactExports.useCallback(
+    async (doc) => {
+      try {
+        await deleteDoc.mutateAsync(doc.id);
+        await logActivity.mutateAsync({
+          activityType: "document",
+          summary: `Deleted "${doc.title}"`,
+          details: `Removed ${doc.fileType || "txt"} document.`
+        });
+        if ((editing == null ? void 0 : editing.id) === doc.id) closeEditor();
+        ue.success(`Deleted "${doc.title}"`);
+      } catch {
+        ue.error("Couldn't delete document.");
+      }
+    },
+    [deleteDoc, logActivity, editing, closeEditor]
+  );
+  const handleUploadClick = reactExports.useCallback(() => {
+    var _a2;
+    (_a2 = fileInputRef.current) == null ? void 0 : _a2.click();
+  }, []);
+  const handleFileSelected = reactExports.useCallback(
+    async (e) => {
+      var _a2, _b2;
+      const file = (_a2 = e.target.files) == null ? void 0 : _a2[0];
+      e.target.value = "";
+      if (!file || !ready || sessionId.length === 0) return;
+      if (!isTextLike(file)) {
+        ue.error("Only text-readable files are supported right now.");
+        return;
+      }
+      setUploadProgress(0);
+      try {
+        const content = await readFileWithProgress(
+          file,
+          (p2) => setUploadProgress(p2)
+        );
+        const ext = ((_b2 = file.name.split(".").pop()) == null ? void 0 : _b2.toLowerCase()) ?? "txt";
+        const title = file.name.replace(/\.[^.]+$/, "");
+        const created = await createDoc.mutateAsync({
+          title: title || "Uploaded file",
+          content
+        });
+        await logActivity.mutateAsync({
+          activityType: "document",
+          summary: `Uploaded "${file.name}"`,
+          details: `Imported ${ext} file, ${content.length} characters.`
+        });
+        ue.success(`Uploaded "${file.name}"`);
+        if (created) openExisting({ ...created, fileType: ext });
+      } catch {
+        ue.error("Couldn't read that file. Try a different format.");
+      } finally {
+        setUploadProgress(null);
+      }
+    },
+    [ready, sessionId, createDoc, logActivity, openExisting]
+  );
+  const handleExport = reactExports.useCallback(() => {
+    if (!editing) return;
+    const ext = editing.fileType || "txt";
+    const blob = new Blob([editing.content], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a2 = document.createElement("a");
+    a2.href = url;
+    a2.download = `${(editing.title || "document").replace(/[^a-z0-9]+/gi, "-").toLowerCase()}.${ext}`;
+    a2.click();
+    URL.revokeObjectURL(url);
+    ue.success("Document exported");
+  }, [editing]);
+  const saving = createDoc.isPending || updateDoc.isPending;
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex h-[calc(100vh-4rem)] overflow-hidden bg-background", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "section",
+      {
+        className: "flex w-full flex-col border-r border-border bg-card/40 md:w-80 lg:w-96",
+        "aria-label": "Document list",
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3 border-b border-border p-4", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display text-lg font-semibold tracking-tight text-foreground", children: "Documents" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs text-muted-foreground", children: [
+                sorted.length,
+                " ",
+                sorted.length === 1 ? "item" : "items"
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Search, { className: "pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                Input,
+                {
+                  type: "search",
+                  value: query,
+                  onChange: (e) => setQuery(e.target.value),
+                  placeholder: "Search by title…",
+                  className: "pl-9",
+                  "aria-label": "Search documents",
+                  "data-ocid": "documents.search_input"
+                }
+              )
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                Button,
+                {
+                  variant: "default",
+                  size: "sm",
+                  className: "flex-1 gap-1.5",
+                  onClick: startNew,
+                  disabled: !ready,
+                  "data-ocid": "documents.new_button",
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(Plus, { className: "size-4" }),
+                    "New"
+                  ]
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                Button,
+                {
+                  variant: "outline",
+                  size: "sm",
+                  className: "flex-1 gap-1.5",
+                  onClick: handleUploadClick,
+                  disabled: !ready || uploadProgress !== null,
+                  "data-ocid": "documents.upload_button",
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(FileUp, { className: "size-4" }),
+                    "Upload"
+                  ]
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "input",
+                {
+                  ref: fileInputRef,
+                  type: "file",
+                  accept: ".txt,.md,.markdown,.json,.csv,.tsv,.log,.js,.ts,.tsx,.jsx,.py,.rs,.go,.java,.c,.cpp,.h,.css,.html,.xml,.yml,.yaml,.toml,.ini,.sh,.sql,.text",
+                  className: "hidden",
+                  onChange: handleFileSelected,
+                  "data-ocid": "documents.file_input"
+                }
+              )
+            ] }),
+            uploadProgress !== null && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1", "data-ocid": "documents.upload_progress", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Progress, { value: uploadProgress, className: "h-1.5" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-xs text-muted-foreground", children: [
+                "Reading file… ",
+                Math.round(uploadProgress),
+                "%"
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollArea, { className: "flex-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-1 p-2", "data-ocid": "documents.list", children: isLoading ? /* @__PURE__ */ jsxRuntimeExports.jsx(ListSkeleton, {}) : sorted.length === 0 ? /* @__PURE__ */ jsxRuntimeExports.jsx(EmptyList, { hasQuery: query.trim().length > 0, onNew: startNew }) : sorted.map((doc, idx) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+            DocumentListItem,
+            {
+              doc,
+              index: idx,
+              active: (editing == null ? void 0 : editing.id) === doc.id,
+              onOpen: () => openExisting(doc),
+              onDelete: () => handleDelete(doc)
+            },
+            doc.id.toString()
+          )) }) })
+        ]
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "section",
+      {
+        className: "hidden min-w-0 flex-1 flex-col md:flex",
+        "aria-label": "Document editor",
+        children: editing ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+          EditorPanel,
+          {
+            editing,
+            onChange: setEditing,
+            onSave: handleSave,
+            onClose: closeEditor,
+            onExport: handleExport,
+            saving
+          }
+        ) : /* @__PURE__ */ jsxRuntimeExports.jsx(EditorEmptyState, { onNew: startNew })
+      }
+    ),
+    editing && /* @__PURE__ */ jsxRuntimeExports.jsx(
+      motion.div,
+      {
+        initial: { x: "100%" },
+        animate: { x: 0 },
+        exit: { x: "100%" },
+        transition: { duration: 0.25, ease: [0.22, 1, 0.36, 1] },
+        className: "fixed inset-0 z-40 flex flex-col bg-background md:hidden",
+        "data-ocid": "documents.editor.mobile",
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          EditorPanel,
+          {
+            editing,
+            onChange: setEditing,
+            onSave: handleSave,
+            onClose: closeEditor,
+            onExport: handleExport,
+            saving
+          }
+        )
+      }
+    )
+  ] });
+}
+function DocumentListItem({
+  doc,
+  index: index2,
+  active,
+  onOpen,
+  onDelete
+}) {
+  const Icon2 = fileTypeIcon(doc.fileType);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { "data-ocid": `documents.item.${index2 + 1}`, className: "group relative", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "button",
+      {
+        type: "button",
+        onClick: onOpen,
+        className: `flex w-full items-start gap-3 rounded-lg border px-3 py-2.5 text-left transition-smooth ${active ? "border-primary/40 bg-primary/10" : "border-transparent hover:border-border hover:bg-muted/50"}`,
+        "aria-current": active ? "true" : void 0,
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "div",
+            {
+              className: `mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-md border ${active ? "border-primary/30 bg-primary/15 text-primary" : "border-border bg-muted/40 text-muted-foreground"}`,
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { className: "size-4", "aria-hidden": true })
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-w-0 flex-1", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "p",
+              {
+                className: `truncate text-sm font-medium ${active ? "text-primary" : "text-foreground"}`,
+                children: doc.title || "Untitled"
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-0.5 flex items-center gap-1.5 text-xs text-muted-foreground", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "size-3", "aria-hidden": true }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("time", { dateTime: new Date(Number(doc.updatedAt)).toISOString(), children: formatRelative(Number(doc.updatedAt)) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { "aria-hidden": true, children: "·" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "uppercase", children: doc.fileType || "txt" })
+            ] })
+          ] })
+        ]
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs(Tooltip, { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(TooltipTrigger, { asChild: true, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "button",
+        {
+          type: "button",
+          onClick: onDelete,
+          "aria-label": `Delete ${doc.title || "document"}`,
+          "data-ocid": `documents.delete_button.${index2 + 1}`,
+          className: "absolute right-2 top-2 hidden size-7 items-center justify-center rounded-md text-muted-foreground transition-smooth hover:bg-destructive/10 hover:text-destructive group-hover:flex focus-visible:flex",
+          children: /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { className: "size-3.5", "aria-hidden": true })
+        }
+      ) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(TooltipContent, { children: "Delete document" })
+    ] })
+  ] });
+}
+function EditorPanel({
+  editing,
+  onChange,
+  onSave,
+  onClose,
+  onExport,
+  saving
+}) {
+  const editorRef = reactExports.useRef(null);
+  const [title, setTitle] = reactExports.useState(editing.title);
+  const [content, setContent] = reactExports.useState(editing.content);
+  reactExports.useEffect(() => {
+    setTitle(editing.title);
+    setContent(editing.content);
+  }, [editing.title, editing.content]);
+  reactExports.useEffect(() => {
+    const el = editorRef.current;
+    if (!el) return;
+    if (el.innerText !== content) el.innerText = content;
+  }, [editing.id]);
+  const commit = reactExports.useCallback(() => {
+    var _a2;
+    onChange({
+      id: editing.id,
+      title,
+      content: ((_a2 = editorRef.current) == null ? void 0 : _a2.innerText) ?? content,
+      fileType: editing.fileType
+    });
+  }, [editing.id, editing.fileType, title, content, onChange]);
+  const handleTitleBlur = reactExports.useCallback(() => {
+    commit();
+  }, [commit]);
+  const handleEditorBlur = reactExports.useCallback(() => {
+    var _a2;
+    setContent(((_a2 = editorRef.current) == null ? void 0 : _a2.innerText) ?? "");
+    commit();
+  }, [commit]);
+  const handleEditorInput = reactExports.useCallback(() => {
+    var _a2;
+    setContent(((_a2 = editorRef.current) == null ? void 0 : _a2.innerText) ?? "");
+  }, []);
+  const Icon2 = fileTypeIcon(editing.fileType);
+  const isNew = editing.id === null;
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex h-full flex-col", "data-ocid": "documents.editor", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-2 border-b border-border bg-card/60 px-4 py-2.5 backdrop-blur", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex min-w-0 items-center gap-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Button,
+          {
+            variant: "ghost",
+            size: "icon",
+            className: "md:hidden",
+            onClick: onClose,
+            "aria-label": "Close editor",
+            "data-ocid": "documents.editor.close_button",
+            children: /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowLeft, { className: "size-4", "aria-hidden": true })
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-7 shrink-0 items-center justify-center rounded-md border border-primary/30 bg-primary/10 text-primary", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { className: "size-3.5", "aria-hidden": true }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Badge, { children: isNew ? "New" : editing.fileType || "txt" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(Tooltip, { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(TooltipTrigger, { asChild: true, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            Button,
+            {
+              variant: "ghost",
+              size: "sm",
+              className: "gap-1.5 text-muted-foreground hover:text-foreground",
+              onClick: onExport,
+              "data-ocid": "documents.export_button",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Download, { className: "size-3.5" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "hidden sm:inline", children: "Export" })
+              ]
+            }
+          ) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(TooltipContent, { children: "Download as file" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Button,
+          {
+            variant: "ghost",
+            size: "icon",
+            className: "hidden md:inline-flex",
+            onClick: onClose,
+            "aria-label": "Close editor",
+            "data-ocid": "documents.editor.close_button.desktop",
+            children: /* @__PURE__ */ jsxRuntimeExports.jsx(X, { className: "size-4", "aria-hidden": true })
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          Button,
+          {
+            variant: "default",
+            size: "sm",
+            className: "gap-1.5",
+            onClick: onSave,
+            disabled: saving,
+            "data-ocid": "documents.save_button",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Save, { className: "size-3.5" }),
+              saving ? "Saving…" : "Save"
+            ]
+          }
+        )
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-b border-border px-4 pt-4 sm:px-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Label, { htmlFor: "doc-title", className: "sr-only", children: "Document title" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "input",
+        {
+          id: "doc-title",
+          type: "text",
+          value: title,
+          onChange: (e) => setTitle(e.target.value),
+          onBlur: handleTitleBlur,
+          placeholder: "Untitled document",
+          className: "w-full bg-transparent font-display text-2xl font-semibold tracking-tight text-foreground outline-none placeholder:text-muted-foreground/60",
+          "data-ocid": "documents.title_input"
+        }
+      )
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollArea, { className: "flex-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "px-4 py-4 sm:px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "div",
+      {
+        ref: editorRef,
+        contentEditable: true,
+        suppressContentEditableWarning: true,
+        tabIndex: 0,
+        onInput: handleEditorInput,
+        onBlur: handleEditorBlur,
+        className: "prose-doc min-h-[40vh] w-full whitespace-pre-wrap break-words font-body text-sm leading-relaxed text-foreground outline-none focus:outline-none",
+        "data-ocid": "documents.content_editor",
+        "aria-label": "Document content",
+        role: "textbox",
+        "aria-multiline": "true"
+      }
+    ) }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between border-t border-border bg-muted/30 px-4 py-2 text-xs text-muted-foreground", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-1.5", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Pencil, { className: "size-3", "aria-hidden": true }),
+        content.length,
+        " characters"
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-mono", children: isNew ? "unsaved" : editing.fileType || "txt" })
+    ] })
+  ] });
+}
+function EditorEmptyState({ onNew }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    ComingSoonPage,
+    "div",
     {
-      title: "Documents",
-      description: "Upload, organize, and analyze your documents with AI-powered extraction and insights.",
-      icon: FileText
+      className: "flex h-full flex-col items-center justify-center px-6 text-center",
+      "data-ocid": "documents.editor.empty_state",
+      children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        motion.div,
+        {
+          initial: { opacity: 0, y: 16 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+          className: "flex max-w-sm flex-col items-center gap-5",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-16 items-center justify-center rounded-2xl border border-primary/30 bg-primary/10 text-primary shadow-lg", children: /* @__PURE__ */ jsxRuntimeExports.jsx(FileText, { className: "size-8", "aria-hidden": true }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display text-xl font-semibold tracking-tight text-foreground", children: "Pick a document to read" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground", children: "Select a document from the list, or start a fresh note to write something new." })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              Button,
+              {
+                variant: "outline",
+                className: "gap-2",
+                onClick: onNew,
+                "data-ocid": "documents.editor.empty_state.new_button",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(Plus, { className: "size-4" }),
+                  "Start a new document"
+                ]
+              }
+            )
+          ]
+        }
+      )
     }
   );
 }
-const dashboardHomeRoute = createRoute({
-  getParentRoute: () => dashboardLayoutRoute,
-  path: "/",
-  component: DashboardHome
-});
-const QUICK_ACTIONS = [
-  {
-    title: "AI Chat",
-    description: "Converse with multiple AI models in one place.",
-    icon: Bot,
-    to: "/dashboard/ai-chat",
-    ocid: "dashboard.home.card.ai_chat"
-  },
-  {
-    title: "Tools",
-    description: "A curated suite of AI-powered utilities.",
-    icon: Wrench,
-    to: "/dashboard/tools",
-    ocid: "dashboard.home.card.tools"
-  },
-  {
-    title: "Documents",
-    description: "Organize and analyze your documents.",
-    icon: FileText,
-    to: "/dashboard/documents",
-    ocid: "dashboard.home.card.documents"
-  },
-  {
-    title: "Workspace",
-    description: "Your projects, notes, and bookmarks.",
-    icon: FolderOpen,
-    to: "/dashboard/workspace",
-    ocid: "dashboard.home.card.workspace"
-  },
-  {
-    title: "Internet Search",
-    description: "Search the web with AI summaries.",
-    icon: Globe,
-    to: "/dashboard/internet-search",
-    ocid: "dashboard.home.card.internet_search"
-  },
-  {
-    title: "YouTube Search",
-    description: "Find videos with AI-curated results.",
-    icon: Youtube,
-    to: "/dashboard/youtube",
-    ocid: "dashboard.home.card.youtube"
-  },
-  {
-    title: "Knowledge Base",
-    description: "Your private, queryable knowledge layer.",
-    icon: Sparkles,
-    to: "/dashboard/knowledge-base",
-    ocid: "dashboard.home.card.knowledge_base"
-  },
-  {
-    title: "Settings",
-    description: "Manage your account and preferences.",
-    icon: Settings,
-    to: "/dashboard/settings",
-    ocid: "dashboard.home.card.settings"
-  }
-];
-function DashboardHome() {
+function EmptyList({
+  hasQuery,
+  onNew
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "li",
+    {
+      className: "flex flex-col items-center gap-3 px-4 py-12 text-center",
+      "data-ocid": "documents.empty_state",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-12 items-center justify-center rounded-xl border border-border bg-muted/40 text-muted-foreground", children: /* @__PURE__ */ jsxRuntimeExports.jsx(FileText, { className: "size-6", "aria-hidden": true }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-medium text-foreground", children: hasQuery ? "No matching documents" : "No documents yet" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground", children: hasQuery ? "Try a different search term." : "Create a note or upload a text file to get started." })
+        ] }),
+        !hasQuery && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          Button,
+          {
+            variant: "outline",
+            size: "sm",
+            className: "gap-1.5",
+            onClick: onNew,
+            "data-ocid": "documents.empty_state.new_button",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Plus, { className: "size-4" }),
+              "New document"
+            ]
+          }
+        )
+      ]
+    }
+  );
+}
+function ListSkeleton() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: [0, 1, 2, 3].map((i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "li",
+    {
+      className: "flex items-start gap-3 rounded-lg px-3 py-2.5",
+      "data-ocid": `documents.loading_state.${i + 1}`,
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-0.5 size-8 shrink-0 animate-pulse rounded-md bg-muted" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 space-y-1.5", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-3.5 w-3/4 animate-pulse rounded bg-muted" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-3 w-1/2 animate-pulse rounded bg-muted" })
+        ] })
+      ]
+    },
+    i
+  )) });
+}
+function Badge({ children }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-flex items-center rounded-md border border-border bg-muted/40 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground", children });
+}
+function fileTypeIcon(fileType) {
+  const ext = (fileType || "").toLowerCase();
+  if (["csv", "tsv"].includes(ext)) return FileSpreadsheet;
+  if ([
+    "json",
+    "js",
+    "ts",
+    "tsx",
+    "jsx",
+    "py",
+    "rs",
+    "go",
+    "java",
+    "c",
+    "cpp",
+    "h",
+    "sh",
+    "sql"
+  ].includes(ext))
+    return FileCode;
+  if (["md", "markdown", "txt", "text", "log"].includes(ext)) return Type2;
+  if (ext) return FileType2;
+  return FileText;
+}
+function isTextLike(file) {
   var _a2;
-  const navigate = useNavigate();
-  const user = useAuth((s) => s.user);
-  const firstName = ((_a2 = user == null ? void 0 : user.name) == null ? void 0 : _a2.split(" ")[0]) ?? "there";
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8", children: [
+  const ext = ((_a2 = file.name.split(".").pop()) == null ? void 0 : _a2.toLowerCase()) ?? "";
+  const textExts = [
+    "txt",
+    "text",
+    "md",
+    "markdown",
+    "json",
+    "csv",
+    "tsv",
+    "log",
+    "js",
+    "ts",
+    "tsx",
+    "jsx",
+    "py",
+    "rs",
+    "go",
+    "java",
+    "c",
+    "cpp",
+    "h",
+    "hpp",
+    "css",
+    "html",
+    "xml",
+    "yml",
+    "yaml",
+    "toml",
+    "ini",
+    "sh",
+    "bash",
+    "sql",
+    "env",
+    "gitignore",
+    "dockerfile"
+  ];
+  if (textExts.includes(ext)) return true;
+  return file.type.startsWith("text/");
+}
+function readFileWithProgress(file, onProgress) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    const size2 = file.size || 1;
+    reader.onprogress = (e) => {
+      if (e.lengthComputable) onProgress(Math.round(e.loaded / size2 * 100));
+    };
+    reader.onload = () => {
+      onProgress(100);
+      resolve(String(reader.result ?? ""));
+    };
+    reader.onerror = () => reject(reader.error ?? new Error("read failed"));
+    reader.readAsText(file);
+  });
+}
+function formatRelative(ts) {
+  const diff = Date.now() - ts;
+  const sec = Math.floor(diff / 1e3);
+  if (sec < 60) return "just now";
+  const min2 = Math.floor(sec / 60);
+  if (min2 < 60) return `${min2}m ago`;
+  const hr = Math.floor(min2 / 60);
+  if (hr < 24) return `${hr}h ago`;
+  const day = Math.floor(hr / 24);
+  if (day < 7) return `${day}d ago`;
+  return new Date(ts).toLocaleDateString(void 0, {
+    month: "short",
+    day: "numeric"
+  });
+}
+const internetSearchRoute = createRoute({
+  getParentRoute: () => dashboardLayoutRoute,
+  path: "/search",
+  component: InternetSearchPage
+});
+function InternetSearchPage() {
+  const { sessionId } = useSession();
+  const searchHistory = useSearchHistory(sessionId);
+  const logSearch = useLogSearch(sessionId);
+  const logActivity = useLogActivity(sessionId);
+  const [query, setQuery] = reactExports.useState("");
+  const [results, setResults] = reactExports.useState([]);
+  const [activeQuery, setActiveQuery] = reactExports.useState("");
+  const [resultSource, setResultSource] = reactExports.useState(null);
+  const [isSearching, setIsSearching] = reactExports.useState(false);
+  const [hasSearched, setHasSearched] = reactExports.useState(false);
+  const [error, setError] = reactExports.useState(null);
+  const inputRef = reactExports.useRef(null);
+  const runSearch = reactExports.useCallback(
+    async (rawQuery) => {
+      const trimmed = rawQuery.trim();
+      if (trimmed.length === 0) return;
+      setIsSearching(true);
+      setError(null);
+      setHasSearched(true);
+      setActiveQuery(trimmed);
+      setResults([]);
+      setResultSource(null);
+      try {
+        const { results: fetched, source } = await performSearch(trimmed);
+        setResults(fetched);
+        setResultSource(source);
+        const count2 = BigInt(fetched.length);
+        logSearch.mutate(
+          { queryText: trimmed, resultCount: count2 },
+          {
+            onError: () => {
+            }
+          }
+        );
+        logActivity.mutate(
+          {
+            activityType: "search",
+            summary: `Searched the web for "${trimmed}"`,
+            details: `Returned ${fetched.length} result${fetched.length === 1 ? "" : "s"} via ${source === "duckduckgo" ? "DuckDuckGo" : "simulated fallback"}.`
+          },
+          {
+            onError: () => {
+            }
+          }
+        );
+      } catch (err) {
+        setError(
+          err instanceof Error ? err.message : "Search failed. Please try again."
+        );
+        ue.error("Search failed. Please try again.");
+      } finally {
+        setIsSearching(false);
+      }
+    },
+    [logActivity, logSearch]
+  );
+  const handleSubmit = reactExports.useCallback(
+    (e) => {
+      e.preventDefault();
+      void runSearch(query);
+    },
+    [query, runSearch]
+  );
+  const handleHistoryClick = reactExports.useCallback(
+    (q2) => {
+      setQuery(q2);
+      void runSearch(q2);
+    },
+    [runSearch]
+  );
+  const handleClear = reactExports.useCallback(() => {
+    var _a2;
+    setQuery("");
+    setResults([]);
+    setActiveQuery("");
+    setResultSource(null);
+    setHasSearched(false);
+    setError(null);
+    (_a2 = inputRef.current) == null ? void 0 : _a2.focus();
+  }, []);
+  const recentSearches = reactExports.useMemo(() => {
+    const records = searchHistory.data ?? [];
+    const seen = /* @__PURE__ */ new Set();
+    const out = [];
+    for (const r2 of records) {
+      const q2 = r2.queryText;
+      if (seen.has(q2)) continue;
+      seen.add(q2);
+      out.push({ id: r2.id.toString(), queryText: q2 });
+      if (out.length >= 8) break;
+    }
+    return out;
+  }, [searchHistory.data]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 lg:px-8", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       motion.section,
       {
         initial: { opacity: 0, y: 16 },
         animate: { opacity: 1, y: 0 },
         transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-        "data-ocid": "dashboard.home.welcome.section",
+        "data-ocid": "search.header.section",
         children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "glass-strong relative overflow-hidden border-border/60 p-8 shadow-lg sm:p-10", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx(
             "div",
@@ -54648,410 +59210,347 @@ function DashboardHome() {
             }
           ),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex flex-col gap-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-medium uppercase tracking-wide text-muted-foreground", children: "Dashboard" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl", children: [
-              "Welcome back, ",
-              firstName
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "max-w-xl text-sm leading-relaxed text-muted-foreground", children: "Your unified AI workspace is ready. Pick a quick action below to get started." })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-medium uppercase tracking-wide text-muted-foreground", children: "Internet Search" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl", children: "Search the open web" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "max-w-xl text-sm leading-relaxed text-muted-foreground", children: "Query the web and get instant answers with cited sources. Every search is saved to your anonymous session history." })
           ] })
         ] })
       }
     ),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "section",
-      {
-        className: "mt-8",
-        "data-ocid": "dashboard.home.quick_actions.section",
-        children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "mb-4 font-display text-lg font-medium text-foreground", children: "Quick Actions" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4", children: QUICK_ACTIONS.map((action, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-            motion.button,
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "mt-8", "data-ocid": "search.input.section", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: handleSubmit, className: "relative", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Search,
+          {
+            className: "pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-muted-foreground",
+            "aria-hidden": true
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Input,
+          {
+            ref: inputRef,
+            value: query,
+            onChange: (e) => setQuery(e.target.value),
+            placeholder: "Search the web…",
+            className: "h-12 rounded-xl border-border/70 bg-card pl-11 pr-24 text-base shadow-sm transition-smooth focus-visible:border-primary/50 focus-visible:ring-primary/30",
+            "aria-label": "Search query",
+            "data-ocid": "search.input",
+            autoFocus: true
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute top-1/2 right-2 flex -translate-y-1/2 items-center gap-1", children: [
+          query.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Button,
             {
               type: "button",
-              initial: { opacity: 0, y: 16 },
-              animate: { opacity: 1, y: 0 },
-              transition: {
-                delay: 0.05 * index2,
-                duration: 0.4,
-                ease: [0.22, 1, 0.36, 1]
-              },
-              whileHover: { y: -3 },
-              className: "text-left",
-              onClick: () => navigate({ to: action.to }),
-              "data-ocid": action.ocid,
-              children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "group h-full border-border/60 bg-card p-5 shadow-sm transition-smooth hover:border-primary/40 hover:shadow-md", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-10 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary transition-smooth group-hover:scale-105", children: /* @__PURE__ */ jsxRuntimeExports.jsx(action.icon, { className: "size-5", "aria-hidden": true }) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-4 font-display text-base font-medium text-foreground", children: action.title }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-xs leading-relaxed text-muted-foreground", children: action.description })
-              ] })
-            },
-            action.title
-          )) })
-        ]
-      }
-    )
-  ] });
-}
-const internetSearchRoute = createRoute({
-  getParentRoute: () => dashboardLayoutRoute,
-  path: "/internet-search",
-  component: InternetSearchPage
-});
-function InternetSearchPage() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    ComingSoonPage,
-    {
-      title: "Internet Search",
-      description: "Search the web and get AI-summarized answers with cited sources.",
-      icon: Globe
-    }
-  );
-}
-const knowledgeBaseRoute = createRoute({
-  getParentRoute: () => dashboardLayoutRoute,
-  path: "/knowledge-base",
-  component: KnowledgeBasePage
-});
-function KnowledgeBasePage() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    ComingSoonPage,
-    {
-      title: "Knowledge Base",
-      description: "Build a private, queryable knowledge layer with folders, tags, and AI answers.",
-      icon: BookOpen
-    }
-  );
-}
-const settingsRoute = createRoute({
-  getParentRoute: () => dashboardLayoutRoute,
-  path: "/settings",
-  component: SettingsPage
-});
-function SettingsPage() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    ComingSoonPage,
-    {
-      title: "Settings",
-      description: "Manage your theme, language, notifications, security, and account preferences.",
-      icon: Settings
-    }
-  );
-}
-var DIALOG_NAME = "Dialog";
-var [createDialogContext] = createContextScope(DIALOG_NAME);
-var [DialogProvider, useDialogContext] = createDialogContext(DIALOG_NAME);
-var Dialog$1 = (props) => {
-  const {
-    __scopeDialog,
-    children,
-    open: openProp,
-    defaultOpen,
-    onOpenChange,
-    modal = true
-  } = props;
-  const triggerRef = reactExports.useRef(null);
-  const contentRef = reactExports.useRef(null);
-  const [open, setOpen] = useControllableState({
-    prop: openProp,
-    defaultProp: defaultOpen ?? false,
-    onChange: onOpenChange,
-    caller: DIALOG_NAME
-  });
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    DialogProvider,
-    {
-      scope: __scopeDialog,
-      triggerRef,
-      contentRef,
-      contentId: useId(),
-      titleId: useId(),
-      descriptionId: useId(),
-      open,
-      onOpenChange: setOpen,
-      onOpenToggle: reactExports.useCallback(() => setOpen((prevOpen) => !prevOpen), [setOpen]),
-      modal,
-      children
-    }
-  );
-};
-Dialog$1.displayName = DIALOG_NAME;
-var TRIGGER_NAME$1 = "DialogTrigger";
-var DialogTrigger = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const { __scopeDialog, ...triggerProps } = props;
-    const context = useDialogContext(TRIGGER_NAME$1, __scopeDialog);
-    const composedTriggerRef = useComposedRefs(forwardedRef, context.triggerRef);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Primitive$1.button,
-      {
-        type: "button",
-        "aria-haspopup": "dialog",
-        "aria-expanded": context.open,
-        "aria-controls": context.contentId,
-        "data-state": getState$1(context.open),
-        ...triggerProps,
-        ref: composedTriggerRef,
-        onClick: composeEventHandlers(props.onClick, context.onOpenToggle)
-      }
-    );
-  }
-);
-DialogTrigger.displayName = TRIGGER_NAME$1;
-var PORTAL_NAME = "DialogPortal";
-var [PortalProvider, usePortalContext] = createDialogContext(PORTAL_NAME, {
-  forceMount: void 0
-});
-var DialogPortal$1 = (props) => {
-  const { __scopeDialog, forceMount, children, container } = props;
-  const context = useDialogContext(PORTAL_NAME, __scopeDialog);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider, { scope: __scopeDialog, forceMount, children: reactExports.Children.map(children, (child) => /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$4, { asChild: true, container, children: child }) })) });
-};
-DialogPortal$1.displayName = PORTAL_NAME;
-var OVERLAY_NAME = "DialogOverlay";
-var DialogOverlay$1 = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const portalContext = usePortalContext(OVERLAY_NAME, props.__scopeDialog);
-    const { forceMount = portalContext.forceMount, ...overlayProps } = props;
-    const context = useDialogContext(OVERLAY_NAME, props.__scopeDialog);
-    return context.modal ? /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(DialogOverlayImpl, { ...overlayProps, ref: forwardedRef }) }) : null;
-  }
-);
-DialogOverlay$1.displayName = OVERLAY_NAME;
-var Slot = /* @__PURE__ */ createSlot("DialogOverlay.RemoveScroll");
-var DialogOverlayImpl = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const { __scopeDialog, ...overlayProps } = props;
-    const context = useDialogContext(OVERLAY_NAME, __scopeDialog);
-    return (
-      // Make sure `Content` is scrollable even when it doesn't live inside `RemoveScroll`
-      // ie. when `Overlay` and `Content` are siblings
-      /* @__PURE__ */ jsxRuntimeExports.jsx(ReactRemoveScroll, { as: Slot, allowPinchZoom: true, shards: [context.contentRef], children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-        Primitive$1.div,
-        {
-          "data-state": getState$1(context.open),
-          ...overlayProps,
-          ref: forwardedRef,
-          style: { pointerEvents: "auto", ...overlayProps.style }
-        }
-      ) })
-    );
-  }
-);
-var CONTENT_NAME$1 = "DialogContent";
-var DialogContent$1 = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const portalContext = usePortalContext(CONTENT_NAME$1, props.__scopeDialog);
-    const { forceMount = portalContext.forceMount, ...contentProps } = props;
-    const context = useDialogContext(CONTENT_NAME$1, props.__scopeDialog);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: context.modal ? /* @__PURE__ */ jsxRuntimeExports.jsx(DialogContentModal, { ...contentProps, ref: forwardedRef }) : /* @__PURE__ */ jsxRuntimeExports.jsx(DialogContentNonModal, { ...contentProps, ref: forwardedRef }) });
-  }
-);
-DialogContent$1.displayName = CONTENT_NAME$1;
-var DialogContentModal = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const context = useDialogContext(CONTENT_NAME$1, props.__scopeDialog);
-    const contentRef = reactExports.useRef(null);
-    const composedRefs = useComposedRefs(forwardedRef, context.contentRef, contentRef);
-    reactExports.useEffect(() => {
-      const content = contentRef.current;
-      if (content) return hideOthers(content);
-    }, []);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      DialogContentImpl,
-      {
-        ...props,
-        ref: composedRefs,
-        trapFocus: context.open,
-        disableOutsidePointerEvents: true,
-        onCloseAutoFocus: composeEventHandlers(props.onCloseAutoFocus, (event) => {
-          var _a2;
-          event.preventDefault();
-          (_a2 = context.triggerRef.current) == null ? void 0 : _a2.focus();
-        }),
-        onPointerDownOutside: composeEventHandlers(props.onPointerDownOutside, (event) => {
-          const originalEvent = event.detail.originalEvent;
-          const ctrlLeftClick = originalEvent.button === 0 && originalEvent.ctrlKey === true;
-          const isRightClick = originalEvent.button === 2 || ctrlLeftClick;
-          if (isRightClick) event.preventDefault();
-        }),
-        onFocusOutside: composeEventHandlers(
-          props.onFocusOutside,
-          (event) => event.preventDefault()
-        )
-      }
-    );
-  }
-);
-var DialogContentNonModal = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const context = useDialogContext(CONTENT_NAME$1, props.__scopeDialog);
-    const hasInteractedOutsideRef = reactExports.useRef(false);
-    const hasPointerDownOutsideRef = reactExports.useRef(false);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      DialogContentImpl,
-      {
-        ...props,
-        ref: forwardedRef,
-        trapFocus: false,
-        disableOutsidePointerEvents: false,
-        onCloseAutoFocus: (event) => {
-          var _a2, _b2;
-          (_a2 = props.onCloseAutoFocus) == null ? void 0 : _a2.call(props, event);
-          if (!event.defaultPrevented) {
-            if (!hasInteractedOutsideRef.current) (_b2 = context.triggerRef.current) == null ? void 0 : _b2.focus();
-            event.preventDefault();
-          }
-          hasInteractedOutsideRef.current = false;
-          hasPointerDownOutsideRef.current = false;
-        },
-        onInteractOutside: (event) => {
-          var _a2, _b2;
-          (_a2 = props.onInteractOutside) == null ? void 0 : _a2.call(props, event);
-          if (!event.defaultPrevented) {
-            hasInteractedOutsideRef.current = true;
-            if (event.detail.originalEvent.type === "pointerdown") {
-              hasPointerDownOutsideRef.current = true;
+              variant: "ghost",
+              size: "icon",
+              className: "size-9 text-muted-foreground hover:text-foreground",
+              onClick: handleClear,
+              "aria-label": "Clear search",
+              "data-ocid": "search.clear_button",
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx(X, { className: "size-4", "aria-hidden": true })
             }
-          }
-          const target = event.target;
-          const targetIsTrigger = (_b2 = context.triggerRef.current) == null ? void 0 : _b2.contains(target);
-          if (targetIsTrigger) event.preventDefault();
-          if (event.detail.originalEvent.type === "focusin" && hasPointerDownOutsideRef.current) {
-            event.preventDefault();
-          }
-        }
-      }
-    );
-  }
-);
-var DialogContentImpl = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const { __scopeDialog, trapFocus, onOpenAutoFocus, onCloseAutoFocus, ...contentProps } = props;
-    const context = useDialogContext(CONTENT_NAME$1, __scopeDialog);
-    const contentRef = reactExports.useRef(null);
-    const composedRefs = useComposedRefs(forwardedRef, contentRef);
-    useFocusGuards();
-    return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        FocusScope,
-        {
-          asChild: true,
-          loop: true,
-          trapped: trapFocus,
-          onMountAutoFocus: onOpenAutoFocus,
-          onUnmountAutoFocus: onCloseAutoFocus,
-          children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-            DismissableLayer,
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            Button,
             {
-              role: "dialog",
-              id: context.contentId,
-              "aria-describedby": context.descriptionId,
-              "aria-labelledby": context.titleId,
-              "data-state": getState$1(context.open),
-              ...contentProps,
-              ref: composedRefs,
-              onDismiss: () => context.onOpenChange(false)
+              type: "submit",
+              size: "sm",
+              className: "h-9 gap-1.5",
+              disabled: isSearching || query.trim().length === 0,
+              "data-ocid": "search.submit_button",
+              children: [
+                isSearching ? /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "size-4 animate-spin", "aria-hidden": true }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Search, { className: "size-4", "aria-hidden": true }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "hidden sm:inline", children: isSearching ? "Searching" : "Search" })
+              ]
             }
           )
+        ] })
+      ] }),
+      recentSearches.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: "mt-4 flex flex-wrap items-center gap-2",
+          "data-ocid": "search.history.section",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-1 text-xs font-medium text-muted-foreground", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "size-3", "aria-hidden": true }),
+              "Recent"
+            ] }),
+            recentSearches.map((item, idx) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "button",
+              {
+                type: "button",
+                onClick: () => handleHistoryClick(item.queryText),
+                "data-ocid": `search.history.item.${idx + 1}`,
+                className: "rounded-full border border-border/70 bg-card px-3 py-1 text-xs text-foreground transition-smooth hover:border-primary/40 hover:bg-primary/5 hover:text-primary",
+                children: item.queryText
+              },
+              item.id
+            ))
+          ]
+        }
+      )
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "mt-8", "data-ocid": "search.results.section", children: [
+      hasSearched && !isSearching && resultSource && results.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-4 flex items-center gap-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          Badge$1,
+          {
+            variant: "secondary",
+            className: resultSource === "simulated" ? "gap-1 border-warning/30 bg-warning/10 text-warning-foreground" : "gap-1 border-primary/20 bg-primary/10 text-primary",
+            "data-ocid": "search.source.badge",
+            children: [
+              resultSource === "simulated" ? /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "size-3", "aria-hidden": true }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Globe, { className: "size-3", "aria-hidden": true }),
+              resultSource === "simulated" ? "Simulated results" : "DuckDuckGo Instant Answers"
+            ]
+          }
+        ),
+        resultSource === "simulated" && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground", children: "Live web results unavailable — showing curated fallback results." })
+      ] }),
+      isSearching && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: "flex flex-col items-center justify-center gap-3 py-16",
+          "data-ocid": "search.loading_state",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-12 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary", children: /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "size-6 animate-spin", "aria-hidden": true }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm text-muted-foreground", children: [
+              "Searching the web for “",
+              activeQuery,
+              "”…"
+            ] })
+          ]
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(TitleWarning, { titleId: context.titleId }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(DescriptionWarning, { contentRef, descriptionId: context.descriptionId })
-      ] })
-    ] });
-  }
-);
-var TITLE_NAME = "DialogTitle";
-var DialogTitle$1 = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const { __scopeDialog, ...titleProps } = props;
-    const context = useDialogContext(TITLE_NAME, __scopeDialog);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Primitive$1.h2, { id: context.titleId, ...titleProps, ref: forwardedRef });
-  }
-);
-DialogTitle$1.displayName = TITLE_NAME;
-var DESCRIPTION_NAME = "DialogDescription";
-var DialogDescription$1 = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const { __scopeDialog, ...descriptionProps } = props;
-    const context = useDialogContext(DESCRIPTION_NAME, __scopeDialog);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Primitive$1.p, { id: context.descriptionId, ...descriptionProps, ref: forwardedRef });
-  }
-);
-DialogDescription$1.displayName = DESCRIPTION_NAME;
-var CLOSE_NAME = "DialogClose";
-var DialogClose = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const { __scopeDialog, ...closeProps } = props;
-    const context = useDialogContext(CLOSE_NAME, __scopeDialog);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Primitive$1.button,
-      {
-        type: "button",
-        ...closeProps,
-        ref: forwardedRef,
-        onClick: composeEventHandlers(props.onClick, () => context.onOpenChange(false))
-      }
-    );
-  }
-);
-DialogClose.displayName = CLOSE_NAME;
-function getState$1(open) {
-  return open ? "open" : "closed";
+      !isSearching && error && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: "flex flex-col items-center justify-center gap-3 py-16 text-center",
+          "data-ocid": "search.error_state",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-12 items-center justify-center rounded-2xl border border-destructive/20 bg-destructive/10 text-destructive", children: /* @__PURE__ */ jsxRuntimeExports.jsx(X, { className: "size-6", "aria-hidden": true }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground", children: error }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              Button,
+              {
+                variant: "outline",
+                size: "sm",
+                onClick: () => void runSearch(activeQuery),
+                "data-ocid": "search.retry_button",
+                children: "Try again"
+              }
+            )
+          ]
+        }
+      ),
+      !isSearching && !error && hasSearched && results.length === 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: "flex flex-col items-center justify-center gap-3 py-16 text-center",
+          "data-ocid": "search.empty_state",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-12 items-center justify-center rounded-2xl border border-border/60 bg-muted/40 text-muted-foreground", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Search, { className: "size-5", "aria-hidden": true }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm text-muted-foreground", children: [
+              "No results found for “",
+              activeQuery,
+              "”. Try a different query."
+            ] })
+          ]
+        }
+      ),
+      !isSearching && !error && results.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-3", children: results.map((r2, idx) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+        motion.div,
+        {
+          initial: { opacity: 0, y: 12 },
+          animate: { opacity: 1, y: 0 },
+          transition: {
+            delay: idx * 0.06,
+            duration: 0.4,
+            ease: [0.22, 1, 0.36, 1]
+          },
+          "data-ocid": `search.result.item.${idx + 1}`,
+          children: /* @__PURE__ */ jsxRuntimeExports.jsx(Card, { className: "group border-border/60 bg-card p-5 shadow-sm transition-smooth hover:border-primary/40 hover:shadow-md", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "a",
+            {
+              href: r2.url,
+              target: "_blank",
+              rel: "noopener noreferrer",
+              className: "block",
+              "data-ocid": `search.result.link.${idx + 1}`,
+              "aria-label": `Open ${r2.title} in a new tab`,
+              children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start justify-between gap-3", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-w-0 flex-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1.5 text-xs text-muted-foreground", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(Globe, { className: "size-3 shrink-0", "aria-hidden": true }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "truncate", children: r2.source })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-1.5 font-display text-base font-medium text-foreground transition-smooth group-hover:text-primary", children: r2.title }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted-foreground", children: r2.snippet })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  ArrowUpRight,
+                  {
+                    className: "size-4 shrink-0 text-muted-foreground transition-smooth group-hover:text-primary",
+                    "aria-hidden": true
+                  }
+                )
+              ] })
+            }
+          ) })
+        },
+        `${r2.url}-${idx}`
+      )) }),
+      !hasSearched && !isSearching && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: "flex flex-col items-center justify-center gap-4 py-16 text-center",
+          "data-ocid": "search.initial.empty_state",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-16 items-center justify-center rounded-2xl border border-primary/30 bg-primary/10 text-primary shadow-lg", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Globe, { className: "size-8", "aria-hidden": true }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display text-xl font-semibold tracking-tight text-foreground", children: "Start searching" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mx-auto max-w-sm text-sm text-muted-foreground", children: "Enter a query above to search the web. Results appear here with titles, snippets, and source links." })
+            ] })
+          ]
+        }
+      )
+    ] })
+  ] });
 }
-var TITLE_WARNING_NAME = "DialogTitleWarning";
-var [WarningProvider, useWarningContext] = createContext2(TITLE_WARNING_NAME, {
-  contentName: CONTENT_NAME$1,
-  titleName: TITLE_NAME,
-  docsSlug: "dialog"
-});
-var TitleWarning = ({ titleId }) => {
-  const titleWarningContext = useWarningContext(TITLE_WARNING_NAME);
-  const MESSAGE = `\`${titleWarningContext.contentName}\` requires a \`${titleWarningContext.titleName}\` for the component to be accessible for screen reader users.
-
-If you want to hide the \`${titleWarningContext.titleName}\`, you can wrap it with our VisuallyHidden component.
-
-For more information, see https://radix-ui.com/primitives/docs/components/${titleWarningContext.docsSlug}`;
-  reactExports.useEffect(() => {
-    if (titleId) {
-      const hasTitle = document.getElementById(titleId);
-      if (!hasTitle) console.error(MESSAGE);
+async function performSearch(query) {
+  try {
+    const ddgResults = await searchDuckDuckGo(query);
+    if (ddgResults.length > 0) {
+      return { results: ddgResults, source: "duckduckgo" };
     }
-  }, [MESSAGE, titleId]);
-  return null;
-};
-var DESCRIPTION_WARNING_NAME = "DialogDescriptionWarning";
-var DescriptionWarning = ({ contentRef, descriptionId }) => {
-  const descriptionWarningContext = useWarningContext(DESCRIPTION_WARNING_NAME);
-  const MESSAGE = `Warning: Missing \`Description\` or \`aria-describedby={undefined}\` for {${descriptionWarningContext.contentName}}.`;
-  reactExports.useEffect(() => {
-    var _a2;
-    const describedById = (_a2 = contentRef.current) == null ? void 0 : _a2.getAttribute("aria-describedby");
-    if (descriptionId && describedById) {
-      const hasDescription = document.getElementById(descriptionId);
-      if (!hasDescription) console.warn(MESSAGE);
+  } catch {
+  }
+  const simulated = simulateResults(query);
+  return { results: simulated, source: "simulated" };
+}
+async function searchDuckDuckGo(query) {
+  const url = `https://api.duckduckgo.com/?q=${encodeURIComponent(query)}&format=json&no_html=1&skip_disambig=1`;
+  const res = await fetch(url, {
+    method: "GET",
+    headers: { Accept: "application/json" }
+  });
+  if (!res.ok) {
+    throw new Error(`DuckDuckGo API returned ${res.status}`);
+  }
+  const data = await res.json();
+  const out = [];
+  if (data.Heading && data.AbstractText && data.AbstractURL) {
+    out.push({
+      title: data.Heading,
+      snippet: data.AbstractText,
+      url: data.AbstractURL,
+      source: data.AbstractSource ?? hostOf(data.AbstractURL)
+    });
+  }
+  const topics = data.RelatedTopics ?? [];
+  for (const topic of topics) {
+    if (out.length >= 8) break;
+    if ("Topics" in topic && Array.isArray(topic.Topics)) {
+      for (const sub of topic.Topics) {
+        if (out.length >= 8) break;
+        const r2 = topicToResult(sub);
+        if (r2) out.push(r2);
+      }
+    } else if ("FirstURL" in topic) {
+      const r2 = topicToResult(topic);
+      if (r2) out.push(r2);
     }
-  }, [MESSAGE, contentRef, descriptionId]);
-  return null;
-};
-var Root$3 = Dialog$1;
-var Portal = DialogPortal$1;
-var Overlay = DialogOverlay$1;
-var Content = DialogContent$1;
-var Title = DialogTitle$1;
-var Description = DialogDescription$1;
-var Close = DialogClose;
+  }
+  for (const item of data.Results ?? []) {
+    if (out.length >= 8) break;
+    const r2 = topicToResult(item);
+    if (r2) out.push(r2);
+  }
+  return out;
+}
+function topicToResult(topic) {
+  if (!topic.FirstURL || !topic.Text) return null;
+  const text = topic.Text;
+  const dashIdx = text.indexOf(" - ");
+  let title;
+  let snippet;
+  if (dashIdx > 0 && dashIdx < 80) {
+    title = text.slice(0, dashIdx).trim();
+    snippet = text.slice(dashIdx + 3).trim();
+  } else {
+    title = text.split(".")[0].slice(0, 100).trim() || text.slice(0, 100);
+    snippet = text;
+  }
+  return {
+    title: title || hostOf(topic.FirstURL),
+    snippet: snippet || title,
+    url: topic.FirstURL,
+    source: hostOf(topic.FirstURL)
+  };
+}
+function hostOf(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+function simulateResults(query) {
+  const q2 = query.trim();
+  const host = "example.com";
+  const base = [
+    {
+      title: `${capitalize(q2)} — Overview & Key Facts`,
+      snippet: `A comprehensive overview of ${q2}, covering the core concepts, history, and practical applications. This reference page summarizes the most cited information on the topic.`,
+      url: `https://${host}/${slugify(q2)}/overview`,
+      source: host
+    },
+    {
+      title: `Everything you need to know about ${q2}`,
+      snippet: `An in-depth guide to ${q2} with examples, common pitfalls, and best practices. Frequently updated and reviewed by community contributors.`,
+      url: `https://guide.${host}/${slugify(q2)}`,
+      source: `guide.${host}`
+    },
+    {
+      title: `${capitalize(q2)} explained simply`,
+      snippet: `A beginner-friendly explanation of ${q2}. Breaks down the essentials into clear, approachable language with helpful diagrams and analogies.`,
+      url: `https://wiki.${host}/wiki/${slugify(q2)}`,
+      source: `wiki.${host}`
+    },
+    {
+      title: `Latest discussions on ${q2}`,
+      snippet: `Community threads and Q&A about ${q2}. See how practitioners approach real-world problems, share tips, and answer common questions.`,
+      url: `https://news.${host}/topic/${slugify(q2)}`,
+      source: `news.${host}`
+    },
+    {
+      title: `${capitalize(q2)}: research and references`,
+      snippet: `Curated academic and technical references on ${q2}, including papers, specifications, and authoritative documentation.`,
+      url: `https://docs.${host}/reference/${slugify(q2)}`,
+      source: `docs.${host}`
+    }
+  ];
+  return base;
+}
+function capitalize(s) {
+  if (s.length === 0) return s;
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+function slugify(s) {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
 function Dialog({
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root$3, { "data-slot": "dialog", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root$9, { "data-slot": "dialog", ...props });
 }
 function DialogPortal({
   ...props
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal, { "data-slot": "dialog-portal", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$3, { "data-slot": "dialog-portal", ...props });
 }
 function DialogOverlay({
   className,
@@ -55078,7 +59577,7 @@ function DialogContent({
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogPortal, { "data-slot": "dialog-portal", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(DialogOverlay, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      Content,
+      Content$1,
       {
         "data-slot": "dialog-content",
         className: cn(
@@ -55140,292 +59639,7 @@ function DialogDescription({
     }
   );
 }
-var TABS_NAME = "Tabs";
-var [createTabsContext] = createContextScope(TABS_NAME, [
-  createRovingFocusGroupScope
-]);
-var useRovingFocusGroupScope = createRovingFocusGroupScope();
-var [TabsProvider, useTabsContext] = createTabsContext(TABS_NAME);
-var Tabs$1 = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const {
-      __scopeTabs,
-      value: valueProp,
-      onValueChange,
-      defaultValue,
-      orientation = "horizontal",
-      dir,
-      activationMode = "automatic",
-      ...tabsProps
-    } = props;
-    const direction = useDirection(dir);
-    const [value, setValue] = useControllableState({
-      prop: valueProp,
-      onChange: onValueChange,
-      defaultProp: defaultValue ?? "",
-      caller: TABS_NAME
-    });
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      TabsProvider,
-      {
-        scope: __scopeTabs,
-        baseId: useId(),
-        value,
-        onValueChange: setValue,
-        orientation,
-        dir: direction,
-        activationMode,
-        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Primitive$1.div,
-          {
-            dir: direction,
-            "data-orientation": orientation,
-            ...tabsProps,
-            ref: forwardedRef
-          }
-        )
-      }
-    );
-  }
-);
-Tabs$1.displayName = TABS_NAME;
-var TAB_LIST_NAME = "TabsList";
-var TabsList$1 = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const { __scopeTabs, loop = true, ...listProps } = props;
-    const context = useTabsContext(TAB_LIST_NAME, __scopeTabs);
-    const rovingFocusGroupScope = useRovingFocusGroupScope(__scopeTabs);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Root$4,
-      {
-        asChild: true,
-        ...rovingFocusGroupScope,
-        orientation: context.orientation,
-        dir: context.dir,
-        loop,
-        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Primitive$1.div,
-          {
-            role: "tablist",
-            "aria-orientation": context.orientation,
-            ...listProps,
-            ref: forwardedRef
-          }
-        )
-      }
-    );
-  }
-);
-TabsList$1.displayName = TAB_LIST_NAME;
-var TRIGGER_NAME = "TabsTrigger";
-var TabsTrigger$1 = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const { __scopeTabs, value, disabled = false, ...triggerProps } = props;
-    const context = useTabsContext(TRIGGER_NAME, __scopeTabs);
-    const rovingFocusGroupScope = useRovingFocusGroupScope(__scopeTabs);
-    const triggerId = makeTriggerId(context.baseId, value);
-    const contentId = makeContentId(context.baseId, value);
-    const isSelected = value === context.value;
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Item$1,
-      {
-        asChild: true,
-        ...rovingFocusGroupScope,
-        focusable: !disabled,
-        active: isSelected,
-        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Primitive$1.button,
-          {
-            type: "button",
-            role: "tab",
-            "aria-selected": isSelected,
-            "aria-controls": contentId,
-            "data-state": isSelected ? "active" : "inactive",
-            "data-disabled": disabled ? "" : void 0,
-            disabled,
-            id: triggerId,
-            ...triggerProps,
-            ref: forwardedRef,
-            onMouseDown: composeEventHandlers(props.onMouseDown, (event) => {
-              if (!disabled && event.button === 0 && event.ctrlKey === false) {
-                context.onValueChange(value);
-              } else {
-                event.preventDefault();
-              }
-            }),
-            onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
-              if ([" ", "Enter"].includes(event.key)) context.onValueChange(value);
-            }),
-            onFocus: composeEventHandlers(props.onFocus, () => {
-              const isAutomaticActivation = context.activationMode !== "manual";
-              if (!isSelected && !disabled && isAutomaticActivation) {
-                context.onValueChange(value);
-              }
-            })
-          }
-        )
-      }
-    );
-  }
-);
-TabsTrigger$1.displayName = TRIGGER_NAME;
-var CONTENT_NAME = "TabsContent";
-var TabsContent = reactExports.forwardRef(
-  (props, forwardedRef) => {
-    const { __scopeTabs, value, forceMount, children, ...contentProps } = props;
-    const context = useTabsContext(CONTENT_NAME, __scopeTabs);
-    const triggerId = makeTriggerId(context.baseId, value);
-    const contentId = makeContentId(context.baseId, value);
-    const isSelected = value === context.value;
-    const isMountAnimationPreventedRef = reactExports.useRef(isSelected);
-    reactExports.useEffect(() => {
-      const rAF = requestAnimationFrame(() => isMountAnimationPreventedRef.current = false);
-      return () => cancelAnimationFrame(rAF);
-    }, []);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || isSelected, children: ({ present }) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Primitive$1.div,
-      {
-        "data-state": isSelected ? "active" : "inactive",
-        "data-orientation": context.orientation,
-        role: "tabpanel",
-        "aria-labelledby": triggerId,
-        hidden: !present,
-        id: contentId,
-        tabIndex: 0,
-        ...contentProps,
-        ref: forwardedRef,
-        style: {
-          ...props.style,
-          animationDuration: isMountAnimationPreventedRef.current ? "0s" : void 0
-        },
-        children: present && children
-      }
-    ) });
-  }
-);
-TabsContent.displayName = CONTENT_NAME;
-function makeTriggerId(baseId, value) {
-  return `${baseId}-trigger-${value}`;
-}
-function makeContentId(baseId, value) {
-  return `${baseId}-content-${value}`;
-}
-var Root2 = Tabs$1;
-var List = TabsList$1;
-var Trigger = TabsTrigger$1;
-function Tabs({
-  className,
-  ...props
-}) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Root2,
-    {
-      "data-slot": "tabs",
-      className: cn("flex flex-col gap-2", className),
-      ...props
-    }
-  );
-}
-function TabsList({
-  className,
-  ...props
-}) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    List,
-    {
-      "data-slot": "tabs-list",
-      className: cn(
-        "bg-muted text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-lg p-[3px]",
-        className
-      ),
-      ...props
-    }
-  );
-}
-function TabsTrigger({
-  className,
-  ...props
-}) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Trigger,
-    {
-      "data-slot": "tabs-trigger",
-      className: cn(
-        "data-[state=active]:bg-background dark:data-[state=active]:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 text-foreground dark:text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
-        className
-      ),
-      ...props
-    }
-  );
-}
-var NODES = [
-  "a",
-  "button",
-  "div",
-  "form",
-  "h2",
-  "h3",
-  "img",
-  "input",
-  "label",
-  "li",
-  "nav",
-  "ol",
-  "p",
-  "select",
-  "span",
-  "svg",
-  "ul"
-];
-var Primitive = NODES.reduce((primitive, node) => {
-  const Slot2 = /* @__PURE__ */ createSlot$1(`Primitive.${node}`);
-  const Node2 = reactExports.forwardRef((props, forwardedRef) => {
-    const { asChild, ...primitiveProps } = props;
-    const Comp = asChild ? Slot2 : node;
-    if (typeof window !== "undefined") {
-      window[Symbol.for("radix-ui")] = true;
-    }
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Comp, { ...primitiveProps, ref: forwardedRef });
-  });
-  Node2.displayName = `Primitive.${node}`;
-  return { ...primitive, [node]: Node2 };
-}, {});
-var NAME = "Label";
-var Label$1 = reactExports.forwardRef((props, forwardedRef) => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Primitive.label,
-    {
-      ...props,
-      ref: forwardedRef,
-      onMouseDown: (event) => {
-        var _a2;
-        const target = event.target;
-        if (target.closest("button, input, select, textarea")) return;
-        (_a2 = props.onMouseDown) == null ? void 0 : _a2.call(props, event);
-        if (!event.defaultPrevented && event.detail > 1) event.preventDefault();
-      }
-    }
-  );
-});
-Label$1.displayName = NAME;
-var Root$2 = Label$1;
-function Label({
-  className,
-  ...props
-}) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Root$2,
-    {
-      "data-slot": "label",
-      className: cn(
-        "flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
-        className
-      ),
-      ...props
-    }
-  );
-}
-function Base64Tool() {
+function Base64Tool({ onUse }) {
   const [mode, setMode] = reactExports.useState("encode");
   const [input, setInput] = reactExports.useState("");
   const [error, setError] = reactExports.useState(null);
@@ -55458,6 +59672,13 @@ function Base64Tool() {
       setError("Invalid Base64 input.");
     }
   };
+  reactExports.useEffect(() => {
+    if (onUse && output) {
+      const inSum = input.length > 60 ? `${input.slice(0, 60)}…` : `(${input.length} chars)`;
+      const outSum = output.length > 60 ? `${output.slice(0, 60)}…` : `(${output.length} chars)`;
+      onUse(`${mode} ${inSum}`, outSum);
+    }
+  }, [output, mode]);
   const copy = () => {
     if (!output) return;
     navigator.clipboard.writeText(output);
@@ -55549,7 +59770,7 @@ function Base64Tool() {
   ] });
 }
 const SAMPLE$2 = `{"name":"Aurora","version":1,"features":["chat","tools","docs"],"meta":{"author":"team","private":false}}`;
-function JSONFormatter() {
+function JSONFormatter({ onUse }) {
   const [input, setInput] = reactExports.useState(SAMPLE$2);
   const [output, setOutput] = reactExports.useState("");
   const [error, setError] = reactExports.useState(null);
@@ -55561,10 +59782,15 @@ function JSONFormatter() {
     }
     try {
       const parsed = JSON.parse(input);
-      setOutput(
-        minify ? JSON.stringify(parsed) : JSON.stringify(parsed, null, 2)
-      );
+      const result = minify ? JSON.stringify(parsed) : JSON.stringify(parsed, null, 2);
+      setOutput(result);
       setError(null);
+      if (onUse) {
+        onUse(
+          `${minify ? "minify" : "pretty"} (${input.length} chars)`,
+          `${result.length} chars`
+        );
+      }
     } catch (e) {
       setError(e instanceof Error ? e.message : "Invalid JSON.");
       setOutput("");
@@ -55637,6 +59863,10 @@ function JSONFormatter() {
       )
     ] })
   ] });
+}
+function summarize$1(text, max2 = 80) {
+  const t = text.trim().replace(/\s+/g, " ");
+  return t.length > max2 ? `${t.slice(0, max2)}…` : t;
 }
 const SAMPLE$1 = `# Markdown Preview
 
@@ -55772,15 +60002,29 @@ function MarkdownPreviewPane({ html }) {
     }
   );
 }
-function MarkdownPreview() {
+function MarkdownPreview({ onUse }) {
   const [value, setValue] = reactExports.useState(SAMPLE$1);
   const [copied, setCopied] = reactExports.useState(false);
   const html = reactExports.useMemo(() => renderTokens(parseMarkdown(value)), [value]);
+  reactExports.useEffect(() => {
+    if (!onUse) return;
+    const handle = window.setTimeout(() => {
+      const tokens = parseMarkdown(value);
+      onUse(
+        summarize$1(value),
+        `${tokens.length} block${tokens.length === 1 ? "" : "s"} rendered`
+      );
+    }, 500);
+    return () => window.clearTimeout(handle);
+  }, [value, onUse]);
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(value);
       setCopied(true);
       ue.success("Markdown copied to clipboard");
+      if (onUse) {
+        onUse(summarize$1(value), "Markdown source copied");
+      }
       setTimeout(() => setCopied(false), 1500);
     } catch {
       ue.error("Failed to copy");
@@ -55862,7 +60106,7 @@ var BACK_KEYS = {
 };
 var SLIDER_NAME = "Slider";
 var [Collection, useCollection, createCollectionScope] = createCollection(SLIDER_NAME);
-var [createSliderContext] = createContextScope(SLIDER_NAME, [
+var [createSliderContext] = createContextScope$1(SLIDER_NAME, [
   createCollectionScope
 ]);
 var [SliderProvider, useSliderContext] = createSliderContext(SLIDER_NAME);
@@ -56449,7 +60693,7 @@ function Slider({
   );
 }
 var SWITCH_NAME = "Switch";
-var [createSwitchContext] = createContextScope(SWITCH_NAME);
+var [createSwitchContext] = createContextScope$1(SWITCH_NAME);
 var [SwitchProvider, useSwitchContext] = createSwitchContext(SWITCH_NAME);
 var Switch$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
@@ -56650,7 +60894,7 @@ function strength(pwd) {
   const labels = ["Very weak", "Weak", "Fair", "Good", "Strong", "Very strong"];
   return { score, label: labels[score] };
 }
-function PasswordGenerator() {
+function PasswordGenerator({ onUse }) {
   const [length, setLength] = reactExports.useState(20);
   const [opts, setOpts] = reactExports.useState({
     upper: true,
@@ -56660,7 +60904,12 @@ function PasswordGenerator() {
   });
   const [password, setPassword] = reactExports.useState("");
   const regenerate = reactExports.useCallback(() => {
-    setPassword(generate(length, opts));
+    const pwd = generate(length, opts);
+    setPassword(pwd);
+    if (onUse && pwd) {
+      const sets = Object.keys(SETS).filter((k2) => opts[k2]).join(", ");
+      onUse(`len=${length}; sets=${sets}`, `${pwd.length}-char password`);
+    }
   }, [length, opts]);
   reactExports.useEffect(() => {
     regenerate();
@@ -56780,12 +61029,12 @@ const EC_CODEWORDS_L = [
 function getGFTables() {
   const exp = new Uint8Array(512);
   const log2 = new Uint8Array(256);
-  let x3 = 1;
+  let x2 = 1;
   for (let i = 0; i < 255; i++) {
-    exp[i] = x3;
-    log2[x3] = i;
-    x3 <<= 1;
-    if (x3 & 256) x3 ^= 285;
+    exp[i] = x2;
+    log2[x2] = i;
+    x2 <<= 1;
+    if (x2 & 256) x2 ^= 285;
   }
   for (let i = 255; i < 512; i++) exp[i] = exp[i - 255];
   return { exp, log: log2 };
@@ -56962,7 +61211,7 @@ function encodeQR(text) {
     return null;
   }
 }
-function QRGenerator() {
+function QRGenerator({ onUse }) {
   const [text, setText] = reactExports.useState("https://caffeine.ai");
   const [size2, setSize] = reactExports.useState(256);
   const canvasRef = reactExports.useRef(null);
@@ -56984,6 +61233,12 @@ function QRGenerator() {
       for (let c2 = 0; c2 < n; c2++) {
         if (matrix[r2][c2]) ctx.fillRect(c2 * scale2, r2 * scale2, scale2, scale2);
       }
+    }
+    if (onUse && text) {
+      onUse(
+        text.length > 80 ? `${text.slice(0, 80)}…` : text,
+        `QR code ${matrix.length}×${matrix.length} @ ${size2}px`
+      );
     }
   }, [text, size2]);
   const download = () => {
@@ -57055,6 +61310,10 @@ function QRGenerator() {
     ] })
   ] });
 }
+function summarize(text, max2 = 80) {
+  const t = text.trim().replace(/\s+/g, " ");
+  return t.length > max2 ? `${t.slice(0, max2)}…` : t;
+}
 const SAMPLE = "The quick brown fox jumps over the lazy dog";
 const CASES = [
   { key: "upper", label: "UPPER CASE", fn: (s) => s.toUpperCase() },
@@ -57085,17 +61344,27 @@ const CASES = [
     fn: (s) => s.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
   }
 ];
-function TextCaseConverter() {
+function TextCaseConverter({ onUse }) {
   const [input, setInput] = reactExports.useState(SAMPLE);
   const [active, setActive] = reactExports.useState("title");
   const [copied, setCopied] = reactExports.useState(false);
   const activeCase = CASES.find((c2) => c2.key === active);
   const output = activeCase.fn(input);
+  const handleCaseChange = (key) => {
+    setActive(key);
+    if (onUse) {
+      const next = CASES.find((c2) => c2.key === key);
+      onUse(`${next.label}: ${summarize(input)}`, summarize(next.fn(input)));
+    }
+  };
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(output);
       setCopied(true);
       ue.success("Output copied to clipboard");
+      if (onUse) {
+        onUse(`${activeCase.label}: ${summarize(input)}`, "Output copied");
+      }
       setTimeout(() => setCopied(false), 1500);
     } catch {
       ue.error("Failed to copy");
@@ -57114,7 +61383,7 @@ function TextCaseConverter() {
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display text-lg font-semibold text-foreground", children: "Text Case Converter" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground", children: "Transform text between common casing styles." })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Badge, { variant: "secondary", className: "glass-strong", children: activeCase.label })
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Badge$1, { variant: "secondary", className: "glass-strong", children: activeCase.label })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-2 mb-4", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -57141,7 +61410,7 @@ function TextCaseConverter() {
           {
             variant: active === c2.key ? "default" : "outline",
             size: "sm",
-            onClick: () => setActive(c2.key),
+            onClick: () => handleCaseChange(c2.key),
             "data-ocid": `textcase.${c2.key}.button`,
             className: active === c2.key ? "" : "glass-strong",
             children: c2.label
@@ -57205,7 +61474,7 @@ function formatHuman(d2) {
   });
 }
 const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-function TimestampConverter() {
+function TimestampConverter({ onUse }) {
   const now2 = Math.floor(Date.now() / 1e3);
   const [unix, setUnix] = reactExports.useState(String(now2));
   const [date, setDate] = reactExports.useState(formatLocal(/* @__PURE__ */ new Date()));
@@ -57223,12 +61492,19 @@ function TimestampConverter() {
     if (dateValid && dateNum !== null) {
       setUnix(String(dateNum));
       ue.success("Pulled date into timestamp");
+      if (onUse) {
+        onUse(`date → ${date}`, `unix ${dateNum}`);
+      }
     }
   };
   const swapToDate = () => {
     if (unixValid && unixDate) {
-      setDate(formatLocal(unixDate));
+      const local = formatLocal(unixDate);
+      setDate(local);
       ue.success("Pulled timestamp into date");
+      if (onUse) {
+        onUse(`unix → ${unix}`, formatHuman(unixDate));
+      }
     }
   };
   const copy = async (text, which) => {
@@ -57237,9 +61513,11 @@ function TimestampConverter() {
       if (which === "unix") {
         setCopiedUnix(true);
         setTimeout(() => setCopiedUnix(false), 1500);
+        if (onUse) onUse(`unix ${unix}`, "Copied unix timestamp");
       } else {
         setCopiedDate(true);
         setTimeout(() => setCopiedDate(false), 1500);
+        if (onUse) onUse(`date ${date}`, "Copied date string");
       }
       ue.success("Copied to clipboard");
     } catch {
@@ -57382,7 +61660,7 @@ function uuidV4() {
   const hex2 = Array.from(bytes, (b2) => b2.toString(16).padStart(2, "0"));
   return `${hex2.slice(0, 4).join("")}-${hex2.slice(4, 6).join("")}-${hex2.slice(6, 8).join("")}-${hex2.slice(8, 10).join("")}-${hex2.slice(10, 16).join("")}`;
 }
-function UUIDGenerator() {
+function UUIDGenerator({ onUse }) {
   const [version, setVersion] = reactExports.useState("v4");
   const [count2, setCount] = reactExports.useState(5);
   const [uuids, setUuids] = reactExports.useState(
@@ -57390,7 +61668,11 @@ function UUIDGenerator() {
   );
   const generate2 = () => {
     const n = Math.max(1, Math.min(100, count2));
-    setUuids(Array.from({ length: n }, uuidV4));
+    const result = Array.from({ length: n }, uuidV4);
+    setUuids(result);
+    if (onUse) {
+      onUse(`${version} × ${n}`, result[0] ?? "");
+    }
   };
   const copyOne = (id2) => {
     navigator.clipboard.writeText(id2);
@@ -57708,9 +61990,23 @@ const CATEGORIES = [
   "Developers"
 ];
 function ToolsMarketplace() {
+  const { sessionId } = useSession();
+  const logToolUsage = useLogToolUsage(sessionId);
+  const logActivity = useLogActivity(sessionId);
   const [query, setQuery] = reactExports.useState("");
   const [activeCategory, setActiveCategory] = reactExports.useState("All");
   const [openTool, setOpenTool] = reactExports.useState(null);
+  const handleToolUse = reactExports.useCallback(
+    (toolName) => (inputSummary, outputSummary) => {
+      logToolUsage.mutate({ toolName, inputSummary, outputSummary });
+      logActivity.mutate({
+        activityType: "tool",
+        summary: `${toolName}: ${inputSummary}`,
+        details: outputSummary
+      });
+    },
+    [logToolUsage, logActivity]
+  );
   const filtered = reactExports.useMemo(() => {
     const q2 = query.trim().toLowerCase();
     return TOOLS.filter((t) => {
@@ -57852,11 +62148,11 @@ function ToolsMarketplace() {
                     children: [
                       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start justify-between gap-3", children: [
                         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-10 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary transition-smooth group-hover:scale-105", children: /* @__PURE__ */ jsxRuntimeExports.jsx(tool.icon, { className: "size-5", "aria-hidden": true }) }),
-                        tool.available ? /* @__PURE__ */ jsxRuntimeExports.jsxs(Badge, { variant: "secondary", className: "gap-1", children: [
+                        tool.available ? /* @__PURE__ */ jsxRuntimeExports.jsxs(Badge$1, { variant: "secondary", className: "gap-1", children: [
                           /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "size-3", "aria-hidden": true }),
                           "Ready"
                         ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx(
-                          Badge,
+                          Badge$1,
                           {
                             variant: "outline",
                             className: "text-muted-foreground",
@@ -57887,7 +62183,7 @@ function ToolsMarketplace() {
             /* @__PURE__ */ jsxRuntimeExports.jsx(DialogTitle, { className: "font-display text-xl", children: openTool.name }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(DialogDescription, { children: openTool.description })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-h-[60vh] overflow-y-auto pr-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ActiveComponent, {}) })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-h-[60vh] overflow-y-auto pr-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ActiveComponent, { onUse: handleToolUse(openTool.name) }) })
         ] }) })
       }
     )
@@ -57901,2785 +62197,14 @@ const toolsRoute = createRoute({
 function ToolsPage() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(ToolsMarketplace, {});
 }
-const workspaceRoute = createRoute({
-  getParentRoute: () => dashboardLayoutRoute,
-  path: "/workspace",
-  component: WorkspacePage
-});
-function WorkspacePage() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    ComingSoonPage,
-    {
-      title: "Workspace",
-      description: "Manage your projects, notes, tasks, and bookmarks in one organized place.",
-      icon: FolderOpen
-    }
-  );
-}
-const youtubeRoute = createRoute({
-  getParentRoute: () => dashboardLayoutRoute,
-  path: "/youtube",
-  component: YoutubePage
-});
-function YoutubePage() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    ComingSoonPage,
-    {
-      title: "YouTube Search",
-      description: "Discover videos with AI-curated results, metadata, and quick playback.",
-      icon: Youtube
-    }
-  );
-}
-const FEATURES = [
-  {
-    icon: MessageSquare,
-    title: "AI Chat",
-    description: "Converse with a capable assistant that drafts, summarizes, and reasons across your work."
-  },
-  {
-    icon: FileText,
-    title: "Document AI",
-    description: "Upload documents and ask questions in plain language with grounded, cited answers."
-  },
-  {
-    icon: Globe,
-    title: "Internet Search",
-    description: "Browse the live web and get concise, source-backed answers to any question."
-  },
-  {
-    icon: Youtube,
-    title: "YouTube Search",
-    description: "Find videos by topic, surface key moments, and pull transcripts straight into your chat."
-  },
-  {
-    icon: FileCog,
-    title: "File Converter",
-    description: "Convert between formats—PDFs, images, documents—in a single click, right in your browser."
-  },
-  {
-    icon: BookOpen,
-    title: "Knowledge Base",
-    description: "Organize notes, docs, and references into a searchable library your AI can read."
-  },
-  {
-    icon: ChartColumn,
-    title: "Analytics",
-    description: "Track usage, costs, and engagement with clear dashboards built for decision-making."
-  },
-  {
-    icon: ShieldCheck,
-    title: "Admin Dashboard",
-    description: "Manage users, roles, and permissions with enterprise-grade controls and audit logs."
-  }
-];
-function FeatureCards() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "section",
-    {
-      id: "features",
-      className: "relative scroll-mt-20 border-t border-border/40 bg-muted/30 px-4 py-24 sm:px-6 lg:px-8",
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-7xl", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          motion.div,
-          {
-            initial: { opacity: 0, y: 20 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true, margin: "-100px" },
-            transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-            className: "mx-auto mb-14 max-w-2xl text-center",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-mono text-xs font-medium uppercase tracking-widest text-primary", children: "Everything in one place" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "mt-3 font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl", children: "Eight tools. One workspace." }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-base leading-relaxed text-muted-foreground", children: "Stop juggling tabs. Nexus AI brings the tools you use every day into a single, beautifully unified experience." })
-            ]
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4", children: FEATURES.map((feature, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx(FeatureCard, { feature, index: index2 }, feature.title)) })
-      ] })
-    }
-  );
-}
-function FeatureCard({ feature, index: index2 }) {
-  const Icon2 = feature.icon;
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    motion.div,
-    {
-      initial: { opacity: 0, y: 24 },
-      whileInView: { opacity: 1, y: 0 },
-      viewport: { once: true, margin: "-50px" },
-      transition: {
-        duration: 0.5,
-        delay: index2 * 0.08,
-        ease: [0.22, 1, 0.36, 1]
-      },
-      "data-ocid": `landing.feature_card.${index2 + 1}`,
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "glass group h-full gap-0 py-6 transition-smooth hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(CardHeader, { className: "gap-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "flex size-12 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary shadow-sm transition-smooth group-hover:scale-110 group-hover:border-primary/40 group-hover:bg-primary/15", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { className: "size-6", "aria-hidden": true }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(CardTitle, { className: "font-display text-lg font-semibold tracking-tight", children: feature.title })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(CardContent, { className: "px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(CardDescription, { className: "text-sm leading-relaxed text-muted-foreground", children: feature.description }) })
-      ] })
-    }
-  );
-}
-function Hero() {
-  const navigate = useNavigate();
-  const [query, setQuery] = reactExports.useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate({ to: "/login" });
-  };
-  const scrollToFeatures = () => {
-    var _a2;
-    (_a2 = document.getElementById("features")) == null ? void 0 : _a2.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    "section",
-    {
-      id: "top",
-      className: "relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center overflow-hidden px-4 py-20 text-center sm:px-6 lg:px-8",
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "div",
-          {
-            "aria-hidden": true,
-            className: "pointer-events-none absolute -top-32 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full opacity-40 blur-3xl gradient-primary"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "div",
-          {
-            "aria-hidden": true,
-            className: "pointer-events-none absolute -bottom-40 right-0 h-[28rem] w-[28rem] rounded-full opacity-20 blur-3xl gradient-accent"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          motion.div,
-          {
-            initial: { opacity: 0, y: 28 },
-            animate: { opacity: 1, y: 0 },
-            transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
-            className: "relative flex flex-col items-center gap-7",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                motion.div,
-                {
-                  initial: { opacity: 0, scale: 0.9 },
-                  animate: { opacity: 1, scale: 1 },
-                  transition: { duration: 0.5, delay: 0.1 },
-                  children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                    Badge,
-                    {
-                      variant: "outline",
-                      className: "glass gap-1.5 border-primary/20 px-3 py-1 text-xs font-medium text-muted-foreground",
-                      children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "size-3.5 text-primary", "aria-hidden": true }),
-                        "Introducing Nexus AI 2.0"
-                      ]
-                    }
-                  )
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                motion.h1,
-                {
-                  initial: { opacity: 0, y: 20 },
-                  animate: { opacity: 1, y: 0 },
-                  transition: { duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] },
-                  className: "max-w-4xl font-display text-5xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl",
-                  children: [
-                    "One AI Platform for",
-                    " ",
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient-primary", children: "Everything." })
-                  ]
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                motion.p,
-                {
-                  initial: { opacity: 0, y: 20 },
-                  animate: { opacity: 1, y: 0 },
-                  transition: { duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] },
-                  className: "max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg",
-                  children: "Search documents, chat with AI, browse the internet, search YouTube, convert files, generate code, and manage knowledge—all from one place."
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                motion.form,
-                {
-                  initial: { opacity: 0, y: 20 },
-                  animate: { opacity: 1, y: 0 },
-                  transition: { duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] },
-                  onSubmit: handleSubmit,
-                  className: "glass-strong w-full max-w-2xl rounded-2xl border border-border/60 p-1.5 shadow-lg",
-                  children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      Search,
-                      {
-                        className: "ml-3 size-5 shrink-0 text-muted-foreground",
-                        "aria-hidden": true
-                      }
-                    ),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      Input,
-                      {
-                        type: "text",
-                        value: query,
-                        onChange: (e) => setQuery(e.target.value),
-                        placeholder: "Ask anything, search everything…",
-                        "aria-label": "Search the platform",
-                        "data-ocid": "landing.search_input",
-                        className: "h-12 flex-1 border-0 bg-transparent px-2 text-base shadow-none focus-visible:ring-0"
-                      }
-                    ),
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                      Button,
-                      {
-                        type: "submit",
-                        size: "lg",
-                        "data-ocid": "landing.search_submit",
-                        className: "h-12 rounded-xl px-5",
-                        children: [
-                          "Search",
-                          /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "size-4", "aria-hidden": true })
-                        ]
-                      }
-                    )
-                  ] })
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                motion.div,
-                {
-                  initial: { opacity: 0, y: 20 },
-                  animate: { opacity: 1, y: 0 },
-                  transition: { duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] },
-                  className: "flex flex-wrap items-center justify-center gap-3 pt-1",
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                      Button,
-                      {
-                        size: "lg",
-                        "data-ocid": "landing.get_started_button",
-                        onClick: () => navigate({ to: "/login" }),
-                        className: "h-12 rounded-xl px-6 text-base",
-                        children: [
-                          "Get Started",
-                          /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "size-4", "aria-hidden": true })
-                        ]
-                      }
-                    ),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      Button,
-                      {
-                        size: "lg",
-                        variant: "outline",
-                        "data-ocid": "landing.learn_more_button",
-                        onClick: scrollToFeatures,
-                        className: "h-12 rounded-xl px-6 text-base",
-                        children: "Learn More"
-                      }
-                    )
-                  ]
-                }
-              )
-            ]
-          }
-        )
-      ]
-    }
-  );
-}
-const FOOTER_LINKS = [
-  {
-    title: "Product",
-    links: [
-      { label: "Features", href: "#features" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "Changelog", href: "#" },
-      { label: "Roadmap", href: "#" }
-    ]
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Contact", href: "#" }
-    ]
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "Documentation", href: "#" },
-      { label: "Guides", href: "#" },
-      { label: "API Reference", href: "#" },
-      { label: "Status", href: "#" }
-    ]
-  },
-  {
-    title: "Legal",
-    links: [
-      { label: "Privacy", href: "#" },
-      { label: "Terms", href: "#" },
-      { label: "Security", href: "#" },
-      { label: "Cookies", href: "#" }
-    ]
-  }
-];
-function LandingFooter() {
-  const year = (/* @__PURE__ */ new Date()).getFullYear();
-  const caffeineUrl = `https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(
-    typeof window !== "undefined" ? window.location.hostname : "nexus.ai"
-  )}`;
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "glass-strong border-t border-border/60", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-8 md:grid-cols-6", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-2", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "a",
-          {
-            href: "#top",
-            className: "flex items-center gap-2.5",
-            "aria-label": "Nexus AI home",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "flex size-9 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-primary shadow-sm", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "size-5", "aria-hidden": true }) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-lg font-semibold tracking-tight text-foreground", children: "Nexus AI" })
-            ]
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground", children: "One AI platform for chat, documents, search, knowledge, and tools—beautifully unified." })
-      ] }),
-      FOOTER_LINKS.map((column) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xs font-semibold uppercase tracking-wider text-foreground", children: column.title }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-4 space-y-2.5", children: column.links.map((link) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: link.href,
-            "data-ocid": `landing.footer_link.${column.title.toLowerCase()}.${link.label.toLowerCase()}`,
-            className: "text-sm text-muted-foreground transition-smooth hover:text-foreground",
-            children: link.label
-          }
-        ) }, link.label)) })
-      ] }, column.title))
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/60 pt-6 sm:flex-row", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-xs text-muted-foreground", children: [
-        "© ",
-        year,
-        ". Built with love using",
-        " ",
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: caffeineUrl,
-            target: "_blank",
-            rel: "noreferrer",
-            className: "font-medium text-foreground transition-smooth hover:text-primary",
-            children: "caffeine.ai"
-          }
-        )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground", children: "Crafted with care for thinkers, builders, and doers." })
-    ] })
-  ] }) });
-}
-var M = (e, i, s, u2, m2, a2, l2, h2) => {
-  let d2 = document.documentElement, w2 = ["light", "dark"];
-  function p2(n) {
-    (Array.isArray(e) ? e : [e]).forEach((y2) => {
-      let k2 = y2 === "class", S2 = k2 && a2 ? m2.map((f2) => a2[f2] || f2) : m2;
-      k2 ? (d2.classList.remove(...S2), d2.classList.add(a2 && a2[n] ? a2[n] : n)) : d2.setAttribute(y2, n);
-    }), R2(n);
-  }
-  function R2(n) {
-    h2 && w2.includes(n) && (d2.style.colorScheme = n);
-  }
-  function c2() {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  }
-  if (u2) p2(u2);
-  else try {
-    let n = localStorage.getItem(i) || s, y2 = l2 && n === "system" ? c2() : n;
-    p2(y2);
-  } catch (n) {
-  }
-};
-var x2 = reactExports.createContext(void 0), U = { setTheme: (e) => {
-}, themes: [] }, z = () => {
-  var e;
-  return (e = reactExports.useContext(x2)) != null ? e : U;
-};
-reactExports.memo(({ forcedTheme: e, storageKey: i, attribute: s, enableSystem: u2, enableColorScheme: m2, defaultTheme: a2, value: l2, themes: h2, nonce: d2, scriptProps: w2 }) => {
-  let p2 = JSON.stringify([s, i, a2, e, h2, l2, u2, m2]).slice(1, -1);
-  return reactExports.createElement("script", { ...w2, suppressHydrationWarning: true, nonce: typeof window == "undefined" ? d2 : "", dangerouslySetInnerHTML: { __html: `(${M.toString()})(${p2})` } });
-});
-function LandingHeader() {
-  const { resolvedTheme, setTheme } = z();
-  const isDark = resolvedTheme === "dark";
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    motion.header,
-    {
-      initial: { opacity: 0, y: -16 },
-      animate: { opacity: 1, y: 0 },
-      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-      className: "glass-strong sticky top-0 z-50 w-full border-b border-border/60",
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "a",
-          {
-            href: "#top",
-            "data-ocid": "landing.logo_link",
-            className: "group flex items-center gap-2.5",
-            "aria-label": "Nexus AI home",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "flex size-9 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-primary shadow-sm transition-smooth group-hover:scale-105 group-hover:border-primary/50", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "size-5", "aria-hidden": true }) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-lg font-semibold tracking-tight text-foreground", children: "Nexus AI" })
-            ]
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("nav", { className: "hidden items-center gap-1 md:flex", children: [
-          { label: "Features", href: "#features" },
-          { label: "Tools", href: "#tools" },
-          { label: "Pricing", href: "#pricing" }
-        ].map((item) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: item.href,
-            "data-ocid": `landing.nav_link.${item.label.toLowerCase()}`,
-            className: "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-smooth hover:text-foreground",
-            children: item.label
-          },
-          item.label
-        )) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            Button,
-            {
-              variant: "ghost",
-              size: "icon",
-              "data-ocid": "landing.theme_toggle",
-              "aria-label": isDark ? "Switch to light mode" : "Switch to dark mode",
-              onClick: () => setTheme(isDark ? "light" : "dark"),
-              children: isDark ? /* @__PURE__ */ jsxRuntimeExports.jsx(Sun, { className: "size-5", "aria-hidden": true }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Moon, { className: "size-5", "aria-hidden": true })
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            Button,
-            {
-              size: "sm",
-              "data-ocid": "landing.sign_in_button",
-              onClick: () => {
-                window.location.href = "/login";
-              },
-              children: "Sign In"
-            }
-          )
-        ] })
-      ] })
-    }
-  );
-}
-const landingRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/",
-  component: LandingPage
-});
-function LandingPage() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex min-h-screen flex-col bg-background", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(LandingHeader, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { className: "flex-1", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(FeatureCards, {})
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(LandingFooter, {})
-  ] });
-}
-var isCheckBoxInput = (element) => element.type === "checkbox";
-var isDateObject = (value) => value instanceof Date;
-var isNullOrUndefined = (value) => value == null;
-const isObjectType = (value) => typeof value === "object";
-var isObject = (value) => !isNullOrUndefined(value) && !Array.isArray(value) && isObjectType(value) && !isDateObject(value);
-var getEventValue = (event) => isObject(event) && event.target ? isCheckBoxInput(event.target) ? event.target.checked : event.target.value : event;
-var getNodeParentName = (name) => name.substring(0, name.search(/\.\d+(\.|$)/)) || name;
-var isNameInFieldArray = (names, name) => names.has(getNodeParentName(name));
-var isPlainObject = (tempObject) => {
-  const prototypeCopy = tempObject.constructor && tempObject.constructor.prototype;
-  return isObject(prototypeCopy) && prototypeCopy.hasOwnProperty("isPrototypeOf");
-};
-var isWeb = typeof window !== "undefined" && typeof window.HTMLElement !== "undefined" && typeof document !== "undefined";
-function cloneObject(data) {
-  if (data instanceof Date) {
-    return new Date(data);
-  }
-  const isFileListInstance = typeof FileList !== "undefined" && data instanceof FileList;
-  if (isWeb && (data instanceof Blob || isFileListInstance)) {
-    return data;
-  }
-  const isArray = Array.isArray(data);
-  if (!isArray && !(isObject(data) && isPlainObject(data))) {
-    return data;
-  }
-  const copy = isArray ? [] : Object.create(Object.getPrototypeOf(data));
-  for (const key in data) {
-    if (Object.prototype.hasOwnProperty.call(data, key)) {
-      copy[key] = cloneObject(data[key]);
-    }
-  }
-  return copy;
-}
-var isKey = (value) => /^\w*$/.test(value);
-var isUndefined = (val) => val === void 0;
-var compact = (value) => Array.isArray(value) ? value.filter(Boolean) : [];
-var stringToPath = (input) => compact(input.replace(/["|']|\]/g, "").split(/\.|\[/));
-var get = (object, path, defaultValue) => {
-  if (!path || !isObject(object)) {
-    return defaultValue;
-  }
-  const result = (isKey(path) ? [path] : stringToPath(path)).reduce((result2, key) => isNullOrUndefined(result2) ? result2 : result2[key], object);
-  return isUndefined(result) || result === object ? isUndefined(object[path]) ? defaultValue : object[path] : result;
-};
-var isBoolean = (value) => typeof value === "boolean";
-var isFunction = (value) => typeof value === "function";
-var set = (object, path, value) => {
-  let index2 = -1;
-  const tempPath = isKey(path) ? [path] : stringToPath(path);
-  const length = tempPath.length;
-  const lastIndex = length - 1;
-  while (++index2 < length) {
-    const key = tempPath[index2];
-    let newValue = value;
-    if (index2 !== lastIndex) {
-      const objValue = object[key];
-      newValue = isObject(objValue) || Array.isArray(objValue) ? objValue : !isNaN(+tempPath[index2 + 1]) ? [] : {};
-    }
-    if (key === "__proto__" || key === "constructor" || key === "prototype") {
-      return;
-    }
-    object[key] = newValue;
-    object = object[key];
-  }
-};
-const EVENTS = {
-  BLUR: "blur",
-  FOCUS_OUT: "focusout",
-  SUBMIT: "submit",
-  TRIGGER: "trigger",
-  VALID: "valid"
-};
-const VALIDATION_MODE = {
-  onBlur: "onBlur",
-  onChange: "onChange",
-  onSubmit: "onSubmit",
-  onTouched: "onTouched",
-  all: "all"
-};
-const INPUT_VALIDATION_RULES = {
-  max: "max",
-  min: "min",
-  maxLength: "maxLength",
-  minLength: "minLength",
-  pattern: "pattern",
-  required: "required",
-  validate: "validate"
-};
-const FORM_ERROR_TYPE = "form";
-const ROOT_ERROR_TYPE = "root";
-const HookFormControlContext = React$4.createContext(null);
-HookFormControlContext.displayName = "HookFormControlContext";
-var getProxyFormState = (formState, control, localProxyFormState, isRoot = true) => {
-  const result = {
-    defaultValues: control._defaultValues
-  };
-  for (const key in formState) {
-    Object.defineProperty(result, key, {
-      get: () => {
-        const _key = key;
-        if (control._proxyFormState[_key] !== VALIDATION_MODE.all) {
-          control._proxyFormState[_key] = !isRoot || VALIDATION_MODE.all;
-        }
-        return formState[_key];
-      }
-    });
-  }
-  return result;
-};
-const useIsomorphicLayoutEffect = typeof window !== "undefined" ? React$4.useLayoutEffect : React$4.useEffect;
-var isString = (value) => typeof value === "string";
-var generateWatchOutput = (names, _names, formValues, isGlobal, defaultValue) => {
-  if (isString(names)) {
-    isGlobal && _names.watch.add(names);
-    return get(formValues, names, defaultValue);
-  }
-  if (Array.isArray(names)) {
-    return names.map((fieldName) => (isGlobal && _names.watch.add(fieldName), get(formValues, fieldName)));
-  }
-  isGlobal && (_names.watchAll = true);
-  return formValues;
-};
-var isPrimitive = (value) => isNullOrUndefined(value) || !isObjectType(value);
-function deepEqual(object1, object2, _internal_visited = /* @__PURE__ */ new WeakSet()) {
-  if (isPrimitive(object1) || isPrimitive(object2)) {
-    return Object.is(object1, object2);
-  }
-  if (isDateObject(object1) && isDateObject(object2)) {
-    return Object.is(object1.getTime(), object2.getTime());
-  }
-  const keys1 = Object.keys(object1);
-  const keys2 = Object.keys(object2);
-  if (keys1.length !== keys2.length) {
-    return false;
-  }
-  if (_internal_visited.has(object1) || _internal_visited.has(object2)) {
-    return true;
-  }
-  _internal_visited.add(object1);
-  _internal_visited.add(object2);
-  for (const key of keys1) {
-    const val1 = object1[key];
-    if (!keys2.includes(key)) {
-      return false;
-    }
-    if (key !== "ref") {
-      const val2 = object2[key];
-      if (isDateObject(val1) && isDateObject(val2) || isObject(val1) && isObject(val2) || Array.isArray(val1) && Array.isArray(val2) ? !deepEqual(val1, val2, _internal_visited) : !Object.is(val1, val2)) {
-        return false;
-      }
-    }
-  }
-  return true;
-}
-const HookFormContext = React$4.createContext(null);
-HookFormContext.displayName = "HookFormContext";
-var appendErrors = (name, validateAllFieldCriteria, errors, type, message) => validateAllFieldCriteria ? {
-  ...errors[name],
-  types: {
-    ...errors[name] && errors[name].types ? errors[name].types : {},
-    [type]: message || true
-  }
-} : {};
-var convertToArrayPayload = (value) => Array.isArray(value) ? value : [value];
-var createSubject = () => {
-  let _observers2 = [];
-  const next = (value) => {
-    for (const observer2 of _observers2) {
-      observer2.next && observer2.next(value);
-    }
-  };
-  const subscribe2 = (observer2) => {
-    _observers2.push(observer2);
-    return {
-      unsubscribe: () => {
-        _observers2 = _observers2.filter((o) => o !== observer2);
-      }
-    };
-  };
-  const unsubscribe = () => {
-    _observers2 = [];
-  };
-  return {
-    get observers() {
-      return _observers2;
-    },
-    next,
-    subscribe: subscribe2,
-    unsubscribe
-  };
-};
-function extractFormValues(fieldsState, formValues) {
-  const values = {};
-  for (const key in fieldsState) {
-    if (fieldsState.hasOwnProperty(key)) {
-      const fieldState = fieldsState[key];
-      const fieldValue = formValues[key];
-      if (fieldState && isObject(fieldState) && fieldValue) {
-        const nestedFieldsState = extractFormValues(fieldState, fieldValue);
-        if (isObject(nestedFieldsState)) {
-          values[key] = nestedFieldsState;
-        }
-      } else if (fieldsState[key]) {
-        values[key] = fieldValue;
-      }
-    }
-  }
-  return values;
-}
-var isEmptyObject = (value) => isObject(value) && !Object.keys(value).length;
-var isFileInput = (element) => element.type === "file";
-var isHTMLElement = (value) => {
-  if (!isWeb) {
-    return false;
-  }
-  const owner = value ? value.ownerDocument : 0;
-  return value instanceof (owner && owner.defaultView ? owner.defaultView.HTMLElement : HTMLElement);
-};
-var isMultipleSelect = (element) => element.type === `select-multiple`;
-var isRadioInput = (element) => element.type === "radio";
-var isRadioOrCheckbox = (ref) => isRadioInput(ref) || isCheckBoxInput(ref);
-var live = (ref) => isHTMLElement(ref) && ref.isConnected;
-function baseGet(object, updatePath) {
-  const length = updatePath.slice(0, -1).length;
-  let index2 = 0;
-  while (index2 < length) {
-    object = isUndefined(object) ? index2++ : object[updatePath[index2++]];
-  }
-  return object;
-}
-function isEmptyArray(obj) {
-  for (const key in obj) {
-    if (obj.hasOwnProperty(key) && !isUndefined(obj[key])) {
-      return false;
-    }
-  }
-  return true;
-}
-function unset(object, path) {
-  const paths = Array.isArray(path) ? path : isKey(path) ? [path] : stringToPath(path);
-  const childObject = paths.length === 1 ? object : baseGet(object, paths);
-  const index2 = paths.length - 1;
-  const key = paths[index2];
-  if (childObject) {
-    delete childObject[key];
-  }
-  if (index2 !== 0 && (isObject(childObject) && isEmptyObject(childObject) || Array.isArray(childObject) && isEmptyArray(childObject))) {
-    unset(object, paths.slice(0, -1));
-  }
-  return object;
-}
-var objectHasFunction = (data) => {
-  for (const key in data) {
-    if (isFunction(data[key])) {
-      return true;
-    }
-  }
-  return false;
-};
-function isTraversable(value) {
-  return Array.isArray(value) || isObject(value) && !objectHasFunction(value);
-}
-function markFieldsDirty(data, fields = {}) {
-  for (const key in data) {
-    const value = data[key];
-    if (isTraversable(value)) {
-      fields[key] = Array.isArray(value) ? [] : {};
-      markFieldsDirty(value, fields[key]);
-    } else if (!isUndefined(value)) {
-      fields[key] = true;
-    }
-  }
-  return fields;
-}
-function getDirtyFields(data, formValues, dirtyFieldsFromValues) {
-  if (!dirtyFieldsFromValues) {
-    dirtyFieldsFromValues = markFieldsDirty(formValues);
-  }
-  for (const key in data) {
-    const value = data[key];
-    if (isTraversable(value)) {
-      if (isUndefined(formValues) || isPrimitive(dirtyFieldsFromValues[key])) {
-        dirtyFieldsFromValues[key] = markFieldsDirty(value, Array.isArray(value) ? [] : {});
-      } else {
-        getDirtyFields(value, isNullOrUndefined(formValues) ? {} : formValues[key], dirtyFieldsFromValues[key]);
-      }
-    } else {
-      const formValue = formValues[key];
-      dirtyFieldsFromValues[key] = !deepEqual(value, formValue);
-    }
-  }
-  return dirtyFieldsFromValues;
-}
-const defaultResult = {
-  value: false,
-  isValid: false
-};
-const validResult = { value: true, isValid: true };
-var getCheckboxValue = (options) => {
-  if (Array.isArray(options)) {
-    if (options.length > 1) {
-      const values = options.filter((option) => option && option.checked && !option.disabled).map((option) => option.value);
-      return { value: values, isValid: !!values.length };
-    }
-    return options[0].checked && !options[0].disabled ? (
-      // @ts-expect-error expected to work in the browser
-      options[0].attributes && !isUndefined(options[0].attributes.value) ? isUndefined(options[0].value) || options[0].value === "" ? validResult : { value: options[0].value, isValid: true } : validResult
-    ) : defaultResult;
-  }
-  return defaultResult;
-};
-var getFieldValueAs = (value, { valueAsNumber, valueAsDate, setValueAs }) => isUndefined(value) ? value : valueAsNumber ? value === "" ? NaN : value ? +value : value : valueAsDate && isString(value) ? new Date(value) : setValueAs ? setValueAs(value) : value;
-const defaultReturn = {
-  isValid: false,
-  value: null
-};
-var getRadioValue = (options) => Array.isArray(options) ? options.reduce((previous, option) => option && option.checked && !option.disabled ? {
-  isValid: true,
-  value: option.value
-} : previous, defaultReturn) : defaultReturn;
-function getFieldValue(_f2) {
-  const ref = _f2.ref;
-  if (isFileInput(ref)) {
-    return ref.files;
-  }
-  if (isRadioInput(ref)) {
-    return getRadioValue(_f2.refs).value;
-  }
-  if (isMultipleSelect(ref)) {
-    return [...ref.selectedOptions].map(({ value }) => value);
-  }
-  if (isCheckBoxInput(ref)) {
-    return getCheckboxValue(_f2.refs).value;
-  }
-  return getFieldValueAs(isUndefined(ref.value) ? _f2.ref.value : ref.value, _f2);
-}
-var getResolverOptions = (fieldsNames, _fields, criteriaMode, shouldUseNativeValidation) => {
-  const fields = {};
-  for (const name of fieldsNames) {
-    const field = get(_fields, name);
-    field && set(fields, name, field._f);
-  }
-  return {
-    criteriaMode,
-    names: [...fieldsNames],
-    fields,
-    shouldUseNativeValidation
-  };
-};
-var isRegex = (value) => value instanceof RegExp;
-var getRuleValue = (rule) => isUndefined(rule) ? rule : isRegex(rule) ? rule.source : isObject(rule) ? isRegex(rule.value) ? rule.value.source : rule.value : rule;
-var getValidationModes = (mode) => ({
-  isOnSubmit: !mode || mode === VALIDATION_MODE.onSubmit,
-  isOnBlur: mode === VALIDATION_MODE.onBlur,
-  isOnChange: mode === VALIDATION_MODE.onChange,
-  isOnAll: mode === VALIDATION_MODE.all,
-  isOnTouch: mode === VALIDATION_MODE.onTouched
-});
-const ASYNC_FUNCTION = "AsyncFunction";
-var hasPromiseValidation = (fieldReference) => !!fieldReference && !!fieldReference.validate && !!(isFunction(fieldReference.validate) && fieldReference.validate.constructor.name === ASYNC_FUNCTION || isObject(fieldReference.validate) && Object.values(fieldReference.validate).find((validateFunction) => validateFunction.constructor.name === ASYNC_FUNCTION));
-var hasValidation = (options) => options.mount && (options.required || options.min || options.max || options.maxLength || options.minLength || options.pattern || options.validate);
-var isWatched = (name, _names, isBlurEvent) => !isBlurEvent && (_names.watchAll || _names.watch.has(name) || [..._names.watch].some((watchName) => name.startsWith(watchName) && /^\.\w+/.test(name.slice(watchName.length))));
-const iterateFieldsByAction = (fields, action, fieldsNames, abortEarly) => {
-  for (const key of fieldsNames || Object.keys(fields)) {
-    const field = get(fields, key);
-    if (field) {
-      const { _f: _f2, ...currentField } = field;
-      if (_f2) {
-        if (_f2.refs && _f2.refs[0] && action(_f2.refs[0], key) && !abortEarly) {
-          return true;
-        } else if (_f2.ref && action(_f2.ref, _f2.name) && !abortEarly) {
-          return true;
-        } else {
-          if (iterateFieldsByAction(currentField, action)) {
-            break;
-          }
-        }
-      } else if (isObject(currentField)) {
-        if (iterateFieldsByAction(currentField, action)) {
-          break;
-        }
-      }
-    }
-  }
-  return;
-};
-function schemaErrorLookup(errors, _fields, name) {
-  const error = get(errors, name);
-  if (error || isKey(name)) {
-    return {
-      error,
-      name
-    };
-  }
-  const names = name.split(".");
-  while (names.length) {
-    const fieldName = names.join(".");
-    const field = get(_fields, fieldName);
-    const foundError = get(errors, fieldName);
-    if (field && !Array.isArray(field) && name !== fieldName) {
-      return { name };
-    }
-    if (foundError && foundError.type) {
-      return {
-        name: fieldName,
-        error: foundError
-      };
-    }
-    if (foundError && foundError.root && foundError.root.type) {
-      return {
-        name: `${fieldName}.root`,
-        error: foundError.root
-      };
-    }
-    names.pop();
-  }
-  return {
-    name
-  };
-}
-var shouldRenderFormState = (formStateData, _proxyFormState, updateFormState, isRoot) => {
-  updateFormState(formStateData);
-  const { name, ...formState } = formStateData;
-  return isEmptyObject(formState) || Object.keys(formState).length >= Object.keys(_proxyFormState).length || Object.keys(formState).find((key) => _proxyFormState[key] === (!isRoot || VALIDATION_MODE.all));
-};
-var shouldSubscribeByName = (name, signalName, exact) => !name || !signalName || name === signalName || convertToArrayPayload(name).some((currentName) => currentName && (exact ? currentName === signalName : currentName.startsWith(signalName) || signalName.startsWith(currentName)));
-var skipValidation = (isBlurEvent, isTouched, isSubmitted, reValidateMode, mode) => {
-  if (mode.isOnAll) {
-    return false;
-  } else if (!isSubmitted && mode.isOnTouch) {
-    return !(isTouched || isBlurEvent);
-  } else if (isSubmitted ? reValidateMode.isOnBlur : mode.isOnBlur) {
-    return !isBlurEvent;
-  } else if (isSubmitted ? reValidateMode.isOnChange : mode.isOnChange) {
-    return isBlurEvent;
-  }
-  return true;
-};
-var unsetEmptyArray = (ref, name) => !compact(get(ref, name)).length && unset(ref, name);
-var updateFieldArrayRootError = (errors, error, name) => {
-  const fieldArrayErrors = convertToArrayPayload(get(errors, name));
-  set(fieldArrayErrors, ROOT_ERROR_TYPE, error[name]);
-  set(errors, name, fieldArrayErrors);
-  return errors;
-};
-function getValidateError(result, ref, type = "validate") {
-  if (isString(result) || Array.isArray(result) && result.every(isString) || isBoolean(result) && !result) {
-    return {
-      type,
-      message: isString(result) ? result : "",
-      ref
-    };
-  }
-}
-var getValueAndMessage = (validationData) => isObject(validationData) && !isRegex(validationData) ? validationData : {
-  value: validationData,
-  message: ""
-};
-var validateField = async (field, disabledFieldNames, formValues, validateAllFieldCriteria, shouldUseNativeValidation, isFieldArray) => {
-  const { ref, refs, required, maxLength, minLength, min: min2, max: max2, pattern, validate, name, valueAsNumber, mount } = field._f;
-  const inputValue = get(formValues, name);
-  if (!mount || disabledFieldNames.has(name)) {
-    return {};
-  }
-  const inputRef = refs ? refs[0] : ref;
-  const setCustomValidity = (message) => {
-    if (shouldUseNativeValidation && inputRef.reportValidity) {
-      inputRef.setCustomValidity(isBoolean(message) ? "" : message || "");
-      inputRef.reportValidity();
-    }
-  };
-  const error = {};
-  const isRadio = isRadioInput(ref);
-  const isCheckBox = isCheckBoxInput(ref);
-  const isRadioOrCheckbox2 = isRadio || isCheckBox;
-  const isEmpty = (valueAsNumber || isFileInput(ref)) && isUndefined(ref.value) && isUndefined(inputValue) || isHTMLElement(ref) && ref.value === "" || inputValue === "" || Array.isArray(inputValue) && !inputValue.length;
-  const appendErrorsCurry = appendErrors.bind(null, name, validateAllFieldCriteria, error);
-  const getMinMaxMessage = (exceedMax, maxLengthMessage, minLengthMessage, maxType = INPUT_VALIDATION_RULES.maxLength, minType = INPUT_VALIDATION_RULES.minLength) => {
-    const message = exceedMax ? maxLengthMessage : minLengthMessage;
-    error[name] = {
-      type: exceedMax ? maxType : minType,
-      message,
-      ref,
-      ...appendErrorsCurry(exceedMax ? maxType : minType, message)
-    };
-  };
-  if (isFieldArray ? !Array.isArray(inputValue) || !inputValue.length : required && (!isRadioOrCheckbox2 && (isEmpty || isNullOrUndefined(inputValue)) || isBoolean(inputValue) && !inputValue || isCheckBox && !getCheckboxValue(refs).isValid || isRadio && !getRadioValue(refs).isValid)) {
-    const { value, message } = isString(required) ? { value: !!required, message: required } : getValueAndMessage(required);
-    if (value) {
-      error[name] = {
-        type: INPUT_VALIDATION_RULES.required,
-        message,
-        ref: inputRef,
-        ...appendErrorsCurry(INPUT_VALIDATION_RULES.required, message)
-      };
-      if (!validateAllFieldCriteria) {
-        setCustomValidity(message);
-        return error;
-      }
-    }
-  }
-  if (!isEmpty && (!isNullOrUndefined(min2) || !isNullOrUndefined(max2))) {
-    let exceedMax;
-    let exceedMin;
-    const maxOutput = getValueAndMessage(max2);
-    const minOutput = getValueAndMessage(min2);
-    if (!isNullOrUndefined(inputValue) && !isNaN(inputValue)) {
-      const valueNumber = ref.valueAsNumber || (inputValue ? +inputValue : inputValue);
-      if (!isNullOrUndefined(maxOutput.value)) {
-        exceedMax = valueNumber > maxOutput.value;
-      }
-      if (!isNullOrUndefined(minOutput.value)) {
-        exceedMin = valueNumber < minOutput.value;
-      }
-    } else {
-      const valueDate = ref.valueAsDate || new Date(inputValue);
-      const convertTimeToDate = (time2) => /* @__PURE__ */ new Date((/* @__PURE__ */ new Date()).toDateString() + " " + time2);
-      const isTime = ref.type == "time";
-      const isWeek = ref.type == "week";
-      if (isString(maxOutput.value) && inputValue) {
-        exceedMax = isTime ? convertTimeToDate(inputValue) > convertTimeToDate(maxOutput.value) : isWeek ? inputValue > maxOutput.value : valueDate > new Date(maxOutput.value);
-      }
-      if (isString(minOutput.value) && inputValue) {
-        exceedMin = isTime ? convertTimeToDate(inputValue) < convertTimeToDate(minOutput.value) : isWeek ? inputValue < minOutput.value : valueDate < new Date(minOutput.value);
-      }
-    }
-    if (exceedMax || exceedMin) {
-      getMinMaxMessage(!!exceedMax, maxOutput.message, minOutput.message, INPUT_VALIDATION_RULES.max, INPUT_VALIDATION_RULES.min);
-      if (!validateAllFieldCriteria) {
-        setCustomValidity(error[name].message);
-        return error;
-      }
-    }
-  }
-  if ((maxLength || minLength) && !isEmpty && (isString(inputValue) || isFieldArray && Array.isArray(inputValue))) {
-    const maxLengthOutput = getValueAndMessage(maxLength);
-    const minLengthOutput = getValueAndMessage(minLength);
-    const exceedMax = !isNullOrUndefined(maxLengthOutput.value) && inputValue.length > +maxLengthOutput.value;
-    const exceedMin = !isNullOrUndefined(minLengthOutput.value) && inputValue.length < +minLengthOutput.value;
-    if (exceedMax || exceedMin) {
-      getMinMaxMessage(exceedMax, maxLengthOutput.message, minLengthOutput.message);
-      if (!validateAllFieldCriteria) {
-        setCustomValidity(error[name].message);
-        return error;
-      }
-    }
-  }
-  if (pattern && !isEmpty && isString(inputValue)) {
-    const { value: patternValue, message } = getValueAndMessage(pattern);
-    if (isRegex(patternValue) && !inputValue.match(patternValue)) {
-      error[name] = {
-        type: INPUT_VALIDATION_RULES.pattern,
-        message,
-        ref,
-        ...appendErrorsCurry(INPUT_VALIDATION_RULES.pattern, message)
-      };
-      if (!validateAllFieldCriteria) {
-        setCustomValidity(message);
-        return error;
-      }
-    }
-  }
-  if (validate) {
-    if (isFunction(validate)) {
-      const result = await validate(inputValue, formValues);
-      const validateError = getValidateError(result, inputRef);
-      if (validateError) {
-        error[name] = {
-          ...validateError,
-          ...appendErrorsCurry(INPUT_VALIDATION_RULES.validate, validateError.message)
-        };
-        if (!validateAllFieldCriteria) {
-          setCustomValidity(validateError.message);
-          return error;
-        }
-      }
-    } else if (isObject(validate)) {
-      let validationResult = {};
-      for (const key in validate) {
-        if (!isEmptyObject(validationResult) && !validateAllFieldCriteria) {
-          break;
-        }
-        const validateError = getValidateError(await validate[key](inputValue, formValues), inputRef, key);
-        if (validateError) {
-          validationResult = {
-            ...validateError,
-            ...appendErrorsCurry(key, validateError.message)
-          };
-          setCustomValidity(validateError.message);
-          if (validateAllFieldCriteria) {
-            error[name] = validationResult;
-          }
-        }
-      }
-      if (!isEmptyObject(validationResult)) {
-        error[name] = {
-          ref: inputRef,
-          ...validationResult
-        };
-        if (!validateAllFieldCriteria) {
-          return error;
-        }
-      }
-    }
-  }
-  setCustomValidity(true);
-  return error;
-};
-const defaultOptions = {
-  mode: VALIDATION_MODE.onSubmit,
-  reValidateMode: VALIDATION_MODE.onChange,
-  shouldFocusError: true
-};
-function createFormControl(props = {}) {
-  let _options7 = {
-    ...defaultOptions,
-    ...props
-  };
-  let _formState = {
-    submitCount: 0,
-    isDirty: false,
-    isReady: false,
-    isLoading: isFunction(_options7.defaultValues),
-    isValidating: false,
-    isSubmitted: false,
-    isSubmitting: false,
-    isSubmitSuccessful: false,
-    isValid: false,
-    touchedFields: {},
-    dirtyFields: {},
-    validatingFields: {},
-    errors: _options7.errors || {},
-    disabled: _options7.disabled || false
-  };
-  let _fields = {};
-  let _defaultValues = isObject(_options7.defaultValues) || isObject(_options7.values) ? cloneObject(_options7.defaultValues || _options7.values) || {} : {};
-  let _formValues = _options7.shouldUnregister ? {} : cloneObject(_defaultValues);
-  let _state = {
-    action: false,
-    mount: false,
-    watch: false,
-    keepIsValid: false
-  };
-  let _names = {
-    mount: /* @__PURE__ */ new Set(),
-    disabled: /* @__PURE__ */ new Set(),
-    unMount: /* @__PURE__ */ new Set(),
-    array: /* @__PURE__ */ new Set(),
-    watch: /* @__PURE__ */ new Set()
-  };
-  let delayErrorCallback;
-  let timer = 0;
-  const defaultProxyFormState = {
-    isDirty: false,
-    dirtyFields: false,
-    validatingFields: false,
-    touchedFields: false,
-    isValidating: false,
-    isValid: false,
-    errors: false
-  };
-  const _proxyFormState = {
-    ...defaultProxyFormState
-  };
-  let _proxySubscribeFormState = {
-    ..._proxyFormState
-  };
-  const _subjects = {
-    array: createSubject(),
-    state: createSubject()
-  };
-  const shouldDisplayAllAssociatedErrors = _options7.criteriaMode === VALIDATION_MODE.all;
-  const debounce = (callback) => (wait) => {
-    clearTimeout(timer);
-    timer = setTimeout(callback, wait);
-  };
-  const _setValid = async (shouldUpdateValid) => {
-    if (_state.keepIsValid) {
-      return;
-    }
-    if (!_options7.disabled && (_proxyFormState.isValid || _proxySubscribeFormState.isValid || shouldUpdateValid)) {
-      let isValid;
-      if (_options7.resolver) {
-        isValid = isEmptyObject((await _runSchema()).errors);
-        _updateIsValidating();
-      } else {
-        isValid = await executeBuiltInValidation({
-          fields: _fields,
-          onlyCheckValid: true,
-          eventType: EVENTS.VALID
-        });
-      }
-      if (isValid !== _formState.isValid) {
-        _subjects.state.next({
-          isValid
-        });
-      }
-    }
-  };
-  const _updateIsValidating = (names, isValidating) => {
-    if (!_options7.disabled && (_proxyFormState.isValidating || _proxyFormState.validatingFields || _proxySubscribeFormState.isValidating || _proxySubscribeFormState.validatingFields)) {
-      (names || Array.from(_names.mount)).forEach((name) => {
-        if (name) {
-          isValidating ? set(_formState.validatingFields, name, isValidating) : unset(_formState.validatingFields, name);
-        }
-      });
-      _subjects.state.next({
-        validatingFields: _formState.validatingFields,
-        isValidating: !isEmptyObject(_formState.validatingFields)
-      });
-    }
-  };
-  const _setFieldArray = (name, values = [], method, args, shouldSetValues = true, shouldUpdateFieldsAndState = true) => {
-    if (args && method && !_options7.disabled) {
-      _state.action = true;
-      if (shouldUpdateFieldsAndState && Array.isArray(get(_fields, name))) {
-        const fieldValues = method(get(_fields, name), args.argA, args.argB);
-        shouldSetValues && set(_fields, name, fieldValues);
-      }
-      if (shouldUpdateFieldsAndState && Array.isArray(get(_formState.errors, name))) {
-        const errors = method(get(_formState.errors, name), args.argA, args.argB);
-        shouldSetValues && set(_formState.errors, name, errors);
-        unsetEmptyArray(_formState.errors, name);
-      }
-      if ((_proxyFormState.touchedFields || _proxySubscribeFormState.touchedFields) && shouldUpdateFieldsAndState && Array.isArray(get(_formState.touchedFields, name))) {
-        const touchedFields = method(get(_formState.touchedFields, name), args.argA, args.argB);
-        shouldSetValues && set(_formState.touchedFields, name, touchedFields);
-      }
-      if (_proxyFormState.dirtyFields || _proxySubscribeFormState.dirtyFields) {
-        const fullDirtyFields = getDirtyFields(_defaultValues, _formValues);
-        const rootName = getNodeParentName(name);
-        set(_formState.dirtyFields, rootName, get(fullDirtyFields, rootName));
-      }
-      _subjects.state.next({
-        name,
-        isDirty: _getDirty(name, values),
-        dirtyFields: _formState.dirtyFields,
-        errors: _formState.errors,
-        isValid: _formState.isValid
-      });
-    } else {
-      set(_formValues, name, values);
-    }
-  };
-  const updateErrors = (name, error) => {
-    set(_formState.errors, name, error);
-    _subjects.state.next({
-      errors: _formState.errors
-    });
-  };
-  const _setErrors = (errors) => {
-    _formState.errors = errors;
-    _subjects.state.next({
-      errors: _formState.errors,
-      isValid: false
-    });
-  };
-  const updateValidAndValue = (name, shouldSkipSetValueAs, value, ref) => {
-    const field = get(_fields, name);
-    if (field) {
-      const defaultValue = get(_formValues, name, isUndefined(value) ? get(_defaultValues, name) : value);
-      isUndefined(defaultValue) || ref && ref.defaultChecked || shouldSkipSetValueAs ? set(_formValues, name, shouldSkipSetValueAs ? defaultValue : getFieldValue(field._f)) : setFieldValue(name, defaultValue);
-      _state.mount && !_state.action && _setValid();
-    }
-  };
-  const updateTouchAndDirty = (name, fieldValue, isBlurEvent, shouldDirty, shouldRender) => {
-    let shouldUpdateField = false;
-    let isPreviousDirty = false;
-    const output = {
-      name
-    };
-    if (!_options7.disabled) {
-      if (!isBlurEvent || shouldDirty) {
-        if (_proxyFormState.isDirty || _proxySubscribeFormState.isDirty) {
-          isPreviousDirty = _formState.isDirty;
-          _formState.isDirty = output.isDirty = _getDirty();
-          shouldUpdateField = isPreviousDirty !== output.isDirty;
-        }
-        const isCurrentFieldPristine = deepEqual(get(_defaultValues, name), fieldValue);
-        isPreviousDirty = !!get(_formState.dirtyFields, name);
-        isCurrentFieldPristine ? unset(_formState.dirtyFields, name) : set(_formState.dirtyFields, name, true);
-        output.dirtyFields = _formState.dirtyFields;
-        shouldUpdateField = shouldUpdateField || (_proxyFormState.dirtyFields || _proxySubscribeFormState.dirtyFields) && isPreviousDirty !== !isCurrentFieldPristine;
-      }
-      if (isBlurEvent) {
-        const isPreviousFieldTouched = get(_formState.touchedFields, name);
-        if (!isPreviousFieldTouched) {
-          set(_formState.touchedFields, name, isBlurEvent);
-          output.touchedFields = _formState.touchedFields;
-          shouldUpdateField = shouldUpdateField || (_proxyFormState.touchedFields || _proxySubscribeFormState.touchedFields) && isPreviousFieldTouched !== isBlurEvent;
-        }
-      }
-      shouldUpdateField && shouldRender && _subjects.state.next(output);
-    }
-    return shouldUpdateField ? output : {};
-  };
-  const shouldRenderByError = (name, isValid, error, fieldState) => {
-    const previousFieldError = get(_formState.errors, name);
-    const shouldUpdateValid = (_proxyFormState.isValid || _proxySubscribeFormState.isValid) && isBoolean(isValid) && _formState.isValid !== isValid;
-    if (_options7.delayError && error) {
-      delayErrorCallback = debounce(() => updateErrors(name, error));
-      delayErrorCallback(_options7.delayError);
-    } else {
-      clearTimeout(timer);
-      delayErrorCallback = null;
-      error ? set(_formState.errors, name, error) : unset(_formState.errors, name);
-    }
-    if ((error ? !deepEqual(previousFieldError, error) : previousFieldError) || !isEmptyObject(fieldState) || shouldUpdateValid) {
-      const updatedFormState = {
-        ...fieldState,
-        ...shouldUpdateValid && isBoolean(isValid) ? { isValid } : {},
-        errors: _formState.errors,
-        name
-      };
-      _formState = {
-        ..._formState,
-        ...updatedFormState
-      };
-      _subjects.state.next(updatedFormState);
-    }
-  };
-  const _runSchema = async (name) => {
-    _updateIsValidating(name, true);
-    return await _options7.resolver(_formValues, _options7.context, getResolverOptions(name || _names.mount, _fields, _options7.criteriaMode, _options7.shouldUseNativeValidation));
-  };
-  const executeSchemaAndUpdateState = async (names) => {
-    const { errors } = await _runSchema(names);
-    _updateIsValidating(names);
-    if (names) {
-      for (const name of names) {
-        const error = get(errors, name);
-        error ? set(_formState.errors, name, error) : unset(_formState.errors, name);
-      }
-    } else {
-      _formState.errors = errors;
-    }
-    return errors;
-  };
-  const validateForm = async ({ name, eventType }) => {
-    if (props.validate) {
-      const result = await props.validate({
-        formValues: _formValues,
-        formState: _formState,
-        name,
-        eventType
-      });
-      if (isObject(result)) {
-        for (const key in result) {
-          const error = result[key];
-          if (error) {
-            setError(`${FORM_ERROR_TYPE}.${key}`, {
-              message: isString(result.message) ? result.message : "",
-              type: INPUT_VALIDATION_RULES.validate
-            });
-          }
-        }
-      } else if (isString(result) || !result) {
-        setError(FORM_ERROR_TYPE, {
-          message: result || "",
-          type: INPUT_VALIDATION_RULES.validate
-        });
-      } else {
-        clearErrors(FORM_ERROR_TYPE);
-      }
-      return result;
-    }
-    return true;
-  };
-  const executeBuiltInValidation = async ({ fields, onlyCheckValid, name, eventType, context = {
-    valid: true,
-    runRootValidation: false
-  } }) => {
-    if (props.validate) {
-      context.runRootValidation = true;
-      const result = await validateForm({
-        name,
-        eventType
-      });
-      if (!result) {
-        context.valid = false;
-        if (onlyCheckValid) {
-          return context.valid;
-        }
-      }
-    }
-    for (const name2 in fields) {
-      const field = fields[name2];
-      if (field) {
-        const { _f: _f2, ...fieldValue } = field;
-        if (_f2) {
-          const isFieldArrayRoot = _names.array.has(_f2.name);
-          const isPromiseFunction = field._f && hasPromiseValidation(field._f);
-          if (isPromiseFunction && _proxyFormState.validatingFields) {
-            _updateIsValidating([_f2.name], true);
-          }
-          const fieldError = await validateField(field, _names.disabled, _formValues, shouldDisplayAllAssociatedErrors, _options7.shouldUseNativeValidation && !onlyCheckValid, isFieldArrayRoot);
-          if (isPromiseFunction && _proxyFormState.validatingFields) {
-            _updateIsValidating([_f2.name]);
-          }
-          if (fieldError[_f2.name]) {
-            context.valid = false;
-            if (onlyCheckValid) {
-              break;
-            }
-          }
-          !onlyCheckValid && (get(fieldError, _f2.name) ? isFieldArrayRoot ? updateFieldArrayRootError(_formState.errors, fieldError, _f2.name) : set(_formState.errors, _f2.name, fieldError[_f2.name]) : unset(_formState.errors, _f2.name));
-          if (props.shouldUseNativeValidation && fieldError[_f2.name]) {
-            break;
-          }
-        }
-        !isEmptyObject(fieldValue) && await executeBuiltInValidation({
-          context,
-          onlyCheckValid,
-          fields: fieldValue,
-          name: name2,
-          eventType
-        });
-      }
-    }
-    return context.valid;
-  };
-  const _removeUnmounted = () => {
-    for (const name of _names.unMount) {
-      const field = get(_fields, name);
-      field && (field._f.refs ? field._f.refs.every((ref) => !live(ref)) : !live(field._f.ref)) && unregister(name);
-    }
-    _names.unMount = /* @__PURE__ */ new Set();
-  };
-  const _getDirty = (name, data) => !_options7.disabled && (name && data && set(_formValues, name, data), !deepEqual(getValues(), _defaultValues));
-  const _getWatch = (names, defaultValue, isGlobal) => generateWatchOutput(names, _names, {
-    ..._state.mount ? _formValues : isUndefined(defaultValue) ? _defaultValues : isString(names) ? { [names]: defaultValue } : defaultValue
-  }, isGlobal, defaultValue);
-  const _getFieldArray = (name) => compact(get(_state.mount ? _formValues : _defaultValues, name, _options7.shouldUnregister ? get(_defaultValues, name, []) : []));
-  const setFieldValue = (name, value, options = {}) => {
-    const field = get(_fields, name);
-    let fieldValue = value;
-    if (field) {
-      const fieldReference = field._f;
-      if (fieldReference) {
-        !fieldReference.disabled && set(_formValues, name, getFieldValueAs(value, fieldReference));
-        fieldValue = isHTMLElement(fieldReference.ref) && isNullOrUndefined(value) ? "" : value;
-        if (isMultipleSelect(fieldReference.ref)) {
-          [...fieldReference.ref.options].forEach((optionRef) => optionRef.selected = fieldValue.includes(optionRef.value));
-        } else if (fieldReference.refs) {
-          if (isCheckBoxInput(fieldReference.ref)) {
-            fieldReference.refs.forEach((checkboxRef) => {
-              if (!checkboxRef.defaultChecked || !checkboxRef.disabled) {
-                if (Array.isArray(fieldValue)) {
-                  checkboxRef.checked = !!fieldValue.find((data) => data === checkboxRef.value);
-                } else {
-                  checkboxRef.checked = fieldValue === checkboxRef.value || !!fieldValue;
-                }
-              }
-            });
-          } else {
-            fieldReference.refs.forEach((radioRef) => radioRef.checked = radioRef.value === fieldValue);
-          }
-        } else if (isFileInput(fieldReference.ref)) {
-          fieldReference.ref.value = "";
-        } else {
-          fieldReference.ref.value = fieldValue;
-          if (!fieldReference.ref.type) {
-            _subjects.state.next({
-              name,
-              values: cloneObject(_formValues)
-            });
-          }
-        }
-      }
-    }
-    (options.shouldDirty || options.shouldTouch) && updateTouchAndDirty(name, fieldValue, options.shouldTouch, options.shouldDirty, true);
-    options.shouldValidate && trigger(name);
-  };
-  const setValues = (name, value, options) => {
-    for (const fieldKey in value) {
-      if (!value.hasOwnProperty(fieldKey)) {
-        return;
-      }
-      const fieldValue = value[fieldKey];
-      const fieldName = name + "." + fieldKey;
-      const field = get(_fields, fieldName);
-      (_names.array.has(name) || isObject(fieldValue) || field && !field._f) && !isDateObject(fieldValue) ? setValues(fieldName, fieldValue, options) : setFieldValue(fieldName, fieldValue, options);
-    }
-  };
-  const setValue = (name, value, options = {}) => {
-    const field = get(_fields, name);
-    const isFieldArray = _names.array.has(name);
-    const cloneValue = cloneObject(value);
-    set(_formValues, name, cloneValue);
-    if (isFieldArray) {
-      _subjects.array.next({
-        name,
-        values: cloneObject(_formValues)
-      });
-      if ((_proxyFormState.isDirty || _proxyFormState.dirtyFields || _proxySubscribeFormState.isDirty || _proxySubscribeFormState.dirtyFields) && options.shouldDirty) {
-        _subjects.state.next({
-          name,
-          dirtyFields: getDirtyFields(_defaultValues, _formValues),
-          isDirty: _getDirty(name, cloneValue)
-        });
-      }
-    } else {
-      field && !field._f && !isNullOrUndefined(cloneValue) ? setValues(name, cloneValue, options) : setFieldValue(name, cloneValue, options);
-    }
-    if (isWatched(name, _names)) {
-      _subjects.state.next({
-        ..._formState,
-        name,
-        values: cloneObject(_formValues)
-      });
-    } else {
-      _subjects.state.next({
-        name: _state.mount ? name : void 0,
-        values: cloneObject(_formValues)
-      });
-    }
-  };
-  const onChange = async (event) => {
-    _state.mount = true;
-    const target = event.target;
-    let name = target.name;
-    let isFieldValueUpdated = true;
-    const field = get(_fields, name);
-    const _updateIsFieldValueUpdated = (fieldValue) => {
-      isFieldValueUpdated = Number.isNaN(fieldValue) || isDateObject(fieldValue) && isNaN(fieldValue.getTime()) || deepEqual(fieldValue, get(_formValues, name, fieldValue));
-    };
-    const validationModeBeforeSubmit = getValidationModes(_options7.mode);
-    const validationModeAfterSubmit = getValidationModes(_options7.reValidateMode);
-    if (field) {
-      let error;
-      let isValid;
-      const fieldValue = target.type ? getFieldValue(field._f) : getEventValue(event);
-      const isBlurEvent = event.type === EVENTS.BLUR || event.type === EVENTS.FOCUS_OUT;
-      const shouldSkipValidation = !hasValidation(field._f) && !props.validate && !_options7.resolver && !get(_formState.errors, name) && !field._f.deps || skipValidation(isBlurEvent, get(_formState.touchedFields, name), _formState.isSubmitted, validationModeAfterSubmit, validationModeBeforeSubmit);
-      const watched = isWatched(name, _names, isBlurEvent);
-      set(_formValues, name, fieldValue);
-      if (isBlurEvent) {
-        if (!target || !target.readOnly) {
-          field._f.onBlur && field._f.onBlur(event);
-          delayErrorCallback && delayErrorCallback(0);
-        }
-      } else if (field._f.onChange) {
-        field._f.onChange(event);
-      }
-      const fieldState = updateTouchAndDirty(name, fieldValue, isBlurEvent);
-      const shouldRender = !isEmptyObject(fieldState) || watched;
-      !isBlurEvent && _subjects.state.next({
-        name,
-        type: event.type,
-        values: cloneObject(_formValues)
-      });
-      if (shouldSkipValidation) {
-        if (_proxyFormState.isValid || _proxySubscribeFormState.isValid) {
-          if (_options7.mode === "onBlur") {
-            if (isBlurEvent) {
-              _setValid();
-            }
-          } else if (!isBlurEvent) {
-            _setValid();
-          }
-        }
-        return shouldRender && _subjects.state.next({ name, ...watched ? {} : fieldState });
-      }
-      if (!_options7.resolver && props.validate) {
-        await validateForm({
-          name,
-          eventType: event.type
-        });
-      }
-      !isBlurEvent && watched && _subjects.state.next({ ..._formState });
-      if (_options7.resolver) {
-        const { errors } = await _runSchema([name]);
-        _updateIsValidating([name]);
-        _updateIsFieldValueUpdated(fieldValue);
-        if (isFieldValueUpdated) {
-          const previousErrorLookupResult = schemaErrorLookup(_formState.errors, _fields, name);
-          const errorLookupResult = schemaErrorLookup(errors, _fields, previousErrorLookupResult.name || name);
-          error = errorLookupResult.error;
-          name = errorLookupResult.name;
-          isValid = isEmptyObject(errors);
-        }
-      } else {
-        _updateIsValidating([name], true);
-        error = (await validateField(field, _names.disabled, _formValues, shouldDisplayAllAssociatedErrors, _options7.shouldUseNativeValidation))[name];
-        _updateIsValidating([name]);
-        _updateIsFieldValueUpdated(fieldValue);
-        if (isFieldValueUpdated) {
-          if (error) {
-            isValid = false;
-          } else if (_proxyFormState.isValid || _proxySubscribeFormState.isValid) {
-            isValid = await executeBuiltInValidation({
-              fields: _fields,
-              onlyCheckValid: true,
-              name,
-              eventType: event.type
-            });
-          }
-        }
-      }
-      if (isFieldValueUpdated) {
-        field._f.deps && (!Array.isArray(field._f.deps) || field._f.deps.length > 0) && trigger(field._f.deps);
-        shouldRenderByError(name, isValid, error, fieldState);
-      }
-    }
-  };
-  const _focusInput = (ref, key) => {
-    if (get(_formState.errors, key) && ref.focus) {
-      ref.focus();
-      return 1;
-    }
-    return;
-  };
-  const trigger = async (name, options = {}) => {
-    let isValid;
-    let validationResult;
-    const fieldNames = convertToArrayPayload(name);
-    if (_options7.resolver) {
-      const errors = await executeSchemaAndUpdateState(isUndefined(name) ? name : fieldNames);
-      isValid = isEmptyObject(errors);
-      validationResult = name ? !fieldNames.some((name2) => get(errors, name2)) : isValid;
-    } else if (name) {
-      validationResult = (await Promise.all(fieldNames.map(async (fieldName) => {
-        const field = get(_fields, fieldName);
-        return await executeBuiltInValidation({
-          fields: field && field._f ? { [fieldName]: field } : field,
-          eventType: EVENTS.TRIGGER
-        });
-      }))).every(Boolean);
-      !(!validationResult && !_formState.isValid) && _setValid();
-    } else {
-      validationResult = isValid = await executeBuiltInValidation({
-        fields: _fields,
-        name,
-        eventType: EVENTS.TRIGGER
-      });
-    }
-    _subjects.state.next({
-      ...!isString(name) || (_proxyFormState.isValid || _proxySubscribeFormState.isValid) && isValid !== _formState.isValid ? {} : { name },
-      ..._options7.resolver || !name ? { isValid } : {},
-      errors: _formState.errors
-    });
-    options.shouldFocus && !validationResult && iterateFieldsByAction(_fields, _focusInput, name ? fieldNames : _names.mount);
-    return validationResult;
-  };
-  const getValues = (fieldNames, config) => {
-    let values = {
-      ..._state.mount ? _formValues : _defaultValues
-    };
-    if (config) {
-      values = extractFormValues(config.dirtyFields ? _formState.dirtyFields : _formState.touchedFields, values);
-    }
-    return isUndefined(fieldNames) ? values : isString(fieldNames) ? get(values, fieldNames) : fieldNames.map((name) => get(values, name));
-  };
-  const getFieldState = (name, formState) => ({
-    invalid: !!get((formState || _formState).errors, name),
-    isDirty: !!get((formState || _formState).dirtyFields, name),
-    error: get((formState || _formState).errors, name),
-    isValidating: !!get(_formState.validatingFields, name),
-    isTouched: !!get((formState || _formState).touchedFields, name)
-  });
-  const clearErrors = (name) => {
-    const names = name ? convertToArrayPayload(name) : void 0;
-    names === null || names === void 0 ? void 0 : names.forEach((inputName) => unset(_formState.errors, inputName));
-    if (names) {
-      names.forEach((inputName) => {
-        _subjects.state.next({
-          name: inputName,
-          errors: _formState.errors
-        });
-      });
-    } else {
-      _subjects.state.next({
-        errors: {}
-      });
-    }
-  };
-  const setError = (name, error, options) => {
-    const ref = (get(_fields, name, { _f: {} })._f || {}).ref;
-    const currentError = get(_formState.errors, name) || {};
-    const { ref: currentRef, message, type, ...restOfErrorTree } = currentError;
-    set(_formState.errors, name, {
-      ...restOfErrorTree,
-      ...error,
-      ref
-    });
-    _subjects.state.next({
-      name,
-      errors: _formState.errors,
-      isValid: false
-    });
-    options && options.shouldFocus && ref && ref.focus && ref.focus();
-  };
-  const watch = (name, defaultValue) => isFunction(name) ? _subjects.state.subscribe({
-    next: (payload) => "values" in payload && name(_getWatch(void 0, defaultValue), payload)
-  }) : _getWatch(name, defaultValue, true);
-  const _subscribe = (props2) => _subjects.state.subscribe({
-    next: (formState) => {
-      if (shouldSubscribeByName(props2.name, formState.name, props2.exact) && shouldRenderFormState(formState, props2.formState || _proxyFormState, _setFormState, props2.reRenderRoot)) {
-        props2.callback({
-          values: { ..._formValues },
-          ..._formState,
-          ...formState,
-          defaultValues: _defaultValues
-        });
-      }
-    }
-  }).unsubscribe;
-  const subscribe2 = (props2) => {
-    _state.mount = true;
-    _proxySubscribeFormState = {
-      ..._proxySubscribeFormState,
-      ...props2.formState
-    };
-    return _subscribe({
-      ...props2,
-      formState: {
-        ...defaultProxyFormState,
-        ...props2.formState
-      }
-    });
-  };
-  const unregister = (name, options = {}) => {
-    for (const fieldName of name ? convertToArrayPayload(name) : _names.mount) {
-      _names.mount.delete(fieldName);
-      _names.array.delete(fieldName);
-      if (!options.keepValue) {
-        unset(_fields, fieldName);
-        unset(_formValues, fieldName);
-      }
-      !options.keepError && unset(_formState.errors, fieldName);
-      !options.keepDirty && unset(_formState.dirtyFields, fieldName);
-      !options.keepTouched && unset(_formState.touchedFields, fieldName);
-      !options.keepIsValidating && unset(_formState.validatingFields, fieldName);
-      !_options7.shouldUnregister && !options.keepDefaultValue && unset(_defaultValues, fieldName);
-    }
-    _subjects.state.next({
-      values: cloneObject(_formValues)
-    });
-    _subjects.state.next({
-      ..._formState,
-      ...!options.keepDirty ? {} : { isDirty: _getDirty() }
-    });
-    !options.keepIsValid && _setValid();
-  };
-  const _setDisabledField = ({ disabled, name }) => {
-    if (isBoolean(disabled) && _state.mount || !!disabled || _names.disabled.has(name)) {
-      const wasDisabled = _names.disabled.has(name);
-      const isDisabled = !!disabled;
-      const disabledStateChanged = wasDisabled !== isDisabled;
-      disabled ? _names.disabled.add(name) : _names.disabled.delete(name);
-      disabledStateChanged && _state.mount && !_state.action && _setValid();
-    }
-  };
-  const register = (name, options = {}) => {
-    let field = get(_fields, name);
-    const disabledIsDefined = isBoolean(options.disabled) || isBoolean(_options7.disabled);
-    set(_fields, name, {
-      ...field || {},
-      _f: {
-        ...field && field._f ? field._f : { ref: { name } },
-        name,
-        mount: true,
-        ...options
-      }
-    });
-    _names.mount.add(name);
-    if (field) {
-      _setDisabledField({
-        disabled: isBoolean(options.disabled) ? options.disabled : _options7.disabled,
-        name
-      });
-    } else {
-      updateValidAndValue(name, true, options.value);
-    }
-    return {
-      ...disabledIsDefined ? { disabled: options.disabled || _options7.disabled } : {},
-      ..._options7.progressive ? {
-        required: !!options.required,
-        min: getRuleValue(options.min),
-        max: getRuleValue(options.max),
-        minLength: getRuleValue(options.minLength),
-        maxLength: getRuleValue(options.maxLength),
-        pattern: getRuleValue(options.pattern)
-      } : {},
-      name,
-      onChange,
-      onBlur: onChange,
-      ref: (ref) => {
-        if (ref) {
-          register(name, options);
-          field = get(_fields, name);
-          const fieldRef = isUndefined(ref.value) ? ref.querySelectorAll ? ref.querySelectorAll("input,select,textarea")[0] || ref : ref : ref;
-          const radioOrCheckbox = isRadioOrCheckbox(fieldRef);
-          const refs = field._f.refs || [];
-          if (radioOrCheckbox ? refs.find((option) => option === fieldRef) : fieldRef === field._f.ref) {
-            return;
-          }
-          set(_fields, name, {
-            _f: {
-              ...field._f,
-              ...radioOrCheckbox ? {
-                refs: [
-                  ...refs.filter(live),
-                  fieldRef,
-                  ...Array.isArray(get(_defaultValues, name)) ? [{}] : []
-                ],
-                ref: { type: fieldRef.type, name }
-              } : { ref: fieldRef }
-            }
-          });
-          updateValidAndValue(name, false, void 0, fieldRef);
-        } else {
-          field = get(_fields, name, {});
-          if (field._f) {
-            field._f.mount = false;
-          }
-          (_options7.shouldUnregister || options.shouldUnregister) && !(isNameInFieldArray(_names.array, name) && _state.action) && _names.unMount.add(name);
-        }
-      }
-    };
-  };
-  const _focusError = () => _options7.shouldFocusError && iterateFieldsByAction(_fields, _focusInput, _names.mount);
-  const _disableForm = (disabled) => {
-    if (isBoolean(disabled)) {
-      _subjects.state.next({ disabled });
-      iterateFieldsByAction(_fields, (ref, name) => {
-        const currentField = get(_fields, name);
-        if (currentField) {
-          ref.disabled = currentField._f.disabled || disabled;
-          if (Array.isArray(currentField._f.refs)) {
-            currentField._f.refs.forEach((inputRef) => {
-              inputRef.disabled = currentField._f.disabled || disabled;
-            });
-          }
-        }
-      }, 0, false);
-    }
-  };
-  const handleSubmit = (onValid, onInvalid) => async (e) => {
-    let onValidError = void 0;
-    if (e) {
-      e.preventDefault && e.preventDefault();
-      e.persist && e.persist();
-    }
-    let fieldValues = cloneObject(_formValues);
-    _subjects.state.next({
-      isSubmitting: true
-    });
-    if (_options7.resolver) {
-      const { errors, values } = await _runSchema();
-      _updateIsValidating();
-      _formState.errors = errors;
-      fieldValues = cloneObject(values);
-    } else {
-      await executeBuiltInValidation({
-        fields: _fields,
-        eventType: EVENTS.SUBMIT
-      });
-    }
-    if (_names.disabled.size) {
-      for (const name of _names.disabled) {
-        unset(fieldValues, name);
-      }
-    }
-    unset(_formState.errors, ROOT_ERROR_TYPE);
-    if (isEmptyObject(_formState.errors)) {
-      _subjects.state.next({
-        errors: {}
-      });
-      try {
-        await onValid(fieldValues, e);
-      } catch (error) {
-        onValidError = error;
-      }
-    } else {
-      if (onInvalid) {
-        await onInvalid({ ..._formState.errors }, e);
-      }
-      _focusError();
-      setTimeout(_focusError);
-    }
-    _subjects.state.next({
-      isSubmitted: true,
-      isSubmitting: false,
-      isSubmitSuccessful: isEmptyObject(_formState.errors) && !onValidError,
-      submitCount: _formState.submitCount + 1,
-      errors: _formState.errors
-    });
-    if (onValidError) {
-      throw onValidError;
-    }
-  };
-  const resetField = (name, options = {}) => {
-    if (get(_fields, name)) {
-      if (isUndefined(options.defaultValue)) {
-        setValue(name, cloneObject(get(_defaultValues, name)));
-      } else {
-        setValue(name, options.defaultValue);
-        set(_defaultValues, name, cloneObject(options.defaultValue));
-      }
-      if (!options.keepTouched) {
-        unset(_formState.touchedFields, name);
-      }
-      if (!options.keepDirty) {
-        unset(_formState.dirtyFields, name);
-        _formState.isDirty = options.defaultValue ? _getDirty(name, cloneObject(get(_defaultValues, name))) : _getDirty();
-      }
-      if (!options.keepError) {
-        unset(_formState.errors, name);
-        _proxyFormState.isValid && _setValid();
-      }
-      _subjects.state.next({ ..._formState });
-    }
-  };
-  const _reset = (formValues, keepStateOptions = {}) => {
-    const updatedValues = formValues ? cloneObject(formValues) : _defaultValues;
-    const cloneUpdatedValues = cloneObject(updatedValues);
-    const isEmptyResetValues = isEmptyObject(formValues);
-    const values = isEmptyResetValues ? _defaultValues : cloneUpdatedValues;
-    if (!keepStateOptions.keepDefaultValues) {
-      _defaultValues = updatedValues;
-    }
-    if (!keepStateOptions.keepValues) {
-      if (keepStateOptions.keepDirtyValues) {
-        const fieldsToCheck = /* @__PURE__ */ new Set([
-          ..._names.mount,
-          ...Object.keys(getDirtyFields(_defaultValues, _formValues))
-        ]);
-        for (const fieldName of Array.from(fieldsToCheck)) {
-          const isDirty = get(_formState.dirtyFields, fieldName);
-          const existingValue = get(_formValues, fieldName);
-          const newValue = get(values, fieldName);
-          if (isDirty && !isUndefined(existingValue)) {
-            set(values, fieldName, existingValue);
-          } else if (!isDirty && !isUndefined(newValue)) {
-            setValue(fieldName, newValue);
-          }
-        }
-      } else {
-        if (isWeb && isUndefined(formValues)) {
-          for (const name of _names.mount) {
-            const field = get(_fields, name);
-            if (field && field._f) {
-              const fieldReference = Array.isArray(field._f.refs) ? field._f.refs[0] : field._f.ref;
-              if (isHTMLElement(fieldReference)) {
-                const form = fieldReference.closest("form");
-                if (form) {
-                  form.reset();
-                  break;
-                }
-              }
-            }
-          }
-        }
-        if (keepStateOptions.keepFieldsRef) {
-          for (const fieldName of _names.mount) {
-            setValue(fieldName, get(values, fieldName));
-          }
-        } else {
-          _fields = {};
-        }
-      }
-      _formValues = _options7.shouldUnregister ? keepStateOptions.keepDefaultValues ? cloneObject(_defaultValues) : {} : cloneObject(values);
-      _subjects.array.next({
-        values: { ...values }
-      });
-      _subjects.state.next({
-        values: { ...values }
-      });
-    }
-    _names = {
-      mount: keepStateOptions.keepDirtyValues ? _names.mount : /* @__PURE__ */ new Set(),
-      unMount: /* @__PURE__ */ new Set(),
-      array: /* @__PURE__ */ new Set(),
-      disabled: /* @__PURE__ */ new Set(),
-      watch: /* @__PURE__ */ new Set(),
-      watchAll: false,
-      focus: ""
-    };
-    _state.mount = !_proxyFormState.isValid || !!keepStateOptions.keepIsValid || !!keepStateOptions.keepDirtyValues || !_options7.shouldUnregister && !isEmptyObject(values);
-    _state.watch = !!_options7.shouldUnregister;
-    _state.keepIsValid = !!keepStateOptions.keepIsValid;
-    _state.action = false;
-    if (!keepStateOptions.keepErrors) {
-      _formState.errors = {};
-    }
-    _subjects.state.next({
-      submitCount: keepStateOptions.keepSubmitCount ? _formState.submitCount : 0,
-      isDirty: isEmptyResetValues ? false : keepStateOptions.keepDirty ? _formState.isDirty : !!(keepStateOptions.keepDefaultValues && !deepEqual(formValues, _defaultValues)),
-      isSubmitted: keepStateOptions.keepIsSubmitted ? _formState.isSubmitted : false,
-      dirtyFields: isEmptyResetValues ? {} : keepStateOptions.keepDirtyValues ? keepStateOptions.keepDefaultValues && _formValues ? getDirtyFields(_defaultValues, _formValues) : _formState.dirtyFields : keepStateOptions.keepDefaultValues && formValues ? getDirtyFields(_defaultValues, formValues) : keepStateOptions.keepDirty ? _formState.dirtyFields : {},
-      touchedFields: keepStateOptions.keepTouched ? _formState.touchedFields : {},
-      errors: keepStateOptions.keepErrors ? _formState.errors : {},
-      isSubmitSuccessful: keepStateOptions.keepIsSubmitSuccessful ? _formState.isSubmitSuccessful : false,
-      isSubmitting: false,
-      defaultValues: _defaultValues
-    });
-  };
-  const reset = (formValues, keepStateOptions) => _reset(isFunction(formValues) ? formValues(_formValues) : formValues, { ..._options7.resetOptions, ...keepStateOptions });
-  const setFocus = (name, options = {}) => {
-    const field = get(_fields, name);
-    const fieldReference = field && field._f;
-    if (fieldReference) {
-      const fieldRef = fieldReference.refs ? fieldReference.refs[0] : fieldReference.ref;
-      if (fieldRef.focus) {
-        setTimeout(() => {
-          fieldRef.focus();
-          options.shouldSelect && isFunction(fieldRef.select) && fieldRef.select();
-        });
-      }
-    }
-  };
-  const _setFormState = (updatedFormState) => {
-    _formState = {
-      ..._formState,
-      ...updatedFormState
-    };
-  };
-  const _resetDefaultValues = () => isFunction(_options7.defaultValues) && _options7.defaultValues().then((values) => {
-    reset(values, _options7.resetOptions);
-    _subjects.state.next({
-      isLoading: false
-    });
-  });
-  const methods = {
-    control: {
-      register,
-      unregister,
-      getFieldState,
-      handleSubmit,
-      setError,
-      _subscribe,
-      _runSchema,
-      _updateIsValidating,
-      _focusError,
-      _getWatch,
-      _getDirty,
-      _setValid,
-      _setFieldArray,
-      _setDisabledField,
-      _setErrors,
-      _getFieldArray,
-      _reset,
-      _resetDefaultValues,
-      _removeUnmounted,
-      _disableForm,
-      _subjects,
-      _proxyFormState,
-      get _fields() {
-        return _fields;
-      },
-      get _formValues() {
-        return _formValues;
-      },
-      get _state() {
-        return _state;
-      },
-      set _state(value) {
-        _state = value;
-      },
-      get _defaultValues() {
-        return _defaultValues;
-      },
-      get _names() {
-        return _names;
-      },
-      set _names(value) {
-        _names = value;
-      },
-      get _formState() {
-        return _formState;
-      },
-      get _options() {
-        return _options7;
-      },
-      set _options(value) {
-        _options7 = {
-          ..._options7,
-          ...value
-        };
-      }
-    },
-    subscribe: subscribe2,
-    trigger,
-    register,
-    handleSubmit,
-    watch,
-    setValue,
-    getValues,
-    reset,
-    resetField,
-    clearErrors,
-    unregister,
-    setError,
-    setFocus,
-    getFieldState
-  };
-  return {
-    ...methods,
-    formControl: methods
-  };
-}
-function useForm(props = {}) {
-  const _formControl = React$4.useRef(void 0);
-  const _values = React$4.useRef(void 0);
-  const [formState, updateFormState] = React$4.useState({
-    isDirty: false,
-    isValidating: false,
-    isLoading: isFunction(props.defaultValues),
-    isSubmitted: false,
-    isSubmitting: false,
-    isSubmitSuccessful: false,
-    isValid: false,
-    submitCount: 0,
-    dirtyFields: {},
-    touchedFields: {},
-    validatingFields: {},
-    errors: props.errors || {},
-    disabled: props.disabled || false,
-    isReady: false,
-    defaultValues: isFunction(props.defaultValues) ? void 0 : props.defaultValues
-  });
-  if (!_formControl.current) {
-    if (props.formControl) {
-      _formControl.current = {
-        ...props.formControl,
-        formState
-      };
-      if (props.defaultValues && !isFunction(props.defaultValues)) {
-        props.formControl.reset(props.defaultValues, props.resetOptions);
-      }
-    } else {
-      const { formControl, ...rest } = createFormControl(props);
-      _formControl.current = {
-        ...rest,
-        formState
-      };
-    }
-  }
-  const control = _formControl.current.control;
-  control._options = props;
-  useIsomorphicLayoutEffect(() => {
-    const sub = control._subscribe({
-      formState: control._proxyFormState,
-      callback: () => updateFormState({ ...control._formState }),
-      reRenderRoot: true
-    });
-    updateFormState((data) => ({
-      ...data,
-      isReady: true
-    }));
-    control._formState.isReady = true;
-    return sub;
-  }, [control]);
-  React$4.useEffect(() => control._disableForm(props.disabled), [control, props.disabled]);
-  React$4.useEffect(() => {
-    if (props.mode) {
-      control._options.mode = props.mode;
-    }
-    if (props.reValidateMode) {
-      control._options.reValidateMode = props.reValidateMode;
-    }
-  }, [control, props.mode, props.reValidateMode]);
-  React$4.useEffect(() => {
-    if (props.errors) {
-      control._setErrors(props.errors);
-      control._focusError();
-    }
-  }, [control, props.errors]);
-  React$4.useEffect(() => {
-    props.shouldUnregister && control._subjects.state.next({
-      values: control._getWatch()
-    });
-  }, [control, props.shouldUnregister]);
-  React$4.useEffect(() => {
-    if (control._proxyFormState.isDirty) {
-      const isDirty = control._getDirty();
-      if (isDirty !== formState.isDirty) {
-        control._subjects.state.next({
-          isDirty
-        });
-      }
-    }
-  }, [control, formState.isDirty]);
-  React$4.useEffect(() => {
-    var _a2;
-    if (props.values && !deepEqual(props.values, _values.current)) {
-      control._reset(props.values, {
-        keepFieldsRef: true,
-        ...control._options.resetOptions
-      });
-      if (!((_a2 = control._options.resetOptions) === null || _a2 === void 0 ? void 0 : _a2.keepIsValid)) {
-        control._setValid();
-      }
-      _values.current = props.values;
-      updateFormState((state) => ({ ...state }));
-    } else {
-      control._resetDefaultValues();
-    }
-  }, [control, props.values]);
-  React$4.useEffect(() => {
-    if (!control._state.mount) {
-      control._setValid();
-      control._state.mount = true;
-    }
-    if (control._state.watch) {
-      control._state.watch = false;
-      control._subjects.state.next({ ...control._formState });
-    }
-    control._removeUnmounted();
-  });
-  _formControl.current.formState = React$4.useMemo(() => getProxyFormState(formState, control), [control, formState]);
-  return _formControl.current;
-}
-function ForgotPasswordForm({ onBack }) {
-  const [sent, setSent] = reactExports.useState(false);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting }
-  } = useForm({
-    mode: "onBlur",
-    defaultValues: { email: "" }
-  });
-  async function onSubmit(values) {
-    await new Promise((r2) => setTimeout(r2, 700));
-    setSent(true);
-  }
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "glass-strong border-border/60 p-8 shadow-xl", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-2 text-center", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-12 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-primary shadow", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "size-6", "aria-hidden": true }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "font-display text-2xl font-semibold tracking-tight text-foreground", children: "Reset your password" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground", children: "Enter your email and we'll send you a reset link." })
-    ] }),
-    sent ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      motion.div,
-      {
-        initial: { opacity: 0, y: 12 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.4 },
-        className: "mt-8 flex flex-col items-center gap-4 text-center",
-        "data-ocid": "forgot_password.success_state",
-        children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheck, { className: "size-12 text-success", "aria-hidden": true }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-medium text-foreground", children: "Check your inbox" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground", children: "If an account exists for that email, a reset link is on its way." })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            Button,
-            {
-              type: "button",
-              variant: "outline",
-              className: "w-full",
-              onClick: onBack,
-              "data-ocid": "forgot_password.back_button",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowLeft, { className: "size-4", "aria-hidden": true }),
-                "Back to sign in"
-              ]
-            }
-          )
-        ]
-      }
-    ) : /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "form",
-      {
-        onSubmit: handleSubmit(onSubmit),
-        className: "mt-8 space-y-4",
-        noValidate: true,
-        children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Label, { htmlFor: "forgot-email", children: "Email" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                Mail,
-                {
-                  className: "pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground",
-                  "aria-hidden": true
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                Input,
-                {
-                  id: "forgot-email",
-                  type: "email",
-                  autoComplete: "email",
-                  placeholder: "you@example.com",
-                  className: "pl-9",
-                  "aria-invalid": !!errors.email,
-                  "data-ocid": "forgot_password.email_input",
-                  ...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                      message: "Enter a valid email address"
-                    }
-                  })
-                }
-              )
-            ] }),
-            errors.email && /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "p",
-              {
-                className: "text-xs text-destructive",
-                "data-ocid": "forgot_password.email.field_error",
-                children: errors.email.message
-              }
-            )
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            Button,
-            {
-              type: "submit",
-              className: "w-full",
-              disabled: isSubmitting,
-              "data-ocid": "forgot_password.submit_button",
-              children: isSubmitting ? /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "size-4 animate-spin", "aria-hidden": true }),
-                "Sending link…"
-              ] }) : "Send reset link"
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "button",
-            {
-              type: "button",
-              onClick: onBack,
-              className: "flex w-full items-center justify-center gap-1.5 text-xs font-medium text-muted-foreground transition-smooth hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded",
-              "data-ocid": "forgot_password.back_link",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowLeft, { className: "size-3.5", "aria-hidden": true }),
-                "Back to sign in"
-              ]
-            }
-          )
-        ]
-      }
-    )
-  ] });
-}
-function LoginForm({ onForgotPassword, onOtpRequired }) {
-  const loginWithEmail = useAuth((s) => s.loginWithEmail);
-  const loginWithII = useAuth((s) => s.loginWithII);
-  const { login: iiLogin } = useInternetIdentity();
-  const [submitError, setSubmitError] = reactExports.useState(null);
-  const [iiError, setIiError] = reactExports.useState(null);
-  const [iiLoading, setIiLoading] = reactExports.useState(false);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting }
-  } = useForm({
-    mode: "onBlur",
-    defaultValues: { email: "", password: "" }
-  });
-  async function onSubmit(values) {
-    setSubmitError(null);
-    await new Promise((r2) => setTimeout(r2, 600));
-    try {
-      loginWithEmail(values.email, values.password);
-      onOtpRequired(values.email);
-    } catch {
-      setSubmitError("Unable to sign in. Please check your credentials.");
-    }
-  }
-  async function handleII() {
-    setIiError(null);
-    setIiLoading(true);
-    try {
-      await iiLogin();
-      loginWithII("ii-principal-mock");
-      onOtpRequired("ii-principal");
-    } catch {
-      setIiError("Internet Identity login failed. Please try again.");
-    } finally {
-      setIiLoading(false);
-    }
-  }
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "glass-strong border-border/60 p-8 shadow-xl", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-2 text-center", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-12 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-primary shadow", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Lock, { className: "size-6", "aria-hidden": true }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "font-display text-2xl font-semibold tracking-tight text-foreground", children: "Welcome back" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground", children: "Sign in to your workspace to continue." })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "form",
-      {
-        onSubmit: handleSubmit(onSubmit),
-        className: "mt-8 space-y-4",
-        noValidate: true,
-        children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Label, { htmlFor: "email", children: "Email" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                Mail,
-                {
-                  className: "pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground",
-                  "aria-hidden": true
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                Input,
-                {
-                  id: "email",
-                  type: "email",
-                  autoComplete: "email",
-                  placeholder: "you@example.com",
-                  className: "pl-9",
-                  "aria-invalid": !!errors.email,
-                  "data-ocid": "login.email_input",
-                  ...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                      message: "Enter a valid email address"
-                    }
-                  })
-                }
-              )
-            ] }),
-            errors.email && /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "p",
-              {
-                className: "text-xs text-destructive",
-                "data-ocid": "login.email.field_error",
-                children: errors.email.message
-              }
-            )
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Label, { htmlFor: "password", children: "Password" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "button",
-                {
-                  type: "button",
-                  onClick: onForgotPassword,
-                  className: "text-xs font-medium text-primary transition-smooth hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded",
-                  "data-ocid": "login.forgot_password_link",
-                  children: "Forgot password?"
-                }
-              )
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                Lock,
-                {
-                  className: "pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground",
-                  "aria-hidden": true
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                Input,
-                {
-                  id: "password",
-                  type: "password",
-                  autoComplete: "current-password",
-                  placeholder: "••••••••",
-                  className: "pl-9",
-                  "aria-invalid": !!errors.password,
-                  "data-ocid": "login.password_input",
-                  ...register("password", {
-                    required: "Password is required",
-                    minLength: { value: 6, message: "At least 6 characters" }
-                  })
-                }
-              )
-            ] }),
-            errors.password && /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "p",
-              {
-                className: "text-xs text-destructive",
-                "data-ocid": "login.password.field_error",
-                children: errors.password.message
-              }
-            )
-          ] }),
-          submitError && /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "div",
-            {
-              className: "rounded-lg border border-destructive/30 bg-destructive/10 px-3 py-2 text-xs text-destructive",
-              "data-ocid": "login.error_state",
-              role: "alert",
-              children: submitError
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            Button,
-            {
-              type: "submit",
-              className: "w-full",
-              disabled: isSubmitting,
-              "data-ocid": "login.submit_button",
-              children: isSubmitting ? /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "size-4 animate-spin", "aria-hidden": true }),
-                "Signing in…"
-              ] }) : "Sign In"
-            }
-          )
-        ]
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative my-6", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 flex items-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-full border-t border-border" }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative flex justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-card px-3 text-xs uppercase tracking-wide text-muted-foreground", children: "or" }) })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      Button,
-      {
-        type: "button",
-        variant: "outline",
-        className: "w-full gap-2",
-        disabled: iiLoading,
-        "data-ocid": "login.ii_button",
-        onClick: handleII,
-        children: [
-          iiLoading ? /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "size-4 animate-spin", "aria-hidden": true }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Fingerprint, { className: "size-4", "aria-hidden": true }),
-          "Continue with Internet Identity"
-        ]
-      }
-    ),
-    iiError && /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "div",
-      {
-        className: "mt-3 rounded-lg border border-destructive/30 bg-destructive/10 px-3 py-2 text-xs text-destructive",
-        "data-ocid": "login.ii.error_state",
-        role: "alert",
-        children: iiError
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-center text-xs text-muted-foreground", children: "By continuing you agree to our Terms & Privacy Policy." })
-  ] });
-}
-motion(LoginForm);
-const OTP_LENGTH = 6;
-function OtpVerification({
-  email,
-  onVerified,
-  onResend
-}) {
-  const [digits, setDigits] = reactExports.useState(Array(OTP_LENGTH).fill(""));
-  const [error, setError] = reactExports.useState(null);
-  const [verifying, setVerifying] = reactExports.useState(false);
-  const [secondsLeft, setSecondsLeft] = reactExports.useState(30);
-  const inputsRef = reactExports.useRef([]);
-  reactExports.useEffect(() => {
-    var _a2;
-    (_a2 = inputsRef.current[0]) == null ? void 0 : _a2.focus();
-  }, []);
-  reactExports.useEffect(() => {
-    if (secondsLeft <= 0) return;
-    const t = setTimeout(() => setSecondsLeft((s) => s - 1), 1e3);
-    return () => clearTimeout(t);
-  }, [secondsLeft]);
-  function updateDigit(index2, value) {
-    var _a2;
-    const char = value.replace(/\D/g, "").slice(-1);
-    const next = [...digits];
-    next[index2] = char;
-    setDigits(next);
-    setError(null);
-    if (char && index2 < OTP_LENGTH - 1) {
-      (_a2 = inputsRef.current[index2 + 1]) == null ? void 0 : _a2.focus();
-    }
-  }
-  function handleKeyDown(index2, e) {
-    var _a2, _b2, _c2;
-    if (e.key === "Backspace" && !digits[index2] && index2 > 0) {
-      (_a2 = inputsRef.current[index2 - 1]) == null ? void 0 : _a2.focus();
-    }
-    if (e.key === "ArrowLeft" && index2 > 0) {
-      (_b2 = inputsRef.current[index2 - 1]) == null ? void 0 : _b2.focus();
-    }
-    if (e.key === "ArrowRight" && index2 < OTP_LENGTH - 1) {
-      (_c2 = inputsRef.current[index2 + 1]) == null ? void 0 : _c2.focus();
-    }
-  }
-  function handlePaste(e) {
-    var _a2;
-    e.preventDefault();
-    const pasted = e.clipboardData.getData("text").replace(/\D/g, "").slice(0, OTP_LENGTH);
-    if (!pasted) return;
-    const next = Array(OTP_LENGTH).fill("");
-    pasted.split("").forEach((c2, i) => {
-      next[i] = c2;
-    });
-    setDigits(next);
-    const focusIndex = Math.min(pasted.length, OTP_LENGTH - 1);
-    (_a2 = inputsRef.current[focusIndex]) == null ? void 0 : _a2.focus();
-  }
-  async function verify() {
-    const code = digits.join("");
-    if (code.length < OTP_LENGTH) {
-      setError("Enter all 6 digits.");
-      return;
-    }
-    setVerifying(true);
-    setError(null);
-    await new Promise((r2) => setTimeout(r2, 700));
-    setVerifying(false);
-    onVerified();
-  }
-  reactExports.useEffect(() => {
-    if (digits.every((d2) => d2 !== "") && !verifying) {
-      void verify();
-    }
-  }, [digits, verify, verifying]);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "glass-strong border-border/60 p-8 shadow-xl", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-2 text-center", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex size-12 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-primary shadow", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ShieldCheck, { className: "size-6", "aria-hidden": true }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "font-display text-2xl font-semibold tracking-tight text-foreground", children: "Verify it's you" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm text-muted-foreground", children: [
-        "We sent a 6-digit code to",
-        " ",
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-medium text-foreground", children: email }),
-        "."
-      ] })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-2", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Label, { htmlFor: "otp-0", children: "Verification code" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-between gap-2", onPaste: handlePaste, children: digits.map((d2, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-        Input,
-        {
-          id: i === 0 ? "otp-0" : void 0,
-          ref: (el) => {
-            inputsRef.current[i] = el;
-          },
-          type: "text",
-          inputMode: "numeric",
-          maxLength: 1,
-          value: d2,
-          autoComplete: i === 0 ? "one-time-code" : "off",
-          "aria-label": `Digit ${i + 1}`,
-          className: "h-14 w-12 text-center text-lg font-semibold",
-          "data-ocid": `otp.input.${i + 1}`,
-          onChange: (e) => updateDigit(i, e.target.value),
-          onKeyDown: (e) => handleKeyDown(i, e)
-        },
-        `otp-${i}-${d2}`
-      )) }),
-      error && /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "p",
-        {
-          className: "text-xs text-destructive",
-          "data-ocid": "otp.field_error",
-          role: "alert",
-          children: error
-        }
-      )
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Button,
-      {
-        type: "button",
-        className: "mt-6 w-full",
-        disabled: verifying || digits.some((d2) => d2 === ""),
-        onClick: verify,
-        "data-ocid": "otp.submit_button",
-        children: verifying ? /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "size-4 animate-spin", "aria-hidden": true }),
-          "Verifying…"
-        ] }) : "Verify & continue"
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 flex items-center justify-center gap-1.5 text-xs text-muted-foreground", children: secondsLeft > 0 ? /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { "data-ocid": "otp.resend_countdown", children: [
-      "Resend code in ",
-      secondsLeft,
-      "s"
-    ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "button",
-      {
-        type: "button",
-        onClick: () => {
-          setSecondsLeft(30);
-          onResend();
-        },
-        className: "font-medium text-primary transition-smooth hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded",
-        "data-ocid": "otp.resend_button",
-        children: "Resend code"
-      }
-    ) })
-  ] });
-}
-const loginRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/login",
-  component: LoginPage
-});
-function LoginPage() {
-  const navigate = useNavigate();
-  const [step, setStep] = reactExports.useState("login");
-  const [otpEmail, setOtpEmail] = reactExports.useState("");
-  function goToDashboard() {
-    navigate({ to: "/dashboard" });
-  }
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { className: "relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-4 py-12", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "div",
-      {
-        "aria-hidden": true,
-        className: "pointer-events-none absolute -top-40 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full opacity-25 blur-3xl gradient-primary"
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "div",
-      {
-        "aria-hidden": true,
-        className: "pointer-events-none absolute -bottom-40 -right-20 h-[28rem] w-[28rem] rounded-full opacity-20 blur-3xl gradient-accent"
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative w-full max-w-md", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(AnimatePresence, { mode: "wait", children: [
-      step === "login" && /* @__PURE__ */ jsxRuntimeExports.jsx(
-        motion.div,
-        {
-          initial: { opacity: 0, y: 24, scale: 0.97 },
-          animate: { opacity: 1, y: 0, scale: 1 },
-          exit: { opacity: 0, y: -16, scale: 0.98 },
-          transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
-          children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-            LoginForm,
-            {
-              onForgotPassword: () => setStep("forgot"),
-              onOtpRequired: (email) => {
-                setOtpEmail(email);
-                setStep("otp");
-              }
-            }
-          )
-        },
-        "login"
-      ),
-      step === "forgot" && /* @__PURE__ */ jsxRuntimeExports.jsx(
-        motion.div,
-        {
-          initial: { opacity: 0, y: 24, scale: 0.97 },
-          animate: { opacity: 1, y: 0, scale: 1 },
-          exit: { opacity: 0, y: -16, scale: 0.98 },
-          transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
-          children: /* @__PURE__ */ jsxRuntimeExports.jsx(ForgotPasswordForm, { onBack: () => setStep("login") })
-        },
-        "forgot"
-      ),
-      step === "otp" && /* @__PURE__ */ jsxRuntimeExports.jsx(
-        motion.div,
-        {
-          initial: { opacity: 0, y: 24, scale: 0.97 },
-          animate: { opacity: 1, y: 0, scale: 1 },
-          exit: { opacity: 0, y: -16, scale: 0.98 },
-          transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
-          children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-            OtpVerification,
-            {
-              email: otpEmail,
-              onVerified: goToDashboard,
-              onResend: () => {
-              }
-            }
-          )
-        },
-        "otp"
-      )
-    ] }) })
-  ] });
-}
-const dashboardTree = dashboardLayoutRoute.addChildren([
-  dashboardHomeRoute,
+const workspaceTree = dashboardLayoutRoute.addChildren([
   aiChatRoute,
   toolsRoute,
-  documentsRoute,
-  workspaceRoute,
   internetSearchRoute,
-  youtubeRoute,
-  knowledgeBaseRoute,
-  settingsRoute,
-  adminRoute
+  documentsRoute,
+  activityRoute
 ]);
-const routeTree = rootRoute.addChildren([
-  landingRoute,
-  loginRoute,
-  dashboardTree
-]);
+const routeTree = rootRoute.addChildren([workspaceTree]);
 const router = createRouter({
   routeTree,
   defaultPreload: "intent"

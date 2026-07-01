@@ -10,6 +10,13 @@ import type { ActorMethod } from '@icp-sdk/core/agent';
 import type { IDL } from '@icp-sdk/core/candid';
 import type { Principal } from '@icp-sdk/core/principal';
 
+export interface ActivityEntry {
+  'id' : bigint,
+  'activityType' : string,
+  'summary' : string,
+  'timestamp' : bigint,
+  'details' : string,
+}
 export interface Chat {
   'id' : bigint,
   'title' : string,
@@ -18,6 +25,14 @@ export interface Chat {
   'updatedAt' : bigint,
   'pinned' : boolean,
   'folder' : [] | [bigint],
+}
+export interface DocumentRecord {
+  'id' : bigint,
+  'title' : string,
+  'content' : string,
+  'createdAt' : bigint,
+  'fileType' : string,
+  'updatedAt' : bigint,
 }
 export interface Folder { 'id' : bigint, 'name' : string, 'createdAt' : bigint }
 export interface Message {
@@ -47,29 +62,102 @@ export type Model = { 'gpt' : null } |
 export type Role = { 'systemMsg' : null } |
   { 'user' : null } |
   { 'assistant' : null };
+export interface SearchRecord {
+  'id' : bigint,
+  'queryText' : string,
+  'timestamp' : bigint,
+  'resultCount' : bigint,
+}
+export type SessionId = string;
+export interface ToolUsage {
+  'id' : bigint,
+  'inputSummary' : string,
+  'outputSummary' : string,
+  'timestamp' : bigint,
+  'toolName' : string,
+}
 export interface _SERVICE {
+  '__activity' : ActorMethod<
+    [[] | [SessionId], [] | [bigint]],
+    Array<[SessionId, Array<ActivityEntry>]>
+  >,
   '__chats' : ActorMethod<
-    [[] | [Principal], [] | [bigint]],
-    Array<[Principal, Array<Chat>]>
+    [[] | [SessionId], [] | [bigint]],
+    Array<[SessionId, Array<Chat>]>
+  >,
+  '__documents' : ActorMethod<
+    [[] | [SessionId], [] | [bigint]],
+    Array<[SessionId, Array<DocumentRecord>]>
   >,
   '__folders' : ActorMethod<
-    [[] | [Principal], [] | [bigint]],
-    Array<[Principal, Array<Folder>]>
+    [[] | [SessionId], [] | [bigint]],
+    Array<[SessionId, Array<Folder>]>
   >,
+  '__nextActivityId' : ActorMethod<[], any>,
   '__nextChatId' : ActorMethod<[], any>,
+  '__nextDocumentId' : ActorMethod<[], any>,
   '__nextFolderId' : ActorMethod<[], any>,
-  'addMessage' : ActorMethod<[bigint, Message], [] | [Chat]>,
-  'createChat' : ActorMethod<[string], Chat>,
-  'createFolder' : ActorMethod<[string], Folder>,
-  'deleteChat' : ActorMethod<[bigint], boolean>,
-  'deleteFolder' : ActorMethod<[bigint], boolean>,
-  'getChat' : ActorMethod<[bigint], [] | [Chat]>,
-  'listChats' : ActorMethod<[], Array<Chat>>,
-  'listFolders' : ActorMethod<[], Array<Folder>>,
-  'renameFolder' : ActorMethod<[bigint, string], [] | [Folder]>,
+  '__nextSearchId' : ActorMethod<[], any>,
+  '__nextToolUsageId' : ActorMethod<[], any>,
+  '__searchHistory' : ActorMethod<
+    [[] | [SessionId], [] | [bigint]],
+    Array<[SessionId, Array<SearchRecord>]>
+  >,
+  '__toolUsage' : ActorMethod<
+    [[] | [SessionId], [] | [bigint]],
+    Array<[SessionId, Array<ToolUsage>]>
+  >,
+  'addMessage' : ActorMethod<[SessionId, bigint, Message], [] | [Chat]>,
+  /**
+   * / Per-session tool-usage records, keyed by anonymous session id.
+   */
+  'clearActivity' : ActorMethod<[SessionId], boolean>,
+  'createChat' : ActorMethod<[SessionId, string], Chat>,
+  'createDocument' : ActorMethod<[SessionId, string, string], DocumentRecord>,
+  'createFolder' : ActorMethod<[SessionId, string], Folder>,
+  'deleteChat' : ActorMethod<[SessionId, bigint], boolean>,
+  /**
+   * / Global next-activity-id counter (monotonic across all sessions).
+   */
+  'deleteDocument' : ActorMethod<[SessionId, bigint], boolean>,
+  'deleteFolder' : ActorMethod<[SessionId, bigint], boolean>,
+  'getChat' : ActorMethod<[SessionId, bigint], [] | [Chat]>,
+  'getDocument' : ActorMethod<[SessionId, bigint], [] | [DocumentRecord]>,
+  /**
+   * / Per-session activity log, keyed by anonymous session id.
+   */
+  'listActivity' : ActorMethod<[SessionId], Array<ActivityEntry>>,
+  'listChats' : ActorMethod<[SessionId], Array<Chat>>,
+  'listDocuments' : ActorMethod<[SessionId], Array<DocumentRecord>>,
+  'listFolders' : ActorMethod<[SessionId], Array<Folder>>,
+  /**
+   * / Per-session activity log, keyed by anonymous session id.
+   */
+  'listSearchHistory' : ActorMethod<[SessionId], Array<SearchRecord>>,
+  /**
+   * / Per-session activity log, keyed by anonymous session id.
+   */
+  'listToolUsage' : ActorMethod<[SessionId], Array<ToolUsage>>,
+  'logActivity' : ActorMethod<
+    [SessionId, string, string, string],
+    ActivityEntry
+  >,
+  'logSearch' : ActorMethod<[SessionId, string, bigint], SearchRecord>,
+  'logToolUsage' : ActorMethod<[SessionId, string, string, string], ToolUsage>,
+  'renameFolder' : ActorMethod<[SessionId, bigint, string], [] | [Folder]>,
+  /**
+   * / Global next-folder-id counter (monotonic across all sessions).
+   */
   'updateChat' : ActorMethod<
-    [bigint, [] | [string], [] | [[] | [bigint]], [] | [boolean]],
+    [SessionId, bigint, [] | [string], [] | [[] | [bigint]], [] | [boolean]],
     [] | [Chat]
+  >,
+  /**
+   * / Per-session activity log, keyed by anonymous session id.
+   */
+  'updateDocument' : ActorMethod<
+    [SessionId, bigint, string, string],
+    [] | [DocumentRecord]
   >,
 }
 export declare const idlService: IDL.ServiceClass;

@@ -144,7 +144,7 @@ export function ChatHistory({
           </Section>
         )}
 
-        {folders.map((folder) => {
+        {folders.map((folder, folderIdx) => {
           const items = folderChats(folder.id);
           if (items.length === 0) return null;
           return (
@@ -155,7 +155,7 @@ export function ChatHistory({
                 <button
                   type="button"
                   onClick={() => onDeleteFolder(folder.id)}
-                  data-ocid={`chat.history.delete_folder.${folder.id}`}
+                  data-ocid={`chat.history.delete_folder.${folderIdx + 1}`}
                   className="text-muted-foreground hover:text-destructive"
                   aria-label={`Delete folder ${folder.name}`}
                 >

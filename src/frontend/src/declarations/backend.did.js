@@ -8,6 +8,14 @@
 
 import { IDL } from '@icp-sdk/core/candid';
 
+export const SessionId = IDL.Text;
+export const ActivityEntry = IDL.Record({
+  'id' : IDL.Nat,
+  'activityType' : IDL.Text,
+  'summary' : IDL.Text,
+  'timestamp' : IDL.Int,
+  'details' : IDL.Text,
+});
 export const Model = IDL.Variant({
   'gpt' : IDL.Null,
   'claude' : IDL.Null,
@@ -50,36 +58,109 @@ export const Chat = IDL.Record({
   'pinned' : IDL.Bool,
   'folder' : IDL.Opt(IDL.Nat),
 });
+export const DocumentRecord = IDL.Record({
+  'id' : IDL.Nat,
+  'title' : IDL.Text,
+  'content' : IDL.Text,
+  'createdAt' : IDL.Int,
+  'fileType' : IDL.Text,
+  'updatedAt' : IDL.Int,
+});
 export const Folder = IDL.Record({
   'id' : IDL.Nat,
   'name' : IDL.Text,
   'createdAt' : IDL.Int,
 });
+export const SearchRecord = IDL.Record({
+  'id' : IDL.Nat,
+  'queryText' : IDL.Text,
+  'timestamp' : IDL.Int,
+  'resultCount' : IDL.Nat,
+});
+export const ToolUsage = IDL.Record({
+  'id' : IDL.Nat,
+  'inputSummary' : IDL.Text,
+  'outputSummary' : IDL.Text,
+  'timestamp' : IDL.Int,
+  'toolName' : IDL.Text,
+});
 
 export const idlService = IDL.Service({
+  '__activity' : IDL.Func(
+      [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+      [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(ActivityEntry)))],
+      ['query'],
+    ),
   '__chats' : IDL.Func(
-      [IDL.Opt(IDL.Principal), IDL.Opt(IDL.Nat)],
-      [IDL.Vec(IDL.Tuple(IDL.Principal, IDL.Vec(Chat)))],
+      [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+      [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(Chat)))],
+      ['query'],
+    ),
+  '__documents' : IDL.Func(
+      [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+      [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(DocumentRecord)))],
       ['query'],
     ),
   '__folders' : IDL.Func(
-      [IDL.Opt(IDL.Principal), IDL.Opt(IDL.Nat)],
-      [IDL.Vec(IDL.Tuple(IDL.Principal, IDL.Vec(Folder)))],
+      [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+      [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(Folder)))],
       ['query'],
     ),
+  '__nextActivityId' : IDL.Func([], [IDL.Reserved], ['query']),
   '__nextChatId' : IDL.Func([], [IDL.Reserved], ['query']),
+  '__nextDocumentId' : IDL.Func([], [IDL.Reserved], ['query']),
   '__nextFolderId' : IDL.Func([], [IDL.Reserved], ['query']),
-  'addMessage' : IDL.Func([IDL.Nat, Message], [IDL.Opt(Chat)], []),
-  'createChat' : IDL.Func([IDL.Text], [Chat], []),
-  'createFolder' : IDL.Func([IDL.Text], [Folder], []),
-  'deleteChat' : IDL.Func([IDL.Nat], [IDL.Bool], []),
-  'deleteFolder' : IDL.Func([IDL.Nat], [IDL.Bool], []),
-  'getChat' : IDL.Func([IDL.Nat], [IDL.Opt(Chat)], []),
-  'listChats' : IDL.Func([], [IDL.Vec(Chat)], []),
-  'listFolders' : IDL.Func([], [IDL.Vec(Folder)], []),
-  'renameFolder' : IDL.Func([IDL.Nat, IDL.Text], [IDL.Opt(Folder)], []),
+  '__nextSearchId' : IDL.Func([], [IDL.Reserved], ['query']),
+  '__nextToolUsageId' : IDL.Func([], [IDL.Reserved], ['query']),
+  '__searchHistory' : IDL.Func(
+      [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+      [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(SearchRecord)))],
+      ['query'],
+    ),
+  '__toolUsage' : IDL.Func(
+      [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+      [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(ToolUsage)))],
+      ['query'],
+    ),
+  'addMessage' : IDL.Func([SessionId, IDL.Nat, Message], [IDL.Opt(Chat)], []),
+  'clearActivity' : IDL.Func([SessionId], [IDL.Bool], []),
+  'createChat' : IDL.Func([SessionId, IDL.Text], [Chat], []),
+  'createDocument' : IDL.Func(
+      [SessionId, IDL.Text, IDL.Text],
+      [DocumentRecord],
+      [],
+    ),
+  'createFolder' : IDL.Func([SessionId, IDL.Text], [Folder], []),
+  'deleteChat' : IDL.Func([SessionId, IDL.Nat], [IDL.Bool], []),
+  'deleteDocument' : IDL.Func([SessionId, IDL.Nat], [IDL.Bool], []),
+  'deleteFolder' : IDL.Func([SessionId, IDL.Nat], [IDL.Bool], []),
+  'getChat' : IDL.Func([SessionId, IDL.Nat], [IDL.Opt(Chat)], []),
+  'getDocument' : IDL.Func([SessionId, IDL.Nat], [IDL.Opt(DocumentRecord)], []),
+  'listActivity' : IDL.Func([SessionId], [IDL.Vec(ActivityEntry)], []),
+  'listChats' : IDL.Func([SessionId], [IDL.Vec(Chat)], []),
+  'listDocuments' : IDL.Func([SessionId], [IDL.Vec(DocumentRecord)], []),
+  'listFolders' : IDL.Func([SessionId], [IDL.Vec(Folder)], []),
+  'listSearchHistory' : IDL.Func([SessionId], [IDL.Vec(SearchRecord)], []),
+  'listToolUsage' : IDL.Func([SessionId], [IDL.Vec(ToolUsage)], []),
+  'logActivity' : IDL.Func(
+      [SessionId, IDL.Text, IDL.Text, IDL.Text],
+      [ActivityEntry],
+      [],
+    ),
+  'logSearch' : IDL.Func([SessionId, IDL.Text, IDL.Nat], [SearchRecord], []),
+  'logToolUsage' : IDL.Func(
+      [SessionId, IDL.Text, IDL.Text, IDL.Text],
+      [ToolUsage],
+      [],
+    ),
+  'renameFolder' : IDL.Func(
+      [SessionId, IDL.Nat, IDL.Text],
+      [IDL.Opt(Folder)],
+      [],
+    ),
   'updateChat' : IDL.Func(
       [
+        SessionId,
         IDL.Nat,
         IDL.Opt(IDL.Text),
         IDL.Opt(IDL.Opt(IDL.Nat)),
@@ -88,11 +169,24 @@ export const idlService = IDL.Service({
       [IDL.Opt(Chat)],
       [],
     ),
+  'updateDocument' : IDL.Func(
+      [SessionId, IDL.Nat, IDL.Text, IDL.Text],
+      [IDL.Opt(DocumentRecord)],
+      [],
+    ),
 });
 
 export const idlInitArgs = [];
 
 export const idlFactory = ({ IDL }) => {
+  const SessionId = IDL.Text;
+  const ActivityEntry = IDL.Record({
+    'id' : IDL.Nat,
+    'activityType' : IDL.Text,
+    'summary' : IDL.Text,
+    'timestamp' : IDL.Int,
+    'details' : IDL.Text,
+  });
   const Model = IDL.Variant({
     'gpt' : IDL.Null,
     'claude' : IDL.Null,
@@ -135,42 +229,124 @@ export const idlFactory = ({ IDL }) => {
     'pinned' : IDL.Bool,
     'folder' : IDL.Opt(IDL.Nat),
   });
+  const DocumentRecord = IDL.Record({
+    'id' : IDL.Nat,
+    'title' : IDL.Text,
+    'content' : IDL.Text,
+    'createdAt' : IDL.Int,
+    'fileType' : IDL.Text,
+    'updatedAt' : IDL.Int,
+  });
   const Folder = IDL.Record({
     'id' : IDL.Nat,
     'name' : IDL.Text,
     'createdAt' : IDL.Int,
   });
+  const SearchRecord = IDL.Record({
+    'id' : IDL.Nat,
+    'queryText' : IDL.Text,
+    'timestamp' : IDL.Int,
+    'resultCount' : IDL.Nat,
+  });
+  const ToolUsage = IDL.Record({
+    'id' : IDL.Nat,
+    'inputSummary' : IDL.Text,
+    'outputSummary' : IDL.Text,
+    'timestamp' : IDL.Int,
+    'toolName' : IDL.Text,
+  });
   
   return IDL.Service({
+    '__activity' : IDL.Func(
+        [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+        [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(ActivityEntry)))],
+        ['query'],
+      ),
     '__chats' : IDL.Func(
-        [IDL.Opt(IDL.Principal), IDL.Opt(IDL.Nat)],
-        [IDL.Vec(IDL.Tuple(IDL.Principal, IDL.Vec(Chat)))],
+        [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+        [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(Chat)))],
+        ['query'],
+      ),
+    '__documents' : IDL.Func(
+        [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+        [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(DocumentRecord)))],
         ['query'],
       ),
     '__folders' : IDL.Func(
-        [IDL.Opt(IDL.Principal), IDL.Opt(IDL.Nat)],
-        [IDL.Vec(IDL.Tuple(IDL.Principal, IDL.Vec(Folder)))],
+        [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+        [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(Folder)))],
         ['query'],
       ),
+    '__nextActivityId' : IDL.Func([], [IDL.Reserved], ['query']),
     '__nextChatId' : IDL.Func([], [IDL.Reserved], ['query']),
+    '__nextDocumentId' : IDL.Func([], [IDL.Reserved], ['query']),
     '__nextFolderId' : IDL.Func([], [IDL.Reserved], ['query']),
-    'addMessage' : IDL.Func([IDL.Nat, Message], [IDL.Opt(Chat)], []),
-    'createChat' : IDL.Func([IDL.Text], [Chat], []),
-    'createFolder' : IDL.Func([IDL.Text], [Folder], []),
-    'deleteChat' : IDL.Func([IDL.Nat], [IDL.Bool], []),
-    'deleteFolder' : IDL.Func([IDL.Nat], [IDL.Bool], []),
-    'getChat' : IDL.Func([IDL.Nat], [IDL.Opt(Chat)], []),
-    'listChats' : IDL.Func([], [IDL.Vec(Chat)], []),
-    'listFolders' : IDL.Func([], [IDL.Vec(Folder)], []),
-    'renameFolder' : IDL.Func([IDL.Nat, IDL.Text], [IDL.Opt(Folder)], []),
+    '__nextSearchId' : IDL.Func([], [IDL.Reserved], ['query']),
+    '__nextToolUsageId' : IDL.Func([], [IDL.Reserved], ['query']),
+    '__searchHistory' : IDL.Func(
+        [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+        [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(SearchRecord)))],
+        ['query'],
+      ),
+    '__toolUsage' : IDL.Func(
+        [IDL.Opt(SessionId), IDL.Opt(IDL.Nat)],
+        [IDL.Vec(IDL.Tuple(SessionId, IDL.Vec(ToolUsage)))],
+        ['query'],
+      ),
+    'addMessage' : IDL.Func([SessionId, IDL.Nat, Message], [IDL.Opt(Chat)], []),
+    'clearActivity' : IDL.Func([SessionId], [IDL.Bool], []),
+    'createChat' : IDL.Func([SessionId, IDL.Text], [Chat], []),
+    'createDocument' : IDL.Func(
+        [SessionId, IDL.Text, IDL.Text],
+        [DocumentRecord],
+        [],
+      ),
+    'createFolder' : IDL.Func([SessionId, IDL.Text], [Folder], []),
+    'deleteChat' : IDL.Func([SessionId, IDL.Nat], [IDL.Bool], []),
+    'deleteDocument' : IDL.Func([SessionId, IDL.Nat], [IDL.Bool], []),
+    'deleteFolder' : IDL.Func([SessionId, IDL.Nat], [IDL.Bool], []),
+    'getChat' : IDL.Func([SessionId, IDL.Nat], [IDL.Opt(Chat)], []),
+    'getDocument' : IDL.Func(
+        [SessionId, IDL.Nat],
+        [IDL.Opt(DocumentRecord)],
+        [],
+      ),
+    'listActivity' : IDL.Func([SessionId], [IDL.Vec(ActivityEntry)], []),
+    'listChats' : IDL.Func([SessionId], [IDL.Vec(Chat)], []),
+    'listDocuments' : IDL.Func([SessionId], [IDL.Vec(DocumentRecord)], []),
+    'listFolders' : IDL.Func([SessionId], [IDL.Vec(Folder)], []),
+    'listSearchHistory' : IDL.Func([SessionId], [IDL.Vec(SearchRecord)], []),
+    'listToolUsage' : IDL.Func([SessionId], [IDL.Vec(ToolUsage)], []),
+    'logActivity' : IDL.Func(
+        [SessionId, IDL.Text, IDL.Text, IDL.Text],
+        [ActivityEntry],
+        [],
+      ),
+    'logSearch' : IDL.Func([SessionId, IDL.Text, IDL.Nat], [SearchRecord], []),
+    'logToolUsage' : IDL.Func(
+        [SessionId, IDL.Text, IDL.Text, IDL.Text],
+        [ToolUsage],
+        [],
+      ),
+    'renameFolder' : IDL.Func(
+        [SessionId, IDL.Nat, IDL.Text],
+        [IDL.Opt(Folder)],
+        [],
+      ),
     'updateChat' : IDL.Func(
         [
+          SessionId,
           IDL.Nat,
           IDL.Opt(IDL.Text),
           IDL.Opt(IDL.Opt(IDL.Nat)),
           IDL.Opt(IDL.Bool),
         ],
         [IDL.Opt(Chat)],
+        [],
+      ),
+    'updateDocument' : IDL.Func(
+        [SessionId, IDL.Nat, IDL.Text, IDL.Text],
+        [IDL.Opt(DocumentRecord)],
         [],
       ),
   });

@@ -25,7 +25,11 @@ function uuidV4(): string {
   return `${hex.slice(0, 4).join("")}-${hex.slice(4, 6).join("")}-${hex.slice(6, 8).join("")}-${hex.slice(8, 10).join("")}-${hex.slice(10, 16).join("")}`;
 }
 
-export function UUIDGenerator() {
+export interface ToolUseProps {
+  onUse?: (inputSummary: string, outputSummary: string) => void;
+}
+
+export function UUIDGenerator({ onUse }: ToolUseProps) {
   const [version, setVersion] = useState("v4");
   const [count, setCount] = useState(5);
   const [uuids, setUuids] = useState<string[]>(() =>
@@ -34,7 +38,11 @@ export function UUIDGenerator() {
 
   const generate = () => {
     const n = Math.max(1, Math.min(100, count));
-    setUuids(Array.from({ length: n }, uuidV4));
+    const result = Array.from({ length: n }, uuidV4);
+    setUuids(result);
+    if (onUse) {
+      onUse(`${version} × ${n}`, result[0] ?? "");
+    }
   };
 
   const copyOne = (id: string) => {

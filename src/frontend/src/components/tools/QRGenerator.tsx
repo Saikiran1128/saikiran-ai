@@ -229,11 +229,16 @@ function encodeQR(text: string): boolean[][] | null {
   }
 }
 
-export function QRGenerator() {
+export interface ToolUseProps {
+  onUse?: (inputSummary: string, outputSummary: string) => void;
+}
+
+export function QRGenerator({ onUse }: ToolUseProps) {
   const [text, setText] = useState("https://caffeine.ai");
   const [size, setSize] = useState(256);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: redraw only when text/size change; onUse is a stable callback
   useEffect(() => {
     const matrix = encodeQR(text || " ");
     const canvas = canvasRef.current;
@@ -252,6 +257,12 @@ export function QRGenerator() {
       for (let c = 0; c < n; c++) {
         if (matrix[r][c]) ctx.fillRect(c * scale, r * scale, scale, scale);
       }
+    }
+    if (onUse && text) {
+      onUse(
+        text.length > 80 ? `${text.slice(0, 80)}…` : text,
+        `QR code ${matrix.length}×${matrix.length} @ ${size}px`,
+      );
     }
   }, [text, size]);
 

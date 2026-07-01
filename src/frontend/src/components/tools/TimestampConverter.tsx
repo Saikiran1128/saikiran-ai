@@ -7,6 +7,10 @@ import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
+export interface ToolUseProps {
+  onUse?: (inputSummary: string, outputSummary: string) => void;
+}
+
 function pad(n: number) {
   return n < 10 ? `0${n}` : `${n}`;
 }
@@ -29,7 +33,7 @@ function formatHuman(d: Date) {
 
 const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-export default function TimestampConverter() {
+export default function TimestampConverter({ onUse }: ToolUseProps) {
   const now = Math.floor(Date.now() / 1000);
   const [unix, setUnix] = useState<string>(String(now));
   const [date, setDate] = useState<string>(formatLocal(new Date()));
@@ -52,13 +56,20 @@ export default function TimestampConverter() {
     if (dateValid && dateNum !== null) {
       setUnix(String(dateNum));
       toast.success("Pulled date into timestamp");
+      if (onUse) {
+        onUse(`date → ${date}`, `unix ${dateNum}`);
+      }
     }
   };
 
   const swapToDate = () => {
     if (unixValid && unixDate) {
-      setDate(formatLocal(unixDate));
+      const local = formatLocal(unixDate);
+      setDate(local);
       toast.success("Pulled timestamp into date");
+      if (onUse) {
+        onUse(`unix → ${unix}`, formatHuman(unixDate));
+      }
     }
   };
 
@@ -68,9 +79,11 @@ export default function TimestampConverter() {
       if (which === "unix") {
         setCopiedUnix(true);
         setTimeout(() => setCopiedUnix(false), 1500);
+        if (onUse) onUse(`unix ${unix}`, "Copied unix timestamp");
       } else {
         setCopiedDate(true);
         setTimeout(() => setCopiedDate(false), 1500);
+        if (onUse) onUse(`date ${date}`, "Copied date string");
       }
       toast.success("Copied to clipboard");
     } catch {

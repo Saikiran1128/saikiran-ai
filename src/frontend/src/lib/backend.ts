@@ -1,38 +1,36 @@
-import { useEffect, useState } from "react";
-import { createActor } from "@/backend";
-import { useAuth } from "@/lib/auth";
+import { useActor } from "@caffeineai/core-infrastructure";
 
-// useBackend — returns a ready-to-use actor instance for chat methods.
-// The actor is created once per session and reused across renders.
-// Real backend calls go through this actor (see hooks/useQueries.ts).
+import { createActor } from "@/backend";
+
+// useBackend — returns a ready-to-use backend actor instance, unconditionally.
+//
+// The actor is created via the core-infrastructure `useActor(createActor)`
+// hook, which mints an agent-backed actor whether or not an Internet Identity
+// is present. In no-login mode the actor is created with an anonymous identity,
+// so chat / tools / search / documents all work immediately on load with no
+// auth gate.
+//
+// Real backend calls go through this actor (see hooks/useQueries.ts). Every
+// backend method takes a `SessionId` as its first argument — pair this hook
+// with `useSession()` from `@/lib/session` at the call site.
 
 type Actor = ReturnType<typeof createActor>;
 
-export function useBackend(): { actor: Actor | null; ready: boolean } {
-  const isAuthenticated = useAuth((s) => s.isAuthenticated);
-  const [actor, setActor] = useState<Actor | null>(null);
-
-  useEffect(() => {
-    if (!isAuthenticated) {
-      setActor(null);
-      return;
-    }
-    try {
-      // createActor requires (canisterId, uploadFile, downloadFile, options?).
-      // We don't have a deployed canister in this version, so pass safe
-      // placeholders; if anything throws, fall back to null (chat route has
-      // an in-memory store).
-      setActor(
-        createActor(
-          "rrkah-fqaaa-aaaaa-aaaaq-cai",
-          (async () => new Uint8Array()) as never,
-          (async () => ({})) as never,
-        ),
-      );
-    } catch {
-      setActor(null);
-    }
-  }, [isAuthenticated]);
-
-  return { actor, ready: actor !== null };
+export interface UseBackendResult {
+  actor: Actor | null;
+  /** True when the actor has resolved and is not currently (re)fetching. */
+  ready: boolean;
+  /** Mirrors core-infrastructure isFetching for finer-grained UI. */
+  isFetching: boolean;
 }
+
+export function useBackend(): UseBackendResult {
+  const { actor, isFetching } = useActor(createActor);
+  return {
+    actor: actor as Actor | null,
+    ready: !!actor && !isFetching,
+    isFetching,
+  };
+}
+
+export type { Actor };

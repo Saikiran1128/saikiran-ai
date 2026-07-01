@@ -14,6 +14,10 @@ interface Options {
   symbols: boolean;
 }
 
+export interface ToolUseProps {
+  onUse?: (inputSummary: string, outputSummary: string) => void;
+}
+
 const STRENGTH_BARS = ["bar-0", "bar-1", "bar-2", "bar-3", "bar-4"] as const;
 
 const SETS: Record<keyof Options, string> = {
@@ -55,7 +59,7 @@ function strength(pwd: string): { score: number; label: string } {
   return { score, label: labels[score] };
 }
 
-export function PasswordGenerator() {
+export function PasswordGenerator({ onUse }: ToolUseProps) {
   const [length, setLength] = useState(20);
   const [opts, setOpts] = useState<Options>({
     upper: true,
@@ -65,8 +69,16 @@ export function PasswordGenerator() {
   });
   const [password, setPassword] = useState("");
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: regenerate only when length/opts change; onUse is a stable callback
   const regenerate = useCallback(() => {
-    setPassword(generate(length, opts));
+    const pwd = generate(length, opts);
+    setPassword(pwd);
+    if (onUse && pwd) {
+      const sets = Object.keys(SETS)
+        .filter((k) => opts[k as keyof Options])
+        .join(", ");
+      onUse(`len=${length}; sets=${sets}`, `${pwd.length}-char password`);
+    }
   }, [length, opts]);
 
   useEffect(() => {

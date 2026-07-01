@@ -1,7 +1,7 @@
 import { Search, Sparkles, Wrench } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { motion } from "motion/react";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { toast } from "sonner";
 
 import { Badge } from "@/components/ui/badge";
@@ -16,6 +16,8 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useLogActivity, useLogToolUsage } from "@/hooks/useQueries";
+import { useSession } from "@/lib/session";
 import { Base64Tool } from "./Base64Tool";
 import { JSONFormatter } from "./JSONFormatter";
 import MarkdownPreview from "./MarkdownPreview";
@@ -34,6 +36,10 @@ type Category =
   | "Text"
   | "Developers";
 
+interface ToolUseProps {
+  onUse?: (inputSummary: string, outputSummary: string) => void;
+}
+
 interface Tool {
   id: string;
   name: string;
@@ -41,7 +47,7 @@ interface Tool {
   category: Exclude<Category, "All">;
   icon: LucideIcon;
   available: boolean;
-  component?: React.ComponentType;
+  component?: React.ComponentType<ToolUseProps>;
 }
 
 const TOOLS: Tool[] = [
@@ -279,9 +285,24 @@ const CATEGORIES: Category[] = [
 ];
 
 export function ToolsMarketplace() {
+  const { sessionId } = useSession();
+  const logToolUsage = useLogToolUsage(sessionId);
+  const logActivity = useLogActivity(sessionId);
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [openTool, setOpenTool] = useState<Tool | null>(null);
+
+  const handleToolUse = useCallback(
+    (toolName: string) => (inputSummary: string, outputSummary: string) => {
+      logToolUsage.mutate({ toolName, inputSummary, outputSummary });
+      logActivity.mutate({
+        activityType: "tool",
+        summary: `${toolName}: ${inputSummary}`,
+        details: outputSummary,
+      });
+    },
+    [logToolUsage, logActivity],
+  );
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -478,7 +499,7 @@ export function ToolsMarketplace() {
                 <DialogDescription>{openTool.description}</DialogDescription>
               </DialogHeader>
               <div className="max-h-[60vh] overflow-y-auto pr-1">
-                <ActiveComponent />
+                <ActiveComponent onUse={handleToolUse(openTool.name)} />
               </div>
             </>
           )}

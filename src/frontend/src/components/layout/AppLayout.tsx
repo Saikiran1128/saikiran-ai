@@ -1,26 +1,20 @@
 import { Outlet, useLocation, useNavigate } from "@tanstack/react-router";
 import {
-  BookOpen,
+  Activity,
   Bot,
   FileText,
-  FolderOpen,
   Globe,
-  Home,
-  LogOut,
   Menu,
-  Settings,
-  ShieldCheck,
   Sparkles,
   Wrench,
   X,
-  Youtube,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { useAuth } from "@/lib/auth";
+import { useSession } from "@/lib/session";
 
 interface NavItem {
   label: string;
@@ -29,61 +23,29 @@ interface NavItem {
   ocid: string;
 }
 
+// Single-page workspace nav — exactly five panels, flat root-level paths.
+// AI Chat is the index route (`/`); the rest are siblings. No auth, no
+// Knowledge Base, no YouTube, no Admin, no Settings, no Workspace.
 const NAV_ITEMS: NavItem[] = [
-  { label: "Home", icon: Home, to: "/dashboard", ocid: "nav.home.link" },
+  { label: "AI Chat", icon: Bot, to: "/", ocid: "nav.ai_chat.link" },
+  { label: "Tools", icon: Wrench, to: "/tools", ocid: "nav.tools.link" },
   {
-    label: "AI Chat",
-    icon: Bot,
-    to: "/dashboard/ai-chat",
-    ocid: "nav.ai_chat.link",
+    label: "Internet Search",
+    icon: Globe,
+    to: "/search",
+    ocid: "nav.internet_search.link",
   },
   {
     label: "Documents",
     icon: FileText,
-    to: "/dashboard/documents",
+    to: "/documents",
     ocid: "nav.documents.link",
   },
   {
-    label: "Workspace",
-    icon: FolderOpen,
-    to: "/dashboard/workspace",
-    ocid: "nav.workspace.link",
-  },
-  {
-    label: "Internet Search",
-    icon: Globe,
-    to: "/dashboard/internet-search",
-    ocid: "nav.internet_search.link",
-  },
-  {
-    label: "YouTube",
-    icon: Youtube,
-    to: "/dashboard/youtube",
-    ocid: "nav.youtube.link",
-  },
-  {
-    label: "Knowledge Base",
-    icon: BookOpen,
-    to: "/dashboard/knowledge-base",
-    ocid: "nav.knowledge_base.link",
-  },
-  {
-    label: "Tools",
-    icon: Wrench,
-    to: "/dashboard/tools",
-    ocid: "nav.tools.link",
-  },
-  {
-    label: "Settings",
-    icon: Settings,
-    to: "/dashboard/settings",
-    ocid: "nav.settings.link",
-  },
-  {
-    label: "Admin",
-    icon: ShieldCheck,
-    to: "/dashboard/admin",
-    ocid: "nav.admin.link",
+    label: "Activity Log",
+    icon: Activity,
+    to: "/activity",
+    ocid: "nav.activity.link",
   },
 ];
 
@@ -91,13 +53,13 @@ export interface AppLayoutProps {
   children?: React.ReactNode;
 }
 
-// Dashboard layout wrapper — sidebar nav + top bar + content area.
+// Workspace shell — sidebar nav + top bar + content area.
 // Uses glassmorphism, semantic tokens, and Framer Motion transitions.
+// No auth dependencies: the app opens directly into the workspace.
 export function AppLayout({ children }: AppLayoutProps) {
   const location = useLocation();
   const navigate = useNavigate();
-  const logout = useAuth((s) => s.logout);
-  const user = useAuth((s) => s.user);
+  const { sessionId, ready } = useSession();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   // Close mobile drawer on route change.
@@ -106,15 +68,15 @@ export function AppLayout({ children }: AppLayoutProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Flat-path active logic: the index route ("/") is active only when the
+  // pathname is exactly "/"; every other item is active on a startsWith match.
   function isActive(to: string): boolean {
-    if (to === "/dashboard") return location.pathname === "/dashboard";
-    return location.pathname.startsWith(to);
+    if (to === "/") return location.pathname === "/";
+    return location.pathname === to || location.pathname.startsWith(`${to}/`);
   }
 
-  function handleLogout() {
-    logout();
-    navigate({ to: "/login", replace: true });
-  }
+  // Truncated session id for the anonymous-session indicator.
+  const sessionLabel = ready && sessionId ? `${sessionId.slice(0, 8)}…` : "—";
 
   const SidebarContent = (
     <nav className="flex h-full flex-col gap-1 p-3" aria-label="Primary">
@@ -153,30 +115,41 @@ export function AppLayout({ children }: AppLayoutProps) {
         })}
       </div>
 
+      {/* Anonymous session indicator — per-browser workspace isolation. */}
       <div className="mt-2 border-t border-border p-3">
-        <div className="mb-2 flex items-center gap-3 px-1">
-          <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-semibold text-primary">
-            {(user?.name?.[0] ?? "U").toUpperCase()}
-          </div>
+        <div
+          className="flex items-center gap-2 rounded-lg bg-muted/40 px-3 py-2"
+          data-ocid="nav.session.panel"
+        >
+          <span className="relative flex size-2 shrink-0" aria-hidden>
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/60 opacity-75" />
+            <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+          </span>
           <div className="min-w-0 flex-1">
             <p className="truncate text-xs font-medium text-foreground">
-              {user?.name ?? "User"}
+              Session active
             </p>
-            <p className="truncate text-[11px] text-muted-foreground">
-              {user?.email || "Signed in"}
+            <p
+              className="truncate font-mono text-[11px] text-muted-foreground"
+              data-ocid="nav.session.id"
+            >
+              {sessionLabel}
             </p>
           </div>
         </div>
-        <Button
-          variant="ghost"
-          size="sm"
-          className="w-full justify-start gap-2 text-muted-foreground hover:text-foreground"
-          onClick={handleLogout}
-          data-ocid="nav.logout.button"
+      </div>
+
+      {/* Caffeine attribution — subtle, unobtrusive footer. */}
+      <div className="px-4 pb-4 pt-1">
+        <a
+          href="https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=nexus-ai"
+          target="_blank"
+          rel="noreferrer"
+          className="text-[11px] leading-relaxed text-muted-foreground/60 transition-smooth hover:text-muted-foreground"
+          data-ocid="nav.attribution.link"
         >
-          <LogOut className="size-4" aria-hidden />
-          Sign out
-        </Button>
+          Built with caffeine.ai
+        </a>
       </div>
     </nav>
   );
@@ -250,9 +223,9 @@ export function AppLayout({ children }: AppLayoutProps) {
 
 function currentSectionLabel(pathname: string): string {
   const match = NAV_ITEMS.find((item) =>
-    item.to === "/dashboard"
-      ? pathname === "/dashboard"
-      : pathname.startsWith(item.to),
+    item.to === "/"
+      ? pathname === "/"
+      : pathname === item.to || pathname.startsWith(`${item.to}/`),
   );
-  return match?.label ?? "Dashboard";
+  return match?.label ?? "Workspace";
 }

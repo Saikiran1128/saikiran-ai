@@ -6,6 +6,15 @@ import { motion } from "motion/react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
 
+export interface ToolUseProps {
+  onUse?: (inputSummary: string, outputSummary: string) => void;
+}
+
+function summarize(text: string, max = 80): string {
+  const t = text.trim().replace(/\s+/g, " ");
+  return t.length > max ? `${t.slice(0, max)}…` : t;
+}
+
 const SAMPLE = `# Markdown Preview
 
 Type on the **left**, see the **rendered** result on the right.
@@ -165,17 +174,35 @@ function MarkdownPreviewPane({ html }: { html: string }) {
   );
 }
 
-export default function MarkdownPreview() {
+export default function MarkdownPreview({ onUse }: ToolUseProps) {
   const [value, setValue] = useState(SAMPLE);
   const [copied, setCopied] = useState(false);
 
   const html = useMemo(() => renderTokens(parseMarkdown(value)), [value]);
+
+  // Debounced render logging — fires onUse once markdown settles (~500ms after
+  // the user stops typing) so we record a usage entry for the rendered preview
+  // without spamming the activity log on every keystroke.
+  useEffect(() => {
+    if (!onUse) return;
+    const handle = window.setTimeout(() => {
+      const tokens = parseMarkdown(value);
+      onUse(
+        summarize(value),
+        `${tokens.length} block${tokens.length === 1 ? "" : "s"} rendered`,
+      );
+    }, 500);
+    return () => window.clearTimeout(handle);
+  }, [value, onUse]);
 
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(value);
       setCopied(true);
       toast.success("Markdown copied to clipboard");
+      if (onUse) {
+        onUse(summarize(value), "Markdown source copied");
+      }
       setTimeout(() => setCopied(false), 1500);
     } catch {
       toast.error("Failed to copy");

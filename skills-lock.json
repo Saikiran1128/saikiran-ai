@@ -90,6 +90,11 @@
       "source": "caffeinelabs/skills",
       "sourceType": "github",
       "computedHash": "3fc3f0077fc47897203d7f6b85ff5a742f337e40c29504c85a60d8ace12e7522"
+    },
+    "extension-gmail-send": {
+      "source": "caffeinelabs/skills",
+      "sourceType": "github",
+      "computedHash": "3f2d2a075953c8ca5d0796d1bd9268a9c12f16d43055992354ce81f505d16c57"
     }
   }
 }

@@ -1,3 +1,19 @@
+type ToolUsage = 
+ record {
+   id: nat;
+   inputSummary: text;
+   outputSummary: text;
+   timestamp: int;
+   toolName: text;
+ };
+type SessionId = text;
+type SearchRecord = 
+ record {
+   id: nat;
+   queryText: text;
+   resultCount: nat;
+   timestamp: int;
+ };
 type Role = 
  variant {
    assistant;
@@ -41,6 +57,15 @@ type Folder =
    id: nat;
    name: text;
  };
+type DocumentRecord = 
+ record {
+   content: text;
+   createdAt: int;
+   fileType: text;
+   id: nat;
+   title: text;
+   updatedAt: int;
+ };
 type Chat = 
  record {
    createdAt: int;
@@ -51,28 +76,85 @@ type Chat =
    title: text;
    updatedAt: int;
  };
+type ActivityEntry = 
+ record {
+   activityType: text;
+   details: text;
+   id: nat;
+   summary: text;
+   timestamp: int;
+ };
 service : {
-  __chats: (ko: opt principal, count: opt nat) ->
+  __activity: (ko: opt SessionId, count: opt nat) ->
    (vec record {
-          principal;
+          SessionId;
+          vec ActivityEntry;
+        }) query;
+  __chats: (ko: opt SessionId, count: opt nat) ->
+   (vec record {
+          SessionId;
           vec Chat;
         }) query;
-  __folders: (ko: opt principal, count: opt nat) ->
+  __documents: (ko: opt SessionId, count: opt nat) ->
    (vec record {
-          principal;
+          SessionId;
+          vec DocumentRecord;
+        }) query;
+  __folders: (ko: opt SessionId, count: opt nat) ->
+   (vec record {
+          SessionId;
           vec Folder;
         }) query;
+  __nextActivityId: () -> (reserved) query;
   __nextChatId: () -> (reserved) query;
+  __nextDocumentId: () -> (reserved) query;
   __nextFolderId: () -> (reserved) query;
-  addMessage: (chatId: nat, message: Message) -> (opt Chat);
-  createChat: (title: text) -> (Chat);
-  createFolder: (name: text) -> (Folder);
-  deleteChat: (id: nat) -> (bool);
-  deleteFolder: (id: nat) -> (bool);
-  getChat: (id: nat) -> (opt Chat);
-  listChats: () -> (vec Chat);
-  listFolders: () -> (vec Folder);
-  renameFolder: (id: nat, name: text) -> (opt Folder);
-  updateChat: (id: nat, title: opt text, folder: opt opt nat, pinned:
-   opt bool) -> (opt Chat);
+  __nextSearchId: () -> (reserved) query;
+  __nextToolUsageId: () -> (reserved) query;
+  __searchHistory: (ko: opt SessionId, count: opt nat) ->
+   (vec record {
+          SessionId;
+          vec SearchRecord;
+        }) query;
+  __toolUsage: (ko: opt SessionId, count: opt nat) ->
+   (vec record {
+          SessionId;
+          vec ToolUsage;
+        }) query;
+  addMessage: (sessionId: SessionId, chatId: nat, message: Message) ->
+   (opt Chat);
+  /// Per-session tool-usage records, keyed by anonymous session id.
+  clearActivity: (sessionId: SessionId) -> (bool);
+  createChat: (sessionId: SessionId, title: text) -> (Chat);
+  createDocument: (sessionId: SessionId, title: text, content: text) ->
+   (DocumentRecord);
+  createFolder: (sessionId: SessionId, name: text) -> (Folder);
+  deleteChat: (sessionId: SessionId, id: nat) -> (bool);
+  /// Global next-activity-id counter (monotonic across all sessions).
+  deleteDocument: (sessionId: SessionId, docId: nat) -> (bool);
+  deleteFolder: (sessionId: SessionId, id: nat) -> (bool);
+  getChat: (sessionId: SessionId, id: nat) -> (opt Chat);
+  getDocument: (sessionId: SessionId, docId: nat) -> (opt DocumentRecord);
+  /// Per-session activity log, keyed by anonymous session id.
+  listActivity: (sessionId: SessionId) -> (vec ActivityEntry);
+  listChats: (sessionId: SessionId) -> (vec Chat);
+  listDocuments: (sessionId: SessionId) -> (vec DocumentRecord);
+  listFolders: (sessionId: SessionId) -> (vec Folder);
+  /// Per-session activity log, keyed by anonymous session id.
+  listSearchHistory: (sessionId: SessionId) -> (vec SearchRecord);
+  /// Per-session activity log, keyed by anonymous session id.
+  listToolUsage: (sessionId: SessionId) -> (vec ToolUsage);
+  logActivity: (sessionId: SessionId, activityType: text, summary: text,
+   details: text) -> (ActivityEntry);
+  logSearch: (sessionId: SessionId, queryText: text, resultCount: nat) ->
+   (SearchRecord);
+  logToolUsage: (sessionId: SessionId, toolName: text, inputSummary: 
+   text, outputSummary: text) -> (ToolUsage);
+  renameFolder: (sessionId: SessionId, id: nat, name: text) -> (opt Folder);
+  /// Global next-folder-id counter (monotonic across all sessions).
+  updateChat: (sessionId: SessionId, id: nat, title: opt text, folder:
+   opt opt nat, pinned: opt bool) -> (opt Chat);
+  /// Per-session activity log, keyed by anonymous session id.
+  updateDocument: (sessionId: SessionId, docId: nat, title: text, content:
+   text) -> (opt DocumentRecord);
 }

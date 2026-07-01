@@ -89,6 +89,36 @@ export class ExternalBlob {
         return this;
     }
 }
+export interface ToolUsage {
+    id: bigint;
+    inputSummary: string;
+    outputSummary: string;
+    timestamp: bigint;
+    toolName: string;
+}
+export interface DocumentRecord {
+    id: bigint;
+    title: string;
+    content: string;
+    createdAt: bigint;
+    fileType: string;
+    updatedAt: bigint;
+}
+export interface Chat {
+    id: bigint;
+    title: string;
+    messages: Array<Message>;
+    createdAt: bigint;
+    updatedAt: bigint;
+    pinned: boolean;
+    folder?: bigint;
+}
+export interface SearchRecord {
+    id: bigint;
+    queryText: string;
+    timestamp: bigint;
+    resultCount: bigint;
+}
 export interface Message {
     model?: Model;
     content: string;
@@ -101,14 +131,13 @@ export interface Folder {
     name: string;
     createdAt: bigint;
 }
-export interface Chat {
+export type SessionId = string;
+export interface ActivityEntry {
     id: bigint;
-    title: string;
-    messages: Array<Message>;
-    createdAt: bigint;
-    updatedAt: bigint;
-    pinned: boolean;
-    folder?: bigint;
+    activityType: string;
+    summary: string;
+    timestamp: bigint;
+    details: string;
 }
 export enum Mode {
     normal = "normal",
@@ -137,25 +166,80 @@ export enum Role {
     assistant = "assistant"
 }
 export interface backendInterface {
-    __chats(ko: Principal | null, count: bigint | null): Promise<Array<[Principal, Array<Chat>]>>;
-    __folders(ko: Principal | null, count: bigint | null): Promise<Array<[Principal, Array<Folder>]>>;
+    __activity(ko: SessionId | null, count: bigint | null): Promise<Array<[SessionId, Array<ActivityEntry>]>>;
+    __chats(ko: SessionId | null, count: bigint | null): Promise<Array<[SessionId, Array<Chat>]>>;
+    __documents(ko: SessionId | null, count: bigint | null): Promise<Array<[SessionId, Array<DocumentRecord>]>>;
+    __folders(ko: SessionId | null, count: bigint | null): Promise<Array<[SessionId, Array<Folder>]>>;
+    __nextActivityId(): Promise<any>;
     __nextChatId(): Promise<any>;
+    __nextDocumentId(): Promise<any>;
     __nextFolderId(): Promise<any>;
-    addMessage(chatId: bigint, message: Message): Promise<Chat | null>;
-    createChat(title: string): Promise<Chat>;
-    createFolder(name: string): Promise<Folder>;
-    deleteChat(id: bigint): Promise<boolean>;
-    deleteFolder(id: bigint): Promise<boolean>;
-    getChat(id: bigint): Promise<Chat | null>;
-    listChats(): Promise<Array<Chat>>;
-    listFolders(): Promise<Array<Folder>>;
-    renameFolder(id: bigint, name: string): Promise<Folder | null>;
-    updateChat(id: bigint, title: string | null, folder: Some<bigint | null> | None, pinned: boolean | null): Promise<Chat | null>;
+    __nextSearchId(): Promise<any>;
+    __nextToolUsageId(): Promise<any>;
+    __searchHistory(ko: SessionId | null, count: bigint | null): Promise<Array<[SessionId, Array<SearchRecord>]>>;
+    __toolUsage(ko: SessionId | null, count: bigint | null): Promise<Array<[SessionId, Array<ToolUsage>]>>;
+    addMessage(sessionId: SessionId, chatId: bigint, message: Message): Promise<Chat | null>;
+    /**
+     * / Per-session tool-usage records, keyed by anonymous session id.
+     */
+    clearActivity(sessionId: SessionId): Promise<boolean>;
+    createChat(sessionId: SessionId, title: string): Promise<Chat>;
+    createDocument(sessionId: SessionId, title: string, content: string): Promise<DocumentRecord>;
+    createFolder(sessionId: SessionId, name: string): Promise<Folder>;
+    deleteChat(sessionId: SessionId, id: bigint): Promise<boolean>;
+    /**
+     * / Global next-activity-id counter (monotonic across all sessions).
+     */
+    deleteDocument(sessionId: SessionId, docId: bigint): Promise<boolean>;
+    deleteFolder(sessionId: SessionId, id: bigint): Promise<boolean>;
+    getChat(sessionId: SessionId, id: bigint): Promise<Chat | null>;
+    getDocument(sessionId: SessionId, docId: bigint): Promise<DocumentRecord | null>;
+    /**
+     * / Per-session activity log, keyed by anonymous session id.
+     */
+    listActivity(sessionId: SessionId): Promise<Array<ActivityEntry>>;
+    listChats(sessionId: SessionId): Promise<Array<Chat>>;
+    listDocuments(sessionId: SessionId): Promise<Array<DocumentRecord>>;
+    listFolders(sessionId: SessionId): Promise<Array<Folder>>;
+    /**
+     * / Per-session activity log, keyed by anonymous session id.
+     */
+    listSearchHistory(sessionId: SessionId): Promise<Array<SearchRecord>>;
+    /**
+     * / Per-session activity log, keyed by anonymous session id.
+     */
+    listToolUsage(sessionId: SessionId): Promise<Array<ToolUsage>>;
+    logActivity(sessionId: SessionId, activityType: string, summary: string, details: string): Promise<ActivityEntry>;
+    logSearch(sessionId: SessionId, queryText: string, resultCount: bigint): Promise<SearchRecord>;
+    logToolUsage(sessionId: SessionId, toolName: string, inputSummary: string, outputSummary: string): Promise<ToolUsage>;
+    renameFolder(sessionId: SessionId, id: bigint, name: string): Promise<Folder | null>;
+    /**
+     * / Global next-folder-id counter (monotonic across all sessions).
+     */
+    updateChat(sessionId: SessionId, id: bigint, title: string | null, folder: Some<bigint | null> | None, pinned: boolean | null): Promise<Chat | null>;
+    /**
+     * / Per-session activity log, keyed by anonymous session id.
+     */
+    updateDocument(sessionId: SessionId, docId: bigint, title: string, content: string): Promise<DocumentRecord | null>;
 }
-import type { Chat as _Chat, Folder as _Folder, Message as _Message, Mode as _Mode, Model as _Model, Role as _Role } from "./declarations/backend.did.d.ts";
+import type { Chat as _Chat, DocumentRecord as _DocumentRecord, Folder as _Folder, Message as _Message, Mode as _Mode, Model as _Model, Role as _Role, SessionId as _SessionId } from "./declarations/backend.did.d.ts";
 export class Backend implements backendInterface {
     constructor(private actor: ActorSubclass<_SERVICE>, private _uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, private _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, private processError?: (error: unknown) => never){}
-    async __chats(arg0: Principal | null, arg1: bigint | null): Promise<Array<[Principal, Array<Chat>]>> {
+    async __activity(arg0: SessionId | null, arg1: bigint | null): Promise<Array<[SessionId, Array<ActivityEntry>]>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.__activity(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.__activity(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+            return result;
+        }
+    }
+    async __chats(arg0: SessionId | null, arg1: bigint | null): Promise<Array<[SessionId, Array<Chat>]>> {
         if (this.processError) {
             try {
                 const result = await this.actor.__chats(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
@@ -169,7 +253,21 @@ export class Backend implements backendInterface {
             return from_candid_vec_n3(this._uploadFile, this._downloadFile, result);
         }
     }
-    async __folders(arg0: Principal | null, arg1: bigint | null): Promise<Array<[Principal, Array<Folder>]>> {
+    async __documents(arg0: SessionId | null, arg1: bigint | null): Promise<Array<[SessionId, Array<DocumentRecord>]>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.__documents(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.__documents(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+            return result;
+        }
+    }
+    async __folders(arg0: SessionId | null, arg1: bigint | null): Promise<Array<[SessionId, Array<Folder>]>> {
         if (this.processError) {
             try {
                 const result = await this.actor.__folders(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
@@ -180,6 +278,20 @@ export class Backend implements backendInterface {
             }
         } else {
             const result = await this.actor.__folders(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+            return result;
+        }
+    }
+    async __nextActivityId(): Promise<any> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.__nextActivityId();
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.__nextActivityId();
             return result;
         }
     }
@@ -197,6 +309,20 @@ export class Backend implements backendInterface {
             return result;
         }
     }
+    async __nextDocumentId(): Promise<any> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.__nextDocumentId();
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.__nextDocumentId();
+            return result;
+        }
+    }
     async __nextFolderId(): Promise<any> {
         if (this.processError) {
             try {
@@ -211,144 +337,368 @@ export class Backend implements backendInterface {
             return result;
         }
     }
-    async addMessage(arg0: bigint, arg1: Message): Promise<Chat | null> {
+    async __nextSearchId(): Promise<any> {
         if (this.processError) {
             try {
-                const result = await this.actor.addMessage(arg0, to_candid_Message_n20(this._uploadFile, this._downloadFile, arg1));
+                const result = await this.actor.__nextSearchId();
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.__nextSearchId();
+            return result;
+        }
+    }
+    async __nextToolUsageId(): Promise<any> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.__nextToolUsageId();
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.__nextToolUsageId();
+            return result;
+        }
+    }
+    async __searchHistory(arg0: SessionId | null, arg1: bigint | null): Promise<Array<[SessionId, Array<SearchRecord>]>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.__searchHistory(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.__searchHistory(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+            return result;
+        }
+    }
+    async __toolUsage(arg0: SessionId | null, arg1: bigint | null): Promise<Array<[SessionId, Array<ToolUsage>]>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.__toolUsage(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.__toolUsage(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+            return result;
+        }
+    }
+    async addMessage(arg0: SessionId, arg1: bigint, arg2: Message): Promise<Chat | null> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.addMessage(arg0, arg1, to_candid_Message_n20(this._uploadFile, this._downloadFile, arg2));
                 return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
             } catch (e) {
                 this.processError(e);
                 throw new Error("unreachable");
             }
         } else {
-            const result = await this.actor.addMessage(arg0, to_candid_Message_n20(this._uploadFile, this._downloadFile, arg1));
+            const result = await this.actor.addMessage(arg0, arg1, to_candid_Message_n20(this._uploadFile, this._downloadFile, arg2));
             return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
         }
     }
-    async createChat(arg0: string): Promise<Chat> {
+    async clearActivity(arg0: SessionId): Promise<boolean> {
         if (this.processError) {
             try {
-                const result = await this.actor.createChat(arg0);
+                const result = await this.actor.clearActivity(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.clearActivity(arg0);
+            return result;
+        }
+    }
+    async createChat(arg0: SessionId, arg1: string): Promise<Chat> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.createChat(arg0, arg1);
                 return from_candid_Chat_n6(this._uploadFile, this._downloadFile, result);
             } catch (e) {
                 this.processError(e);
                 throw new Error("unreachable");
             }
         } else {
-            const result = await this.actor.createChat(arg0);
+            const result = await this.actor.createChat(arg0, arg1);
             return from_candid_Chat_n6(this._uploadFile, this._downloadFile, result);
         }
     }
-    async createFolder(arg0: string): Promise<Folder> {
+    async createDocument(arg0: SessionId, arg1: string, arg2: string): Promise<DocumentRecord> {
         if (this.processError) {
             try {
-                const result = await this.actor.createFolder(arg0);
+                const result = await this.actor.createDocument(arg0, arg1, arg2);
                 return result;
             } catch (e) {
                 this.processError(e);
                 throw new Error("unreachable");
             }
         } else {
-            const result = await this.actor.createFolder(arg0);
+            const result = await this.actor.createDocument(arg0, arg1, arg2);
             return result;
         }
     }
-    async deleteChat(arg0: bigint): Promise<boolean> {
+    async createFolder(arg0: SessionId, arg1: string): Promise<Folder> {
         if (this.processError) {
             try {
-                const result = await this.actor.deleteChat(arg0);
+                const result = await this.actor.createFolder(arg0, arg1);
                 return result;
             } catch (e) {
                 this.processError(e);
                 throw new Error("unreachable");
             }
         } else {
-            const result = await this.actor.deleteChat(arg0);
+            const result = await this.actor.createFolder(arg0, arg1);
             return result;
         }
     }
-    async deleteFolder(arg0: bigint): Promise<boolean> {
+    async deleteChat(arg0: SessionId, arg1: bigint): Promise<boolean> {
         if (this.processError) {
             try {
-                const result = await this.actor.deleteFolder(arg0);
+                const result = await this.actor.deleteChat(arg0, arg1);
                 return result;
             } catch (e) {
                 this.processError(e);
                 throw new Error("unreachable");
             }
         } else {
-            const result = await this.actor.deleteFolder(arg0);
+            const result = await this.actor.deleteChat(arg0, arg1);
             return result;
         }
     }
-    async getChat(arg0: bigint): Promise<Chat | null> {
+    async deleteDocument(arg0: SessionId, arg1: bigint): Promise<boolean> {
         if (this.processError) {
             try {
-                const result = await this.actor.getChat(arg0);
+                const result = await this.actor.deleteDocument(arg0, arg1);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.deleteDocument(arg0, arg1);
+            return result;
+        }
+    }
+    async deleteFolder(arg0: SessionId, arg1: bigint): Promise<boolean> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.deleteFolder(arg0, arg1);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.deleteFolder(arg0, arg1);
+            return result;
+        }
+    }
+    async getChat(arg0: SessionId, arg1: bigint): Promise<Chat | null> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.getChat(arg0, arg1);
                 return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
             } catch (e) {
                 this.processError(e);
                 throw new Error("unreachable");
             }
         } else {
-            const result = await this.actor.getChat(arg0);
+            const result = await this.actor.getChat(arg0, arg1);
             return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
         }
     }
-    async listChats(): Promise<Array<Chat>> {
+    async getDocument(arg0: SessionId, arg1: bigint): Promise<DocumentRecord | null> {
         if (this.processError) {
             try {
-                const result = await this.actor.listChats();
-                return from_candid_vec_n5(this._uploadFile, this._downloadFile, result);
-            } catch (e) {
-                this.processError(e);
-                throw new Error("unreachable");
-            }
-        } else {
-            const result = await this.actor.listChats();
-            return from_candid_vec_n5(this._uploadFile, this._downloadFile, result);
-        }
-    }
-    async listFolders(): Promise<Array<Folder>> {
-        if (this.processError) {
-            try {
-                const result = await this.actor.listFolders();
-                return result;
-            } catch (e) {
-                this.processError(e);
-                throw new Error("unreachable");
-            }
-        } else {
-            const result = await this.actor.listFolders();
-            return result;
-        }
-    }
-    async renameFolder(arg0: bigint, arg1: string): Promise<Folder | null> {
-        if (this.processError) {
-            try {
-                const result = await this.actor.renameFolder(arg0, arg1);
+                const result = await this.actor.getDocument(arg0, arg1);
                 return from_candid_opt_n29(this._uploadFile, this._downloadFile, result);
             } catch (e) {
                 this.processError(e);
                 throw new Error("unreachable");
             }
         } else {
-            const result = await this.actor.renameFolder(arg0, arg1);
+            const result = await this.actor.getDocument(arg0, arg1);
             return from_candid_opt_n29(this._uploadFile, this._downloadFile, result);
         }
     }
-    async updateChat(arg0: bigint, arg1: string | null, arg2: Some<bigint | null> | None, arg3: boolean | null): Promise<Chat | null> {
+    async listActivity(arg0: SessionId): Promise<Array<ActivityEntry>> {
         if (this.processError) {
             try {
-                const result = await this.actor.updateChat(arg0, to_candid_opt_n30(this._uploadFile, this._downloadFile, arg1), to_candid_opt_n31(this._uploadFile, this._downloadFile, arg2), to_candid_opt_n32(this._uploadFile, this._downloadFile, arg3));
+                const result = await this.actor.listActivity(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.listActivity(arg0);
+            return result;
+        }
+    }
+    async listChats(arg0: SessionId): Promise<Array<Chat>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.listChats(arg0);
+                return from_candid_vec_n5(this._uploadFile, this._downloadFile, result);
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.listChats(arg0);
+            return from_candid_vec_n5(this._uploadFile, this._downloadFile, result);
+        }
+    }
+    async listDocuments(arg0: SessionId): Promise<Array<DocumentRecord>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.listDocuments(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.listDocuments(arg0);
+            return result;
+        }
+    }
+    async listFolders(arg0: SessionId): Promise<Array<Folder>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.listFolders(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.listFolders(arg0);
+            return result;
+        }
+    }
+    async listSearchHistory(arg0: SessionId): Promise<Array<SearchRecord>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.listSearchHistory(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.listSearchHistory(arg0);
+            return result;
+        }
+    }
+    async listToolUsage(arg0: SessionId): Promise<Array<ToolUsage>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.listToolUsage(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.listToolUsage(arg0);
+            return result;
+        }
+    }
+    async logActivity(arg0: SessionId, arg1: string, arg2: string, arg3: string): Promise<ActivityEntry> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.logActivity(arg0, arg1, arg2, arg3);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.logActivity(arg0, arg1, arg2, arg3);
+            return result;
+        }
+    }
+    async logSearch(arg0: SessionId, arg1: string, arg2: bigint): Promise<SearchRecord> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.logSearch(arg0, arg1, arg2);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.logSearch(arg0, arg1, arg2);
+            return result;
+        }
+    }
+    async logToolUsage(arg0: SessionId, arg1: string, arg2: string, arg3: string): Promise<ToolUsage> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.logToolUsage(arg0, arg1, arg2, arg3);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.logToolUsage(arg0, arg1, arg2, arg3);
+            return result;
+        }
+    }
+    async renameFolder(arg0: SessionId, arg1: bigint, arg2: string): Promise<Folder | null> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.renameFolder(arg0, arg1, arg2);
+                return from_candid_opt_n30(this._uploadFile, this._downloadFile, result);
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.renameFolder(arg0, arg1, arg2);
+            return from_candid_opt_n30(this._uploadFile, this._downloadFile, result);
+        }
+    }
+    async updateChat(arg0: SessionId, arg1: bigint, arg2: string | null, arg3: Some<bigint | null> | None, arg4: boolean | null): Promise<Chat | null> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.updateChat(arg0, arg1, to_candid_opt_n31(this._uploadFile, this._downloadFile, arg2), to_candid_opt_n32(this._uploadFile, this._downloadFile, arg3), to_candid_opt_n33(this._uploadFile, this._downloadFile, arg4));
                 return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
             } catch (e) {
                 this.processError(e);
                 throw new Error("unreachable");
             }
         } else {
-            const result = await this.actor.updateChat(arg0, to_candid_opt_n30(this._uploadFile, this._downloadFile, arg1), to_candid_opt_n31(this._uploadFile, this._downloadFile, arg2), to_candid_opt_n32(this._uploadFile, this._downloadFile, arg3));
+            const result = await this.actor.updateChat(arg0, arg1, to_candid_opt_n31(this._uploadFile, this._downloadFile, arg2), to_candid_opt_n32(this._uploadFile, this._downloadFile, arg3), to_candid_opt_n33(this._uploadFile, this._downloadFile, arg4));
             return from_candid_opt_n28(this._uploadFile, this._downloadFile, result);
+        }
+    }
+    async updateDocument(arg0: SessionId, arg1: bigint, arg2: string, arg3: string): Promise<DocumentRecord | null> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.updateDocument(arg0, arg1, arg2, arg3);
+                return from_candid_opt_n29(this._uploadFile, this._downloadFile, result);
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.updateDocument(arg0, arg1, arg2, arg3);
+            return from_candid_opt_n29(this._uploadFile, this._downloadFile, result);
         }
     }
 }
@@ -379,7 +729,10 @@ function from_candid_opt_n19(_uploadFile: (file: ExternalBlob) => Promise<Uint8A
 function from_candid_opt_n28(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: [] | [_Chat]): Chat | null {
     return value.length === 0 ? null : from_candid_Chat_n6(_uploadFile, _downloadFile, value[0]);
 }
-function from_candid_opt_n29(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: [] | [_Folder]): Folder | null {
+function from_candid_opt_n29(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: [] | [_DocumentRecord]): DocumentRecord | null {
+    return value.length === 0 ? null : value[0];
+}
+function from_candid_opt_n30(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: [] | [_Folder]): Folder | null {
     return value.length === 0 ? null : value[0];
 }
 function from_candid_record_n10(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: {
@@ -430,7 +783,7 @@ function from_candid_record_n7(_uploadFile: (file: ExternalBlob) => Promise<Uint
         folder: record_opt_to_undefined(from_candid_opt_n19(_uploadFile, _downloadFile, value.folder))
     };
 }
-function from_candid_tuple_n4(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: [Principal, Array<_Chat>]): [Principal, Array<Chat>] {
+function from_candid_tuple_n4(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: [_SessionId, Array<_Chat>]): [SessionId, Array<Chat>] {
     return [
         value[0],
         from_candid_vec_n5(_uploadFile, _downloadFile, value[1])
@@ -485,7 +838,7 @@ function from_candid_variant_n18(_uploadFile: (file: ExternalBlob) => Promise<Ui
 }): Role {
     return "systemMsg" in value ? Role.systemMsg : "user" in value ? Role.user : "assistant" in value ? Role.assistant : value;
 }
-function from_candid_vec_n3(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: Array<[Principal, Array<_Chat>]>): Array<[Principal, Array<Chat>]> {
+function from_candid_vec_n3(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: Array<[_SessionId, Array<_Chat>]>): Array<[SessionId, Array<Chat>]> {
     return value.map((x)=>from_candid_tuple_n4(_uploadFile, _downloadFile, x));
 }
 function from_candid_vec_n5(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: Array<_Chat>): Array<Chat> {
@@ -506,19 +859,19 @@ function to_candid_Model_n22(_uploadFile: (file: ExternalBlob) => Promise<Uint8A
 function to_candid_Role_n26(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: Role): _Role {
     return to_candid_variant_n27(_uploadFile, _downloadFile, value);
 }
-function to_candid_opt_n1(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: Principal | null): [] | [Principal] {
+function to_candid_opt_n1(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: SessionId | null): [] | [_SessionId] {
     return value === null ? candid_none() : candid_some(value);
 }
 function to_candid_opt_n2(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: bigint | null): [] | [bigint] {
     return value === null ? candid_none() : candid_some(value);
 }
-function to_candid_opt_n30(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: string | null): [] | [string] {
+function to_candid_opt_n31(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: string | null): [] | [string] {
     return value === null ? candid_none() : candid_some(value);
 }
-function to_candid_opt_n31(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: Some<bigint | null> | None): [] | [[] | [bigint]] {
+function to_candid_opt_n32(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: Some<bigint | null> | None): [] | [[] | [bigint]] {
     return isNone(value) ? candid_none() : candid_some(to_candid_opt_n2(_uploadFile, _downloadFile, unwrap(value)));
 }
-function to_candid_opt_n32(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: boolean | null): [] | [boolean] {
+function to_candid_opt_n33(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: boolean | null): [] | [boolean] {
     return value === null ? candid_none() : candid_some(value);
 }
 function to_candid_record_n21(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: {

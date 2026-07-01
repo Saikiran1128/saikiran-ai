@@ -1,20 +1,24 @@
 {
-  "overview": "A premium AI-powered productivity platform combining AI chat, productivity tools, and a clean modern interface in one place.",
+  "overview": "A no-login, open-on-load AI workspace with chat, tools, internet search, documents, and a browsable activity log — all on one page with per-browser session persistence.",
   "features": [
-    "Landing page with hero, search bar, and feature cards",
-    "Email login and Internet Identity sign-in with protected routes",
-    "ChatGPT-style AI chat with streaming, modes, models, and history",
-    "Tools marketplace with 8 functional tools and coming soon cards",
-    "Dark and light mode with smooth animations",
-    "Responsive sidebar navigation across all pages"
+    "Open directly into the AI workspace with no login or landing page",
+    "AI chat with streaming responses, multiple chats, folders, and history",
+    "8 inline tools (QR, password, UUID, Base64, JSON, Markdown, text case, timestamp)",
+    "Internet search with inline results and search history",
+    "Document creation and editing with file uploads",
+    "Browsable Activity Log panel showing all chats, tools, searches, and actions",
+    "Per-browser anonymous session persistence — data survives reloads",
+    "Single-page workspace with no redirects between features"
   ],
   "category": "productivity",
   "tags": [
     "ai",
     "chat",
     "tools",
-    "productivity",
-    "dashboard"
+    "no-login",
+    "open-source",
+    "workspace",
+    "activity-log"
   ],
-  "last_updated": "2026-06-30T08:24:38.847Z"
+  "last_updated": "2026-07-01T06:52:25.460Z"
 }

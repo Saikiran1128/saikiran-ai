@@ -7,6 +7,15 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { toast } from "sonner";
 
+export interface ToolUseProps {
+  onUse?: (inputSummary: string, outputSummary: string) => void;
+}
+
+function summarize(text: string, max = 80): string {
+  const t = text.trim().replace(/\s+/g, " ");
+  return t.length > max ? `${t.slice(0, max)}…` : t;
+}
+
 type CaseKey =
   | "upper"
   | "lower"
@@ -63,7 +72,7 @@ const CASES: { key: CaseKey; label: string; fn: (s: string) => string }[] = [
   },
 ];
 
-export default function TextCaseConverter() {
+export default function TextCaseConverter({ onUse }: ToolUseProps) {
   const [input, setInput] = useState(SAMPLE);
   const [active, setActive] = useState<CaseKey>("title");
   const [copied, setCopied] = useState(false);
@@ -71,11 +80,22 @@ export default function TextCaseConverter() {
   const activeCase = CASES.find((c) => c.key === active)!;
   const output = activeCase.fn(input);
 
+  const handleCaseChange = (key: CaseKey) => {
+    setActive(key);
+    if (onUse) {
+      const next = CASES.find((c) => c.key === key)!;
+      onUse(`${next.label}: ${summarize(input)}`, summarize(next.fn(input)));
+    }
+  };
+
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(output);
       setCopied(true);
       toast.success("Output copied to clipboard");
+      if (onUse) {
+        onUse(`${activeCase.label}: ${summarize(input)}`, "Output copied");
+      }
       setTimeout(() => setCopied(false), 1500);
     } catch {
       toast.error("Failed to copy");
@@ -126,7 +146,7 @@ export default function TextCaseConverter() {
               key={c.key}
               variant={active === c.key ? "default" : "outline"}
               size="sm"
-              onClick={() => setActive(c.key)}
+              onClick={() => handleCaseChange(c.key)}
               data-ocid={`textcase.${c.key}.button`}
               className={active === c.key ? "" : "glass-strong"}
             >

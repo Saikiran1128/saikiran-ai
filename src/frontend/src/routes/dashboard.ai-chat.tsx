@@ -32,25 +32,32 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  useAddMessage,
+  useChats,
+  useCreateChat,
+  useCreateFolder,
+  useDeleteChat,
+  useDeleteFolder,
+  useFolders,
+  useLogActivity,
+  useUpdateChat,
+} from "@/hooks/useQueries";
 import { streamMockResponse } from "@/lib/ai-simulate";
 import { useBackend } from "@/lib/backend";
-import type { Mode, Model } from "@/types/chat";
-import type { Chat, Folder, Message } from "@/types/chat";
+import { useSession } from "@/lib/session";
+import type { Chat, Folder, Message, Mode, Model } from "@/types/chat";
 import { dashboardLayoutRoute } from "./dashboard";
 
 export const aiChatRoute = createRoute({
   getParentRoute: () => dashboardLayoutRoute,
-  path: "/ai-chat",
+  path: "/",
   component: AiChatPage,
 });
 
 // ─────────────────────────────────────────────────────────────────────────
-// Local chat store. The backend actor is the source of truth for persisted
-// chats; this state mirrors it for snappy UI. When the actor is unavailable
-// (e.g. local dev without a deployed canister), we fall back to an in-memory
-// store so the experience still works end-to-end.
+// Suggested prompts shown in the empty state.
 // ─────────────────────────────────────────────────────────────────────────
-
 const SUGGESTED_PROMPTS = [
   {
     icon: Lightbulb,
@@ -89,8 +96,11 @@ function uid(prefix: string): string {
 }
 
 function AiChatPage() {
+  const { sessionId } = useSession();
   const { actor } = useBackend();
 
+  // Backend is the source of truth. We mirror chats/folders into local UI
+  // state keyed by backend ids (as strings) for snappy optimistic updates.
   const [chats, setChats] = useState<Chat[]>([]);
   const [folders, setFolders] = useState<Folder[]>([]);
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
@@ -102,33 +112,61 @@ function AiChatPage() {
   const abortRef = useRef<AbortController | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // React Query hooks — each takes sessionId as first arg per the new
+  // no-login session-based backend contract.
+  const chatsQuery = useChats(sessionId);
+  const foldersQuery = useFolders(sessionId);
+  const createChatMut = useCreateChat(sessionId);
+  const updateChatMut = useUpdateChat(sessionId);
+  const deleteChatMut = useDeleteChat(sessionId);
+  const addMessageMut = useAddMessage(sessionId);
+  const createFolderMut = useCreateFolder(sessionId);
+  const deleteFolderMut = useDeleteFolder(sessionId);
+  const logActivityMut = useLogActivity(sessionId);
+
   const activeChat = useMemo(
     () => chats.find((c) => c.id === activeChatId) ?? null,
     [chats, activeChatId],
   );
 
-  // Load chats + folders from backend on mount (best-effort).
+  // Sync backend query data into local UI state. The backend is the source of
+  // truth; local state mirrors it for optimistic streaming updates.
   useEffect(() => {
-    let cancelled = false;
-    async function load() {
-      if (!actor) return;
-      try {
-        const [backendChats, backendFolders] = await Promise.all([
-          actor.listChats(),
-          actor.listFolders(),
-        ]);
-        if (cancelled) return;
-        setChats(backendChats.map(adaptChat));
-        setFolders(backendFolders.map(adaptFolder));
-      } catch {
-        // Backend unavailable — keep local store.
-      }
+    if (chatsQuery.data) {
+      setChats((prev) => {
+        // Preserve in-flight streaming assistant messages that the backend
+        // hasn't seen yet by merging them onto the backend snapshot.
+        const streamingByChatId = new Map<string, Message[]>();
+        for (const c of prev) {
+          const streaming = c.messages.filter(
+            (m) => m.id.startsWith("msg-") && m.role === "assistant",
+          );
+          if (streaming.length > 0) {
+            streamingByChatId.set(c.id, streaming);
+          }
+        }
+        const next = chatsQuery.data.map(adaptChat);
+        for (const c of next) {
+          const extra = streamingByChatId.get(c.id);
+          if (extra && extra.length > 0) {
+            // Append streaming messages not yet persisted.
+            const existingIds = new Set(c.messages.map((m) => m.id));
+            c.messages = [
+              ...c.messages,
+              ...extra.filter((m) => !existingIds.has(m.id)),
+            ];
+          }
+        }
+        return next;
+      });
     }
-    load();
-    return () => {
-      cancelled = true;
-    };
-  }, [actor]);
+  }, [chatsQuery.data]);
+
+  useEffect(() => {
+    if (foldersQuery.data) {
+      setFolders(foldersQuery.data.map(adaptFolder));
+    }
+  }, [foldersQuery.data]);
 
   // Auto-scroll to bottom on new messages / streaming.
   const scrollToBottom = useCallback((smooth = true) => {
@@ -156,21 +194,36 @@ function AiChatPage() {
 
   // ── Chat mutations ────────────────────────────────────────────────────
   function persistMessage(chatId: string, message: Message) {
-    if (!actor) return;
-    actor
-      .addMessage(BigInt(chatId), {
-        role: message.role as BackendRole,
-        content: message.content,
-        model: (message.model ?? undefined) as unknown as BackendModel,
-        mode: message.mode as BackendMode,
-        timestamp: BigInt(message.createdAt),
-      })
-      .catch(() => {});
+    if (!actor || !sessionId) return;
+    addMessageMut.mutate(
+      {
+        chatId: BigInt(chatId),
+        message: {
+          role: message.role as BackendRole,
+          content: message.content,
+          model: (message.model ?? undefined) as unknown as BackendModel,
+          mode: message.mode as BackendMode,
+          timestamp: BigInt(message.createdAt),
+        },
+      },
+      { onError: () => {} },
+    );
   }
 
-  function newChat(): Chat {
-    const chat: Chat = {
-      id: uid("chat"),
+  function recordActivity(summary: string, details: string) {
+    if (!sessionId) return;
+    logActivityMut.mutate(
+      { activityType: "chat", summary, details },
+      { onError: () => {} },
+    );
+  }
+
+  async function newChat(): Promise<Chat> {
+    // Optimistic local chat with a temporary id; we replace it with the
+    // backend-returned id once createChat resolves.
+    const tempId = uid("chat");
+    const optimistic: Chat = {
+      id: tempId,
       title: "New chat",
       mode,
       model,
@@ -179,17 +232,30 @@ function AiChatPage() {
       createdAt: Date.now(),
       updatedAt: Date.now(),
     };
-    setChats((prev) => [chat, ...prev]);
-    setActiveChatId(chat.id);
-    if (actor) {
-      actor.createChat(chat.title).catch(() => {});
+    setChats((prev) => [optimistic, ...prev]);
+    setActiveChatId(tempId);
+
+    if (actor && sessionId) {
+      try {
+        const created = await createChatMut.mutateAsync(optimistic.title);
+        const realId = created.id.toString();
+        // Replace temp id with backend id, preserving any messages added
+        // in the meantime (e.g. the first user message).
+        setChats((prev) =>
+          prev.map((c) => (c.id === tempId ? { ...c, id: realId } : c)),
+        );
+        setActiveChatId((cur) => (cur === tempId ? realId : cur));
+        return { ...optimistic, id: realId };
+      } catch {
+        // Keep optimistic chat; backend sync will retry on next refetch.
+      }
     }
-    return chat;
+    return optimistic;
   }
 
   function handleNewChat() {
     if (isStreaming) stopGeneration();
-    newChat();
+    void newChat();
   }
 
   function selectChat(id: string) {
@@ -200,7 +266,9 @@ function AiChatPage() {
   function deleteChat(id: string) {
     setChats((prev) => prev.filter((c) => c.id !== id));
     if (activeChatId === id) setActiveChatId(null);
-    if (actor) actor.deleteChat(BigInt(id)).catch(() => {});
+    if (actor && sessionId) {
+      deleteChatMut.mutate(BigInt(id), { onError: () => {} });
+    }
     toast.success("Chat deleted");
   }
 
@@ -210,35 +278,51 @@ function AiChatPage() {
         c.id === id ? { ...c, title, updatedAt: Date.now() } : c,
       ),
     );
-    if (actor)
-      actor
-        .updateChat(BigInt(id), title, { __kind__: "None" }, null)
-        .catch(() => {});
+    if (actor && sessionId) {
+      updateChatMut.mutate(
+        { id: BigInt(id), title, folder: { __kind__: "None" }, pinned: null },
+        { onError: () => {} },
+      );
+    }
   }
 
   function pinChat(id: string) {
-    // Pinning is a UI-level toggle; backend updateChat supports pinned flag.
     setChats((prev) =>
       prev.map((c) => (c.id === id ? { ...c, updatedAt: Date.now() } : c)),
     );
-    if (actor)
-      actor
-        .updateChat(BigInt(id), null, { __kind__: "None" }, true)
-        .catch(() => {});
+    if (actor && sessionId) {
+      updateChatMut.mutate(
+        {
+          id: BigInt(id),
+          title: null,
+          folder: { __kind__: "None" },
+          pinned: true,
+        },
+        { onError: () => {} },
+      );
+    }
     toast.success("Chat pinned");
   }
 
   function newFolder() {
     const name = `Folder ${folders.length + 1}`;
-    const folder: Folder = { id: uid("folder"), name, createdAt: Date.now() };
-    setFolders((prev) => [...prev, folder]);
-    if (actor) actor.createFolder(name).catch(() => {});
+    if (actor && sessionId) {
+      createFolderMut.mutate(name, {
+        onError: () => toast.error("Couldn't create folder"),
+      });
+    } else {
+      // Fallback for when actor isn't ready yet.
+      const folder: Folder = { id: uid("folder"), name, createdAt: Date.now() };
+      setFolders((prev) => [...prev, folder]);
+    }
     toast.success("Folder created");
   }
 
   function deleteFolder(id: string) {
     setFolders((prev) => prev.filter((f) => f.id !== id));
-    if (actor) actor.deleteFolder(BigInt(id)).catch(() => {});
+    if (actor && sessionId) {
+      deleteFolderMut.mutate(BigInt(id), { onError: () => {} });
+    }
   }
 
   // ── Streaming ─────────────────────────────────────────────────────────
@@ -297,13 +381,25 @@ function AiChatPage() {
         },
         controller.signal,
       );
-      // Persist final assistant message.
+      // Persist final assistant message + record activity.
       const finalChat = chatsRef.current.find((c) => c.id === chatId);
       const finalMsg = finalChat?.messages.find((m) => m.id === assistantId);
-      if (finalMsg) persistMessage(chatId, finalMsg);
+      if (finalMsg) {
+        persistMessage(chatId, finalMsg);
+        recordActivity(
+          `Assistant reply in "${finalChat?.title ?? "chat"}"`,
+          prompt.slice(0, 200),
+        );
+      }
     } catch (err) {
       if ((err as DOMException)?.name === "AbortError") {
         toast.info("Generation stopped");
+        // Persist partial assistant message if any content was generated.
+        const finalChat = chatsRef.current.find((c) => c.id === chatId);
+        const partial = finalChat?.messages.find((m) => m.id === assistantId);
+        if (partial && partial.content.length > 0) {
+          persistMessage(chatId, partial);
+        }
       } else {
         toast.error("Something went wrong while generating.");
       }
@@ -323,9 +419,9 @@ function AiChatPage() {
     abortRef.current?.abort();
   }
 
-  function handleSend(text: string) {
+  async function handleSend(text: string) {
     let chat = activeChat;
-    if (!chat) chat = newChat();
+    if (!chat) chat = await newChat();
     const chatId = chat.id;
 
     const userMsg: Message = {
@@ -349,13 +445,13 @@ function AiChatPage() {
       ),
     );
     persistMessage(chatId, userMsg);
+    recordActivity(`Sent message in "${chat.title}"`, text.slice(0, 200));
     void runStream(chatId, text, mode, model);
   }
 
   function handleRegenerate() {
     if (!activeChat || isStreaming) return;
     const msgs = activeChat.messages;
-    // Find last user message.
     let lastUser: Message | undefined;
     for (let i = msgs.length - 1; i >= 0; i--) {
       if (msgs[i].role === "user") {
@@ -364,7 +460,6 @@ function AiChatPage() {
       }
     }
     if (!lastUser) return;
-    // Drop trailing assistant message(s) after the last user message.
     const lastUserIdx = msgs.lastIndexOf(lastUser);
     setChats((prev) =>
       prev.map((c) =>
@@ -503,7 +598,7 @@ function AiChatPage() {
         >
           {!hasMessages ? (
             <EmptyState
-              onPick={(p) => handleSend(p)}
+              onPick={(p) => void handleSend(p)}
               onNewChat={handleNewChat}
             />
           ) : (
@@ -558,7 +653,7 @@ function AiChatPage() {
 
         {/* Composer */}
         <ChatComposer
-          onSend={handleSend}
+          onSend={(t) => void handleSend(t)}
           onStop={stopGeneration}
           isStreaming={isStreaming}
         />

@@ -1,5 +1,5 @@
 import { Copy } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,11 @@ import { Textarea } from "@/components/ui/textarea";
 
 type Mode = "encode" | "decode";
 
-export function Base64Tool() {
+export interface ToolUseProps {
+  onUse?: (inputSummary: string, outputSummary: string) => void;
+}
+
+export function Base64Tool({ onUse }: ToolUseProps) {
   const [mode, setMode] = useState<Mode>("encode");
   const [input, setInput] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -46,6 +50,21 @@ export function Base64Tool() {
       setError("Invalid Base64 input.");
     }
   };
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: log only when output/mode change; input is reflected in summary
+  useEffect(() => {
+    if (onUse && output) {
+      const inSum =
+        input.length > 60
+          ? `${input.slice(0, 60)}…`
+          : `(${input.length} chars)`;
+      const outSum =
+        output.length > 60
+          ? `${output.slice(0, 60)}…`
+          : `(${output.length} chars)`;
+      onUse(`${mode} ${inSum}`, outSum);
+    }
+  }, [output, mode]);
 
   const copy = () => {
     if (!output) return;

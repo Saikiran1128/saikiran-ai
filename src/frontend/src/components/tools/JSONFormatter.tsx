@@ -8,7 +8,11 @@ import { Textarea } from "@/components/ui/textarea";
 
 const SAMPLE = `{"name":"Aurora","version":1,"features":["chat","tools","docs"],"meta":{"author":"team","private":false}}`;
 
-export function JSONFormatter() {
+export interface ToolUseProps {
+  onUse?: (inputSummary: string, outputSummary: string) => void;
+}
+
+export function JSONFormatter({ onUse }: ToolUseProps) {
   const [input, setInput] = useState(SAMPLE);
   const [output, setOutput] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -21,10 +25,17 @@ export function JSONFormatter() {
     }
     try {
       const parsed = JSON.parse(input);
-      setOutput(
-        minify ? JSON.stringify(parsed) : JSON.stringify(parsed, null, 2),
-      );
+      const result = minify
+        ? JSON.stringify(parsed)
+        : JSON.stringify(parsed, null, 2);
+      setOutput(result);
       setError(null);
+      if (onUse) {
+        onUse(
+          `${minify ? "minify" : "pretty"} (${input.length} chars)`,
+          `${result.length} chars`,
+        );
+      }
     } catch (e) {
       setError(e instanceof Error ? e.message : "Invalid JSON.");
       setOutput("");

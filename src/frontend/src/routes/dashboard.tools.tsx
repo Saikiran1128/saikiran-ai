@@ -9,6 +9,7 @@ export const toolsRoute = createRoute({
   path: "/tools",
   component: ToolsPage,
 });
+// Note: route path is "/tools" (flat, root-level under the workspace layout).
 
 function ToolsPage() {
   return <ToolsMarketplace />;

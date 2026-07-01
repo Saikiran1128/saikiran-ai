@@ -1,4 +1,20 @@
 // Version: 4.0.0
+type ActivityEntry__154727889 =
+  {
+    activityType : Text;
+    details : Text;
+    id : Nat;
+    summary : Text;
+    timestamp : Int
+  };
+type ActivityEntry__497453047 =
+  {
+    activityType : Text;
+    details : Text;
+    id : Nat;
+    summary : Text;
+    timestamp : Int
+  };
 type Chat__20117544 =
   {
     createdAt : Int;
@@ -21,6 +37,24 @@ type Chat__792738717 =
   };
 type Data__80296667<K, V> =
   {var count : Nat__1040412405; kvs : [var ?(K, V)]};
+type DocumentRecord__286163236 =
+  {
+    content : Text;
+    createdAt : Int;
+    fileType : Text;
+    id : Nat;
+    title : Text;
+    updatedAt : Int
+  };
+type DocumentRecord__870998661 =
+  {
+    content : Text;
+    createdAt : Int;
+    fileType : Text;
+    id : Nat;
+    title : Text;
+    updatedAt : Int
+  };
 type Folder__1052370243 = {createdAt : Int; id : Nat; name : Text};
 type Folder__977224132 = {createdAt : Int; id : Nat; name : Text};
 type Internal__41346355<K, V> =
@@ -76,6 +110,21 @@ type Model__159366869 =
   {#claude; #deepseek; #gemini; #gpt; #llama; #mistral; #ollama; #qwen};
 type Nat__1040412405 = Nat__920180692;
 type Nat__920180692 = Nat;
+type NewActor__551726622 =
+  {
+    activity : Map__222667396<Text, [ActivityEntry__154727889]>;
+    chats : Map__222667396<Text, [NewChat__977788869]>;
+    documents : Map__222667396<Text, [DocumentRecord__286163236]>;
+    folders : Map__222667396<Text, [NewFolder__69094252]>;
+    nextActivityId : {var next : Nat};
+    nextChatId : {var next : Nat};
+    nextDocumentId : {var next : Nat};
+    nextFolderId : {var next : Nat};
+    nextSearchId : {var next : Nat};
+    nextToolUsageId : {var next : Nat};
+    searchHistory : Map__222667396<Text, [SearchRecord__801483394]>;
+    toolUsage : Map__222667396<Text, [ToolUsage__631071181]>
+  };
 type NewActor__721354561 =
   {
     chats : Map__222667396<Principal, [Chat__20117544]>;
@@ -83,25 +132,150 @@ type NewActor__721354561 =
     nextChatId : {var next : Nat};
     nextFolderId : {var next : Nat}
   };
+type NewChat__977788869 =
+  {
+    createdAt : Int;
+    folder : ?Nat;
+    id : Nat;
+    messages : [NewMessage__693150885];
+    pinned : Bool;
+    title : Text;
+    updatedAt : Int
+  };
+type NewFolder__69094252 = {createdAt : Int; id : Nat; name : Text};
+type NewMessage__693150885 =
+  {
+    content : Text;
+    mode : ?NewMode__439299916;
+    model : ?NewModel__255488624;
+    role : NewRole__659504071;
+    timestamp : Int
+  };
+type NewMode__439299916 =
+  {
+    #codingAssistant;
+    #documentAssistant;
+    #emailAssistant;
+    #imageAnalysis;
+    #internetSearch;
+    #knowledgeBase;
+    #normal;
+    #research;
+    #youtubeSearch
+  };
+type NewModel__255488624 =
+  {#claude; #deepseek; #gemini; #gpt; #llama; #mistral; #ollama; #qwen};
+type NewRole__659504071 = {#assistant; #systemMsg; #user};
 type Node__1000929467<K, V> =
   {#internal : Internal__41346355<K, V>; #leaf : Leaf__712614010<K, V>};
 type OldActor__196187416 = {};
+type OldActor__66675082 =
+  {
+    chats : Map__222667396<Principal, [OldChat__286945636]>;
+    folders : Map__222667396<Principal, [OldFolder__366556199]>;
+    nextChatId : {var next : Nat};
+    nextFolderId : {var next : Nat}
+  };
+type OldChat__286945636 =
+  {
+    createdAt : Int;
+    folder : ?Nat;
+    id : Nat;
+    messages : [OldMessage__730151248];
+    pinned : Bool;
+    title : Text;
+    updatedAt : Int
+  };
+type OldFolder__366556199 = {createdAt : Int; id : Nat; name : Text};
+type OldMessage__730151248 =
+  {
+    content : Text;
+    mode : ?OldMode__987748553;
+    model : ?OldModel__650009277;
+    role : OldRole__579756141;
+    timestamp : Int
+  };
+type OldMode__987748553 =
+  {
+    #codingAssistant;
+    #documentAssistant;
+    #emailAssistant;
+    #imageAnalysis;
+    #internetSearch;
+    #knowledgeBase;
+    #normal;
+    #research;
+    #youtubeSearch
+  };
+type OldModel__650009277 =
+  {#claude; #deepseek; #gemini; #gpt; #llama; #mistral; #ollama; #qwen};
+type OldRole__579756141 = {#assistant; #systemMsg; #user};
 type Role__415105322 = {#assistant; #systemMsg; #user};
 type Role__711988144 = {#assistant; #systemMsg; #user};
+type SearchRecord__234387400 =
+  {id : Nat; queryText : Text; resultCount : Nat; timestamp : Int};
+type SearchRecord__801483394 =
+  {id : Nat; queryText : Text; resultCount : Nat; timestamp : Int};
+type SessionId__1052913375 = Text;
+type ToolUsage__631071181 =
+  {
+    id : Nat;
+    inputSummary : Text;
+    outputSummary : Text;
+    timestamp : Int;
+    toolName : Text
+  };
+type ToolUsage__769806716 =
+  {
+    id : Nat;
+    inputSummary : Text;
+    outputSummary : Text;
+    timestamp : Int;
+    toolName : Text
+  };
 {
-  "20260630_000000" : (old : OldActor__196187416) -> NewActor__721354561
+  "20260630_000000" : (old : OldActor__196187416) -> NewActor__721354561;
+  "20260701_000000" : (old : OldActor__66675082) -> NewActor__551726622
 }
 actor  {
+  stable activity :
+    {
+      var root :
+        Node__1000929467<SessionId__1052913375, [ActivityEntry__497453047]>;
+      var size : Nat__1040412405
+    };
   stable chats :
     {
-      var root : Node__1000929467<Principal, [Chat__792738717]>;
+      var root : Node__1000929467<SessionId__1052913375, [Chat__792738717]>;
+      var size : Nat__1040412405
+    };
+  stable documents :
+    {
+      var root :
+        Node__1000929467<SessionId__1052913375, [DocumentRecord__870998661]>;
       var size : Nat__1040412405
     };
   stable folders :
     {
-      var root : Node__1000929467<Principal, [Folder__977224132]>;
+      var root : Node__1000929467<SessionId__1052913375, [Folder__977224132]>;
       var size : Nat__1040412405
     };
+  stable nextActivityId : {var next : Nat};
   stable nextChatId : {var next : Nat};
-  stable nextFolderId : {var next : Nat}
+  stable nextDocumentId : {var next : Nat};
+  stable nextFolderId : {var next : Nat};
+  stable nextSearchId : {var next : Nat};
+  stable nextToolUsageId : {var next : Nat};
+  stable searchHistory :
+    {
+      var root :
+        Node__1000929467<SessionId__1052913375, [SearchRecord__234387400]>;
+      var size : Nat__1040412405
+    };
+  stable toolUsage :
+    {
+      var root :
+        Node__1000929467<SessionId__1052913375, [ToolUsage__769806716]>;
+      var size : Nat__1040412405
+    }
 };
